@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'front_office'
+require_relative 'player'
+require_relative 'team'
+require_relative 'pick_event'
+require_relative 'sim_event'
+
 module Basketball
   module Drafting
     class EngineSerializer

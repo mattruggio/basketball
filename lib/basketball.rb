@@ -7,6 +7,4 @@ require 'json'
 require 'securerandom'
 require 'slop'
 
-module Basketball
-  autoload(:Drafting, './lib/basketball/drafting.rb')
-end
+require_relative 'basketball/drafting'

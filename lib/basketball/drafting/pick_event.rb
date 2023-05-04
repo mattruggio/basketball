@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'event'
+
 module Basketball
   module Drafting
     class PickEvent < Event

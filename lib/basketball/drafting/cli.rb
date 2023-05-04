@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'engine'
+require_relative 'engine_serializer'
+require_relative 'player_search'
+require_relative 'position'
+
 module Basketball
   module Drafting
     # Example:
