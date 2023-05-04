@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/basketball.svg)](https://badge.fury.io/rb/basketball) [![CI](https://github.com/mattruggio/basketball/actions/workflows/ci.yaml/badge.svg)](https://github.com/mattruggio/basketball/actions/workflows/ci.yaml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-#### Basketball Simulation Engine
+#### Basketball League Game Engine
 
 This library is meant to serve as the domain for a basketball league/season simulator/turn-based game. It models core ideas such as: players, general managers, draft strategy, drafting, season generation, season simultation, playoff generation, playoff simulation, and more.
 
