@@ -45,43 +45,55 @@ The drafting module is meant to be interfaces using its Ruby API by consuming ap
 #### Generate a Fresh Draft
 
 ```zsh
-exe/basketball-draft -o tmp/draft.json
+basketball-draft -o tmp/draft.json
 ```
 
 #### N Top Available Players
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -t 10
+basketball-draft -i tmp/draft.json -t 10
 ```
 
 #### N Top Available Players for a Position
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -t 10 -q PG
+basketball-draft -i tmp/draft.json -t 10 -q PG
 ```
 
 #### Output Current Rosters
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -r
+basketball-draft -i tmp/draft.json -r
+```
+
+#### Output Event Log
+
+```zsh
+basketball-draft -i tmp/draft.json -l
 ```
 
 #### Simulate N picks
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -s 10
+basketball-draft -i tmp/draft.json -s 10
+```
+
+#### Skip N picks
+
+```zsh
+basketball-draft -i tmp/draft.json -x 10
 ```
 
 #### Pick Players
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -p P-100,P-200,P-300
+basketball-draft -i tmp/draft.json -p P-100,P-200,P-300
 ```
 
 #### Simulate the Rest of the Draft
 
 ```zsh
-exe/basketball-draft -i tmp/draft.json -a
+basketball-draft -i tmp/draft.json -a
 ```
 
 ## Contributing
