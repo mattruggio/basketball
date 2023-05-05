@@ -4,6 +4,7 @@ module Basketball
   class ValueObject
     include Comparable
 
+    # NOTE: This current implementation most likely does not work for deep inheritance trees.
     class << self
       def value_keys
         @value_keys ||= []
