@@ -61,8 +61,8 @@ describe Basketball::Drafting::Player do
       expect(player.to_s).to include(player.full_name)
     end
 
-    it 'includes position value' do
-      expect(player.to_s).to include(position.value)
+    it 'includes position code' do
+      expect(player.to_s).to include(position.code)
     end
 
     it 'includes overall' do

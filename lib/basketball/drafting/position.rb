@@ -2,7 +2,7 @@
 
 module Basketball
   module Drafting
-    class Position
+    class Position < ValueObject
       extend Forwardable
 
       class << self
@@ -17,25 +17,18 @@ module Basketball
       FRONT_COURT_VALUES = %w[PF C].to_set.freeze
       ALL_VALUES         = (BACK_COURT_VALUES.to_a + FRONT_COURT_VALUES.to_a).to_set.freeze
 
-      attr_reader :value
+      attr_reader_value :code
 
-      def_delegators :value, :to_s
+      def_delegators :code, :to_s
 
-      def initialize(value)
-        @value = value.to_s.upcase
+      def initialize(code)
+        super()
 
-        raise InvalidPositionError, "Unknown position value: #{@value}" unless ALL_VALUES.include?(@value)
+        @code = code.to_s.upcase
+
+        raise InvalidPositionError, "Unknown position code: #{@code}" unless ALL_VALUES.include?(@code)
 
         freeze
-      end
-
-      def ==(other)
-        value == other.value
-      end
-      alias eql? ==
-
-      def hash
-        value.hash
       end
     end
   end

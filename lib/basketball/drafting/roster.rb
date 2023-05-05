@@ -2,16 +2,18 @@
 
 module Basketball
   module Drafting
-    class Roster
+    class Roster < ValueObject
       extend Forwardable
 
       class WrongTeamEventError < StandardError; end
 
-      attr_reader :team, :events
+      attr_reader_value :team, :events
 
       def_delegators :team, :id
 
       def initialize(team:, events: [])
+        super()
+
         raise ArgumentError, 'team is required' unless team
 
         other_teams_pick_event_ids = events.reject { |e| e.team == team }.map(&:id)

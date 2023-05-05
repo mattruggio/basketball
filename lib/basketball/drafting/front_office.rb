@@ -2,16 +2,18 @@
 
 module Basketball
   module Drafting
-    class FrontOffice
+    class FrontOffice < ValueObject
       MAX_DEPTH     = 3
       MAX_FUZZ      = 2
       MAX_POSITIONS = 12
 
       private_constant :MAX_DEPTH, :MAX_FUZZ, :MAX_POSITIONS
 
-      attr_reader :prioritized_positions, :fuzz, :depth
+      attr_reader_value :prioritized_positions, :fuzz, :depth
 
       def initialize(prioritized_positions: [], fuzz: rand(0..MAX_FUZZ), depth: rand(0..MAX_DEPTH))
+        super()
+
         @fuzz                  = fuzz.to_i
         @depth                 = depth.to_i
         @prioritized_positions = prioritized_positions
@@ -22,10 +24,6 @@ module Basketball
         @prioritized_positions += random_positions_queue[0...need_count]
 
         freeze
-      end
-
-      def to_s
-        "#{prioritized_positions.map(&:to_s).join(',')} (F:#{fuzz} D:#{depth})"
       end
 
       def pick(undrafted_player_search:, drafted_players:, round:)

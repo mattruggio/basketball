@@ -3,7 +3,11 @@
 module Basketball
   module Drafting
     class Team < Entity
+      extend Forwardable
+
       attr_reader :name, :front_office
+
+      def_delegators :front_office, :pick
 
       def initialize(id:, name: '', front_office: FrontOffice.new)
         super(id)
@@ -18,10 +22,6 @@ module Basketball
 
       def to_s
         "[#{super}] #{name}"
-      end
-
-      def pick(undrafted_player_search:, drafted_players:, round:)
-        front_office.pick(undrafted_player_search:, drafted_players:, round:)
       end
     end
   end

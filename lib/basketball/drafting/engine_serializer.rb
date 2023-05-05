@@ -101,7 +101,7 @@ module Basketball
               first_name: player.first_name,
               last_name: player.last_name,
               overall: player.overall,
-              position: player.position.value
+              position: player.position.code
             }
           ]
         end

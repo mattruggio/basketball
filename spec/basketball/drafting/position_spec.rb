@@ -4,42 +4,42 @@ require 'spec_helper'
 
 describe Basketball::Drafting::Position do
   subject(:position) do
-    described_class.new(value)
+    described_class.new(code)
   end
 
-  let(:value) { 'c' }
+  let(:code) { 'c' }
 
   describe 'initialization' do
-    it 'sets value' do
-      expect(position.value).to eq(value.upcase)
+    it 'sets code' do
+      expect(position.code).to eq(code.upcase)
     end
 
-    it 'accepts symbols for value' do
-      expect(described_class.new(:pf).value).to eq('PF')
+    it 'accepts symbols for code' do
+      expect(described_class.new(:pf).code).to eq('PF')
     end
 
-    it 'raises InvalidPositionError for unknown values' do
+    it 'raises InvalidPositionError for unknown codes' do
       expect { described_class.new(:bench) }.to raise_error(described_class::InvalidPositionError)
     end
   end
 
   describe 'equality' do
     specify '==' do
-      expect(position == described_class.new(value)).to be true
+      expect(position == described_class.new(code)).to be true
     end
 
     specify 'eq?' do
-      expect(position).to eq(described_class.new(value))
+      expect(position).to eq(described_class.new(code))
     end
 
     specify 'eql?' do
-      expect(position).to eql(described_class.new(value))
+      expect(position).to eql(described_class.new(code))
     end
   end
 
   describe '#to_s' do
-    it 'includes value' do
-      expect(position.to_s).to include(value.upcase)
+    it 'includes code' do
+      expect(position.to_s).to include(code.upcase)
     end
   end
 end
