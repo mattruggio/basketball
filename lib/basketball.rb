@@ -7,4 +7,8 @@ require 'json'
 require 'securerandom'
 require 'slop'
 
+# Top-level
+require_relative 'basketball/entity'
+
+# Submodules
 require_relative 'basketball/drafting'

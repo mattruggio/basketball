@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::Entity do
+describe Basketball::Entity do
   subject(:entity) do
     described_class.new(id)
   end

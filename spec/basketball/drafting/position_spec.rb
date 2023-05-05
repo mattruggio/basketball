@@ -23,6 +23,20 @@ describe Basketball::Drafting::Position do
     end
   end
 
+  describe 'equality' do
+    specify '==' do
+      expect(position == described_class.new(value)).to be true
+    end
+
+    specify 'eq?' do
+      expect(position).to eq(described_class.new(value))
+    end
+
+    specify 'eql?' do
+      expect(position).to eql(described_class.new(value))
+    end
+  end
+
   describe '#to_s' do
     it 'includes value' do
       expect(position.to_s).to include(value.upcase)

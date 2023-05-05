@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'entity'
-
 module Basketball
   module Drafting
     class Team < Entity
@@ -22,8 +20,8 @@ module Basketball
         "[#{super}] #{name}"
       end
 
-      def pick(undrafted_players:, drafted_players:, round:)
-        front_office.pick(undrafted_players:, drafted_players:, round:)
+      def pick(undrafted_player_search:, drafted_players:, round:)
+        front_office.pick(undrafted_player_search:, drafted_players:, round:)
       end
     end
   end

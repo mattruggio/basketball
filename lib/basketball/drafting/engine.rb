@@ -98,12 +98,13 @@ module Basketball
 
       def sim!(times = nil)
         counter = 0
+        events  = []
 
         until done? || (times && counter >= times)
           team = current_team
 
           player = team.pick(
-            undrafted_players:,
+            undrafted_player_search:,
             drafted_players: drafted_players(team),
             round: current_round
           )
@@ -122,9 +123,10 @@ module Basketball
           yield(event) if block_given?
 
           counter += 1
+          events << event
         end
 
-        self
+        events
       end
 
       def pick!(player)
@@ -144,6 +146,10 @@ module Basketball
 
       def undrafted_players
         players - drafted_players
+      end
+
+      def undrafted_player_search
+        PlayerSearch.new(undrafted_players)
       end
 
       private

@@ -28,40 +28,36 @@ module Basketball
         "#{prioritized_positions.map(&:to_s).join(',')} (F:#{fuzz} D:#{depth})"
       end
 
-      def pick(undrafted_players:, drafted_players:, round:)
+      def pick(undrafted_player_search:, drafted_players:, round:)
         players = []
 
-        players = adaptive_search(undrafted_players:, drafted_players:) if depth >= round
-        players = balanced_search(undrafted_players:, drafted_players:) if players.empty?
-        players = top_players(undrafted_players:)                       if players.empty?
+        players = adaptive_search(undrafted_player_search:, drafted_players:) if depth >= round
+        players = balanced_search(undrafted_player_search:, drafted_players:) if players.empty?
+        players = top_players(undrafted_player_search:)                       if players.empty?
 
         players[0..fuzz].sample
       end
 
       private
 
-      def adaptive_search(undrafted_players:, drafted_players:)
-        search = PlayerSearch.new(undrafted_players)
-
+      def adaptive_search(undrafted_player_search:, drafted_players:)
         drafted_positions = drafted_players.map(&:position)
 
-        search.query(exclude_positions: drafted_positions)
+        undrafted_player_search.query(exclude_positions: drafted_positions)
       end
 
-      def balanced_search(undrafted_players:, drafted_players:)
-        search = PlayerSearch.new(undrafted_players)
-
+      def balanced_search(undrafted_player_search:, drafted_players:)
         players = []
 
         # Try to find best pick for exact desired position.
         # If you cant find one, then move to the next desired position until the end of the queue
         available_prioritized_positions(drafted_players:).each do |position|
-          players = search.query(position:)
+          players = undrafted_player_search.query(position:)
 
           break if players.any?
         end
 
-        players = players.any? ? players : search.query
+        players = players.any? ? players : undrafted_player_search.query
       end
 
       def all_random_positions
