@@ -2,41 +2,36 @@
 
 module Basketball
   module Drafting
-    class Roster < ValueObject
-      extend Forwardable
+    class Roster < Entity
+      class PlayerAlreadyRegisteredError < StandardError; end
+      class PlayerRequiredError < StandardError; end
 
-      class WrongTeamEventError < StandardError; end
+      attr_reader :name, :players
 
-      attr_reader_value :team, :events
+      def initialize(id:, name: '', players: [])
+        super(id)
 
-      def_delegators :team, :id
+        @name    = name.to_s
+        @players = []
 
-      def initialize(team:, events: [])
-        super()
-
-        raise ArgumentError, 'team is required' unless team
-
-        other_teams_pick_event_ids = events.reject { |e| e.team == team }.map(&:id)
-
-        if other_teams_pick_event_ids.any?
-          raise WrongTeamEventError,
-                "Event(s): #{other_teams_pick_event_ids.join(',')} has wrong team"
-        end
-
-        @team   = team
-        @events = events
+        freeze
       end
 
-      def player_events
-        events.select { |e| e.respond_to?(:player) }
+      def registered?(player)
+        players.include?(player)
       end
 
-      def players
-        player_events.map(&:player)
+      def register!(player)
+        raise PlayerRequiredError, "player is required" unless player
+        raise PlayerAlreadyRegisteredError, "#{player} already registered for #{id}" if registered?(player)
+
+        players << player
+
+        self
       end
 
       def to_s
-        ([team.to_s] + players.map(&:to_s)).join("\n")
+        ("[#{super}] #{name} Roster" + players.map(&:to_s)).join("\n")
       end
     end
   end

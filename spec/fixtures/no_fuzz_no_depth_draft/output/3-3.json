@@ -296,11 +296,6 @@
   },
   "rosters": {
     "T-1": {
-      "events": [
-        "3B9DBE64-2DAD-49B6-B756-DAFD58C1EB00",
-        "93172A81-07E6-4BBF-A07A-1F56E9316739",
-        "FE00FCEA-FCE8-4336-B14F-A8467D6750B7"
-      ],
       "players": [
         "P-1",
         "P-14",
@@ -308,11 +303,6 @@
       ]
     },
     "T-2": {
-      "events": [
-        "6DD0ED3B-2B60-4CA0-9B34-C4AB244759D7",
-        "96AFB9DD-7FF3-4307-A50E-ECA9190E7773",
-        "B7FBE3E8-867A-494C-9675-D75DF47E0CC8"
-      ],
       "players": [
         "P-9",
         "P-16",
@@ -320,11 +310,6 @@
       ]
     },
     "T-3": {
-      "events": [
-        "D64F95E6-CEB5-4C14-9820-0870527D4EFF",
-        "95451F99-D6E7-4CF8-B2E3-9537A30511CE",
-        "A4D6D46D-A554-4D2B-A27D-8FAE384DD6C3"
-      ],
       "players": [
         "P-20",
         "P-8",

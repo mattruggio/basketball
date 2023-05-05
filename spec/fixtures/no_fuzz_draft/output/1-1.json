@@ -232,19 +232,14 @@
   },
   "rosters": {
     "T-1": {
-      "events": [
-        "EB6CF9A0-6470-4C2C-96FE-F549FA7F9B4A"
-      ],
       "players": [
         "P-1"
       ]
     },
     "T-2": {
-      "events": [],
       "players": []
     },
     "T-3": {
-      "events": [],
       "players": []
     }
   }

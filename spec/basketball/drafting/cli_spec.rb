@@ -130,12 +130,6 @@ describe Basketball::Drafting::CLI do
     (actual.dig(:engine, :events) || []).each { |event| event[:id] = nil }
     (expected.dig(:engine, :events) || []).each { |event| event[:id] = nil }
 
-    (actual[:rosters] || {}).each_value { |roster| roster[:events] = [] }
-
-    (expected[:rosters] || {}).each_value do |roster|
-      roster[:events] = []
-    end
-
     expect(actual[:info]).to                 eq(expected[:info])
     expect(actual.dig(:engine, :teams)).to   eq(expected.dig(:engine, :teams))
     expect(actual.dig(:engine, :players)).to eq(expected.dig(:engine, :players))

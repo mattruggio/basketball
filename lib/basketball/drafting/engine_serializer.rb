@@ -72,7 +72,6 @@ module Basketball
           [
             roster.id,
             {
-              events: roster.events.map(&:id),
               players: roster.players.map(&:id)
             }
           ]

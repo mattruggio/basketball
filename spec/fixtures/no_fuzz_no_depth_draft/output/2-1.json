@@ -248,25 +248,16 @@
   },
   "rosters": {
     "T-1": {
-      "events": [
-        "3A9ECEB7-0CFE-4332-8387-6999B39B57F4"
-      ],
       "players": [
         "P-1"
       ]
     },
     "T-2": {
-      "events": [
-        "4B407636-C59B-4E73-B4ED-14FB2C6303D5"
-      ],
       "players": [
         "P-9"
       ]
     },
     "T-3": {
-      "events": [
-        "C1801F30-ABC9-4B85-90D2-A63AB1B9C1AE"
-      ],
       "players": [
         "P-20"
       ]

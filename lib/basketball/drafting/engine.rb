@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'roster'
+require_relative 'league'
 
 module Basketball
   module Drafting
@@ -31,15 +31,13 @@ module Basketball
       end
 
       def rosters
-        events_by_team = teams.to_h { |t| [t, []] }
+        league = League.new(teams:)
 
-        events.each do |event|
-          events_by_team.fetch(event.team) << event
+        player_events.each do |event|
+          league.register!(player: event.player, team: event.team)
         end
 
-        events_by_team.map do |team, events|
-          Roster.new(team:, events:)
-        end
+        league.rosters
       end
 
       def to_s
