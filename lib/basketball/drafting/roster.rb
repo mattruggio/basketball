@@ -27,8 +27,12 @@ module Basketball
         @events = events
       end
 
+      def player_events
+        events.select { |e| e.respond_to?(:player) }
+      end
+
       def players
-        events.map(&:player)
+        player_events.map(&:player)
       end
 
       def to_s

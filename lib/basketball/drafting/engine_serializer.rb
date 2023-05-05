@@ -5,13 +5,15 @@ require_relative 'player'
 require_relative 'team'
 require_relative 'pick_event'
 require_relative 'sim_event'
+require_relative 'skip_event'
 
 module Basketball
   module Drafting
     class EngineSerializer
       EVENT_CLASSES = {
         'PickEvent' => PickEvent,
-        'SimEvent' => SimEvent
+        'SimEvent' => SimEvent,
+        'SkipEvent' => SkipEvent
       }.freeze
 
       private_constant :EVENT_CLASSES
@@ -71,7 +73,7 @@ module Basketball
             roster.id,
             {
               events: roster.events.map(&:id),
-              players: roster.events.map { |event| event.player.id }
+              players: roster.players.map(&:id)
             }
           ]
         end
@@ -112,12 +114,13 @@ module Basketball
           {
             type: event.class.name.split('::').last,
             id: event.id,
-            player: event.player.id,
             team: event.team.id,
             pick: event.pick,
             round: event.round,
             round_pick: event.round_pick
-          }
+          }.tap do |hash|
+            hash[:player] = event.player.id if event.respond_to?(:player)
+          end
         end
       end
 
@@ -162,11 +165,14 @@ module Basketball
       def deserialize_events(json, players, teams)
         (json.dig(:engine, :events) || []).map do |event_hash|
           event_opts = event_hash.slice(:id, :pick, :round, :round_pick).merge(
-            player: players.find { |p| p.id == event_hash[:player] },
             team: teams.find { |t| t.id == event_hash[:team] }
           )
 
           class_constant = EVENT_CLASSES.fetch(event_hash[:type])
+
+          if [PickEvent, SimEvent].include?(class_constant)
+            event_opts[:player] = players.find { |p| p.id == event_hash[:player] }
+          end
 
           class_constant.new(**event_opts)
         end

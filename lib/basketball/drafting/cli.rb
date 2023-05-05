@@ -9,12 +9,16 @@ module Basketball
   module Drafting
     # Example:
     #   exe/basketball-draft -o tmp/draft.json
-    #   exe/basketball-draft -i tmp/draft.json -o tmp/draft-wip.json -s 28 -p ONEALSH01,ONEALJE01 -t 10 -q PG
+    #   exe/basketball-draft -i tmp/draft.json -o tmp/draft-wip.json -s 26 -p P-5,P-10 -t 10 -q PG
+    #   exe/basketball-draft -i tmp/draft-wip.json -x 2
     #   exe/basketball-draft -i tmp/draft-wip.json -r -t 10
     #   exe/basketball-draft -i tmp/draft-wip.json -t 10 -q SG
     #   exe/basketball-draft -i tmp/draft-wip.json -s 30 -t 10
     #   exe/basketball-draft -i tmp/draft-wip.json -a -r
+    #   exe/basketball-draft -i tmp/draft-wip.json -l
     class CLI
+      class PlayerNotFound < StandardError; end
+
       attr_reader :opts, :serializer, :io
 
       def initialize(args:, io: $stdout)
@@ -43,10 +47,12 @@ module Basketball
           io.puts('Draft is complete!')
         else
           io.puts("#{engine.remaining_picks} Remaining pick(s)")
-          io.puts("Round #{engine.current_round} pick #{engine.current_round_pick} for #{engine.current_team}")
+          io.puts("Up Next: Round #{engine.current_round} pick #{engine.current_round_pick} for #{engine.current_team}")
         end
 
         write(engine)
+
+        log(engine)
 
         rosters(engine)
 
@@ -70,6 +76,8 @@ module Basketball
           o.integer '-t', '--top',          'Output the top rated available players (default is 0).', default: 0
           o.string  '-q', '--query',        "Filter TOP by position: #{Position::ALL_VALUES.join(', ')}."
           o.bool    '-r', '--rosters',      'Output all team rosters.', default: false
+          o.integer '-x', '--skip',         'Number of picks to skip (default is 0).', default: 0
+          o.bool    '-l', '--log',          'Output event log.', default: false
 
           o.on '-h', '--help', 'Print out help, like this is doing right now.' do
             io.puts(o)
@@ -121,6 +129,15 @@ module Basketball
         end
       end
 
+      def log(engine)
+        return unless opts[:log]
+
+        io.puts
+        io.puts('Event Log')
+
+        puts engine.events
+      end
+
       # rubocop:disable Metrics/AbcSize
       def query(engine)
         top = opts[:top]
@@ -161,7 +178,17 @@ module Basketball
 
           player = engine.players.find { |p| p.id == id.to_s.upcase }
 
+          raise PlayerNotFound, "player not found by id: #{id}" unless player
+
           event = engine.pick!(player)
+
+          io.puts(event)
+
+          event_count += 1
+        end
+
+        opts[:skip].times do
+          event = engine.skip!
 
           io.puts(event)
 

@@ -96,6 +96,22 @@ module Basketball
         !done?
       end
 
+      def skip!
+        return if done?
+
+        event = SkipEvent.new(
+          id: SecureRandom.uuid,
+          team: current_team,
+          pick: current_pick,
+          round: current_round,
+          round_pick: current_round_pick
+        )
+
+        play!(event)
+
+        event
+      end
+
       def sim!(times = nil)
         counter = 0
         events  = []
@@ -156,12 +172,16 @@ module Basketball
 
       attr_reader :players_by_id, :teams_by_id
 
+      def player_events
+        events.select { |e| e.respond_to?(:player) }
+      end
+
       def internal_current_pick
         events.length + 1
       end
 
       def drafted_players(team = nil)
-        events.each_with_object([]) do |e, memo|
+        player_events.each_with_object([]) do |e, memo|
           next unless team.nil? || e.team == team
 
           memo << e.player
@@ -172,15 +192,21 @@ module Basketball
       # rubocop:disable Metrics/CyclomaticComplexity
       # rubocop:disable Metrics/PerceivedComplexity
       def play!(event)
-        raise AlreadyPickedError, "#{player} was already picked" if drafted_players.include?(event.player)
-        raise DupeEventError,     "#{event} is a dupe"                if events.include?(event)
-        raise EventOutOfOrder,    "#{event} team cant pick right now" if event.team != current_team
-        raise EventOutOfOrder,    "#{event} has wrong pick"           if event.pick != current_pick
-        raise EventOutOfOrder,    "#{event} has wrong round"          if event.round != current_round
-        raise EventOutOfOrder,    "#{event} has wrong round_pick" if event.round_pick != current_round_pick
-        raise UnknownTeamError,   "#{team} doesnt exist"                   unless teams.include?(event.team)
-        raise UnknownPlayerError, "#{player} doesnt exist"                 unless players.include?(event.player)
-        raise EndOfDraftError,    "#{total_picks} pick limit reached"      if events.length > total_picks + 1
+        if event.respond_to?(:player) && drafted_players.include?(event.player)
+          raise AlreadyPickedError, "#{player} was already picked"
+        end
+
+        if event.respond_to?(:player) && !players.include?(event.player)
+          raise UnknownPlayerError, "#{event.player} doesnt exist"
+        end
+
+        raise DupeEventError,   "#{event} is a dupe"                if events.include?(event)
+        raise EventOutOfOrder,  "#{event} team cant pick right now" if event.team != current_team
+        raise EventOutOfOrder,  "#{event} has wrong pick"           if event.pick != current_pick
+        raise EventOutOfOrder,  "#{event} has wrong round"          if event.round != current_round
+        raise EventOutOfOrder,  "#{event} has wrong round_pick"     if event.round_pick != current_round_pick
+        raise UnknownTeamError, "#{team} doesnt exist"              unless teams.include?(event.team)
+        raise EndOfDraftError,  "#{total_picks} pick limit reached" if events.length > total_picks + 1
 
         events << event
 
