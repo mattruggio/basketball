@@ -46,8 +46,12 @@ module Basketball
         if engine.done?
           io.puts('Draft is complete!')
         else
+          current_round        = engine.current_round
+          current_round_pick   = engine.current_round_pick
+          current_front_office = engine.current_front_office
+
           io.puts("#{engine.remaining_picks} Remaining pick(s)")
-          io.puts("Up Next: Round #{engine.current_round} pick #{engine.current_round_pick} for #{engine.current_team}")
+          io.puts("Up Next: Round #{current_round} pick #{current_round_pick} for #{current_front_office}")
         end
 
         write(engine)
@@ -75,7 +79,7 @@ module Basketball
           o.array   '-p', '--picks',        'Comma-separated list of ordered player IDs to pick.', delimiter: ','
           o.integer '-t', '--top',          'Output the top rated available players (default is 0).', default: 0
           o.string  '-q', '--query',        "Filter TOP by position: #{Position::ALL_VALUES.join(', ')}."
-          o.bool    '-r', '--rosters',      'Output all team rosters.', default: false
+          o.bool    '-r', '--rosters',      'Output all front_office rosters.', default: false
           o.integer '-x', '--skip',         'Number of picks to skip (default is 0).', default: 0
           o.bool    '-l', '--log',          'Output event log.', default: false
 
@@ -88,7 +92,7 @@ module Basketball
 
       def load_engine
         if opts[:input].to_s.empty?
-          io.puts('Input path was not provided, generating fresh teams and players')
+          io.puts('Input path was not provided, generating fresh front_offices and players')
 
           generate_draft
         else
@@ -99,8 +103,8 @@ module Basketball
       end
 
       def generate_draft
-        teams = 30.times.map do |i|
-          Team.new(
+        front_offices = 30.times.map do |i|
+          FrontOffice.new(
             id: "T-#{i + 1}", name: Faker::Team.name
           )
         end
@@ -115,7 +119,7 @@ module Basketball
           )
         end
 
-        Engine.new(players:, teams:)
+        Engine.new(players:, front_offices:)
       end
 
       def league(engine)

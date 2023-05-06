@@ -2,8 +2,8 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::Team do
-  subject(:team) do
+describe Basketball::Drafting::FrontOffice do
+  subject(:front_office) do
     described_class.new(id:, name:)
   end
 
@@ -12,21 +12,21 @@ describe Basketball::Drafting::Team do
 
   describe 'initialization' do
     it 'sets id' do
-      expect(team.id).to eq(id.upcase)
+      expect(front_office.id).to eq(id.upcase)
     end
 
     it 'sets name' do
-      expect(team.name).to eq(name)
+      expect(front_office.name).to eq(name)
     end
   end
 
   describe '#to_s' do
     it 'includes id' do
-      expect(team.to_s).to include(id.upcase)
+      expect(front_office.to_s).to include(id.upcase)
     end
 
     it 'includes name' do
-      expect(team.to_s).to include(name)
+      expect(front_office.to_s).to include(name)
     end
   end
 end

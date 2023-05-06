@@ -7,24 +7,25 @@ module Basketball
     class League
       class PlayerAlreadyRegisteredError < StandardError; end
       class RosterNotFoundError < StandardError; end
+      class RosterAlreadyAddedError < StandardError; end
 
       attr_reader :free_agents, :rosters
 
-      def initialize(free_agents: [], teams: [])
+      def initialize(free_agents: [], front_offices: [])
         @rosters     = []
         @free_agents = []
 
-        teams.each       { |team| add_roster(team) }
-        free_agents.each { |p| register!(player: p) }
+        front_offices.each { |front_office| add_roster(front_office) }
+        free_agents.each   { |p| register!(player: p) }
 
         freeze
       end
 
-      def roster(team)
-        rosters.find { |r| r == team }
+      def roster(front_office)
+        rosters.find { |r| r == front_office }
       end
 
-      def register!(player:, team: nil)
+      def register!(player:, front_office: nil)
         raise PlayerRequiredError, 'player is required' unless player
 
         rosters.each do |roster|
@@ -39,10 +40,10 @@ module Basketball
                 "#{player} already registered as a free agent"
         end
 
-        if team
-          roster = roster(team)
+        if front_office
+          roster = roster(front_office)
 
-          raise RosterNotFoundError, "Roster not found for: #{team}" unless roster
+          raise RosterNotFoundError, "Roster not found for: #{front_office}" unless roster
 
           roster.sign!(player)
         else
@@ -58,10 +59,10 @@ module Basketball
 
       private
 
-      def add_roster(team)
-        raise TeamAlreadyAddedError, "#{team} already added" if rosters.include?(team)
+      def add_roster(front_office)
+        raise RosterAlreadyAddedError, "#{front_office} already added" if rosters.include?(front_office)
 
-        rosters << Roster.new(id: team.id, name: team.name)
+        rosters << Roster.new(id: front_office.id, name: front_office.name)
 
         self
       end

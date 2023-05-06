@@ -131,11 +131,11 @@ describe Basketball::Drafting::CLI do
     (actual.dig(:engine, :events) || []).each { |event| event[:id] = nil }
     (expected.dig(:engine, :events) || []).each { |event| event[:id] = nil }
 
-    expect(actual[:info]).to                 eq(expected[:info])
-    expect(actual.dig(:engine, :teams)).to   eq(expected.dig(:engine, :teams))
-    expect(actual.dig(:engine, :players)).to eq(expected.dig(:engine, :players))
-    expect(actual.dig(:engine, :events)).to  eq(expected.dig(:engine, :events))
-    expect(actual[:league]).to               eq(expected[:league])
+    expect(actual[:info]).to                       eq(expected[:info])
+    expect(actual.dig(:engine, :front_offices)).to eq(expected.dig(:engine, :front_offices))
+    expect(actual.dig(:engine, :players)).to       eq(expected.dig(:engine, :players))
+    expect(actual.dig(:engine, :events)).to        eq(expected.dig(:engine, :events))
+    expect(actual[:league]).to                     eq(expected[:league])
   end
   # rubocop:enable Metrics/AbcSize
 end

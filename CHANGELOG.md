@@ -1,3 +1,6 @@
+#### 0.0.5 - May 5th, 2023
+
+* Remove the notion of Team in favor of a flat front office.
 #### 0.0.4 - May 5th, 2023
 
 * Add ability to skip draft picks using `Basketball::Drafting::Engine#skip!`

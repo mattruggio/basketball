@@ -26,7 +26,7 @@ Install executable scripts:
 bundle binstubs basketball
 ````
 
-## Main Modules
+## Sub-Modules
 
 This library is broken down into several bounded contexts that can be consumed either via its Ruby API's or CLI through provided executable scripts:
 
@@ -37,6 +37,21 @@ This library is broken down into several bounded contexts that can be consumed e
 The drafting module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
 
 ![Basketball Architecture - Drafting.png](/docs/architecture/drafting.png)
+
+Element      | Description
+:------------ | :-----------
+**Drafting** | Bounded context (sub-module) dealing with executing an asynchronous draft.
+**Engine** | Aggregate root responsible for providing an iterable interface capable of executing a draft, pick by pick.
+**Event** | Represents one cycle execution result from the Engine.
+**External Ruby App** | An example consumer for the Drafting context.
+**Front Office** | Identifiable as a team, contains configuration for how to auto-pick draft selections.
+**League** | Set of rosters that together form a cohesive league.
+**Pick Event** | Result event emitted when a player is manually selected.
+**Playe ** | Identitiable as a person able to be drafted.
+**Position** | Value object based on position code: PG, SG, SF, PF, and C.
+**Roster** | Identifiable as a team, set of players that make up a single team.
+**Sim Event** | Result event emitted when a player is automatically selected by a front office.
+**Skip Event** | Result event emitted when a front office decides to skip a round.
 
 ### The Drafting CLI
 

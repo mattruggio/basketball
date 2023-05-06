@@ -9,7 +9,7 @@ module Basketball
       class DupeEventError < StandardError; end
       class EventOutOfOrderError < StandardError; end
       class UnknownPlayerError < StandardError; end
-      class UnknownTeamError < StandardError; end
+      class UnknownFrontOfficeError < StandardError; end
       class EndOfDraftError < StandardError; end
 
       DEFAULT_ROUNDS = 12
@@ -18,11 +18,11 @@ module Basketball
 
       attr_reader :events, :rounds
 
-      def initialize(players: [], teams: [], events: [], rounds: DEFAULT_ROUNDS)
-        @players_by_id = players.to_h { |p| [p.id, p] }
-        @teams_by_id   = teams.to_h { |t| [t.id, t] }
-        @events        = []
-        @rounds        = rounds.to_i
+      def initialize(players: [], front_offices: [], events: [], rounds: DEFAULT_ROUNDS)
+        @players_by_id       = players.to_h { |p| [p.id, p] }
+        @front_offices_by_id = front_offices.to_h { |fo| [fo.id, fo] }
+        @events              = []
+        @rounds              = rounds.to_i
 
         # Each one will be validated for correctness.
         events.each { |e| play!(e) }
@@ -31,9 +31,9 @@ module Basketball
       end
 
       def to_league
-        League.new(teams:).tap do |league|
+        League.new(front_offices:).tap do |league|
           player_events.each do |event|
-            league.register!(player: event.player, team: event.team)
+            league.register!(player: event.player, front_office: event.front_office)
           end
 
           undrafted_players.each do |player|
@@ -46,8 +46,8 @@ module Basketball
         events.join("\n")
       end
 
-      def teams
-        teams_by_id.values
+      def front_offices
+        front_offices_by_id.values
       end
 
       def players
@@ -55,27 +55,27 @@ module Basketball
       end
 
       def total_picks
-        rounds * teams.length
+        rounds * front_offices.length
       end
 
       def current_round
         return if done?
 
-        (current_pick / teams.length.to_f).ceil
+        (current_pick / front_offices.length.to_f).ceil
       end
 
       def current_round_pick
         return if done?
 
-        mod = current_pick % teams.length
+        mod = current_pick % front_offices.length
 
-        mod.positive? ? mod : teams.length
+        mod.positive? ? mod : front_offices.length
       end
 
-      def current_team
+      def current_front_office
         return if done?
 
-        teams[current_round_pick - 1]
+        front_offices[current_round_pick - 1]
       end
 
       def current_pick
@@ -101,7 +101,7 @@ module Basketball
 
         event = SkipEvent.new(
           id: SecureRandom.uuid,
-          team: current_team,
+          front_office: current_front_office,
           pick: current_pick,
           round: current_round,
           round_pick: current_round_pick
@@ -117,17 +117,17 @@ module Basketball
         events  = []
 
         until done? || (times && counter >= times)
-          team = current_team
+          front_office = current_front_office
 
-          player = team.pick(
+          player = front_office.pick(
             undrafted_player_search:,
-            drafted_players: drafted_players(team),
+            drafted_players: drafted_players(front_office),
             round: current_round
           )
 
           event = SimEvent.new(
             id: SecureRandom.uuid,
-            team:,
+            front_office:,
             player:,
             pick: current_pick,
             round: current_round,
@@ -150,7 +150,7 @@ module Basketball
 
         event = PickEvent.new(
           id: SecureRandom.uuid,
-          team: current_team,
+          front_office: current_front_office,
           player:,
           pick: current_pick,
           round: current_round,
@@ -170,7 +170,7 @@ module Basketball
 
       private
 
-      attr_reader :players_by_id, :teams_by_id
+      attr_reader :players_by_id, :front_offices_by_id
 
       def player_events
         events.select { |e| e.respond_to?(:player) }
@@ -180,9 +180,9 @@ module Basketball
         events.length + 1
       end
 
-      def drafted_players(team = nil)
+      def drafted_players(front_office = nil)
         player_events.each_with_object([]) do |e, memo|
-          next unless team.nil? || e.team == team
+          next unless front_office.nil? || e.front_office == front_office
 
           memo << e.player
         end
@@ -200,13 +200,17 @@ module Basketball
           raise UnknownPlayerError, "#{event.player} doesnt exist"
         end
 
-        raise DupeEventError,   "#{event} is a dupe"                if events.include?(event)
-        raise EventOutOfOrder,  "#{event} team cant pick right now" if event.team != current_team
-        raise EventOutOfOrder,  "#{event} has wrong pick"           if event.pick != current_pick
-        raise EventOutOfOrder,  "#{event} has wrong round"          if event.round != current_round
-        raise EventOutOfOrder,  "#{event} has wrong round_pick"     if event.round_pick != current_round_pick
-        raise UnknownTeamError, "#{team} doesnt exist"              unless teams.include?(event.team)
-        raise EndOfDraftError,  "#{total_picks} pick limit reached" if events.length > total_picks + 1
+        if event.front_office != current_front_office
+          raise EventOutOfOrder, "#{event} #{event.front_office} cant pick right now"
+        end
+
+        raise UnknownFrontOfficeError, "#{front_office} doesnt exist" unless front_offices.include?(event.front_office)
+
+        raise DupeEventError,          "#{event} is a dupe"                if events.include?(event)
+        raise EventOutOfOrder,         "#{event} has wrong pick"           if event.pick != current_pick
+        raise EventOutOfOrder,         "#{event} has wrong round"          if event.round != current_round
+        raise EventOutOfOrder,         "#{event} has wrong round_pick"     if event.round_pick != current_round_pick
+        raise EndOfDraftError,         "#{total_picks} pick limit reached" if events.length > total_picks + 1
 
         events << event
 

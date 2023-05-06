@@ -2,7 +2,6 @@
 
 require_relative 'front_office'
 require_relative 'player'
-require_relative 'team'
 require_relative 'pick_event'
 require_relative 'sim_event'
 require_relative 'skip_event'
@@ -19,14 +18,14 @@ module Basketball
       private_constant :EVENT_CLASSES
 
       def deserialize(string)
-        json        = JSON.parse(string, symbolize_names: true)
-        teams       = deserialize_teams(json)
-        players     = deserialize_players(json)
-        events      = deserialize_events(json, players, teams)
+        json          = JSON.parse(string, symbolize_names: true)
+        front_offices = deserialize_front_offices(json)
+        players       = deserialize_players(json)
+        events        = deserialize_events(json, players, front_offices)
 
         engine_opts = {
           players:,
-          teams:,
+          front_offices:,
           events:
         }
 
@@ -48,7 +47,7 @@ module Basketball
       def serialize_engine(engine)
         {
           rounds: engine.rounds,
-          teams: serialize_teams(engine),
+          front_offices: serialize_front_offices(engine),
           players: serialize_players(engine),
           events: serialize_events(engine.events)
         }
@@ -59,11 +58,10 @@ module Basketball
           total_picks: engine.total_picks,
           current_round: engine.current_round,
           current_round_pick: engine.current_round_pick,
-          current_team: engine.current_team&.id,
+          current_front_office: engine.current_front_office&.id,
           current_pick: engine.current_pick,
           remaining_picks: engine.remaining_picks,
-          done: engine.done?,
-          undrafted_players: engine.undrafted_players.map(&:id)
+          done: engine.done?
         }
       end
 
@@ -85,17 +83,15 @@ module Basketball
         }
       end
 
-      def serialize_teams(engine)
-        engine.teams.to_h do |team|
+      def serialize_front_offices(engine)
+        engine.front_offices.to_h do |front_office|
           [
-            team.id,
+            front_office.id,
             {
-              name: team.name,
-              front_office: {
-                fuzz: team.front_office.fuzz,
-                depth: team.front_office.depth,
-                prioritized_positions: team.front_office.prioritized_positions
-              }
+              name: front_office.name,
+              fuzz: front_office.fuzz,
+              depth: front_office.depth,
+              prioritized_positions: front_office.prioritized_positions.map(&:code)
             }
           ]
         end
@@ -120,7 +116,7 @@ module Basketball
           {
             type: event.class.name.split('::').last,
             id: event.id,
-            team: event.team.id,
+            front_office: event.front_office.id,
             pick: event.pick,
             round: event.round,
             round_pick: event.round_pick
@@ -130,30 +126,21 @@ module Basketball
         end
       end
 
-      def deserialize_teams(json)
-        (json.dig(:engine, :teams) || []).map do |id, team_hash|
-          team_opts = {
-            id:,
-            name: team_hash[:name]
-          }
-
-          if team_hash.key?(:front_office)
-            front_office_hash = team_hash[:front_office] || {}
-
-            prioritized_positions = (front_office_hash[:prioritized_positions] || []).map do |v|
-              Position.new(v)
-            end
-
-            front_office_opts = {
-              prioritized_positions:,
-              fuzz: front_office_hash[:fuzz],
-              depth: front_office_hash[:depth]
-            }
-
-            team_opts[:front_office] = FrontOffice.new(**front_office_opts)
+      def deserialize_front_offices(json)
+        (json.dig(:engine, :front_offices) || []).map do |id, front_office_hash|
+          prioritized_positions = (front_office_hash[:prioritized_positions] || []).map do |v|
+            Position.new(v)
           end
 
-          Team.new(**team_opts)
+          front_office_opts = {
+            id:,
+            name: front_office_hash[:name],
+            prioritized_positions:,
+            fuzz: front_office_hash[:fuzz],
+            depth: front_office_hash[:depth]
+          }
+
+          FrontOffice.new(**front_office_opts)
         end
       end
 
@@ -168,10 +155,10 @@ module Basketball
         end
       end
 
-      def deserialize_events(json, players, teams)
+      def deserialize_events(json, players, front_offices)
         (json.dig(:engine, :events) || []).map do |event_hash|
           event_opts = event_hash.slice(:id, :pick, :round, :round_pick).merge(
-            team: teams.find { |t| t.id == event_hash[:team] }
+            front_office: front_offices.find { |t| t.id == event_hash[:front_office] }
           )
 
           class_constant = EVENT_CLASSES.fetch(event_hash[:type])

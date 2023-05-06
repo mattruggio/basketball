@@ -2,18 +2,19 @@
 
 module Basketball
   module Drafting
-    class FrontOffice < ValueObject
+    class FrontOffice < Entity
       MAX_DEPTH     = 3
       MAX_FUZZ      = 2
       MAX_POSITIONS = 12
 
       private_constant :MAX_DEPTH, :MAX_FUZZ, :MAX_POSITIONS
 
-      attr_reader_value :prioritized_positions, :fuzz, :depth
+      attr_reader :prioritized_positions, :fuzz, :depth, :name
 
-      def initialize(prioritized_positions: [], fuzz: rand(0..MAX_FUZZ), depth: rand(0..MAX_DEPTH))
-        super()
+      def initialize(id:, name: '', prioritized_positions: [], fuzz: rand(0..MAX_FUZZ), depth: rand(0..MAX_DEPTH))
+        super(id)
 
+        @name                  = name
         @fuzz                  = fuzz.to_i
         @depth                 = depth.to_i
         @prioritized_positions = prioritized_positions
@@ -34,6 +35,10 @@ module Basketball
         players = top_players(undrafted_player_search:)                       if players.empty?
 
         players[0..fuzz].sample
+      end
+
+      def to_s
+        "[#{super}] #{name}"
       end
 
       private

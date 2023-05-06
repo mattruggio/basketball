@@ -1,69 +1,63 @@
 {
   "engine": {
     "rounds": 3,
-    "teams": {
+    "front_offices": {
       "T-1": {
         "name": "South Dakota cattle",
-        "front_office": {
-          "fuzz": 0,
-          "depth": 0,
-          "prioritized_positions": [
-            "C",
-            "PG",
-            "SF",
-            "PF",
-            "SG",
-            "SG",
-            "C",
-            "PG",
-            "PF",
-            "SF",
-            "PF",
-            "PF"
-          ]
-        }
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "C",
+          "PG",
+          "SF",
+          "PF",
+          "SG",
+          "SG",
+          "C",
+          "PG",
+          "PF",
+          "SF",
+          "PF",
+          "PF"
+        ]
       },
       "T-2": {
         "name": "Oregon giants",
-        "front_office": {
-          "fuzz": 0,
-          "depth": 0,
-          "prioritized_positions": [
-            "SF",
-            "PF",
-            "SG",
-            "PG",
-            "C",
-            "C",
-            "SG",
-            "SF",
-            "PF",
-            "PG",
-            "PF",
-            "SG"
-          ]
-        }
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "SF",
+          "PF",
+          "SG",
+          "PG",
+          "C",
+          "C",
+          "SG",
+          "SF",
+          "PF",
+          "PG",
+          "PF",
+          "SG"
+        ]
       },
       "T-3": {
         "name": "Georgia monkeys",
-        "front_office": {
-          "fuzz": 0,
-          "depth": 0,
-          "prioritized_positions": [
-            "PF",
-            "SF",
-            "SG",
-            "C",
-            "PG",
-            "SF",
-            "SG",
-            "C",
-            "PG",
-            "PF",
-            "SF",
-            "PG"
-          ]
-        }
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "PF",
+          "SF",
+          "SG",
+          "C",
+          "PG",
+          "SF",
+          "SG",
+          "C",
+          "PG",
+          "PF",
+          "SF",
+          "PG"
+        ]
       }
     },
     "players": {
