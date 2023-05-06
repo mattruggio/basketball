@@ -6,38 +6,54 @@ module Basketball
   module Drafting
     class League
       class PlayerAlreadyRegisteredError < StandardError; end
-      class TeamAlreadyAddedError < StandardError; end
       class RosterNotFoundError < StandardError; end
 
-      attr_reader :rosters
+      attr_reader :free_agents, :rosters
 
-      def initialize(teams: [])
-        @rosters = []
+      def initialize(free_agents: [], teams: [])
+        @rosters     = []
+        @free_agents = []
 
-        teams.each { |team| add_roster(team) }
+        teams.each       { |team| add_roster(team) }
+        free_agents.each { |p| register!(player: p) }
 
         freeze
       end
 
-      def register!(player:, team:)
-        raise PlayerRequiredError, "player is required" unless player
-        raise TeamRequiredError,   "team is required"   unless team
+      def roster(team)
+        rosters.find { |r| r == team }
+      end
+
+      def register!(player:, team: nil)
+        raise PlayerRequiredError, 'player is required' unless player
 
         rosters.each do |roster|
-          raise PlayerAlreadyRegisteredError, "#{player} already registered to: #{roster.id}" if roster.registered?(player)
+          if roster.registered?(player)
+            raise PlayerAlreadyRegisteredError,
+                  "#{player} already registered to: #{roster.id}"
+          end
         end
 
-        roster = rosters.find { |r| r == team }
+        if free_agents.include?(player)
+          raise PlayerAlreadyRegisteredError,
+                "#{player} already registered as a free agent"
+        end
 
-        raise RosterNotFoundError, "Roster not found for: #{team}" unless roster
+        if team
+          roster = roster(team)
 
-        roster.register!(player)
+          raise RosterNotFoundError, "Roster not found for: #{team}" unless roster
+
+          roster.sign!(player)
+        else
+          free_agents << player
+        end
 
         self
       end
 
       def to_s
-        ("League" + rosters.map(&:to_s)).join("\n")
+        (['League'] + rosters.map(&:to_s)).join("\n")
       end
 
       private

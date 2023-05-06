@@ -12,7 +12,7 @@ module Basketball
         super(id)
 
         @name    = name.to_s
-        @players = []
+        @players = players.each { |p| register!(p) }
 
         freeze
       end
@@ -21,8 +21,8 @@ module Basketball
         players.include?(player)
       end
 
-      def register!(player)
-        raise PlayerRequiredError, "player is required" unless player
+      def sign!(player)
+        raise PlayerRequiredError, 'player is required' unless player
         raise PlayerAlreadyRegisteredError, "#{player} already registered for #{id}" if registered?(player)
 
         players << player
@@ -31,7 +31,7 @@ module Basketball
       end
 
       def to_s
-        ("[#{super}] #{name} Roster" + players.map(&:to_s)).join("\n")
+        (["[#{super}] #{name} Roster"] + players.map(&:to_s)).join("\n")
       end
     end
   end

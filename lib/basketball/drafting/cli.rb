@@ -54,7 +54,7 @@ module Basketball
 
         log(engine)
 
-        rosters(engine)
+        league(engine)
 
         query(engine)
 
@@ -118,15 +118,11 @@ module Basketball
         Engine.new(players:, teams:)
       end
 
-      def rosters(engine)
+      def league(engine)
         return unless opts[:rosters]
 
         io.puts
-        io.puts('Rosters')
-
-        engine.rosters.each do |roster|
-          io.puts(roster)
-        end
+        io.puts(engine.to_league)
       end
 
       def log(engine)

@@ -213,108 +213,123 @@
     "events": [
       {
         "type": "PickEvent",
-        "id": "0191DBB3-2907-4778-BBB0-704ED74ECF76",
-        "player": "P-5",
+        "id": "68568B52-FD65-4611-ACB7-A81B3CD4B5B6",
         "team": "T-1",
         "pick": 1,
         "round": 1,
-        "round_pick": 1
+        "round_pick": 1,
+        "player": "P-5"
       },
       {
         "type": "PickEvent",
-        "id": "9C7888E6-C4E9-42EA-9D31-340E1E5A8B44",
-        "player": "P-6",
+        "id": "24BEBABE-6B00-42B8-ADA7-15F2FE172ED6",
         "team": "T-2",
         "pick": 2,
         "round": 1,
-        "round_pick": 2
+        "round_pick": 2,
+        "player": "P-6"
       },
       {
         "type": "PickEvent",
-        "id": "D95A470F-5FD6-4926-AA05-F0F788B63830",
-        "player": "P-7",
+        "id": "8A52D9FF-8D51-423D-887F-AA656145DF93",
         "team": "T-3",
         "pick": 3,
         "round": 1,
-        "round_pick": 3
+        "round_pick": 3,
+        "player": "P-7"
       },
       {
         "type": "PickEvent",
-        "id": "29289E3C-43EE-4172-9944-D1A98613ED04",
-        "player": "P-1",
+        "id": "AAEF5A8B-CC28-4453-B679-3C234802B0DD",
         "team": "T-1",
         "pick": 4,
         "round": 2,
-        "round_pick": 1
+        "round_pick": 1,
+        "player": "P-1"
       },
       {
         "type": "PickEvent",
-        "id": "19E27662-4F9F-4852-9894-F5D9C6308E0F",
-        "player": "P-3",
+        "id": "339E7F77-2C3F-4A38-B488-88C6CDCAC61A",
         "team": "T-2",
         "pick": 5,
         "round": 2,
-        "round_pick": 2
+        "round_pick": 2,
+        "player": "P-3"
       },
       {
         "type": "PickEvent",
-        "id": "DA1FCB09-91DB-439E-8FDC-35165805ADD3",
-        "player": "P-2",
+        "id": "119177B8-DE52-4582-B50E-8C745F895E15",
         "team": "T-3",
         "pick": 6,
         "round": 2,
-        "round_pick": 3
+        "round_pick": 3,
+        "player": "P-2"
       },
       {
         "type": "PickEvent",
-        "id": "1ECD972F-B1A2-4E64-AA0B-A48B02AE5376",
-        "player": "P-11",
+        "id": "C145ACF7-339E-4D8F-9A61-46282432D4A4",
         "team": "T-1",
         "pick": 7,
         "round": 3,
-        "round_pick": 1
+        "round_pick": 1,
+        "player": "P-11"
       },
       {
         "type": "PickEvent",
-        "id": "AF021A31-9EA0-4E68-8562-DBC2020B139D",
-        "player": "P-13",
+        "id": "3B382DFD-C552-44BC-990B-7365FD999A14",
         "team": "T-2",
         "pick": 8,
         "round": 3,
-        "round_pick": 2
+        "round_pick": 2,
+        "player": "P-13"
       },
       {
         "type": "PickEvent",
-        "id": "ECF8913B-CAFF-4A29-A43A-6034AD4C6C49",
-        "player": "P-15",
+        "id": "85E4C32F-02A5-4A79-A4A6-9F34C060FC34",
         "team": "T-3",
         "pick": 9,
         "round": 3,
-        "round_pick": 3
+        "round_pick": 3,
+        "player": "P-15"
       }
     ]
   },
-  "rosters": {
-    "T-1": {
-      "players": [
-        "P-5",
-        "P-1",
-        "P-11"
-      ]
-    },
-    "T-2": {
-      "players": [
-        "P-6",
-        "P-3",
-        "P-13"
-      ]
-    },
-    "T-3": {
-      "players": [
-        "P-7",
-        "P-2",
-        "P-15"
-      ]
+  "league": {
+    "free_agents": [
+      "P-4",
+      "P-8",
+      "P-9",
+      "P-10",
+      "P-12",
+      "P-14",
+      "P-16",
+      "P-17",
+      "P-18",
+      "P-19",
+      "P-20"
+    ],
+    "rosters": {
+      "T-1": {
+        "players": [
+          "P-5",
+          "P-1",
+          "P-11"
+        ]
+      },
+      "T-2": {
+        "players": [
+          "P-6",
+          "P-3",
+          "P-13"
+        ]
+      },
+      "T-3": {
+        "players": [
+          "P-7",
+          "P-2",
+          "P-15"
+        ]
+      }
     }
   }
 }

@@ -30,14 +30,16 @@ module Basketball
         freeze
       end
 
-      def rosters
-        league = League.new(teams:)
+      def to_league
+        League.new(teams:).tap do |league|
+          player_events.each do |event|
+            league.register!(player: event.player, team: event.team)
+          end
 
-        player_events.each do |event|
-          league.register!(player: event.player, team: event.team)
+          undrafted_players.each do |player|
+            league.register!(player:)
+          end
         end
-
-        league.rosters
       end
 
       def to_s

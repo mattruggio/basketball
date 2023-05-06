@@ -22,7 +22,7 @@ module Basketball
         json        = JSON.parse(string, symbolize_names: true)
         teams       = deserialize_teams(json)
         players     = deserialize_players(json)
-        events = deserialize_events(json, players, teams)
+        events      = deserialize_events(json, players, teams)
 
         engine_opts = {
           players:,
@@ -39,7 +39,7 @@ module Basketball
         {
           info: serialize_info(engine),
           engine: serialize_engine(engine),
-          rosters: serialize_rosters(engine)
+          league: serialize_league(engine)
         }.to_json
       end
 
@@ -67,8 +67,10 @@ module Basketball
         }
       end
 
-      def serialize_rosters(engine)
-        engine.rosters.to_h do |roster|
+      def serialize_league(engine)
+        league = engine.to_league
+
+        rosters = league.rosters.to_h do |roster|
           [
             roster.id,
             {
@@ -76,6 +78,11 @@ module Basketball
             }
           ]
         end
+
+        {
+          free_agents: league.free_agents.map(&:id),
+          rosters:
+        }
       end
 
       def serialize_teams(engine)
