@@ -47,7 +47,7 @@ Element      | Description
 **Front Office** | Identifiable as a team, contains configuration for how to auto-pick draft selections.
 **League** | Set of rosters that together form a cohesive league.
 **Pick Event** | Result event emitted when a player is manually selected.
-**Playe ** | Identitiable as a person able to be drafted.
+**Player** | Identitiable as a person able to be drafted.
 **Position** | Value object based on position code: PG, SG, SF, PF, and C.
 **Roster** | Identifiable as a team, set of players that make up a single team.
 **Sim Event** | Result event emitted when a player is automatically selected by a front office.
