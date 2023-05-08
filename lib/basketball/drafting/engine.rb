@@ -206,11 +206,11 @@ module Basketball
 
         raise UnknownFrontOfficeError, "#{front_office} doesnt exist" unless front_offices.include?(event.front_office)
 
-        raise DupeEventError,          "#{event} is a dupe"                if events.include?(event)
-        raise EventOutOfOrder,         "#{event} has wrong pick"           if event.pick != current_pick
-        raise EventOutOfOrder,         "#{event} has wrong round"          if event.round != current_round
-        raise EventOutOfOrder,         "#{event} has wrong round_pick"     if event.round_pick != current_round_pick
-        raise EndOfDraftError,         "#{total_picks} pick limit reached" if events.length > total_picks + 1
+        raise DupeEventError,  "#{event} is a dupe"                if events.include?(event)
+        raise EventOutOfOrder, "#{event} has wrong pick"           if event.pick != current_pick
+        raise EventOutOfOrder, "#{event} has wrong round"          if event.round != current_round
+        raise EventOutOfOrder, "#{event} has wrong round_pick"     if event.round_pick != current_round_pick
+        raise EndOfDraftError, "#{total_picks} pick limit reached" if events.length > total_picks + 1
 
         events << event
 

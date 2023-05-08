@@ -3,6 +3,8 @@
 module Basketball
   module Scheduling
     class League
+      class UnknownTeamError < StandardError; end
+
       CONFERENCES_SIZE = 2
 
       attr_reader :conferences
@@ -43,6 +45,46 @@ module Basketball
         conferences.flat_map do |conference|
           conference.divisions.flat_map(&:teams)
         end
+      end
+
+      def conference_for(team)
+        conferences.find { |c| c.divisions.find { |d| d.teams.include?(team) } }
+      end
+
+      def division_for(team)
+        conference_for(team)&.divisions&.find { |d| d.teams.include?(team) }
+      end
+
+      # Same conference, same division
+      def division_opponents_for(team)
+        division = division_for(team)
+
+        return nil unless division
+
+        division.teams - [team]
+      end
+
+      # Same conference, different division
+      def cross_division_opponents_for(team)
+        conference = conference_for(team)
+        division   = division_for(team)
+
+        return nil unless conference && division
+
+        other_divisions = conference.divisions - [division]
+
+        other_divisions.flat_map(&:teams)
+      end
+
+      # Different conference
+      def cross_conference_opponents_for(team)
+        conference = conference_for(team)
+
+        return nil unless conference
+
+        other_conferences = conferences - [conference]
+
+        other_conferences.flat_map { |c| c.divisions.flat_map(&:teams) }
       end
 
       private

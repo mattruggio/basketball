@@ -14,5 +14,7 @@ module Basketball
     class BadConferencesSizeError < StandardError; end
     class BadDivisionsSizeError < StandardError; end
     class BadTeamsSizeError < StandardError; end
+
+    class UnknownTeamError < StandardError; end
   end
 end

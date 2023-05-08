@@ -85,4 +85,87 @@ describe Basketball::Scheduling::League do
       end
     end
   end
+
+  describe '#conference_for' do
+    it 'returns conference' do
+      team   = conferences.last.divisions.first.teams.last
+      actual = league.conference_for(team)
+
+      expect(actual).to eq(conferences.last)
+    end
+
+    it 'returns null for unknown team' do
+      team   = make_teams(1).first
+      actual = league.conference_for(team)
+
+      expect(actual).to be_nil
+    end
+  end
+
+  describe '#division_for' do
+    it 'returns division' do
+      team   = conferences.last.divisions.first.teams.last
+      actual = league.division_for(team)
+
+      expect(actual).to eq(conferences.last.divisions.first)
+    end
+
+    it 'returns null for unknown team' do
+      team   = make_teams(1).first
+      actual = league.division_for(team)
+
+      expect(actual).to be_nil
+    end
+  end
+
+  describe '#division_opponents_for' do
+    it 'returns other teams' do
+      team     = conferences.last.divisions.first.teams.last
+      expected = conferences.last.divisions.first.teams - [team]
+      actual   = league.division_opponents_for(team)
+
+      expect(actual).to match_array(expected)
+    end
+
+    it 'returns null for unknown team' do
+      team   = make_teams(1).first
+      actual = league.division_opponents_for(team)
+
+      expect(actual).to be_nil
+    end
+  end
+
+  describe '#cross_division_opponents_for' do
+    it 'returns other teams' do
+      team     = conferences.last.divisions.first.teams.last
+      expected = conferences.last.divisions[1..].flat_map(&:teams)
+      actual   = league.cross_division_opponents_for(team)
+
+      expect(actual).to match_array(expected)
+    end
+
+    it 'returns null for unknown team' do
+      team   = make_teams(1).first
+      actual = league.cross_division_opponents_for(team)
+
+      expect(actual).to be_nil
+    end
+  end
+
+  describe '#cross_conference_opponents_for' do
+    it 'returns other teams' do
+      team     = conferences.last.divisions.first.teams.last
+      expected = conferences.first.divisions.flat_map(&:teams)
+      actual   = league.cross_conference_opponents_for(team)
+
+      expect(actual).to match_array(expected)
+    end
+
+    it 'returns null for unknown team' do
+      team   = make_teams(1).first
+      actual = league.cross_conference_opponents_for(team)
+
+      expect(actual).to be_nil
+    end
+  end
 end
