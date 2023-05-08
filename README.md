@@ -55,7 +55,7 @@ Element      | Description
 
 ### The Drafting CLI
 
-The drafting module is meant to be interfaces using its Ruby API by consuming applications.  It also ships with a CLI which a user can interact with to emulate "the draft process".  Technically speaking, the CLI provides an example application built on top of the Drafting module.  Each time a CLI command is executed, its results will be resaved, so the output file can then be used as the next command's input file to string together commands.  The following sections are example CLI interactions:
+The drafting module is meant to be interfaced with using its Ruby API by consuming applications.  It also ships with a CLI which a user can interact with to emulate "the draft process".  Technically speaking, the CLI provides an example application built on top of the Drafting module.  Each time a CLI command is executed, its results will be resaved, so the output file can then be used as the next command's input file to string together commands.  The following sections are example CLI interactions:
 
 #### Generate a Fresh Draft
 

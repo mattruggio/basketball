@@ -3,9 +3,7 @@
 require 'spec_helper'
 
 describe Basketball::Drafting::Position do
-  subject(:position) do
-    described_class.new(code)
-  end
+  subject(:position) { described_class.new(code) }
 
   let(:code) { 'c' }
 

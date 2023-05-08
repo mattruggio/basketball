@@ -3,7 +3,6 @@
 module Basketball
   module Drafting
     class Roster < Entity
-      class PlayerAlreadyRegisteredError < StandardError; end
       class PlayerRequiredError < StandardError; end
 
       attr_reader :name, :players
