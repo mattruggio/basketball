@@ -4,6 +4,14 @@ def make_id
   SecureRandom.uuid
 end
 
+def make_preseason_game(args)
+  Basketball::Scheduling::PreseasonGame.new(**args)
+end
+
+def make_season_game(args)
+  Basketball::Scheduling::SeasonGame.new(**args)
+end
+
 def make_team(args)
   Basketball::Scheduling::Team.new(**args)
 end
