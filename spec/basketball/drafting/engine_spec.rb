@@ -7,7 +7,7 @@ describe Basketball::Drafting::Engine do
     Basketball::Drafting::EngineSerializer.new.deserialize(contents)
   end
 
-  let(:contents) { read_fixture('no_fuzz_draft', 'input.json') }
+  let(:contents) { read_fixture('drafting', 'no_fuzz_draft', 'input.json') }
 
   describe '#undrafted_player_search' do
     it 'returns search instance' do

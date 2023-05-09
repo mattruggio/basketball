@@ -4,10 +4,26 @@ def make_id
   SecureRandom.uuid
 end
 
+def make_team(args)
+  Basketball::Scheduling::Team.new(**args)
+end
+
+def make_division(args)
+  Basketball::Scheduling::Division.new(**args)
+end
+
+def make_conference(args)
+  Basketball::Scheduling::Conference.new(**args)
+end
+
+def make_league(args)
+  Basketball::Scheduling::League.new(**args)
+end
+
 def make_teams(count = 5)
   [].tap do |teams|
     count.times do
-      teams << Basketball::Scheduling::Team.new(id: make_id, name: 'TEAM')
+      teams << make_team(id: make_id, name: Faker::Team.name)
     end
   end
 end
@@ -15,9 +31,9 @@ end
 def make_divisions(count = 3)
   [].tap do |divisions|
     count.times do
-      divisions << Basketball::Scheduling::Division.new(
+      divisions << make_division(
         id: make_id,
-        name: 'DIVISION',
+        name: Faker::Address.community,
         teams: make_teams(5)
       )
     end
@@ -27,9 +43,9 @@ end
 def make_conferences(count = 2)
   [].tap do |conferences|
     count.times do
-      conferences << Basketball::Scheduling::Conference.new(
+      conferences << make_conference(
         id: make_id,
-        name: 'CONFERENCE',
+        name: Faker::Address.community,
         divisions: make_divisions(3)
       )
     end

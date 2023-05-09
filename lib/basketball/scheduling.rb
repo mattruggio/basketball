@@ -3,6 +3,7 @@
 require_relative 'scheduling/conference'
 require_relative 'scheduling/division'
 require_relative 'scheduling/league'
+require_relative 'scheduling/league_serializer'
 require_relative 'scheduling/team'
 
 module Basketball

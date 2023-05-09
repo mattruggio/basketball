@@ -5,6 +5,10 @@ module Basketball
     class League
       class UnknownTeamError < StandardError; end
 
+      class << self
+        def generate_random; end
+      end
+
       CONFERENCES_SIZE = 2
 
       attr_reader :conferences
