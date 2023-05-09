@@ -5,11 +5,22 @@ module Basketball
     class Calendar
       class TeamAlreadyBookedError < StandardError; end
       class InvalidGameOrderError < StandardError; end
+      class OutOfBoundsError < StandardError; end
 
-      attr_reader :games
+      attr_reader :games,
+                  :preseason_start_date,
+                  :preseason_end_date,
+                  :season_start_date,
+                  :season_end_date
 
-      def initialize(games: [])
-        @games = []
+      def initialize(year:, games: [])
+        raise ArgumentError, 'year is required' unless year
+
+        @preseason_start_date = Date.new(year, 9, 30)
+        @preseason_end_date   = Date.new(year, 10, 14)
+        @season_start_date    = Date.new(year, 10, 18)
+        @season_end_date      = Date.new(year + 1, 4, 29)
+        @games                = []
 
         games.each { |game| add!(game) }
 
@@ -17,12 +28,20 @@ module Basketball
       end
 
       def add!(game)
+        assert_in_bounds(game)
         assert_free_date(game)
-        assert_proper_order(game)
 
         @games << game
 
         self
+      end
+
+      def preseason_games_for(date: nil, team: nil)
+        games_for(date:, team:).select { |game| game.is_a?(PreseasonGame) }
+      end
+
+      def season_games_for(date: nil, team: nil)
+        games_for(date:, team:).select { |game| game.is_a?(SeasonGame) }
       end
 
       def games_for(date: nil, team: nil)
@@ -32,14 +51,29 @@ module Basketball
         end
       end
 
-      private
-
-      def first_season_game_date
-        games.sort_by(&:date).select { |g| g.is_a?(SeasonGame) }.first&.date
+      def available_preseason_dates_for(team)
+        all_preseason_dates - preseason_games_for(team:).map(&:date)
       end
 
-      def last_preseason_game_date
-        games.sort_by(&:date).select { |g| g.is_a?(PreseasonGame) }.last&.date
+      def available_season_dates_for(team)
+        all_season_dates - season_games_for(team:).map(&:date)
+      end
+
+      def available_preseason_matchup_dates(team1, team2)
+        available_team_dates       = available_preseason_dates_for(team1)
+        available_other_team_dates = available_preseason_dates_for(team2)
+
+        available_team_dates & available_other_team_dates
+      end
+
+      private
+
+      def all_preseason_dates
+        (preseason_start_date..preseason_end_date).to_a
+      end
+
+      def all_season_dates
+        (season_start_date..season_end_date).to_a
       end
 
       def assert_free_date(game)
@@ -52,14 +86,16 @@ module Basketball
         raise TeamAlreadyBookedError, "#{game.away_team} already playing on #{game.date}"
       end
 
-      def assert_proper_order(game)
-        if first_season_game_date && game.is_a?(PreseasonGame) && game.date >= first_season_game_date
-          raise InvalidGameOrderError, "#{game.date} cant be on or after #{first_season_game_date}"
+      def assert_in_bounds(game)
+        if game.is_a?(PreseasonGame)
+          raise OutOfBoundsError, "#{game.date} is before preseason begins" if game.date < preseason_start_date
+          raise OutOfBoundsError, "#{game.date} is after preseason ends"    if game.date > preseason_end_date
+        elsif game.is_a?(SeasonGame)
+          raise OutOfBoundsError, "#{game.date} is before season begins" if game.date < season_start_date
+          raise OutOfBoundsError, "#{game.date} is after season ends"    if game.date > season_end_date
+        else
+          raise ArgumentError, "Dont know what this game type is: #{game.class.name}"
         end
-
-        return unless last_preseason_game_date && game.is_a?(SeasonGame) && game.date <= last_preseason_game_date
-
-        raise InvalidGameOrderError, "#{game.date} cant be on or before #{last_preseason_game_date}"
       end
     end
   end

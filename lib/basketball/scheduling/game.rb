@@ -19,6 +19,10 @@ module Basketball
 
         freeze
       end
+
+      def teams
+        [home_team, away_team]
+      end
     end
   end
 end

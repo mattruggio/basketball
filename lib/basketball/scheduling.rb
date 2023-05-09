@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'scheduling/calendar'
 require_relative 'scheduling/conference'
+require_relative 'scheduling/coordinator'
 require_relative 'scheduling/division'
 require_relative 'scheduling/game'
 require_relative 'scheduling/league'

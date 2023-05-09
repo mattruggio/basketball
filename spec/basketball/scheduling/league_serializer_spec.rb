@@ -6,7 +6,7 @@ require 'scheduling_helper'
 describe Basketball::Scheduling::LeagueSerializer do
   subject(:serializer) { described_class.new }
 
-  let(:contents)       { read_fixture('scheduling', 'league.json') }
+  let(:contents) { read_fixture('scheduling', 'league.json') }
 
   let(:league) do
     make_league(
