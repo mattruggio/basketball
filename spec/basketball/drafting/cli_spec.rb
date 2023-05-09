@@ -128,9 +128,6 @@ describe Basketball::Drafting::CLI do
     actual   = JSON.parse(File.read(actual_path), symbolize_names: true)
     expected = JSON.parse(File.read(expected_path), symbolize_names: true)
 
-    (actual.dig(:engine, :events) || []).each { |event| event[:id] = nil }
-    (expected.dig(:engine, :events) || []).each { |event| event[:id] = nil }
-
     expect(actual[:info]).to                       eq(expected[:info])
     expect(actual.dig(:engine, :front_offices)).to eq(expected.dig(:engine, :front_offices))
     expect(actual.dig(:engine, :players)).to       eq(expected.dig(:engine, :players))

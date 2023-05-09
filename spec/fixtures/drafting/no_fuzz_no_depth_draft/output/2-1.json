@@ -1,1 +1,259 @@
-{"info":{"total_picks":9,"current_round":2,"current_round_pick":1,"current_front_office":"T-1","current_pick":4,"remaining_picks":6,"done":false},"engine":{"rounds":3,"front_offices":{"T-1":{"name":"South Dakota cattle","fuzz":0,"depth":0,"prioritized_positions":["C","PG","SF","PF","SG","SG","C","PG","PF","SF","PF","PF"]},"T-2":{"name":"Oregon giants","fuzz":0,"depth":0,"prioritized_positions":["SF","PF","SG","PG","C","C","SG","SF","PF","PG","PF","SG"]},"T-3":{"name":"Georgia monkeys","fuzz":0,"depth":0,"prioritized_positions":["PF","SF","SG","C","PG","SF","SG","C","PG","PF","SF","PG"]}},"players":{"P-1":{"first_name":"Carlyn","last_name":"Witting","overall":91,"position":"C"},"P-2":{"first_name":"Merlin","last_name":"O'Conner","overall":1,"position":"SG"},"P-3":{"first_name":"Angelika","last_name":"Harber","overall":53,"position":"PF"},"P-4":{"first_name":"Lynn","last_name":"Kihn","overall":82,"position":"SG"},"P-5":{"first_name":"Stephine","last_name":"Jerde","overall":0,"position":"C"},"P-6":{"first_name":"Oralia","last_name":"Rolfson","overall":33,"position":"SG"},"P-7":{"first_name":"Donny","last_name":"Senger","overall":19,"position":"C"},"P-8":{"first_name":"Rosia","last_name":"Carter","overall":23,"position":"SF"},"P-9":{"first_name":"Phoebe","last_name":"Hartmann","overall":71,"position":"SF"},"P-10":{"first_name":"Lashandra","last_name":"Lebsack","overall":15,"position":"SF"},"P-11":{"first_name":"Darin","last_name":"Towne","overall":49,"position":"PF"},"P-12":{"first_name":"Hazel","last_name":"Oberbrunner","overall":32,"position":"C"},"P-13":{"first_name":"Graham","last_name":"O'Keefe","overall":58,"position":"PG"},"P-14":{"first_name":"Cathey","last_name":"Dicki","overall":84,"position":"PG"},"P-15":{"first_name":"Dorris","last_name":"Beer","overall":22,"position":"SG"},"P-16":{"first_name":"Ezekiel","last_name":"Hilpert","overall":53,"position":"PF"},"P-17":{"first_name":"Jordan","last_name":"Spinka","overall":40,"position":"C"},"P-18":{"first_name":"Dusty","last_name":"Ratke","overall":43,"position":"C"},"P-19":{"first_name":"Raylene","last_name":"Ernser","overall":24,"position":"PF"},"P-20":{"first_name":"Nicolette","last_name":"Ziemann","overall":89,"position":"PF"}},"events":[{"type":"SimEvent","id":"89C6C8FC-199A-43B4-A97E-8F7FEE736FC2","front_office":"T-1","pick":1,"round":1,"round_pick":1,"player":"P-1"},{"type":"SimEvent","id":"70D738BF-9FB3-48EB-9552-6E0A743CDC2D","front_office":"T-2","pick":2,"round":1,"round_pick":2,"player":"P-9"},{"type":"SimEvent","id":"D9E94B04-831D-496B-B898-26D0B82BF9E7","front_office":"T-3","pick":3,"round":1,"round_pick":3,"player":"P-20"}]},"league":{"free_agents":["P-2","P-3","P-4","P-5","P-6","P-7","P-8","P-10","P-11","P-12","P-13","P-14","P-15","P-16","P-17","P-18","P-19"],"rosters":{"T-1":{"players":["P-1"]},"T-2":{"players":["P-9"]},"T-3":{"players":["P-20"]}}}}
+{
+  "info": {
+    "total_picks": 9,
+    "current_round": 2,
+    "current_round_pick": 1,
+    "current_front_office": "T-1",
+    "current_pick": 4,
+    "remaining_picks": 6,
+    "done": false
+  },
+  "engine": {
+    "rounds": 3,
+    "front_offices": {
+      "T-1": {
+        "name": "South Dakota cattle",
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "C",
+          "PG",
+          "SF",
+          "PF",
+          "SG",
+          "SG",
+          "C",
+          "PG",
+          "PF",
+          "SF",
+          "PF",
+          "PF"
+        ]
+      },
+      "T-2": {
+        "name": "Oregon giants",
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "SF",
+          "PF",
+          "SG",
+          "PG",
+          "C",
+          "C",
+          "SG",
+          "SF",
+          "PF",
+          "PG",
+          "PF",
+          "SG"
+        ]
+      },
+      "T-3": {
+        "name": "Georgia monkeys",
+        "fuzz": 0,
+        "depth": 0,
+        "prioritized_positions": [
+          "PF",
+          "SF",
+          "SG",
+          "C",
+          "PG",
+          "SF",
+          "SG",
+          "C",
+          "PG",
+          "PF",
+          "SF",
+          "PG"
+        ]
+      }
+    },
+    "players": {
+      "P-1": {
+        "first_name": "Carlyn",
+        "last_name": "Witting",
+        "overall": 91,
+        "position": "C"
+      },
+      "P-2": {
+        "first_name": "Merlin",
+        "last_name": "O'Conner",
+        "overall": 1,
+        "position": "SG"
+      },
+      "P-3": {
+        "first_name": "Angelika",
+        "last_name": "Harber",
+        "overall": 53,
+        "position": "PF"
+      },
+      "P-4": {
+        "first_name": "Lynn",
+        "last_name": "Kihn",
+        "overall": 82,
+        "position": "SG"
+      },
+      "P-5": {
+        "first_name": "Stephine",
+        "last_name": "Jerde",
+        "overall": 0,
+        "position": "C"
+      },
+      "P-6": {
+        "first_name": "Oralia",
+        "last_name": "Rolfson",
+        "overall": 33,
+        "position": "SG"
+      },
+      "P-7": {
+        "first_name": "Donny",
+        "last_name": "Senger",
+        "overall": 19,
+        "position": "C"
+      },
+      "P-8": {
+        "first_name": "Rosia",
+        "last_name": "Carter",
+        "overall": 23,
+        "position": "SF"
+      },
+      "P-9": {
+        "first_name": "Phoebe",
+        "last_name": "Hartmann",
+        "overall": 71,
+        "position": "SF"
+      },
+      "P-10": {
+        "first_name": "Lashandra",
+        "last_name": "Lebsack",
+        "overall": 15,
+        "position": "SF"
+      },
+      "P-11": {
+        "first_name": "Darin",
+        "last_name": "Towne",
+        "overall": 49,
+        "position": "PF"
+      },
+      "P-12": {
+        "first_name": "Hazel",
+        "last_name": "Oberbrunner",
+        "overall": 32,
+        "position": "C"
+      },
+      "P-13": {
+        "first_name": "Graham",
+        "last_name": "O'Keefe",
+        "overall": 58,
+        "position": "PG"
+      },
+      "P-14": {
+        "first_name": "Cathey",
+        "last_name": "Dicki",
+        "overall": 84,
+        "position": "PG"
+      },
+      "P-15": {
+        "first_name": "Dorris",
+        "last_name": "Beer",
+        "overall": 22,
+        "position": "SG"
+      },
+      "P-16": {
+        "first_name": "Ezekiel",
+        "last_name": "Hilpert",
+        "overall": 53,
+        "position": "PF"
+      },
+      "P-17": {
+        "first_name": "Jordan",
+        "last_name": "Spinka",
+        "overall": 40,
+        "position": "C"
+      },
+      "P-18": {
+        "first_name": "Dusty",
+        "last_name": "Ratke",
+        "overall": 43,
+        "position": "C"
+      },
+      "P-19": {
+        "first_name": "Raylene",
+        "last_name": "Ernser",
+        "overall": 24,
+        "position": "PF"
+      },
+      "P-20": {
+        "first_name": "Nicolette",
+        "last_name": "Ziemann",
+        "overall": 89,
+        "position": "PF"
+      }
+    },
+    "events": [
+      {
+        "type": "SimEvent",
+        "front_office": "T-1",
+        "pick": 1,
+        "round": 1,
+        "round_pick": 1,
+        "player": "P-1"
+      },
+      {
+        "type": "SimEvent",
+        "front_office": "T-2",
+        "pick": 2,
+        "round": 1,
+        "round_pick": 2,
+        "player": "P-9"
+      },
+      {
+        "type": "SimEvent",
+        "front_office": "T-3",
+        "pick": 3,
+        "round": 1,
+        "round_pick": 3,
+        "player": "P-20"
+      }
+    ]
+  },
+  "league": {
+    "free_agents": [
+      "P-2",
+      "P-3",
+      "P-4",
+      "P-5",
+      "P-6",
+      "P-7",
+      "P-8",
+      "P-10",
+      "P-11",
+      "P-12",
+      "P-13",
+      "P-14",
+      "P-15",
+      "P-16",
+      "P-17",
+      "P-18",
+      "P-19"
+    ],
+    "rosters": {
+      "T-1": {
+        "players": [
+          "P-1"
+        ]
+      },
+      "T-2": {
+        "players": [
+          "P-9"
+        ]
+      },
+      "T-3": {
+        "players": [
+          "P-20"
+        ]
+      }
+    }
+  }
+}

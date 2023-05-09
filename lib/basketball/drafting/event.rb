@@ -2,11 +2,11 @@
 
 module Basketball
   module Drafting
-    class Event < Entity
-      attr_reader :pick, :round, :round_pick, :front_office
+    class Event < ValueObject
+      attr_reader_value :pick, :round, :round_pick, :front_office
 
-      def initialize(id:, front_office:, pick:, round:, round_pick:)
-        super(id)
+      def initialize(front_office:, pick:, round:, round_pick:)
+        super()
 
         raise ArgumentError, 'front_office required' unless front_office
 

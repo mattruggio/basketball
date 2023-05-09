@@ -115,7 +115,6 @@ module Basketball
         events.map do |event|
           {
             type: event.class.name.split('::').last,
-            id: event.id,
             front_office: event.front_office.id,
             pick: event.pick,
             round: event.round,
@@ -157,7 +156,7 @@ module Basketball
 
       def deserialize_events(json, players, front_offices)
         (json.dig(:engine, :events) || []).map do |event_hash|
-          event_opts = event_hash.slice(:id, :pick, :round, :round_pick).merge(
+          event_opts = event_hash.slice(:pick, :round, :round_pick).merge(
             front_office: front_offices.find { |t| t.id == event_hash[:front_office] }
           )
 

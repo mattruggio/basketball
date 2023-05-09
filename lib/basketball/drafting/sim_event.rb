@@ -3,10 +3,10 @@
 module Basketball
   module Drafting
     class SimEvent < Event
-      attr_reader :player
+      attr_reader_value :player
 
-      def initialize(id:, front_office:, player:, pick:, round:, round_pick:)
-        super(id:, front_office:, pick:, round:, round_pick:)
+      def initialize(front_office:, player:, pick:, round:, round_pick:)
+        super(front_office:, pick:, round:, round_pick:)
 
         raise ArgumentError, 'player required' unless player
 

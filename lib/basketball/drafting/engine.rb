@@ -100,7 +100,6 @@ module Basketball
         return if done?
 
         event = SkipEvent.new(
-          id: SecureRandom.uuid,
           front_office: current_front_office,
           pick: current_pick,
           round: current_round,
@@ -126,7 +125,6 @@ module Basketball
           )
 
           event = SimEvent.new(
-            id: SecureRandom.uuid,
             front_office:,
             player:,
             pick: current_pick,
@@ -149,7 +147,6 @@ module Basketball
         return nil if done?
 
         event = PickEvent.new(
-          id: SecureRandom.uuid,
           front_office: current_front_office,
           player:,
           pick: current_pick,
