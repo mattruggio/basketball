@@ -2,20 +2,24 @@
 
 module Basketball
   module Scheduling
-    class Calendar
+    class Calendar < ValueObject
       class TeamAlreadyBookedError < StandardError; end
       class InvalidGameOrderError < StandardError; end
       class OutOfBoundsError < StandardError; end
 
-      attr_reader :games,
-                  :preseason_start_date,
+      attr_reader :preseason_start_date,
                   :preseason_end_date,
                   :season_start_date,
                   :season_end_date
 
+      attr_reader_value :year, :games
+
       def initialize(year:, games: [])
+        super()
+
         raise ArgumentError, 'year is required' unless year
 
+        @year                 = year
         @preseason_start_date = Date.new(year, 9, 30)
         @preseason_end_date   = Date.new(year, 10, 14)
         @season_start_date    = Date.new(year, 10, 18)
@@ -64,6 +68,10 @@ module Basketball
         available_other_team_dates = available_preseason_dates_for(team2)
 
         available_team_dates & available_other_team_dates
+      end
+
+      def teams
+        games.flat_map(&:teams)
       end
 
       private

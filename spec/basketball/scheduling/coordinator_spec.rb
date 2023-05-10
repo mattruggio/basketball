@@ -6,10 +6,8 @@ require 'scheduling_helper'
 describe Basketball::Scheduling::Coordinator do
   subject(:coordinator) { described_class.new }
 
-  let(:contents)          { read_fixture('scheduling', 'league.json') }
-  let(:league_serializer) { Basketball::Scheduling::LeagueSerializer.new }
-  let(:league)            { league_serializer.deserialize(contents) }
-  let(:year)              { 2023 }
+  let(:league) { read_league_fixture('scheduling', 'league.json') }
+  let(:year)   { 2023 }
 
   describe '#schedule' do
     specify 'all teams play between 4 and 6 preseason games' do

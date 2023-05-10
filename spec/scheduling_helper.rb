@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+def read_league_fixture(*path)
+  Basketball::Scheduling::LeagueSerializer.new.deserialize(read_fixture(*path))
+end
+
 def make_id
   SecureRandom.uuid
 end
