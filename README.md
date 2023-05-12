@@ -32,6 +32,10 @@ This library is broken down into several bounded contexts that can be consumed e
 
 ![Basketball Architecture - Overview](/docs/architecture/overview.png)
 
+#### Command Line Interfaces
+
+Each module is meant to be interfaced with using its Ruby API by consuming applications.  Each module also ships with a CLI script (backed by a module service) which a user can interact with to emulate different portions of the league management process.  Technically speaking, the CLI provides an example application built on top of the each individual core module. Each module section below should contain with it example CLI calls.
+
 ## Drafting Module
 
 The drafting module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
@@ -53,65 +57,65 @@ Element      | Description
 **Sim Event** | Result event emitted when a player is automatically selected by a front office.
 **Skip Event** | Result event emitted when a front office decides to skip a round.
 
-### The Drafting CLI
+#### The Drafting CLI
 
-The drafting module is meant to be interfaced with using its Ruby API by consuming applications.  It also ships with a CLI which a user can interact with to emulate "the draft process".  Technically speaking, the CLI provides an example application built on top of the Drafting module.  Each time a CLI command is executed, its results will be resaved, so the output file can then be used as the next command's input file to string together commands.  The following sections are example CLI interactions:
+The drafting module's main object: `Basketball::Drafting::Engine` is a stateful iterator. Each time a CLI command is executed, it's results will be re-saved to disk so the output file can then be used as the next command's input file to string together commands.
 
-##### Generate a Fresh Draft
+###### Generate a Fresh Draft
 
 ```zsh
 basketball-draft -o tmp/draft.json
 ```
 
-##### N Top Available Players
+###### N Top Available Players
 
 ```zsh
 basketball-draft -i tmp/draft.json -t 10
 ```
 
-##### N Top Available Players for a Position
+###### N Top Available Players for a Position
 
 ```zsh
 basketball-draft -i tmp/draft.json -t 10 -q PG
 ```
 
-##### Output Current Rosters
+###### Output Current Rosters
 
 ```zsh
 basketball-draft -i tmp/draft.json -r
 ```
 
-##### Output Event Log
+###### Output Event Log
 
 ```zsh
 basketball-draft -i tmp/draft.json -l
 ```
 
-##### Simulate N Picks
+###### Simulate N Picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -s 10
 ```
 
-##### Skip N Picks
+###### Skip N Picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -x 10
 ```
 
-##### Pick Players
+###### Pick Players
 
 ```zsh
 basketball-draft -i tmp/draft.json -p P-100,P-200,P-300
 ```
 
-##### Simulate the Rest of the Draft
+###### Simulate the Rest of the Draft
 
 ```zsh
 basketball-draft -i tmp/draft.json -a
 ```
 
-##### Help Menu
+###### Help Menu
 
 ```zsh
 basketball-draft -h
@@ -138,49 +142,51 @@ Element      | Description
 **Scheduling** | Bounded context (sub-module) dealing with matchup and calendar generation.
 **Team** | Identified by an ID and described by a name: represents a basketball team that can be scheduled.
 
-##### Generate League
+#### The Scheduling CLI
+
+###### Generate League
 
 ```zsh
 basketball-schedule -o tmp/league.json
 ```
 
-##### Generate Calendar From League
+###### Generate Calendar From League
 
 ```zsh
 basketball-schedule -i tmp/league.json -o tmp/calendar.json
 ```
 
-##### Generate Calendar From League For a Specific Year
+###### Generate Calendar From League For a Specific Year
 
 ```zsh
 basketball-schedule -i tmp/league.json -o tmp/calendar.json -y 2005
 ```
 
-##### Output a Generated Calendar's Matchups
+###### Output a Generated Calendar's Matchups
 
 ```zsh
 basketball-schedule -c tmp/calendar.json
 ```
 
-##### Output a Generated Calendar's Matchups For a Specific Team
+###### Output a Generated Calendar's Matchups For a Specific Team
 
 ```zsh
 basketball-schedule -c tmp/calendar.json -t C0-D0-T0
 ```
 
-##### Output a Generated Calendar's Matchups For a Specific Date
+###### Output a Generated Calendar's Matchups For a Specific Date
 
 ```zsh
 basketball-schedule -c tmp/calendar.json -d 2005-02-03
 ```
 
-##### Output a Generated Calendar's Matchups For a Specific Team and Date
+###### Output a Generated Calendar's Matchups For a Specific Team and Date
 
 ```zsh
 basketball-schedule -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
 ```
 
-##### Help Menu
+###### Help Menu
 
 ```zsh
 basketball-schedule -h
