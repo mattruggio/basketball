@@ -1,0 +1,7981 @@
+{
+  "year": 2005,
+  "teams": {
+    "C0-D0-T0": {
+      "name": "New Mexico conspirators"
+    },
+    "C0-D2-T4": {
+      "name": "Wyoming horses"
+    },
+    "C1-D1-T2": {
+      "name": "Minnesota lions"
+    },
+    "C0-D1-T4": {
+      "name": "Indiana conspirators"
+    },
+    "C1-D1-T4": {
+      "name": "Texas chimeras"
+    },
+    "C0-D2-T3": {
+      "name": "North Carolina nemesis"
+    },
+    "C1-D2-T0": {
+      "name": "California owls"
+    },
+    "C0-D0-T1": {
+      "name": "Indiana lycanthropes"
+    },
+    "C0-D2-T2": {
+      "name": "Georgia zebras"
+    },
+    "C1-D0-T3": {
+      "name": "Arkansas elephants"
+    },
+    "C0-D0-T2": {
+      "name": "Kentucky bees"
+    },
+    "C1-D2-T2": {
+      "name": "Louisiana geese"
+    },
+    "C1-D2-T3": {
+      "name": "Arkansas oxen"
+    },
+    "C1-D1-T0": {
+      "name": "Alabama spiders"
+    },
+    "C0-D0-T3": {
+      "name": "Kentucky worshipers"
+    },
+    "C1-D1-T1": {
+      "name": "Georgia chimeras"
+    },
+    "C1-D1-T3": {
+      "name": "Wisconsin exorcists"
+    },
+    "C0-D0-T4": {
+      "name": "Nevada prophets"
+    },
+    "C1-D0-T0": {
+      "name": "Pennsylvania crows"
+    },
+    "C0-D2-T1": {
+      "name": "Utah exorcists"
+    },
+    "C0-D1-T0": {
+      "name": "Mississippi ducks"
+    },
+    "C1-D0-T2": {
+      "name": "Rhode Island ghosts"
+    },
+    "C0-D1-T2": {
+      "name": "Louisiana griffins"
+    },
+    "C0-D1-T1": {
+      "name": "Alaska dwarves"
+    },
+    "C0-D1-T3": {
+      "name": "Montana warlocks"
+    },
+    "C1-D0-T1": {
+      "name": "Utah ducks"
+    },
+    "C0-D2-T0": {
+      "name": "New Jersey worshipers"
+    },
+    "C1-D0-T4": {
+      "name": "California elves"
+    },
+    "C1-D2-T4": {
+      "name": "Iowa vampires"
+    },
+    "C1-D2-T1": {
+      "name": "Illinois sons"
+    }
+  },
+  "games": [
+    {
+      "type": "PreseasonGame",
+      "date": "2005-09-30",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-09-30",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-09-30",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-09-30",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-09-30",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-01",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-01",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-01",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-01",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-02",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-03",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-03",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-03",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-04",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-05",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-06",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-07",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-07",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-07",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-07",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-07",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-08",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-08",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-08",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-08",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-09",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-09",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-09",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-09",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-09",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-10",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-10",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-10",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-10",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-10",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-11",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-11",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-11",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-11",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-12",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-13",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "PreseasonGame",
+      "date": "2005-10-14",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-18",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-18",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-18",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-18",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-18",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-19",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-20",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-21",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-22",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-23",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-24",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-25",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-26",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-26",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-26",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-26",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-27",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-28",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-29",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-29",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-29",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-29",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-29",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-30",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-10-31",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-01",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-01",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-01",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-01",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-02",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-03",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-04",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-05",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-05",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-05",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-05",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-05",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-06",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-07",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-08",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-09",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-09",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-09",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-09",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-10",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-10",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-10",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-10",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-10",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-11",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-11",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-11",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-11",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-12",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-12",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-12",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-12",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-12",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-13",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-14",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-15",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-15",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-15",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-15",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-15",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-16",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-16",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-16",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-16",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-16",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-17",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-18",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-18",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-18",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-18",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-18",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-19",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-20",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-21",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-21",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-21",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-21",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-22",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-22",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-22",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-23",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-24",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-24",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-24",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-24",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-24",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-25",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-26",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-26",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-26",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-26",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-26",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-27",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-28",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-29",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-11-30",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-01",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-02",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-03",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-04",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-04",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-05",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-06",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-07",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-08",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-08",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-09",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-10",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-11",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-12",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-13",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-14",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-15",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-15",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-15",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-15",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-16",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-17",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-18",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-19",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-20",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-21",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-22",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-23",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-23",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-23",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-24",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-25",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-26",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-27",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-27",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-27",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-27",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-27",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-28",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-28",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-28",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-29",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-29",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-29",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-29",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-30",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-31",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-31",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-31",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-31",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2005-12-31",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-01",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-01",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-01",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-02",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-03",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-04",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-04",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-04",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-04",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-05",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-05",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-05",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-05",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-05",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-06",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-06",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-06",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-06",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-07",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-08",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-09",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-10",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-11",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-11",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-11",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-11",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-12",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-13",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-13",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-13",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-14",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-15",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-15",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-15",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-15",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-16",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-17",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-18",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-18",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-18",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-18",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-19",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-20",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-21",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-22",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-23",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-24",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-25",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-26",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-27",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-28",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-29",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-30",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-01-31",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-01",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-02",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-02",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-02",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-02",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-02",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-03",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-04",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-04",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-04",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-04",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-04",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-05",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-06",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-06",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-06",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-07",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-07",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-07",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-07",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-07",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-08",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-09",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-10",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-11",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-12",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-12",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-12",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-12",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-13",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-14",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-15",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-16",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-17",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-18",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-18",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-18",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-18",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-19",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-20",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-21",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-22",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-22",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-22",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-22",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-22",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-23",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-24",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-25",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-26",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-27",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-02-28",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-01",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-02",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-03",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-03",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-03",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-03",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-04",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-05",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-06",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-06",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-06",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-06",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-06",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-07",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-07",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-07",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-07",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-07",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-08",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-09",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-10",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C0-D0-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-11",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-12",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-13",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-14",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-14",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-14",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-14",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-14",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-15",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-16",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-17",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-18",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-18",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-18",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-18",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-18",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-19",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-20",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-20",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-20",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-20",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-20",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-21",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-22",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-22",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C1-D1-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-23",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-24",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-24",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-24",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-25",
+      "home_team": "C0-D0-T4",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-25",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-25",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-25",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-25",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-26",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-26",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-26",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-26",
+      "home_team": "C1-D1-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-27",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-28",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-28",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-28",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-28",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-28",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-29",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-30",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-03-31",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-01",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-02",
+      "home_team": "C0-D2-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-02",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-02",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-02",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-02",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-03",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-04",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-05",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-06",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-07",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-07",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-07",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-07",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-07",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C1-D1-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-08",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-09",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-09",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-09",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-09",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-10",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C0-D1-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-11",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C0-D2-T0",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-12",
+      "home_team": "C1-D1-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-13",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C0-D1-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C1-D2-T3",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-14",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-15",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-15",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-15",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-15",
+      "home_team": "C0-D1-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-15",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D0-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-16",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-17",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-17",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-17",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-17",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-17",
+      "home_team": "C1-D0-T1",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-18",
+      "home_team": "C1-D1-T2",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C0-D2-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C1-D1-T1",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C1-D0-T4",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-19",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C1-D0-T2",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C0-D2-T1",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-20",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C0-D1-T0",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C0-D2-T0",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C0-D1-T4",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-21",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C1-D1-T4",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C1-D2-T4",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C0-D0-T2",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C0-D2-T3",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-22",
+      "home_team": "C0-D0-T3",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-23",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-23",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-23",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-23",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-23",
+      "home_team": "C1-D0-T0",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C0-D2-T2",
+      "away_team": "C0-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C1-D2-T0",
+      "away_team": "C0-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-24",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C1-D2-T1",
+      "away_team": "C0-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C0-D0-T3",
+      "away_team": "C0-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C1-D2-T2",
+      "away_team": "C0-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-25",
+      "home_team": "C0-D2-T3",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C1-D2-T2",
+      "away_team": "C1-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C0-D1-T3",
+      "away_team": "C1-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C1-D2-T0",
+      "away_team": "C1-D2-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C1-D0-T3",
+      "away_team": "C0-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C1-D1-T0",
+      "away_team": "C0-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C0-D0-T0",
+      "away_team": "C1-D2-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C0-D0-T4",
+      "away_team": "C1-D1-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-26",
+      "home_team": "C0-D1-T1",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C1-D0-T0",
+      "away_team": "C1-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C1-D0-T4",
+      "away_team": "C1-D1-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C0-D2-T4",
+      "away_team": "C0-D2-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C0-D1-T3",
+      "away_team": "C0-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-27",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C1-D2-T3",
+      "away_team": "C1-D0-T0"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C0-D1-T0",
+      "away_team": "C1-D0-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C0-D0-T0",
+      "away_team": "C0-D1-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C0-D0-T1",
+      "away_team": "C1-D0-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C1-D2-T4",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C1-D1-T3",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-28",
+      "home_team": "C1-D2-T1",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C1-D0-T3",
+      "away_team": "C1-D1-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C1-D0-T2",
+      "away_team": "C0-D2-T1"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C0-D0-T1",
+      "away_team": "C0-D1-T3"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C0-D2-T2",
+      "away_team": "C1-D2-T2"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C0-D1-T1",
+      "away_team": "C1-D0-T4"
+    },
+    {
+      "type": "SeasonGame",
+      "date": "2006-04-29",
+      "home_team": "C1-D1-T2",
+      "away_team": "C1-D2-T4"
+    }
+  ]
+}
