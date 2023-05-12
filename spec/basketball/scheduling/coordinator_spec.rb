@@ -19,5 +19,15 @@ describe Basketball::Scheduling::Coordinator do
         expect(count).to be_between(4, 6), "#{team} only plays #{count} preseason games"
       end
     end
+
+    specify 'all teams play 82 eseason games' do
+      calendar = coordinator.schedule(year:, league:)
+
+      league.teams.each do |team|
+        count = calendar.season_games_for(team:).length
+
+        expect(count).to eq(82), "#{team} plays #{count} season games"
+      end
+    end
   end
 end

@@ -70,6 +70,13 @@ module Basketball
         available_team_dates & available_other_team_dates
       end
 
+      def available_season_matchup_dates(team1, team2)
+        available_team_dates       = available_season_dates_for(team1)
+        available_other_team_dates = available_season_dates_for(team2)
+
+        available_team_dates & available_other_team_dates
+      end
+
       def teams
         games.flat_map(&:teams)
       end
