@@ -87,13 +87,13 @@ basketball-draft -i tmp/draft.json -r
 basketball-draft -i tmp/draft.json -l
 ```
 
-##### Simulate N picks
+##### Simulate N Picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -s 10
 ```
 
-##### Skip N picks
+##### Skip N Picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -x 10
@@ -137,6 +137,54 @@ Element      | Description
 **League** | Describes a league in terms of structure; composed of an array conferences (there can only be 2).
 **Scheduling** | Bounded context (sub-module) dealing with matchup and calendar generation.
 **Team** | Identified by an ID and described by a name: represents a basketball team that can be scheduled.
+
+##### Generate League
+
+```zsh
+basketball-schedule -o tmp/league.json
+```
+
+##### Generate Calendar From League
+
+```zsh
+basketball-schedule -i tmp/league.json -o tmp/calendar.json
+```
+
+##### Generate Calendar From League For a Specific Year
+
+```zsh
+basketball-schedule -i tmp/league.json -o tmp/calendar.json -y 2005
+```
+
+##### Output a Generated Calendar's Matchups
+
+```zsh
+basketball-schedule -c tmp/calendar.json
+```
+
+##### Output a Generated Calendar's Matchups For a Specific Team
+
+```zsh
+basketball-schedule -c tmp/calendar.json -t C0-D0-T0
+```
+
+##### Output a Generated Calendar's Matchups For a Specific Date
+
+```zsh
+basketball-schedule -c tmp/calendar.json -d 2005-02-03
+```
+
+##### Output a Generated Calendar's Matchups For a Specific Team and Date
+
+```zsh
+basketball-schedule -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
+```
+
+##### Help Menu
+
+```zsh
+basketball-schedule -h
+```
 
 ## Contributing
 
