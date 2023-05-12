@@ -7,7 +7,7 @@ require_relative 'position'
 
 module Basketball
   module Drafting
-    # Example:
+    # Examples:
     #   exe/basketball-draft -o tmp/draft.json
     #   exe/basketball-draft -i tmp/draft.json -o tmp/draft-wip.json -s 26 -p P-5,P-10 -t 10 -q PG
     #   exe/basketball-draft -i tmp/draft-wip.json -x 2
@@ -69,7 +69,7 @@ module Basketball
 
       def slop_parse(args)
         Slop.parse(args) do |o|
-          o.banner = 'Usage: draft [options] ...'
+          o.banner = 'Usage: basketball-draft [options] ...'
 
           o.string  '-i', '--input',
                     'Path to load the engine from. If omitted then a new draft will be generated.'

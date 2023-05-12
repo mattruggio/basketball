@@ -23,6 +23,10 @@ module Basketball
       def teams
         [home_team, away_team]
       end
+
+      def to_s
+        "#{date} - #{away_team} at #{home_team}"
+      end
     end
   end
 end

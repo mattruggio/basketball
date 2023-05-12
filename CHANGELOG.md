@@ -1,3 +1,8 @@
+#### 0.0.6 - May 11th, 2023
+
+* Added Scheduling module that can generate full schedules for entire league.
+* Drafting::Event does not have identity anymore (no current tangible benefit).
+
 #### 0.0.5 - May 5th, 2023
 
 * Remove the notion of Team in favor of a flat front office.

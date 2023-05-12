@@ -70,7 +70,7 @@ module Basketball
       end
 
       def serialize_games(games)
-        games.map do |game|
+        games.sort_by(&:date).map do |game|
           {
             type: game.class.name.split('::').last,
             date: game.date,

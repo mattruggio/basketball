@@ -30,13 +30,13 @@ bundle binstubs basketball
 
 This library is broken down into several bounded contexts that can be consumed either via its Ruby API's or CLI through provided executable scripts:
 
-![Basketball Architecture - Overview.png](/docs/architecture/overview.png)
+![Basketball Architecture - Overview](/docs/architecture/overview.png)
 
 ## Drafting Module
 
 The drafting module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
 
-![Basketball Architecture - Drafting.png](/docs/architecture/drafting.png)
+![Basketball Architecture - Drafting](/docs/architecture/drafting.png)
 
 Element      | Description
 :------------ | :-----------
@@ -57,59 +57,86 @@ Element      | Description
 
 The drafting module is meant to be interfaced with using its Ruby API by consuming applications.  It also ships with a CLI which a user can interact with to emulate "the draft process".  Technically speaking, the CLI provides an example application built on top of the Drafting module.  Each time a CLI command is executed, its results will be resaved, so the output file can then be used as the next command's input file to string together commands.  The following sections are example CLI interactions:
 
-#### Generate a Fresh Draft
+##### Generate a Fresh Draft
 
 ```zsh
 basketball-draft -o tmp/draft.json
 ```
 
-#### N Top Available Players
+##### N Top Available Players
 
 ```zsh
 basketball-draft -i tmp/draft.json -t 10
 ```
 
-#### N Top Available Players for a Position
+##### N Top Available Players for a Position
 
 ```zsh
 basketball-draft -i tmp/draft.json -t 10 -q PG
 ```
 
-#### Output Current Rosters
+##### Output Current Rosters
 
 ```zsh
 basketball-draft -i tmp/draft.json -r
 ```
 
-#### Output Event Log
+##### Output Event Log
 
 ```zsh
 basketball-draft -i tmp/draft.json -l
 ```
 
-#### Simulate N picks
+##### Simulate N picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -s 10
 ```
 
-#### Skip N picks
+##### Skip N picks
 
 ```zsh
 basketball-draft -i tmp/draft.json -x 10
 ```
 
-#### Pick Players
+##### Pick Players
 
 ```zsh
 basketball-draft -i tmp/draft.json -p P-100,P-200,P-300
 ```
 
-#### Simulate the Rest of the Draft
+##### Simulate the Rest of the Draft
 
 ```zsh
 basketball-draft -i tmp/draft.json -a
 ```
+
+##### Help Menu
+
+```zsh
+basketball-draft -h
+```
+
+## Scheduling Module
+
+The Scheduling module is meant to take a League (conferences/divisions/teams) and turn it into a Calendar.  This Calendar creation is atomic - the full calendar will be generated completely all in one call.  Here is a cartoon showing the major components:
+
+![Basketball Architecture - Scheduling](/docs/architecture/scheduling.png)
+
+Element      | Description
+:------------ | :-----------
+**Away Team** | Team object designated as the away team for a Game.
+**Calendar Serializer** | Understands how to serialize and deserialize a Calendar object.
+**Calendar** | Hold a calendar for a year season.  Pass in a year and the Calendar will know how to mark important boundary dates (preseason start, preseason end, season start, and season end) and it knows how to ensure Calendar correctness regarding dates.
+**Conference** | Describes a conference in terms of structure; composed of an array of divisions (there can only 3).
+**Coordinator** | Service which can generate a Calendar from a League.
+**Division** | Describes a division in terms of structure; composed of an array of teams (there can only 5).
+**Game** | Matches up a date with two teams (home and away) to represent a scheduled matchup.
+**Home Team** | Team object designated as the home team for a Game.
+**League Serializer** | Understands how to serialize and deserialize a League object.
+**League** | Describes a league in terms of structure; composed of an array conferences (there can only be 2).
+**Scheduling** | Bounded context (sub-module) dealing with matchup and calendar generation.
+**Team** | Identified by an ID and described by a name: represents a basketball team that can be scheduled.
 
 ## Contributing
 

@@ -81,6 +81,10 @@ module Basketball
         games.flat_map(&:teams)
       end
 
+      def team(id)
+        teams.find { |t| t == Team.new(id:) }
+      end
+
       private
 
       def all_preseason_dates

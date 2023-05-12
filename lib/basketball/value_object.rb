@@ -4,14 +4,23 @@ module Basketball
   class ValueObject
     include Comparable
 
-    # NOTE: This current implementation most likely does not work for deep inheritance trees.
     class << self
-      def value_keys
-        @value_keys ||= []
+      def all_value_keys
+        @all_value_keys ||= ancestors.flat_map do |ancestor|
+          if ancestor < Basketball::ValueObject
+            ancestor.value_keys
+          else
+            []
+          end
+        end.uniq.sort
       end
 
-      def sorted_value_keys
-        value_keys.sort
+      def all_sorted_value_keys
+        all_value_keys.sort
+      end
+
+      def value_keys
+        @value_keys ||= []
       end
 
       def attr_reader_value(*keys)
@@ -26,7 +35,7 @@ module Basketball
     end
 
     def to_h
-      self.class.sorted_value_keys.to_h { |k| [k, send(k)] }
+      self.class.all_sorted_value_keys.to_h { |k| [k, send(k)] }
     end
 
     def [](key)
@@ -47,7 +56,7 @@ module Basketball
     end
 
     def all_sorted_values
-      self.class.sorted_value_keys.map { |k| self[k] }
+      self.class.all_sorted_value_keys.map { |k| self[k] }
     end
   end
 end
