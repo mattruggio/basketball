@@ -2,7 +2,6 @@
 
 require 'spec_helper'
 
-# rubocop:disable RSpec/NoExpectationExample
 describe Basketball::Drafting::CLI do
   describe 'feature tests' do
     let(:input_path) { fixture_path(dir, 'input.json') }
@@ -19,7 +18,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim 1 pick' do
@@ -29,7 +28,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim 2 picks' do
@@ -39,7 +38,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim 3 picks' do
@@ -49,7 +48,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim 4 picks' do
@@ -59,7 +58,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim all picks' do
@@ -69,7 +68,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
     end
 
@@ -83,7 +82,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim 1 pick' do
@@ -93,7 +92,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
 
       specify 'sim all picks' do
@@ -103,7 +102,7 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
     end
 
@@ -118,22 +117,8 @@ describe Basketball::Drafting::CLI do
 
         described_class.new(args:, io:).invoke!
 
-        compare_outputs(output_path, expected_path)
+        expect(output_path).to produce_same_json_draft(expected_path)
       end
     end
   end
-
-  # rubocop:disable Metrics/AbcSize
-  def compare_outputs(actual_path, expected_path)
-    actual   = JSON.parse(File.read(actual_path), symbolize_names: true)
-    expected = JSON.parse(File.read(expected_path), symbolize_names: true)
-
-    expect(actual[:info]).to                       eq(expected[:info])
-    expect(actual.dig(:engine, :front_offices)).to eq(expected.dig(:engine, :front_offices))
-    expect(actual.dig(:engine, :players)).to       eq(expected.dig(:engine, :players))
-    expect(actual.dig(:engine, :events)).to        eq(expected.dig(:engine, :events))
-    expect(actual[:league]).to                     eq(expected[:league])
-  end
-  # rubocop:enable Metrics/AbcSize
 end
-# rubocop:enable RSpec/NoExpectationExample

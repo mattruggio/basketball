@@ -26,6 +26,23 @@ RSpec.configure do |config|
   config.before(:suite) do
     FileUtils.rm_rf(TEMP_DIR)
   end
+
+  RSpec::Matchers.define :produce_same_json_draft do |expected_path|
+    match do |actual_path|
+      actual   = JSON.parse(File.read(actual_path), symbolize_names: true)
+      expected = JSON.parse(File.read(expected_path), symbolize_names: true)
+
+      actual[:info] == expected[:info] &&
+        actual.dig(:engine, :front_offices) == expected.dig(:engine, :front_offices) &&
+        actual.dig(:engine, :players) == expected.dig(:engine, :players) &&
+        actual.dig(:engine, :events) == expected.dig(:engine, :events) &&
+        actual[:league] == expected[:league]
+    end
+
+    failure_message do |actual_path|
+      "expected that #{actual_path} would have equal parts to #{expected_path}"
+    end
+  end
 end
 
 require 'rspec/expectations'
