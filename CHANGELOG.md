@@ -1,3 +1,8 @@
+#### 0.0.7 - May 14th, 2023
+
+* Added #to_hash and #from_hash serializer methods to allow larger consumer json constructions more directly.
+* Opt for string keys during serialization/deserialization.
+
 #### 0.0.6 - May 11th, 2023
 
 * Added Scheduling module that can generate full schedules for entire league.
