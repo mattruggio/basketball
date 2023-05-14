@@ -3,17 +3,26 @@
 module Basketball
   module Scheduling
     class LeagueSerializer
-      def deserialize(string)
-        json        = JSON.parse(string, symbolize_names: true)
-        conferences = deserialize_conferences(json[:conferences])
+      def to_hash(league)
+        {
+          'conferences' => serialize_conferences(league.conferences)
+        }
+      end
+
+      def from_hash(json)
+        conferences = deserialize_conferences(json['conferences'])
 
         League.new(conferences:)
       end
 
+      def deserialize(string)
+        json = JSON.parse(string)
+
+        from_hash(json)
+      end
+
       def serialize(league)
-        {
-          conferences: serialize_conferences(league.conferences)
-        }.to_json
+        to_hash(league).to_json
       end
 
       private
@@ -24,8 +33,8 @@ module Basketball
         (conferences || []).map do |conference_id, conference_hash|
           Conference.new(
             id: conference_id,
-            name: conference_hash[:name],
-            divisions: deserialize_divisions(conference_hash[:divisions])
+            name: conference_hash['name'],
+            divisions: deserialize_divisions(conference_hash['divisions'])
           )
         end
       end
@@ -34,8 +43,8 @@ module Basketball
         (divisions || []).map do |division_id, division_hash|
           Division.new(
             id: division_id,
-            name: division_hash[:name],
-            teams: deserialize_teams(division_hash[:teams])
+            name: division_hash['name'],
+            teams: deserialize_teams(division_hash['teams'])
           )
         end
       end
@@ -44,7 +53,7 @@ module Basketball
         (teams || []).map do |team_id, team_hash|
           Team.new(
             id: team_id,
-            name: team_hash[:name]
+            name: team_hash['name']
           )
         end
       end
@@ -56,8 +65,8 @@ module Basketball
           [
             conference.id,
             {
-              name: conference.name,
-              divisions: serialize_divisions(conference.divisions)
+              'name' => conference.name,
+              'divisions' => serialize_divisions(conference.divisions)
             }
           ]
         end
@@ -68,8 +77,8 @@ module Basketball
           [
             division.id,
             {
-              name: division.name,
-              teams: serialize_teams(division.teams)
+              'name' => division.name,
+              'teams' => serialize_teams(division.teams)
             }
           ]
         end
@@ -80,7 +89,7 @@ module Basketball
           [
             team.id,
             {
-              name: team.name
+              'name' => team.name
             }
           ]
         end

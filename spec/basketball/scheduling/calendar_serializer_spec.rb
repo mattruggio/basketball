@@ -27,6 +27,19 @@ describe Basketball::Scheduling::CalendarSerializer do
     ]
   end
 
+  specify '#to_hash' do
+    actual_contents   = serializer.to_hash(calendar)
+    expected_contents = JSON.parse(contents)
+
+    expect(actual_contents).to eq(expected_contents)
+  end
+
+  specify '#from_hash' do
+    actual_calendar = serializer.from_hash(JSON.parse(contents))
+
+    expect(actual_calendar).to eq(calendar)
+  end
+
   specify '#serialize' do
     actual_contents   = JSON.parse(serializer.serialize(calendar))
     expected_contents = JSON.parse(contents)

@@ -93,19 +93,27 @@ describe Basketball::Scheduling::LeagueSerializer do
     )
   end
 
-  describe '#deserialize' do
-    it 'deserializes conferences' do
-      actual_league = serializer.deserialize(contents)
+  specify '#to_hash' do
+    actual_contents = serializer.to_hash(league)
 
-      expect(actual_league.conferences).to eq(league.conferences)
-    end
+    expect(actual_contents).to eq(JSON.parse(contents))
   end
 
-  describe '#serialize' do
-    it 'serializes conferences' do
-      actual_contents = JSON.parse(serializer.serialize(league))
+  specify '#from_hash' do
+    actual_league = serializer.from_hash(JSON.parse(contents))
 
-      expect(actual_contents).to eq(JSON.parse(contents))
-    end
+    expect(actual_league.conferences).to eq(league.conferences)
+  end
+
+  specify '#deserialize' do
+    actual_league = serializer.deserialize(contents)
+
+    expect(actual_league.conferences).to eq(league.conferences)
+  end
+
+  specify '#serialize' do
+    actual_contents = JSON.parse(serializer.serialize(league))
+
+    expect(actual_contents).to eq(JSON.parse(contents))
   end
 end
