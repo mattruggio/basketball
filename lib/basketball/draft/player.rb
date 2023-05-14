@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Drafting
+  module Draft
     class Player < Entity
       STAR_THRESHOLD         = 75
       OVERALL_STAR_INDICATOR = '⭐'

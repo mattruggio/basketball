@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::Player do
+describe Basketball::Draft::Player do
   subject(:player_with_no_last_name) do
     described_class.new(id:, first_name:, overall:, position:)
   end
@@ -14,7 +14,7 @@ describe Basketball::Drafting::Player do
   let(:first_name) { '  Hops  ' }
   let(:last_name)  { '  The Bunny  ' }
   let(:overall)    { 34 }
-  let(:position) { Basketball::Drafting::Position.new('pf') }
+  let(:position) { Basketball::Draft::Position.new('pf') }
 
   describe 'initialization' do
     it 'sets id' do

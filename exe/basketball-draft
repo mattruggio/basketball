@@ -4,4 +4,4 @@
 require 'bundler/setup'
 require 'basketball'
 
-Basketball::Drafting::CLI.new(args: ARGV).invoke!
+Basketball::Draft::CLI.new(args: ARGV).invoke!

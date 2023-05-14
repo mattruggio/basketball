@@ -3,7 +3,7 @@
 require_relative 'league'
 
 module Basketball
-  module Drafting
+  module Draft
     class Engine
       class AlreadyPickedError < StandardError; end
       class DupeEventError < StandardError; end

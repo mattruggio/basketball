@@ -36,18 +36,18 @@ This library is broken down into several bounded contexts that can be consumed e
 
 Each module is meant to be interfaced with using its Ruby API by consuming applications.  Each module also ships with a CLI script (backed by a module service) which a user can interact with to emulate different portions of the league management process.  Technically speaking, the CLI provides an example application built on top of the each individual core module. Each module section below should contain with it example CLI calls.
 
-## Drafting Module
+## Draft Module
 
-The drafting module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
+The draft module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
 
-![Basketball Architecture - Drafting](/docs/architecture/drafting.png)
+![Basketball Architecture - Draft](/docs/architecture/draft.png)
 
 Element      | Description
 :------------ | :-----------
-**Drafting** | Bounded context (sub-module) dealing with executing an asynchronous draft.
+**Draft** | Bounded context (sub-module) dealing with executing an asynchronous draft.
 **Engine** | Aggregate root responsible for providing an iterable interface capable of executing a draft, pick by pick.
 **Event** | Represents one cycle execution result from the Engine.
-**External Ruby App** | An example consumer for the Drafting context.
+**External Ruby App** | An example consumer for the Draft context.
 **Front Office** | Identifiable as a team, contains configuration for how to auto-pick draft selections.
 **League** | Set of rosters that together form a cohesive league.
 **Pick Event** | Result event emitted when a player is manually selected.
@@ -57,9 +57,9 @@ Element      | Description
 **Sim Event** | Result event emitted when a player is automatically selected by a front office.
 **Skip Event** | Result event emitted when a front office decides to skip a round.
 
-#### The Drafting CLI
+#### The Draft CLI
 
-The drafting module's main object: `Basketball::Drafting::Engine` is a stateful iterator. Each time a CLI command is executed, it's results will be re-saved to disk so the output file can then be used as the next command's input file to string together commands.
+The draft module's main object: `Basketball::Draft::Engine` is a stateful iterator. Each time a CLI command is executed, it's results will be re-saved to disk so the output file can then be used as the next command's input file to string together commands.
 
 ###### Generate a Fresh Draft
 

@@ -2,14 +2,14 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::CLI do
+describe Basketball::Draft::CLI do
   describe 'feature tests' do
     let(:input_path) { fixture_path(dir, 'input.json') }
     let(:io)         { StringIO.new }
     let(:prefix)     { "#{SecureRandom.uuid}-" }
 
     context 'with no fuzz and no depth' do
-      let(:dir) { File.join('drafting', 'no_fuzz_no_depth_draft') }
+      let(:dir) { File.join('draft', 'no_fuzz_no_depth_draft') }
 
       specify 'no sim picks' do
         output_path   = File.join(TEMP_DIR, dir, "#{prefix}0-0.json")
@@ -73,7 +73,7 @@ describe Basketball::Drafting::CLI do
     end
 
     context 'with no fuzz' do
-      let(:dir) { File.join('drafting', 'no_fuzz_draft') }
+      let(:dir) { File.join('draft', 'no_fuzz_draft') }
 
       specify 'no sim picks' do
         output_path   = File.join(TEMP_DIR, dir, "#{prefix}0-0.json")
@@ -107,7 +107,7 @@ describe Basketball::Drafting::CLI do
     end
 
     context 'with no sim picks' do
-      let(:dir) { File.join('drafting', 'no_sim_draft') }
+      let(:dir) { File.join('draft', 'no_sim_draft') }
 
       specify 'sim all picks' do
         output_path   = File.join(TEMP_DIR, dir, "#{prefix}3-3.json")

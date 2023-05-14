@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::FrontOffice do
+describe Basketball::Draft::FrontOffice do
   subject(:front_office) { described_class.new(id:, name:) }
 
   let(:id)   { 'p1234' }

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Drafting
+  module Draft
     class PlayerSearch
       attr_reader :players
 

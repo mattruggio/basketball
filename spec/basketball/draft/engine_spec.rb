@@ -2,16 +2,16 @@
 
 require 'spec_helper'
 
-describe Basketball::Drafting::Engine do
+describe Basketball::Draft::Engine do
   subject(:engine) do
-    Basketball::Drafting::EngineSerializer.new.deserialize(contents)
+    Basketball::Draft::EngineSerializer.new.deserialize(contents)
   end
 
-  let(:contents) { read_fixture('drafting', 'no_fuzz_draft', 'input.json') }
+  let(:contents) { read_fixture('draft', 'no_fuzz_draft', 'input.json') }
 
   describe '#undrafted_player_search' do
     it 'returns search instance' do
-      expect(engine.undrafted_player_search).to be_a Basketball::Drafting::PlayerSearch
+      expect(engine.undrafted_player_search).to be_a Basketball::Draft::PlayerSearch
     end
 
     it 'contains correct players' do

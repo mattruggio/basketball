@@ -3,7 +3,7 @@
 require_relative 'roster'
 
 module Basketball
-  module Drafting
+  module Draft
     class League
       class RosterNotFoundError < StandardError; end
       class RosterAlreadyAddedError < StandardError; end

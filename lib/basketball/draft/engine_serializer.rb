@@ -7,7 +7,7 @@ require_relative 'sim_event'
 require_relative 'skip_event'
 
 module Basketball
-  module Drafting
+  module Draft
     class EngineSerializer
       EVENT_CLASSES = {
         'PickEvent' => PickEvent,

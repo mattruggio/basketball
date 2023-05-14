@@ -3,7 +3,7 @@
 require_relative 'event'
 
 module Basketball
-  module Drafting
+  module Draft
     class SkipEvent < Event
       def to_s
         "skipped #{super}"

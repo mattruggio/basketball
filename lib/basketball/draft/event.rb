@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Drafting
+  module Draft
     class Event < ValueObject
       attr_reader_value :pick, :round, :round_pick, :front_office
 

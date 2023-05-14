@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Drafting
+  module Draft
     class FrontOffice < Entity
       MAX_DEPTH     = 3
       MAX_FUZZ      = 2

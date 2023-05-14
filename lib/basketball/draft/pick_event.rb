@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'event'
+
 module Basketball
-  module Drafting
-    class SimEvent < Event
+  module Draft
+    class PickEvent < Event
       attr_reader_value :player
 
       def initialize(front_office:, player:, pick:, round:, round_pick:)
@@ -16,7 +18,7 @@ module Basketball
       end
 
       def to_s
-        "#{player} auto-picked #{super}"
+        "#{player} picked #{super}"
       end
     end
   end

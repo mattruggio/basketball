@@ -6,7 +6,7 @@ require_relative 'player_search'
 require_relative 'position'
 
 module Basketball
-  module Drafting
+  module Draft
     # Examples:
     #   exe/basketball-draft -o tmp/draft.json
     #   exe/basketball-draft -i tmp/draft.json -o tmp/draft-wip.json -s 26 -p P-5,P-10 -t 10 -q PG
