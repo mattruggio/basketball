@@ -33,15 +33,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency('faker', '~>3.2')
   s.add_dependency('slop', '~>4.10')
-
-  s.add_development_dependency('bundler-audit', '~>0.9')
-  s.add_development_dependency('guard-rspec', '~>4.7')
-  s.add_development_dependency('pry', '~>0.14')
-  s.add_development_dependency('rake', '~>13.0')
-  s.add_development_dependency('rspec', '~>3.12')
-  s.add_development_dependency('rubocop', '~>1.49')
-  s.add_development_dependency('rubocop-rake', '~>0.6')
-  s.add_development_dependency('rubocop-rspec', '~>2.20')
-  s.add_development_dependency('simplecov', '~>0.22')
-  s.add_development_dependency('simplecov-console', '~>0.9')
 end
