@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::Division do
+describe Basketball::Season::Division do
   subject(:division) { described_class.new(id:, name:, teams:) }
 
   let(:id)    { 'D-1' }
@@ -22,21 +22,21 @@ describe Basketball::Scheduling::Division do
 
     it 'prevents dupe teams' do
       dupe_teams     = [team] * 5
-      expected_error = Basketball::Scheduling::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(id:, teams: dupe_teams) }.to raise_error(expected_error)
     end
 
     it 'prevents more than 5 teams' do
       teams          = make_teams(6)
-      expected_error = Basketball::Scheduling::BadTeamsSizeError
+      expected_error = Basketball::Season::BadTeamsSizeError
 
       expect { described_class.new(id:, teams:) }.to raise_error(expected_error)
     end
 
     it 'prevents less than 5 teams' do
       teams          = make_teams(4)
-      expected_error = Basketball::Scheduling::BadTeamsSizeError
+      expected_error = Basketball::Season::BadTeamsSizeError
 
       expect { described_class.new(id:, teams:) }.to raise_error(expected_error)
     end

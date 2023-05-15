@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::League do
+describe Basketball::Season::League do
   subject(:league) { described_class.new(conferences:) }
 
   let(:conferences) { make_conferences }
@@ -16,7 +16,7 @@ describe Basketball::Scheduling::League do
     it 'prevents dupe conferences' do
       conference       = conferences.first
       dupe_conferences = [conference, conference]
-      expected_error   = Basketball::Scheduling::ConferenceAlreadyRegisteredError
+      expected_error   = Basketball::Season::ConferenceAlreadyRegisteredError
 
       expect { described_class.new(conferences: dupe_conferences) }.to raise_error(expected_error)
     end
@@ -25,54 +25,54 @@ describe Basketball::Scheduling::League do
       divisions = conferences.first.divisions
 
       conferences = [
-        Basketball::Scheduling::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Western',
           divisions:
         ),
-        Basketball::Scheduling::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Eastern',
           divisions:
         )
       ]
 
-      expected_error = Basketball::Scheduling::DivisionAlreadyRegisteredError
+      expected_error = Basketball::Season::DivisionAlreadyRegisteredError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
 
     it 'prevents dupe teams across divisions' do
-      team = Basketball::Scheduling::Team.new(id: 'dupe-team')
+      team = Basketball::Season::Team.new(id: 'dupe-team')
 
       conferences = [
-        Basketball::Scheduling::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Western',
           divisions: make_divisions(2) + [
-            Basketball::Scheduling::Division.new(id: 'with-dupe-1', teams: make_teams(4) + [team])
+            Basketball::Season::Division.new(id: 'with-dupe-1', teams: make_teams(4) + [team])
           ]
         ),
-        Basketball::Scheduling::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Eastern',
           divisions: make_divisions(2) + [
-            Basketball::Scheduling::Division.new(id: 'with-dupe-2', teams: make_teams(4) + [team])
+            Basketball::Season::Division.new(id: 'with-dupe-2', teams: make_teams(4) + [team])
           ]
         )
       ]
 
-      expected_error = Basketball::Scheduling::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
 
     it 'prevents more than 2 conferences' do
       conferences    = make_conferences(3)
-      expected_error = Basketball::Scheduling::BadConferencesSizeError
+      expected_error = Basketball::Season::BadConferencesSizeError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
 
     it 'prevents less than 2 conference' do
       conferences    = make_conferences(1)
-      expected_error = Basketball::Scheduling::BadConferencesSizeError
+      expected_error = Basketball::Season::BadConferencesSizeError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end

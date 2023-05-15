@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Scheduling::Team do
+describe Basketball::Season::Team do
   subject(:team) { described_class.new(id:, name:) }
 
   let(:id)   { 'p1234' }

@@ -30,7 +30,7 @@ bundle binstubs basketball
 
 This library is broken down into several bounded contexts that can be consumed either via its Ruby API's or CLI through provided executable scripts:
 
-![Basketball Architecture - Overview](/docs/architecture/overview.png)
+![Basketball Architecture - Overview](/docs/architecture/Basketball%20Architecture%20-%20Overview.png)
 
 #### Command Line Interfaces
 
@@ -40,7 +40,7 @@ Each module is meant to be interfaced with using its Ruby API by consuming appli
 
 The draft module is responsible for providing a turn-based iterator allowing the consumer to either manually pick or simulate picks.  Here is a cartoon showing the major components:
 
-![Basketball Architecture - Draft](/docs/architecture/draft.png)
+![Basketball Architecture - Draft](/docs/architecture/Basketball%20Architecture%20-%20Draft.png)
 
 Element      | Description
 :------------ | :-----------
@@ -121,11 +121,11 @@ basketball-draft -i tmp/draft.json -a
 basketball-draft -h
 ```
 
-## Scheduling Module
+## Season Module
 
-The Scheduling module is meant to take a League (conferences/divisions/teams) and turn it into a Calendar.  This Calendar creation is atomic - the full calendar will be generated completely all in one call.  Here is a cartoon showing the major components:
+The Season module is meant to take a League (conferences/divisions/teams) and turn it into a Calendar.  This Calendar creation is atomic - the full calendar will be generated completely all in one call.  Here is a cartoon showing the major components:
 
-![Basketball Architecture - Scheduling](/docs/architecture/scheduling.png)
+![Basketball Architecture - Season](/docs/architecture/Basketball%20Architecture%20-%20Season.png)
 
 Element      | Description
 :------------ | :-----------
@@ -139,57 +139,57 @@ Element      | Description
 **Home Team** | Team object designated as the home team for a Game.
 **League Serializer** | Understands how to serialize and deserialize a League object.
 **League** | Describes a league in terms of structure; composed of an array conferences (there can only be 2).
-**Scheduling** | Bounded context (sub-module) dealing with matchup and calendar generation.
+**Season** | Bounded context (sub-module) dealing with calendar and matchup generation.
 **Team** | Identified by an ID and described by a name: represents a basketball team that can be scheduled.
 
-#### The Scheduling CLI
+#### The Season CLI
 
 ###### Generate League
 
 ```zsh
-basketball-schedule -o tmp/league.json
+basketball-season-scheduling -o tmp/league.json
 ```
 
 ###### Generate Calendar From League
 
 ```zsh
-basketball-schedule -i tmp/league.json -o tmp/calendar.json
+basketball-season-scheduling -i tmp/league.json -o tmp/calendar.json
 ```
 
 ###### Generate Calendar From League For a Specific Year
 
 ```zsh
-basketball-schedule -i tmp/league.json -o tmp/calendar.json -y 2005
+basketball-season-scheduling -i tmp/league.json -o tmp/calendar.json -y 2005
 ```
 
 ###### Output a Generated Calendar's Matchups
 
 ```zsh
-basketball-schedule -c tmp/calendar.json
+basketball-season-scheduling -c tmp/calendar.json
 ```
 
 ###### Output a Generated Calendar's Matchups For a Specific Team
 
 ```zsh
-basketball-schedule -c tmp/calendar.json -t C0-D0-T0
+basketball-season-scheduling -c tmp/calendar.json -t C0-D0-T0
 ```
 
 ###### Output a Generated Calendar's Matchups For a Specific Date
 
 ```zsh
-basketball-schedule -c tmp/calendar.json -d 2005-02-03
+basketball-season-scheduling -c tmp/calendar.json -d 2005-02-03
 ```
 
 ###### Output a Generated Calendar's Matchups For a Specific Team and Date
 
 ```zsh
-basketball-schedule -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
+basketball-season-scheduling -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
 ```
 
 ###### Help Menu
 
 ```zsh
-basketball-schedule -h
+basketball-season-scheduling -h
 ```
 
 ## Contributing

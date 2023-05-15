@@ -5,7 +5,7 @@ require_relative 'preseason_game'
 require_relative 'season_game'
 
 module Basketball
-  module Scheduling
+  module Season
     class CalendarSerializer
       GAME_CLASSES = {
         'PreseasonGame' => PreseasonGame,

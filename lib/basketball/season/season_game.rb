@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Scheduling
+  module Season
     class SeasonGame < Game
     end
   end

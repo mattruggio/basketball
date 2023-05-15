@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::Calendar do
+describe Basketball::Season::Calendar do
   subject(:calendar) do
     described_class.new(year:, games:)
   end
@@ -102,7 +102,7 @@ describe Basketball::Scheduling::Calendar do
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
-      it 'prevents scheduling during preseason' do
+      it 'prevents season during preseason' do
         new_game = make_season_game(date: Date.parse('2022-10-03'), home_team: santas, away_team: rizzos)
         error    = described_class::OutOfBoundsError
 
@@ -133,7 +133,7 @@ describe Basketball::Scheduling::Calendar do
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
-      it 'prevents scheduling preseason during regular season' do
+      it 'prevents season preseason during regular season' do
         new_game = make_preseason_game(date: calendar.season_start_date + 10, home_team: santas, away_team: rizzos)
         error    = described_class::OutOfBoundsError
 

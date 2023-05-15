@@ -9,16 +9,16 @@ require_relative 'league_serializer'
 require_relative 'team'
 
 module Basketball
-  module Scheduling
+  module Season
     # Examples:
-    #   exe/basketball-schedule -o tmp/league.json
-    #   exe/basketball-schedule -i tmp/league.json -o tmp/calendar.json
-    #   exe/basketball-schedule -i tmp/league.json -o tmp/calendar.json -y 2005
-    #   exe/basketball-schedule -c tmp/calendar.json
-    #   exe/basketball-schedule -c tmp/calendar.json -t C0-D0-T0
-    #   exe/basketball-schedule -c tmp/calendar.json -d 2005-02-03
-    #   exe/basketball-schedule -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
-    class CLI
+    #   exe/basketball-season-scheduling -o tmp/league.json
+    #   exe/basketball-season-scheduling -i tmp/league.json -o tmp/calendar.json
+    #   exe/basketball-season-scheduling -i tmp/league.json -o tmp/calendar.json -y 2005
+    #   exe/basketball-season-scheduling -c tmp/calendar.json
+    #   exe/basketball-season-scheduling -c tmp/calendar.json -t C0-D0-T0
+    #   exe/basketball-season-scheduling -c tmp/calendar.json -d 2005-02-03
+    #   exe/basketball-season-scheduling -c tmp/calendar.json -d 2005-02-03 -t C0-D0-T0
+    class SchedulingCLI
       attr_reader :opts,
                   :league_serializer,
                   :calendar_serializer,

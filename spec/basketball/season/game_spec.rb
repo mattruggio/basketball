@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::Game do
+describe Basketball::Season::Game do
   subject(:game) { described_class.new(date:, home_team:, away_team:) }
 
   let(:date)      { Date.parse('2023-01-02') }

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Scheduling
+  module Season
     class Conference < Entity
       DIVISIONS_SIZE = 3
 

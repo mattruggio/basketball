@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::Conference do
+describe Basketball::Season::Conference do
   subject(:conference) { described_class.new(id:, name:, divisions:) }
 
   let(:id)        { 'C-1' }
@@ -22,34 +22,34 @@ describe Basketball::Scheduling::Conference do
 
     it 'prevents dupe divisions' do
       dupe_divisions = [division] * 3
-      expected_error = Basketball::Scheduling::DivisionAlreadyRegisteredError
+      expected_error = Basketball::Season::DivisionAlreadyRegisteredError
 
       expect { described_class.new(id:, divisions: dupe_divisions) }.to raise_error(expected_error)
     end
 
     it 'prevents divisions with dupe teams' do
-      team = Basketball::Scheduling::Team.new(id: 'dupe-team')
+      team = Basketball::Season::Team.new(id: 'dupe-team')
 
       dupe_divisions = make_divisions(1) + [
-        Basketball::Scheduling::Division.new(id: 'with-dupe-1', teams: make_teams(4) + [team]),
-        Basketball::Scheduling::Division.new(id: 'with-dupe-2', teams: make_teams(4) + [team])
+        Basketball::Season::Division.new(id: 'with-dupe-1', teams: make_teams(4) + [team]),
+        Basketball::Season::Division.new(id: 'with-dupe-2', teams: make_teams(4) + [team])
       ]
 
-      expected_error = Basketball::Scheduling::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(id:, divisions: dupe_divisions) }.to raise_error(expected_error)
     end
 
     it 'prevents more than 3 divisions' do
       divisions      = make_divisions(4)
-      expected_error = Basketball::Scheduling::BadDivisionsSizeError
+      expected_error = Basketball::Season::BadDivisionsSizeError
 
       expect { described_class.new(id:, divisions:) }.to raise_error(expected_error)
     end
 
     it 'prevents less than 3 divisions' do
       divisions      = make_divisions(2)
-      expected_error = Basketball::Scheduling::BadDivisionsSizeError
+      expected_error = Basketball::Season::BadDivisionsSizeError
 
       expect { described_class.new(id:, divisions:) }.to raise_error(expected_error)
     end

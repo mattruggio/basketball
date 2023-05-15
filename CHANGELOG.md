@@ -1,3 +1,9 @@
+
+#### 0.0.8 - May 15th, 2023
+
+* Renamed Drafting to Draft to match bounded context word form.
+* Renamed Scheduling to Season to include more things other than scheduling.
+
 #### 0.0.7 - May 14th, 2023
 
 * Added #to_hash and #from_hash serializer methods to allow larger consumer json constructions more directly.
@@ -5,7 +11,7 @@
 
 #### 0.0.6 - May 11th, 2023
 
-* Added Scheduling module that can generate full schedules for entire league.
+* Added Season module that can generate full schedules for entire league.
 * Draft::Event does not have identity anymore (no current tangible benefit).
 
 #### 0.0.5 - May 5th, 2023

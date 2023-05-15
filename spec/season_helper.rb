@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def read_league_fixture(*path)
-  Basketball::Scheduling::LeagueSerializer.new.deserialize(read_fixture(*path))
+  Basketball::Season::LeagueSerializer.new.deserialize(read_fixture(*path))
 end
 
 def make_id
@@ -9,27 +9,27 @@ def make_id
 end
 
 def make_preseason_game(args)
-  Basketball::Scheduling::PreseasonGame.new(**args)
+  Basketball::Season::PreseasonGame.new(**args)
 end
 
 def make_season_game(args)
-  Basketball::Scheduling::SeasonGame.new(**args)
+  Basketball::Season::SeasonGame.new(**args)
 end
 
 def make_team(args)
-  Basketball::Scheduling::Team.new(**args)
+  Basketball::Season::Team.new(**args)
 end
 
 def make_division(args)
-  Basketball::Scheduling::Division.new(**args)
+  Basketball::Season::Division.new(**args)
 end
 
 def make_conference(args)
-  Basketball::Scheduling::Conference.new(**args)
+  Basketball::Season::Conference.new(**args)
 end
 
 def make_league(args)
-  Basketball::Scheduling::League.new(**args)
+  Basketball::Season::League.new(**args)
 end
 
 def make_teams(count = 5)

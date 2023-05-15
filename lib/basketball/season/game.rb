@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Scheduling
+  module Season
     class Game < ValueObject
       attr_reader_value :date, :home_team, :away_team
 

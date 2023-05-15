@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Scheduling
+  module Season
     class Calendar < ValueObject
       class TeamAlreadyBookedError < StandardError; end
       class InvalidGameOrderError < StandardError; end

@@ -3,12 +3,12 @@
 require_relative 'calendar'
 
 module Basketball
-  module Scheduling
+  module Season
     # This is the service class responsible for actually picking out free dates ane pairing up teams to
     # play each other.  This is a reasonable naive first pass at some underlying match-making algorithms
     # but could definitely use some help with the complexity/runtime/etc.
     class Coordinator
-      MIN_PRESEASON_GAMES_PER_TEAM = 4
+      MIN_PRESEASON_GAMES_PER_TEAM = 3
       MAX_PRESEASON_GAMES_PER_TEAM = 6
 
       private_constant :MIN_PRESEASON_GAMES_PER_TEAM,

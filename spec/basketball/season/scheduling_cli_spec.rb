@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Basketball::Scheduling::CLI do
+describe Basketball::Season::SchedulingCLI do
   let(:input_path)          { fixture_path(dir, 'league.json') }
   let(:io)                  { StringIO.new }
   let(:prefix)              { "#{SecureRandom.uuid}-" }
-  let(:dir)                 { File.join('scheduling') }
-  let(:league_serializer)   { Basketball::Scheduling::LeagueSerializer.new }
-  let(:calendar_serializer) { Basketball::Scheduling::CalendarSerializer.new }
+  let(:dir)                 { File.join('season') }
+  let(:league_serializer)   { Basketball::Season::LeagueSerializer.new }
+  let(:calendar_serializer) { Basketball::Season::CalendarSerializer.new }
   let(:calendar_path)       { fixture_path(dir, 'full_calendar.json') }
 
   describe 'league generation' do
@@ -47,7 +47,7 @@ describe Basketball::Scheduling::CLI do
   end
 
   describe 'calendar generation' do
-    it 'all league teams get assigned 4-6 preseason games' do
+    it 'all league teams get assigned 3-6 preseason games' do
       output_path = File.join(TEMP_DIR, dir, "#{prefix}calendar.json")
       args        = ['-i', input_path, '-o', output_path]
       league      = league_serializer.deserialize(File.read(input_path))
@@ -57,7 +57,7 @@ describe Basketball::Scheduling::CLI do
       calendar = calendar_serializer.deserialize(File.read(output_path))
 
       league.teams.each do |team|
-        expect(calendar.preseason_games_for(team:).length).to be_between(4, 6)
+        expect(calendar.preseason_games_for(team:).length).to be_between(3, 6)
       end
     end
 

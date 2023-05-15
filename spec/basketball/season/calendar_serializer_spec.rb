@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'scheduling_helper'
+require 'season_helper'
 
-describe Basketball::Scheduling::CalendarSerializer do
+describe Basketball::Season::CalendarSerializer do
   subject(:serializer) { described_class.new }
 
   let(:year)     { 2022 }
   let(:bunnies)  { make_team(id: 'bunnies', name: 'the bunnies') }
   let(:rabbits)  { make_team(id: 'rabbits', name: 'the rabbits') }
   let(:games)    { preseason_games + season_games }
-  let(:calendar) { Basketball::Scheduling::Calendar.new(year: 2022, games:) }
-  let(:contents) { read_fixture('scheduling', 'calendar.json') }
+  let(:calendar) { Basketball::Season::Calendar.new(year: 2022, games:) }
+  let(:contents) { read_fixture('season', 'calendar.json') }
 
   let(:preseason_games) do
     [

@@ -13,4 +13,4 @@ require_relative 'basketball/value_object'
 
 # Submodules
 require_relative 'basketball/draft'
-require_relative 'basketball/scheduling'
+require_relative 'basketball/season'

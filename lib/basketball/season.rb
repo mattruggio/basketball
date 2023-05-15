@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'scheduling/cli'
+require_relative 'season/scheduling_cli'
 
 module Basketball
-  module Scheduling
+  module Season
     class ConferenceAlreadyRegisteredError < StandardError; end
     class DivisionAlreadyRegisteredError < StandardError; end
     class TeamAlreadyRegisteredError < StandardError; end
