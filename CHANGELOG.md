@@ -2,7 +2,9 @@
 #### 0.0.8 - May 15th, 2023
 
 * Renamed Drafting to Draft to match bounded context word form.
+* Renamed Drafting::Engine to Draft::Room for better language.
 * Renamed Scheduling to Season to include more things other than scheduling.
+* Issued README warning for 0.0.X releases not having stable APIs.
 
 #### 0.0.7 - May 14th, 2023
 
@@ -19,14 +21,14 @@
 * Remove the notion of Team in favor of a flat front office.
 #### 0.0.4 - May 5th, 2023
 
-* Add ability to skip draft picks using `Basketball::Draft::Engine#skip!`
+* Add ability to skip draft picks using `Basketball::Draft::Room#skip!`
 * Add ability to output event full draft event log using CLI: `basketball-draft -i tmp/draft-wip.json -l`
 * Add ability to skip draft picks using CLI: `basketball-draft -i tmp/draft-wip.json -x 1`
 
 #### 0.0.3 - May 5th, 2023
 
-* `Draft::Engine#sim!` should return events
-* Added `Draft::Engine#undrafted_player_search`
+* `Draft::Room#sim!` should return events
+* Added `Draft::Room#undrafted_player_search`
 
 #### 0.0.2 - May 4th, 2023
 

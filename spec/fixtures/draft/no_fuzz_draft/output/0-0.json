@@ -8,7 +8,7 @@
     "remaining_picks": 9,
     "done": false
   },
-  "engine": {
+  "room": {
     "rounds": 3,
     "front_offices": {
       "T-1": {

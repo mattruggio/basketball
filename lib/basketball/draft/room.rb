@@ -4,7 +4,7 @@ require_relative 'league'
 
 module Basketball
   module Draft
-    class Engine
+    class Room
       class AlreadyPickedError < StandardError; end
       class DupeEventError < StandardError; end
       class EventOutOfOrderError < StandardError; end

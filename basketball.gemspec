@@ -5,7 +5,7 @@ require './lib/basketball/version'
 Gem::Specification.new do |s|
   s.name        = 'basketball'
   s.version     = Basketball::VERSION
-  s.summary     = 'Basketball League Game Engine'
+  s.summary     = 'Basketball League Game Room'
 
   s.description = <<-DESC
     This library is meant to serve as the domain for a basketball league/season simulator/turn-based game.

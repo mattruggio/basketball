@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'engine'
-require_relative 'engine_serializer'
+require_relative 'room'
+require_relative 'room_serializer'
 require_relative 'player_search'
 require_relative 'position'
 
@@ -23,7 +23,7 @@ module Basketball
 
       def initialize(args:, io: $stdout)
         @io         = io
-        @serializer = EngineSerializer.new
+        @serializer = RoomSerializer.new
         @opts       = slop_parse(args)
 
         if opts[:input].to_s.empty? && opts[:output].to_s.empty?
@@ -36,31 +36,31 @@ module Basketball
       end
 
       def invoke!
-        engine = load_engine
+        room = load_room
 
-        execute(engine)
+        execute(room)
 
         io.puts
         io.puts('Status')
 
-        if engine.done?
+        if room.done?
           io.puts('Draft is complete!')
         else
-          current_round        = engine.current_round
-          current_round_pick   = engine.current_round_pick
-          current_front_office = engine.current_front_office
+          current_round        = room.current_round
+          current_round_pick   = room.current_round_pick
+          current_front_office = room.current_front_office
 
-          io.puts("#{engine.remaining_picks} Remaining pick(s)")
+          io.puts("#{room.remaining_picks} Remaining pick(s)")
           io.puts("Up Next: Round #{current_round} pick #{current_round_pick} for #{current_front_office}")
         end
 
-        write(engine)
+        write(room)
 
-        log(engine)
+        log(room)
 
-        league(engine)
+        league(room)
 
-        query(engine)
+        query(room)
 
         self
       end
@@ -72,8 +72,8 @@ module Basketball
           o.banner = 'Usage: basketball-draft [options] ...'
 
           o.string  '-i', '--input',
-                    'Path to load the engine from. If omitted then a new draft will be generated.'
-          o.string  '-o', '--output',       'Path to write the engine to (if omitted then input path will be used)'
+                    'Path to load the room from. If omitted then a new draft will be generated.'
+          o.string  '-o', '--output',       'Path to write the room to (if omitted then input path will be used)'
           o.integer '-s', '--simulate',     'Number of picks to simulate (default is 0).', default: 0
           o.bool    '-a', '--simulate-all', 'Simulate the rest of the draft', default: false
           o.array   '-p', '--picks',        'Comma-separated list of ordered player IDs to pick.', delimiter: ','
@@ -90,7 +90,7 @@ module Basketball
         end.to_h
       end
 
-      def load_engine
+      def load_room
         if opts[:input].to_s.empty?
           io.puts('Input path was not provided, generating fresh front_offices and players')
 
@@ -119,32 +119,32 @@ module Basketball
           )
         end
 
-        Engine.new(players:, front_offices:)
+        Room.new(players:, front_offices:)
       end
 
-      def league(engine)
+      def league(room)
         return unless opts[:rosters]
 
         io.puts
-        io.puts(engine.to_league)
+        io.puts(room.to_league)
       end
 
-      def log(engine)
+      def log(room)
         return unless opts[:log]
 
         io.puts
         io.puts('Event Log')
 
-        puts engine.events
+        puts room.events
       end
 
       # rubocop:disable Metrics/AbcSize
-      def query(engine)
+      def query(room)
         top = opts[:top]
 
         return if top <= 0
 
-        search   = PlayerSearch.new(engine.undrafted_players)
+        search   = PlayerSearch.new(room.undrafted_players)
         position = opts[:query].to_s.empty? ? nil : Position.new(opts[:query])
         players  = search.query(position:).take(opts[:top])
 
@@ -167,20 +167,20 @@ module Basketball
       end
 
       # rubocop:disable Metrics/AbcSize
-      def execute(engine)
+      def execute(room)
         event_count = 0
 
         io.puts
         io.puts('New Events')
 
         (opts[:picks] || []).each do |id|
-          break if engine.done?
+          break if room.done?
 
-          player = engine.players.find { |p| p.id == id.to_s.upcase }
+          player = room.players.find { |p| p.id == id.to_s.upcase }
 
           raise PlayerNotFound, "player not found by id: #{id}" unless player
 
-          event = engine.pick!(player)
+          event = room.pick!(player)
 
           io.puts(event)
 
@@ -188,21 +188,21 @@ module Basketball
         end
 
         opts[:skip].times do
-          event = engine.skip!
+          event = room.skip!
 
           io.puts(event)
 
           event_count += 1
         end
 
-        engine.sim!(opts[:simulate]) do |event|
+        room.sim!(opts[:simulate]) do |event|
           io.puts(event)
 
           event_count += 1
         end
 
         if opts[:simulate_all]
-          engine.sim! do |event|
+          room.sim! do |event|
             io.puts(event)
 
             event_count += 1
@@ -215,10 +215,10 @@ module Basketball
       end
       # rubocop:enable Metrics/AbcSize
 
-      def write(engine)
+      def write(room)
         output = opts[:output].to_s.empty? ? opts[:input] : opts[:output]
 
-        contents = serializer.serialize(engine)
+        contents = serializer.serialize(room)
         out_dir  = File.dirname(output)
 
         FileUtils.mkdir_p(out_dir)

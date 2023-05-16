@@ -2,7 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/basketball.svg)](https://badge.fury.io/rb/basketball) [![CI](https://github.com/mattruggio/basketball/actions/workflows/ci.yaml/badge.svg)](https://github.com/mattruggio/basketball/actions/workflows/ci.yaml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-#### Basketball League Game Engine
+:warning: **Note:** This is currently in the early phases of initial development. Consider all 0.0.X releases as having unstable APIs between versions. A formal 0.1 minor release will be eventually releases which will honor [Semver](https://semver.org/).
+
+#### Basketball League Game Room
 
 This library is meant to serve as the domain for a basketball league/season simulator/turn-based game. It models core ideas such as: players, general managers, draft strategy, drafting, season generation, season simultation, playoff generation, playoff simulation, and more.
 
@@ -45,8 +47,8 @@ The draft module is responsible for providing a turn-based iterator allowing the
 Element      | Description
 :------------ | :-----------
 **Draft** | Bounded context (sub-module) dealing with executing an asynchronous draft.
-**Engine** | Aggregate root responsible for providing an iterable interface capable of executing a draft, pick by pick.
-**Event** | Represents one cycle execution result from the Engine.
+**Room** | Aggregate root responsible for providing an iterable interface capable of executing a draft, pick by pick.
+**Event** | Represents one cycle execution result from the Room.
 **External Ruby App** | An example consumer for the Draft context.
 **Front Office** | Identifiable as a team, contains configuration for how to auto-pick draft selections.
 **League** | Set of rosters that together form a cohesive league.
@@ -59,7 +61,7 @@ Element      | Description
 
 #### The Draft CLI
 
-The draft module's main object: `Basketball::Draft::Engine` is a stateful iterator. Each time a CLI command is executed, it's results will be re-saved to disk so the output file can then be used as the next command's input file to string together commands.
+The draft module's main object: `Basketball::Draft::Room` is a stateful iterator. Each time a CLI command is executed, it's results will be re-saved to disk so the output file can then be used as the next command's input file to string together commands.
 
 ###### Generate a Fresh Draft
 

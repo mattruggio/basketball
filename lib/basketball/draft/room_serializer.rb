@@ -8,7 +8,7 @@ require_relative 'skip_event'
 
 module Basketball
   module Draft
-    class EngineSerializer
+    class RoomSerializer
       EVENT_CLASSES = {
         'PickEvent' => PickEvent,
         'SimEvent' => SimEvent,
@@ -17,11 +17,11 @@ module Basketball
 
       private_constant :EVENT_CLASSES
 
-      def to_hash(engine)
+      def to_hash(room)
         {
-          'info' => serialize_info(engine),
-          'engine' => serialize_engine(engine),
-          'league' => serialize_league(engine)
+          'info' => serialize_info(room),
+          'room' => serialize_room(room),
+          'league' => serialize_league(room)
         }
       end
 
@@ -30,15 +30,15 @@ module Basketball
         players       = deserialize_players(json)
         events        = deserialize_events(json, players, front_offices)
 
-        engine_opts = {
+        room_opts = {
           players:,
           front_offices:,
           events:
         }
 
-        engine_opts[:rounds] = json.dig('engine', 'rounds') if json.dig('engine', 'rounds')
+        room_opts[:rounds] = json.dig('room', 'rounds') if json.dig('room', 'rounds')
 
-        Engine.new(**engine_opts)
+        Room.new(**room_opts)
       end
 
       def deserialize(string)
@@ -47,35 +47,35 @@ module Basketball
         from_hash(json)
       end
 
-      def serialize(engine)
-        to_hash(engine).to_json
+      def serialize(room)
+        to_hash(room).to_json
       end
 
       private
 
-      def serialize_engine(engine)
+      def serialize_room(room)
         {
-          'rounds' => engine.rounds,
-          'front_offices' => serialize_front_offices(engine),
-          'players' => serialize_players(engine),
-          'events' => serialize_events(engine.events)
+          'rounds' => room.rounds,
+          'front_offices' => serialize_front_offices(room),
+          'players' => serialize_players(room),
+          'events' => serialize_events(room.events)
         }
       end
 
-      def serialize_info(engine)
+      def serialize_info(room)
         {
-          'total_picks' => engine.total_picks,
-          'current_round' => engine.current_round,
-          'current_round_pick' => engine.current_round_pick,
-          'current_front_office' => engine.current_front_office&.id,
-          'current_pick' => engine.current_pick,
-          'remaining_picks' => engine.remaining_picks,
-          'done' => engine.done?
+          'total_picks' => room.total_picks,
+          'current_round' => room.current_round,
+          'current_round_pick' => room.current_round_pick,
+          'current_front_office' => room.current_front_office&.id,
+          'current_pick' => room.current_pick,
+          'remaining_picks' => room.remaining_picks,
+          'done' => room.done?
         }
       end
 
-      def serialize_league(engine)
-        league = engine.to_league
+      def serialize_league(room)
+        league = room.to_league
 
         rosters = league.rosters.to_h do |roster|
           [
@@ -92,8 +92,8 @@ module Basketball
         }
       end
 
-      def serialize_front_offices(engine)
-        engine.front_offices.to_h do |front_office|
+      def serialize_front_offices(room)
+        room.front_offices.to_h do |front_office|
           [
             front_office.id,
             {
@@ -106,8 +106,8 @@ module Basketball
         end
       end
 
-      def serialize_players(engine)
-        engine.players.to_h do |player|
+      def serialize_players(room)
+        room.players.to_h do |player|
           [
             player.id,
             {
@@ -135,7 +135,7 @@ module Basketball
       end
 
       def deserialize_front_offices(json)
-        (json.dig('engine', 'front_offices') || []).map do |id, front_office_hash|
+        (json.dig('room', 'front_offices') || []).map do |id, front_office_hash|
           prioritized_positions = (front_office_hash['prioritized_positions'] || []).map do |v|
             Position.new(v)
           end
@@ -153,7 +153,7 @@ module Basketball
       end
 
       def deserialize_players(json)
-        (json.dig('engine', 'players') || []).map do |id, player_hash|
+        (json.dig('room', 'players') || []).map do |id, player_hash|
           player_opts = {
             id:,
             first_name: player_hash['first_name'],
@@ -167,7 +167,7 @@ module Basketball
       end
 
       def deserialize_events(json, players, front_offices)
-        (json.dig('engine', 'events') || []).map do |event_hash|
+        (json.dig('room', 'events') || []).map do |event_hash|
           event_opts = event_hash.slice('pick', 'round', 'round_pick').merge(
             front_office: front_offices.find { |t| t.id == event_hash['front_office'] }
           )

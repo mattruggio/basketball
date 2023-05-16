@@ -33,9 +33,9 @@ RSpec.configure do |config|
       expected = JSON.parse(File.read(expected_path), symbolize_names: true)
 
       actual[:info] == expected[:info] &&
-        actual.dig(:engine, :front_offices) == expected.dig(:engine, :front_offices) &&
-        actual.dig(:engine, :players) == expected.dig(:engine, :players) &&
-        actual.dig(:engine, :events) == expected.dig(:engine, :events) &&
+        actual.dig(:room, :front_offices) == expected.dig(:room, :front_offices) &&
+        actual.dig(:room, :players) == expected.dig(:room, :players) &&
+        actual.dig(:room, :events) == expected.dig(:room, :events) &&
         actual[:league] == expected[:league]
     end
 
