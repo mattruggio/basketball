@@ -6,17 +6,17 @@
 
 This library is meant to serve as the domain for a basketball league/season simulator/turn-based game. It models core ideas such as: players, general managers, draft strategy, drafting, season generation, season simultation, playoff generation, playoff simulation, and more.
 
-![Architecture](/docs/Draft%20Day%20-%20Architecture.png)
+![Architecture](/docs/architecture.png)
 
 Element      | Description
 :------------ | :-----------
 **Arena** | Determines exhibition and regular season game outcomes.
 **Assessment** | When the Room needs to know who a Front Office wants to select, the Room will send the Front Office an Assessment. The Assessment is a report of where the team currently stands: players picked, players available, and round information.
+**basketball-room** | Command-line executable script illustrating an example of how to subclass and consume the drafting module.
 **Calendar** | Stores important boundary dates (preseason start, preseason end, season start, and season end).
 **Coordinator CLI** | Underlying Ruby class that powers the `basketball-coordinator` script. Basically a terminal wrapper over the Coordinator object.
 **Coordinator Repository** | Understands how to save and load Coordinator objects from JSON files on disk.
 **Coordinator** | Object which can take a League, Calendar, Games, and an Arena and provide an iterable interface to enumerate through days and simulate games as results.
-**basketball-room** | Command-line executable script illustrating an example of how to subclass and consume the drafting module.
 **Draft** | Bounded context (sub-module) dealing with running a round-robin player draft for teams.
 **Exhibition** | Pre-season game which has no impact to team record.
 **External Dependency** | Some outside system which this library or portions of this library are dependent on.
@@ -33,6 +33,7 @@ Element      | Description
 **Room CLI** | Underlying Ruby class that powers the `basketball-room` script. Basically a terminal wrapper for the Room object.
 **Room Repository** | Understands how to save and load Room objects from JSON files on disk.
 **Room** | Main object responsible for providing an iterable interface capable of executing a draft, pick by pick.
+**Scout** | Knows how to stack rank lists of players.
 **Season** | Bounded context (sub-module) dealing with calendar and matchup generation.
 **Skip** | Result event emitted when a front office decides to skip a round.
 **Team Group** | Set of rosters that together form a cohesive league.
