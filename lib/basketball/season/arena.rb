@@ -2,53 +2,110 @@
 
 module Basketball
   module Season
-    # A very basic implementation that will select the higher overall sum of all players while also
-    # giving the home team an extra 3 overall points.
+    # A very, very, very basic starting point for a "semi-randomized" game simulator.
     class Arena
-      # Home courts generally carry with this an inherent advantage.  So much so that even sometimes
-      # leagues/teams will refer to their fans as players (i.e. NFL teams calling the fans "the 12th man")
-      HOME_ADVANTAGE = 3
+      RANDOM             = :random
+      TOP_ONE            = :top_one
+      TOP_TWO            = :top_two
+      TOP_THREE          = :top_three
+      TOP_SIX            = :top_six
+      MAX_HOME_ADVANTAGE = 5
 
-      private_constant :HOME_ADVANTAGE
+      STRATEGY_FREQUENCIES = {
+        RANDOM => 10,
+        TOP_ONE => 5,
+        TOP_TWO => 10,
+        TOP_THREE => 20,
+        TOP_SIX => 30
+      }.freeze
+
+      private_constant :STRATEGY_FREQUENCIES,
+                       :RANDOM,
+                       :TOP_ONE,
+                       :TOP_TWO,
+                       :TOP_SIX,
+                       :MAX_HOME_ADVANTAGE
+
+      def initialize
+        @lotto = STRATEGY_FREQUENCIES.inject([]) do |memo, (name, frequency)|
+          memo + ([name] * frequency)
+        end.shuffle
+
+        freeze
+      end
 
       def play(matchup)
-        home_score, away_score = home_score_and_away_score(matchup)
+        scores        = generate_scores
+        winning_score = scores.max
+        losing_score  = scores.min
+        strategy      = pick_strategy
 
-        Season::Result.new(
-          game: matchup.game,
-          home_score:,
-          away_score:
-        )
+        if home_wins?(matchup, strategy)
+          Result.new(
+            game: matchup.game,
+            home_score: winning_score,
+            away_score: losing_score
+          )
+        else
+          Result.new(
+            game: matchup.game,
+            home_score: losing_score,
+            away_score: winning_score
+          )
+        end
       end
 
       private
 
-      # this could be a tie and thats fine.
-      def losing_and_winning_scores
-        [rand(0..5), rand(0..5)].sort
+      attr_reader :lotto
+
+      def pick_strategy
+        lotto.sample
       end
 
-      def home_score_and_away_score(matchup)
-        # Take the most number of players we can but ensure same are taken from each team.
-        max_players  = [matchup.home_players.length, matchup.away_players.length].min
-
-        # Sum top player overall values
-        home_overall = top_player_sum(matchup.home_players, max_players) + HOME_ADVANTAGE
-        away_overall = top_player_sum(matchup.away_players, max_players)
-
-        # Generate two random scores to use. Note: this can be a tie.
-        losing_score, winning_score = losing_and_winning_scores
-
-        # Decide who wins
-        if home_overall >= away_overall
-          [winning_score, losing_score]
-        else
-          [losing_score, winning_score]
-        end
+      def home_wins?(game, strategy)
+        send("#{strategy}_strategy", game)
       end
 
       def top_player_sum(players, amount)
         players.sort_by(&:overall).reverse.take(amount).sum(&:overall)
+      end
+
+      def generate_scores
+        scores = [
+          rand(70..130),
+          rand(70..130)
+        ]
+
+        # No ties
+        scores[0] += 1 if scores[0] == scores[1]
+
+        scores
+      end
+
+      def random_strategy(_game)
+        # 60% chance home wins
+        (([0] * 6) + ([1] * 4)).sample.zero?
+      end
+
+      def random_home_advantage
+        rand(0..MAX_HOME_ADVANTAGE)
+      end
+
+      def top_one_strategy(matchup)
+        top_player_sum(matchup.home_players, 1) + random_home_advantage >= top_player_sum(matchup.away_players, 1)
+      end
+
+      def top_two_strategy(matchup)
+        top_player_sum(matchup.home_players, 2) + random_home_advantage >= top_player_sum(matchup.away_players, 2)
+      end
+
+      def top_three_strategy(matchup)
+        top_player_sum(matchup.home_players, 3) + random_home_advantage >= top_player_sum(matchup.away_players, 3)
+      end
+
+      def top_six_strategy(matchup)
+        top_player_sum(matchup.home_players, 6) + random_home_advantage >= top_player_sum(matchup.away_players, 6)
       end
     end
   end

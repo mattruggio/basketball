@@ -6,7 +6,7 @@ describe Basketball::Draft::FrontOffice do
   subject(:front_office) { described_class.new(id:, fuzz:) }
 
   let(:id) { 'p1234' }
-  let(:rando)             do
+  let(:rando) do
     Basketball::Org::Player.new(id: 'rando', overall: 12, position: Basketball::Org::Position.new('C'))
   end
   let(:the_dude) do

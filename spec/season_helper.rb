@@ -10,7 +10,7 @@ end
 
 class PlayoffGame < Basketball::Season::Game; end
 
-class BadArena < Basketball::Season::Arena
+class BadArena
   attr_reader :date
 
   def initialize(date)
@@ -29,12 +29,12 @@ class BadArena < Basketball::Season::Arena
         away_opponent: game.away_opponent
       ),
       home_score: 1,
-      away_score: 1
+      away_score: 2
     )
   end
 end
 
-class PredictableArena < Basketball::Season::Arena
+class PredictableArena
   def play(matchup)
     Basketball::Season::Result.new(
       game: matchup.game,

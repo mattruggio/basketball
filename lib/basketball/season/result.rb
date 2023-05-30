@@ -7,12 +7,15 @@ module Basketball
     class Result
       extend Forwardable
 
+      class CannotTieError < StandardError; end
+
       attr_reader :game, :home_score, :away_score
 
       def_delegators :game, :date, :home_opponent, :away_opponent, :teams
 
       def initialize(game:, home_score:, away_score:)
         raise ArgumentError, 'game is required' unless game
+        raise CannotTieError, "#{game} ended in a tie" if home_score == away_score
 
         @game       = game
         @home_score = home_score.to_i
