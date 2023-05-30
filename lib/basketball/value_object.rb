@@ -1,37 +1,15 @@
 # frozen_string_literal: true
 
+require_relative 'value_object_dsl'
+
 module Basketball
   # A Value Object is something that has no specific identity, instead its identity is the sum of
   # the attribute values. Changing one will change the entire object's identity.
-  # Comes with a very simple DSL for specifying properties along with base equality and sorting methods.
+  # Comes with a very simple DSL provided by ValueObjectDSL for specifying properties along with
+  # base equality and sorting methods.
   class ValueObject
     include Comparable
-
-    class << self
-      def all_value_keys
-        @all_value_keys ||= ancestors.flat_map do |ancestor|
-          if ancestor < Basketball::ValueObject
-            ancestor.value_keys
-          else
-            []
-          end
-        end.uniq.sort
-      end
-
-      def all_sorted_value_keys
-        all_value_keys.sort
-      end
-
-      def value_keys
-        @value_keys ||= []
-      end
-
-      def value_reader(*keys)
-        keys.each { |k| value_keys << k.to_sym }
-
-        attr_reader(*keys)
-      end
-    end
+    extend ValueObjectDSL
 
     def to_s
       to_h.map { |k, v| "#{k}: #{v}" }.join(', ')

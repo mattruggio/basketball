@@ -4,16 +4,11 @@ module Basketball
   # Base class for uniquely identifiable classes.  Subclasses are simply based on a string-based ID
   # and comparison/sorting/equality will be done in a case-insensitive manner.
   class Entity
-    extend Forwardable
     include Comparable
 
     attr_reader :id
 
-    def_delegators :id, :to_s
-
-    def initialize(id)
-      raise ArgumentError, 'id is required' if id.to_s.empty?
-
+    def initialize(id = nil)
       @id = id
     end
 
@@ -28,6 +23,10 @@ module Basketball
 
     def hash
       comparable_id.hash
+    end
+
+    def to_s
+      id.to_s
     end
 
     def comparable_id

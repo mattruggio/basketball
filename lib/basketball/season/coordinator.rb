@@ -3,7 +3,7 @@
 module Basketball
   module Season
     # Main iterator-based object that knows how to manage a calendar and simulate games per day.
-    class Coordinator
+    class Coordinator < Entity
       extend Forwardable
 
       class AlreadyPlayedGameError < StandardError; end
@@ -18,8 +18,7 @@ module Basketball
                   :current_date,
                   :arena,
                   :results,
-                  :league,
-                  :id
+                  :league
 
       def_delegators :calendar,
                      :preseason_start_date,

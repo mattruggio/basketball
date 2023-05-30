@@ -3,7 +3,7 @@
 module Basketball
   module Draft
     # Main pick-by-pick iterator object which will round-robin rotate team selections.
-    class Room
+    class Room < Entity
       class AlreadyPickedError < StandardError; end
       class EndOfDraftError < StandardError; end
       class EventOutOfOrderError < StandardError; end
@@ -12,9 +12,11 @@ module Basketball
       class UnknownFrontOfficeError < StandardError; end
       class UnknownPlayerError < StandardError; end
 
-      attr_reader :rounds, :players, :front_offices, :events, :id
+      attr_reader :rounds, :players, :front_offices, :events
 
       def initialize(front_offices:, rounds:, players: [], events: [])
+        super()
+
         raise InvalidRoundsError, "#{rounds} should be a positive number" unless rounds.positive?
 
         @rounds        = rounds

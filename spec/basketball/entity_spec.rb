@@ -8,10 +8,6 @@ describe Basketball::Entity do
   let(:id) { 'p1234' }
 
   describe '#initialize' do
-    it 'requires id' do
-      expect { described_class.new('') }.to raise_error(ArgumentError)
-    end
-
     it 'sets id as string' do
       expect(entity.id).to eq(id.to_s)
     end
