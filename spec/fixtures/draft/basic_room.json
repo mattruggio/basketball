@@ -1,0 +1,54 @@
+{
+  "rounds": 2,
+  "front_offices": [
+    {
+      "id": "ducks",
+      "fuzz": 2
+    },
+    {
+      "id": "eagles",
+      "fuzz": 5
+    }
+  ],
+  "players": [
+    {
+      "id": "mickey",
+      "overall": 99
+    },
+    {
+      "id": "donald",
+      "overall": 98
+    },
+    {
+      "id": "daisy",
+      "overall": 97
+    }
+  ],
+  "events": [
+    {
+      "type": "Pick",
+      "front_office": "ducks",
+      "pick": 1,
+      "round": 1,
+      "round_pick": 1,
+      "player": "mickey",
+      "auto": true
+    },
+    {
+      "type": "Skip",
+      "front_office": "eagles",
+      "pick": 2,
+      "round": 1,
+      "round_pick": 2
+    },
+    {
+      "type": "Pick",
+      "front_office": "ducks",
+      "pick": 3,
+      "round": 2,
+      "round_pick": 1,
+      "player": "donald",
+      "auto": false
+    }
+  ]
+}

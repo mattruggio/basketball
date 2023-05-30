@@ -1,0 +1,99 @@
+{
+  "rounds": 3,
+  "front_offices": [
+    {
+      "id": "T-1",
+      "fuzz": 0
+    },
+    {
+      "id":  "T-2",
+      "fuzz": 0
+    },
+    {
+      "id": "T-3",
+        "fuzz": 0
+    }
+  ],
+  "players": [
+    {
+      "id": "P-1",
+      "overall": 91
+    },
+    {
+      "id": "P-2",
+      "overall": 1
+    },
+    {
+      "id": "P-3",
+      "overall": 53
+    },
+    {
+      "id": "P-4",
+      "overall": 82
+    },
+    {
+      "id": "P-5",
+      "overall": 0
+    },
+    {
+      "id": "P-6",
+      "overall": 33
+    },
+    {
+      "id": "P-7",
+      "overall": 19
+    },
+    {
+      "id": "P-8",
+      "overall": 23
+    },
+    {
+      "id": "P-9",
+      "overall": 71
+    },
+    {
+      "id": "P-10",
+      "overall": 15
+    },
+    {
+      "id": "P-11",
+      "overall": 49
+    },
+    {
+      "id": "P-12",
+      "overall": 32
+    },
+    {
+      "id": "P-13",
+      "overall": 58
+    },
+    {
+      "id": "P-14",
+      "overall": 84
+    },
+    {
+      "id": "P-15",
+      "overall": 22
+    },
+    {
+      "id": "P-16",
+      "overall": 53
+    },
+    {
+      "id": "P-17",
+      "overall": 40
+    },
+    {
+      "id": "P-18",
+      "overall": 43
+    },
+    {
+      "id": "P-19",
+      "overall": 24
+    },
+    {
+      "id": "P-20",
+      "overall": 89
+    }
+  ]
+}

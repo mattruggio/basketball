@@ -1,0 +1,115 @@
+{
+  "calendar": {
+    "preseason_start_date": "2022-10-01",
+    "preseason_end_date": "2022-10-14",
+    "season_start_date": "2022-10-16",
+    "season_end_date": "2023-04-29",
+    "games": [
+      {
+        "type": "Exhibition",
+        "date": "2022-10-01",
+        "home_opponent": "bunnies",
+        "away_opponent": "rabbits"
+      },
+      {
+        "date": "2022-10-02",
+        "type": "Exhibition",
+        "home_opponent": "rabbits",
+        "away_opponent": "bunnies"
+      },
+      {
+        "type": "Regular",
+        "date": "2022-11-03",
+        "home_opponent": "bunnies",
+        "away_opponent": "rabbits"
+      },
+      {
+        "type": "Regular",
+        "date": "2023-01-04",
+        "home_opponent": "rabbits",
+        "away_opponent": "bunnies"
+      }
+    ]
+  },
+  "current_date": "2023-01-04",
+  "results": [
+    {
+      "game": {
+        "type": "Exhibition",
+        "date": "2022-10-01",
+        "home_opponent": "bunnies",
+        "away_opponent": "rabbits"
+      },
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "game": {
+        "type": "Exhibition",
+        "date": "2022-10-02",
+        "home_opponent": "rabbits",
+        "away_opponent": "bunnies"
+      },
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "game": {
+        "type": "Regular",
+        "date": "2022-11-03",
+        "home_opponent": "bunnies",
+        "away_opponent": "rabbits"
+      },
+      "home_score": 1,
+      "away_score": 2
+    }
+  ],
+  "league": {
+    "teams": [
+      {
+        "id": "bunnies",
+        "players": [
+          {
+            "id": "P1",
+            "overall": 1
+          },
+          {
+            "id": "P2",
+            "overall": 2
+          }
+        ]
+      },
+      {
+        "id": "rabbits",
+        "players": [
+          {
+            "id": "P3",
+            "overall": 3
+          },
+          {
+            "id": "P4",
+            "overall": 4
+          }
+        ]
+      },
+      {
+        "id": "santas",
+        "players": [
+          {
+            "id": "P5",
+            "overall": 5
+          }
+        ]
+      },
+      {
+        "id": "rizzos",
+        "players": [
+          {
+            "id": "P6",
+            "overall": 6
+          }
+        ]
+      }
+    ]
+  }
+}
