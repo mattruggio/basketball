@@ -69,21 +69,15 @@ module Basketball
         }
       end
 
+      # Serialization
+
       def serialize_player(player)
         {
           id: player.id,
-          overall: player.overall
+          overall: player.overall,
+          position: player.position&.code
         }
       end
-
-      def deserialize_player(player_hash)
-        Org::Player.new(
-          id: player_hash[:id],
-          overall: player_hash[:overall]
-        )
-      end
-
-      # Serialization
 
       def serialize_games(games)
         games.map { |game| serialize_game(game) }
@@ -136,6 +130,14 @@ module Basketball
       end
 
       # Deserialization
+
+      def deserialize_player(player_hash)
+        Org::Player.new(
+          id: player_hash[:id],
+          overall: player_hash[:overall],
+          position: Org::Position.new(player_hash[:position])
+        )
+      end
 
       def deserialize_league(league_hash)
         team_hashes = league_hash[:teams] || []

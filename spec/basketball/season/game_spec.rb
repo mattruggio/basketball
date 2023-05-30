@@ -56,15 +56,4 @@ describe Basketball::Season::Game do
       expect(game.to_s).to include(away_opponent.to_s)
     end
   end
-
-  specify '#hash' do
-    expected = [
-      game.class.name,
-      game.date,
-      game.home_opponent,
-      game.away_opponent
-    ].hash
-
-    expect(game.hash).to eq(expected)
-  end
 end

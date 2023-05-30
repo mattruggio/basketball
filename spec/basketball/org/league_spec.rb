@@ -8,9 +8,9 @@ describe Basketball::Org::League do
   let(:chunky_monkeys) { Basketball::Org::Team.new(id: 'Chunky Monkeys', players: [mousey]) }
   let(:fantastics)     { Basketball::Org::Team.new(id: 'Fantastics', players: [funky_man]) }
   let(:clowns)         { Basketball::Org::Team.new(id: 'Clowns') }
-  let(:mousey)         { Basketball::Org::Player.new(id: 'Mousey') }
-  let(:funky_man)      { Basketball::Org::Player.new(id: 'Funky Man') }
-  let(:moose_head)     { Basketball::Org::Player.new(id: 'Moose Head') }
+  let(:mousey)         { Basketball::Org::Player.new(id: 'Mousey', position: Basketball::Org::Position.new('C')) }
+  let(:funky_man)      { Basketball::Org::Player.new(id: 'Funky Man', position: Basketball::Org::Position.new('C')) }
+  let(:moose_head)     { Basketball::Org::Player.new(id: 'Moose Head', position: Basketball::Org::Position.new('C')) }
 
   describe '#initialize' do
     it 'sets teams' do

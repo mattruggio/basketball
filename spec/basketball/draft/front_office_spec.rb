@@ -5,10 +5,16 @@ require 'spec_helper'
 describe Basketball::Draft::FrontOffice do
   subject(:front_office) { described_class.new(id:, fuzz:) }
 
-  let(:id)                { 'p1234' }
-  let(:rando)             { Basketball::Org::Player.new(id: 'rando', overall: 12) }
-  let(:the_dude)          { Basketball::Org::Player.new(id: 'the dude', overall: 90) }
-  let(:puffy)             { Basketball::Org::Player.new(id: 'puffy', overall: 98) }
+  let(:id) { 'p1234' }
+  let(:rando)             do
+    Basketball::Org::Player.new(id: 'rando', overall: 12, position: Basketball::Org::Position.new('C'))
+  end
+  let(:the_dude) do
+    Basketball::Org::Player.new(id: 'the dude', overall: 90, position: Basketball::Org::Position.new('C'))
+  end
+  let(:puffy) do
+    Basketball::Org::Player.new(id: 'puffy', overall: 98, position: Basketball::Org::Position.new('C'))
+  end
   let(:undrafted_players) { [the_dude, puffy, rando] }
   let(:top_two)           { [the_dude, puffy] }
   let(:drafted_players)   { [] }

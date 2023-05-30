@@ -6,9 +6,9 @@ describe Basketball::Org::Team do
   subject(:team)   { described_class.new(id:, players: [mousey]) }
 
   let(:id)         { 'p1234' }
-  let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey') }
-  let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man') }
-  let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head') }
+  let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey', position: Basketball::Org::Position.new('C')) }
+  let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man', position: Basketball::Org::Position.new('C')) }
+  let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head', position: Basketball::Org::Position.new('C')) }
 
   describe 'initialization' do
     it 'sets id' do

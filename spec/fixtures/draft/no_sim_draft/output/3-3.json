@@ -17,83 +17,103 @@
   "players": [
     {
       "id": "P-1",
-      "overall": 91
+      "overall": 91,
+      "position": "C"
     },
     {
       "id": "P-2",
-      "overall": 1
+      "overall": 1,
+      "position": "C"
     },
     {
       "id": "P-3",
-      "overall": 53
+      "overall": 53,
+      "position": "C"
     },
     {
       "id": "P-4",
-      "overall": 82
+      "overall": 82,
+      "position": "C"
     },
     {
       "id": "P-5",
-      "overall": 0
+      "overall": 0,
+      "position": "C"
     },
     {
       "id": "P-6",
-      "overall": 33
+      "overall": 33,
+      "position": "C"
     },
     {
       "id": "P-7",
-      "overall": 19
+      "overall": 19,
+      "position": "C"
     },
     {
       "id": "P-8",
-      "overall": 23
+      "overall": 23,
+      "position": "C"
     },
     {
       "id": "P-9",
-      "overall": 71
+      "overall": 71,
+      "position": "C"
     },
     {
       "id": "P-10",
-      "overall": 15
+      "overall": 15,
+      "position": "C"
     },
     {
       "id": "P-11",
-      "overall": 49
+      "overall": 49,
+      "position": "C"
     },
     {
       "id": "P-12",
-      "overall": 32
+      "overall": 32,
+      "position": "C"
     },
     {
       "id": "P-13",
-      "overall": 58
+      "overall": 58,
+      "position": "C"
     },
     {
       "id": "P-14",
-      "overall": 84
+      "overall": 84,
+      "position": "C"
     },
     {
       "id": "P-15",
-      "overall": 22
+      "overall": 22,
+      "position": "C"
     },
     {
       "id": "P-16",
-      "overall": 53
+      "overall": 53,
+      "position": "C"
     },
     {
       "id": "P-17",
-      "overall": 40
+      "overall": 40,
+      "position": "C"
     },
     {
       "id": "P-18",
-      "overall": 43
+      "overall": 43,
+      "position": "C"
     },
     {
       "id": "P-19",
-      "overall": 24
+      "overall": 24,
+      "position": "C"
     },
     {
       "id": "P-20",
-      "overall": 89
+      "overall": 89,
+      "position": "C"
     }
   ],
   "events": [

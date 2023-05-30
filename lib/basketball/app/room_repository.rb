@@ -73,10 +73,13 @@ module Basketball
         }
       end
 
+      # Serialization
+
       def serialize_player(player)
         {
           id: player.id,
-          overall: player.overall
+          overall: player.overall,
+          position: player.position&.code
         }
       end
 
@@ -86,22 +89,6 @@ module Basketball
           fuzz: front_office.fuzz
         }
       end
-
-      def deserialize_player(player_hash)
-        Org::Player.new(
-          id: player_hash[:id],
-          overall: player_hash[:overall]
-        )
-      end
-
-      def deserialize_front_office(hash)
-        Draft::FrontOffice.new(
-          id: hash[:id],
-          fuzz: hash[:fuzz]
-        )
-      end
-
-      # Serialization
 
       def serialize_events(events)
         events.map do |event|
@@ -137,6 +124,21 @@ module Basketball
       end
 
       # Deserialization
+
+      def deserialize_player(player_hash)
+        Org::Player.new(
+          id: player_hash[:id],
+          overall: player_hash[:overall],
+          position: Org::Position.new(player_hash[:position])
+        )
+      end
+
+      def deserialize_front_office(hash)
+        Draft::FrontOffice.new(
+          id: hash[:id],
+          fuzz: hash[:fuzz]
+        )
+      end
 
       def deserialize_front_offices(hashes)
         (hashes || []).map { |fo| deserialize_front_office(fo) }

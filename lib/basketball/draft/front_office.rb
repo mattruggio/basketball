@@ -2,11 +2,7 @@
 
 module Basketball
   module Draft
-    # A basic sub-class which selects one of the best available player based only on overall skill.
-    # The fuzz will determine in what top X group of player to randomly select from.  For example:
-    # A fuzz of <= 1 means the top overall will always be selected.  A fuzz of 5 means a random top 5
-    # player will be selected.  This is basically the crudest form of randomness that can be generally
-    # applied.
+    # A team will send their front office to a draft room to make draft selections.
     class FrontOffice < Entity
       # Inject some randomness into the front office by giving it some fuzziness.
       DEFAULT_MAX_FUZZ = 4

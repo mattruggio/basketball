@@ -8,6 +8,7 @@ require 'slop'
 
 # Generic
 require_relative 'basketball/entity'
+require_relative 'basketball/value_object'
 
 # Dependent on Generic
 require_relative 'basketball/org'

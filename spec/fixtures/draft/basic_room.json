@@ -13,15 +13,18 @@
   "players": [
     {
       "id": "mickey",
-      "overall": 99
+      "overall": 99,
+      "position": "C"
     },
     {
       "id": "donald",
-      "overall": 98
+      "overall": 98,
+      "position": "C"
     },
     {
       "id": "daisy",
-      "overall": 97
+      "overall": 97,
+      "position": "C"
     }
   ],
   "events": [

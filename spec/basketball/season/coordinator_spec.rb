@@ -32,8 +32,8 @@ describe Basketball::Season::Coordinator do
     Basketball::Org::Team.new(
       id: 'unknown',
       players: [
-        Basketball::Org::Player.new(id: 'P99'),
-        Basketball::Org::Player.new(id: 'P98')
+        Basketball::Org::Player.new(id: 'P99', position: Basketball::Org::Position.new('C')),
+        Basketball::Org::Player.new(id: 'P98', position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -42,8 +42,8 @@ describe Basketball::Season::Coordinator do
     Basketball::Org::Team.new(
       id: 'bunnies',
       players: [
-        Basketball::Org::Player.new(id: 'P1'),
-        Basketball::Org::Player.new(id: 'P2')
+        Basketball::Org::Player.new(id: 'P1', position: Basketball::Org::Position.new('C')),
+        Basketball::Org::Player.new(id: 'P2', position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -52,8 +52,8 @@ describe Basketball::Season::Coordinator do
     Basketball::Org::Team.new(
       id: 'rabbits',
       players: [
-        Basketball::Org::Player.new(id: 'P3'),
-        Basketball::Org::Player.new(id: 'P4')
+        Basketball::Org::Player.new(id: 'P3', position: Basketball::Org::Position.new('C')),
+        Basketball::Org::Player.new(id: 'P4', position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -62,7 +62,7 @@ describe Basketball::Season::Coordinator do
     Basketball::Org::Team.new(
       id: 'santas',
       players: [
-        Basketball::Org::Player.new(id: 'P5')
+        Basketball::Org::Player.new(id: 'P5', position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -71,7 +71,7 @@ describe Basketball::Season::Coordinator do
     Basketball::Org::Team.new(
       id: 'rizzos',
       players: [
-        Basketball::Org::Player.new(id: 'P6')
+        Basketball::Org::Player.new(id: 'P6', position: Basketball::Org::Position.new('C'))
       ]
     )
   end

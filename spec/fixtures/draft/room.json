@@ -10,13 +10,16 @@
   ],
   "players": [
     {
-      "id": "mickey"
+      "id": "mickey",
+      "position": "C"
     },
     {
-      "id": "donald"
+      "id": "donald",
+      "position": "C"
     },
     {
-      "id": "daisy"
+      "id": "daisy",
+      "position": "C"
     }
   ],
   "events": [

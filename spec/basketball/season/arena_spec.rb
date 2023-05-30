@@ -17,15 +17,15 @@ describe Basketball::Season::Arena do
     context 'when home team has same overalls as away team' do
       let(:home_players) do
         [
-          Basketball::Org::Player.new(id: 'p1', overall: 90),
-          Basketball::Org::Player.new(id: 'p2', overall: 80)
+          Basketball::Org::Player.new(id: 'p1', overall: 90, position: Basketball::Org::Position.new('C')),
+          Basketball::Org::Player.new(id: 'p2', overall: 80, position: Basketball::Org::Position.new('C'))
         ]
       end
 
       let(:away_players) do
         [
-          Basketball::Org::Player.new(id: 'p3', overall: 90),
-          Basketball::Org::Player.new(id: 'p4', overall: 80)
+          Basketball::Org::Player.new(id: 'p3', overall: 90, position: Basketball::Org::Position.new('C')),
+          Basketball::Org::Player.new(id: 'p4', overall: 80, position: Basketball::Org::Position.new('C'))
         ]
       end
 
@@ -39,15 +39,15 @@ describe Basketball::Season::Arena do
     context 'when away team has better overalls as home team' do
       let(:home_players) do
         [
-          Basketball::Org::Player.new(id: 'p1', overall: 70),
-          Basketball::Org::Player.new(id: 'p2', overall: 60)
+          Basketball::Org::Player.new(id: 'p1', overall: 70, position: Basketball::Org::Position.new('C')),
+          Basketball::Org::Player.new(id: 'p2', overall: 60, position: Basketball::Org::Position.new('C'))
         ]
       end
 
       let(:away_players) do
         [
-          Basketball::Org::Player.new(id: 'p3', overall: 90),
-          Basketball::Org::Player.new(id: 'p4', overall: 80)
+          Basketball::Org::Player.new(id: 'p3', overall: 90, position: Basketball::Org::Position.new('C')),
+          Basketball::Org::Player.new(id: 'p4', overall: 80, position: Basketball::Org::Position.new('C'))
         ]
       end
 

@@ -19,7 +19,7 @@ describe Basketball::Season::Matchup do
 
     it 'prevents players being on both teams' do
       players = [
-        Basketball::Org::Player.new(id: 'p1', overall: 99)
+        Basketball::Org::Player.new(id: 'p1', overall: 99, position: Basketball::Org::Position.new('C'))
       ]
 
       expect do

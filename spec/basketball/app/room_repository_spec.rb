@@ -13,9 +13,15 @@ describe Basketball::App::RoomRepository do
   let(:fixture_hash)  { read_json_fixture('draft', 'basic_room.json') }
   let(:ducks)         { Basketball::Draft::FrontOffice.new(id: 'ducks', fuzz: 2) }
   let(:eagles)        { Basketball::Draft::FrontOffice.new(id: 'eagles', fuzz: 5) }
-  let(:mickey)        { Basketball::Org::Player.new(id: 'mickey', overall: 99) }
-  let(:donald)        { Basketball::Org::Player.new(id: 'donald', overall: 98) }
-  let(:daisy)         { Basketball::Org::Player.new(id: 'daisy', overall: 97) }
+  let(:mickey)        do
+    Basketball::Org::Player.new(id: 'mickey', overall: 99, position: Basketball::Org::Position.new('C'))
+  end
+  let(:donald) do
+    Basketball::Org::Player.new(id: 'donald', overall: 98, position: Basketball::Org::Position.new('C'))
+  end
+  let(:daisy) do
+    Basketball::Org::Player.new(id: 'daisy', overall: 97, position: Basketball::Org::Position.new('C'))
+  end
 
   let(:events) do
     [

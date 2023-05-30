@@ -3,8 +3,8 @@
 module Basketball
   module Season
     # Base class describing what all games have in common.
-    class Game
-      attr_reader :date, :home_opponent, :away_opponent
+    class Game < ValueObject
+      value_reader :date, :home_opponent, :away_opponent
 
       def initialize(date:, home_opponent:, away_opponent:)
         super()
@@ -31,18 +31,6 @@ module Basketball
 
       def to_s
         "#{date} - #{away_opponent} at #{home_opponent}"
-      end
-
-      def ==(other)
-        self.class.name == other.class.name &&
-          date == other.date &&
-          home_opponent == other.home_opponent &&
-          away_opponent == other.away_opponent
-      end
-      alias eql? ==
-
-      def hash
-        [self.class.name, date, home_opponent, away_opponent].hash
       end
     end
   end

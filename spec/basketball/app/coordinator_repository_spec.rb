@@ -40,8 +40,8 @@ describe Basketball::App::CoordinatorRepository do
     Basketball::Org::Team.new(
       id: 'bunnies',
       players: [
-        Basketball::Org::Player.new(id: 'P1', overall: 1),
-        Basketball::Org::Player.new(id: 'P2', overall: 2)
+        Basketball::Org::Player.new(id: 'P1', overall: 1, position: Basketball::Org::Position.new('C')),
+        Basketball::Org::Player.new(id: 'P2', overall: 2, position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -50,8 +50,8 @@ describe Basketball::App::CoordinatorRepository do
     Basketball::Org::Team.new(
       id: 'rabbits',
       players: [
-        Basketball::Org::Player.new(id: 'P3', overall: 3),
-        Basketball::Org::Player.new(id: 'P4', overall: 4)
+        Basketball::Org::Player.new(id: 'P3', overall: 3, position: Basketball::Org::Position.new('C')),
+        Basketball::Org::Player.new(id: 'P4', overall: 4, position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -60,7 +60,7 @@ describe Basketball::App::CoordinatorRepository do
     Basketball::Org::Team.new(
       id: 'santas',
       players: [
-        Basketball::Org::Player.new(id: 'P5', overall: 5)
+        Basketball::Org::Player.new(id: 'P5', overall: 5, position: Basketball::Org::Position.new('C'))
       ]
     )
   end
@@ -69,7 +69,7 @@ describe Basketball::App::CoordinatorRepository do
     Basketball::Org::Team.new(
       id: 'rizzos',
       players: [
-        Basketball::Org::Player.new(id: 'P6', overall: 6)
+        Basketball::Org::Player.new(id: 'P6', overall: 6, position: Basketball::Org::Position.new('C'))
       ]
     )
   end

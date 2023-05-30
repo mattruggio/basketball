@@ -103,7 +103,11 @@ module Basketball
             team = Org::Team.new(id: "T-#{i}")
 
             players_per_team_count.times do |j|
-              player = Org::Player.new(id: "T-#{i}-P-#{j}", overall: rand(20..100))
+              player = Org::Player.new(
+                id: "T-#{i}-P-#{j}",
+                overall: rand(20..100),
+                position: Org::Position.random
+              )
 
               team.sign!(player)
             end

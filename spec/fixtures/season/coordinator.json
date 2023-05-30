@@ -71,11 +71,13 @@
         "players": [
           {
             "id": "P1",
-            "overall": 1
+            "overall": 1,
+            "position": "C"
           },
           {
             "id": "P2",
-            "overall": 2
+            "overall": 2,
+            "position": "C"
           }
         ]
       },
@@ -84,11 +86,13 @@
         "players": [
           {
             "id": "P3",
-            "overall": 3
+            "overall": 3,
+            "position": "C"
           },
           {
             "id": "P4",
-            "overall": 4
+            "overall": 4,
+            "position": "C"
           }
         ]
       },
@@ -97,7 +101,8 @@
         "players": [
           {
             "id": "P5",
-            "overall": 5
+            "overall": 5,
+            "position": "C"
           }
         ]
       },
@@ -106,7 +111,8 @@
         "players": [
           {
             "id": "P6",
-            "overall": 6
+            "overall": 6,
+            "position": "C"
           }
         ]
       }

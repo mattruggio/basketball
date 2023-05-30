@@ -104,7 +104,8 @@ module Basketball
         players = 450.times.map do |i|
           Org::Player.new(
             id: "P-#{i + 1}",
-            overall: (20..100).to_a.sample
+            overall: (20..100).to_a.sample,
+            position: Org::Position.random
           )
         end
 
