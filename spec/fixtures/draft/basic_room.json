@@ -3,11 +3,11 @@
   "front_offices": [
     {
       "id": "ducks",
-      "fuzz": 2
+      "risk_level": 2
     },
     {
       "id": "eagles",
-      "fuzz": 5
+      "risk_level": 5
     }
   ],
   "players": [

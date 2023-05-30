@@ -3,15 +3,15 @@
   "front_offices": [
     {
       "id": "T-1",
-      "fuzz": 0
+      "risk_level": 0
     },
     {
       "id": "T-2",
-      "fuzz": 0
+      "risk_level": 0
     },
     {
       "id": "T-3",
-      "fuzz": 0
+      "risk_level": 0
     }
   ],
   "players": [

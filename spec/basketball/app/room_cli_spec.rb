@@ -8,8 +8,8 @@ describe Basketball::App::RoomCLI do
     let(:io)         { StringIO.new }
     let(:prefix)     { "#{SecureRandom.uuid}-" }
 
-    context 'with no fuzz' do
-      let(:dir) { File.join('draft', 'no_fuzz_draft') }
+    context 'with no risk_level' do
+      let(:dir) { File.join('draft', 'no_risk_level_draft') }
 
       specify 'no sim picks' do
         output_path   = File.join(TEMP_DIR, dir, "#{prefix}0-0.json")

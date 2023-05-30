@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Services
+require_relative 'draft/scout'
+
 # Common
 require_relative 'draft/assessment'
 require_relative 'draft/event'

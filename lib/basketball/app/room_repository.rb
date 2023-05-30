@@ -86,7 +86,7 @@ module Basketball
       def serialize_front_office(front_office)
         {
           id: front_office.id,
-          fuzz: front_office.fuzz
+          risk_level: front_office.risk_level
         }
       end
 
@@ -136,7 +136,7 @@ module Basketball
       def deserialize_front_office(hash)
         Draft::FrontOffice.new(
           id: hash[:id],
-          fuzz: hash[:fuzz]
+          risk_level: hash[:risk_level]
         )
       end
 

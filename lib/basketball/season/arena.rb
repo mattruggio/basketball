@@ -73,8 +73,8 @@ module Basketball
 
       def generate_scores
         scores = [
-          rand(70..130),
-          rand(70..130)
+          rand(70..120),
+          rand(70..120)
         ]
 
         # No ties

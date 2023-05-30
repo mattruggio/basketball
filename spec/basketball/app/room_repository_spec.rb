@@ -11,8 +11,8 @@ describe Basketball::App::RoomRepository do
   let(:rounds)        { 2 }
   let(:path)          { fixture_path('draft', 'basic_room.json') }
   let(:fixture_hash)  { read_json_fixture('draft', 'basic_room.json') }
-  let(:ducks)         { Basketball::Draft::FrontOffice.new(id: 'ducks', fuzz: 2) }
-  let(:eagles)        { Basketball::Draft::FrontOffice.new(id: 'eagles', fuzz: 5) }
+  let(:ducks)         { Basketball::Draft::FrontOffice.new(id: 'ducks', risk_level: 2) }
+  let(:eagles)        { Basketball::Draft::FrontOffice.new(id: 'eagles', risk_level: 5) }
   let(:mickey)        do
     Basketball::Org::Player.new(id: 'mickey', overall: 99, position: Basketball::Org::Position.new('C'))
   end
