@@ -19,7 +19,7 @@ module Basketball
           end
         end
 
-        filtered_players.sort_by(&:overall).reverse
+        filtered_players.sort_by { |p| [p.overall, p.id] }.reverse
       end
     end
   end
