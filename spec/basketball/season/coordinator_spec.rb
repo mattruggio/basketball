@@ -5,7 +5,9 @@ require 'season_helper'
 
 describe Basketball::Season::Coordinator do
   subject(:coordinator) do
-    described_class.new(calendar:, current_date:, league:, arena:)
+    described_class.new(calendar:, current_date:, league:).tap do |coordinator|
+      coordinator.send('arena=', PredictableArena.new)
+    end
   end
 
   let(:calendar) do
@@ -18,7 +20,6 @@ describe Basketball::Season::Coordinator do
     )
   end
 
-  let(:arena)                { PredictableArena.new }
   let(:current_date)         { Date.new(2022, 10, 1) }
   let(:preseason_start_date) { Date.new(2022, 10, 1) }
   let(:preseason_end_date)   { Date.new(2022, 10, 14) }
@@ -350,9 +351,12 @@ describe Basketball::Season::Coordinator do
       coordinator = described_class.new(
         calendar:,
         league:,
-        current_date: Date.new(2022, 10, 1),
-        arena: BadArena.new(Date.new(2199, 1, 1))
+        current_date: Date.new(2022, 10, 1)
       )
+
+      arena = BadArena.new(Date.new(2199, 1, 1))
+
+      coordinator.send('arena=', arena)
 
       expect { coordinator.sim! }.to raise_error(described_class::GameNotCurrentError)
     end

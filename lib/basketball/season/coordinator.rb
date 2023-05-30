@@ -34,7 +34,6 @@ module Basketball
       def initialize(
         calendar:,
         current_date:,
-        arena: Arena.new,
         results: [],
         league: Org::League.new
       )
@@ -42,12 +41,11 @@ module Basketball
 
         raise ArgumentError, 'calendar is required' unless calendar
         raise ArgumentError, 'current_date is required' if current_date.to_s.empty?
-        raise ArgumentError, 'arena is required' unless arena
         raise ArgumentError, 'league is required' unless league
 
         @calendar     = calendar
         @current_date = current_date
-        @arena        = arena
+        @arena        = Arena.new
         @results      = []
         @league       = league
 
@@ -158,7 +156,7 @@ module Basketball
 
       private
 
-      attr_writer :id
+      attr_writer :id, :arena
 
       def opponent_team(opponent)
         league.teams.find { |t| t == opponent }

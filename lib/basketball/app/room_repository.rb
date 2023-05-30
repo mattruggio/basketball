@@ -9,8 +9,18 @@ module Basketball
 
       private_constant :PICK_EVENT, :SKIP_EVENT
 
+      attr_reader :store
+
+      def initialize(store: FileStore.new)
+        super()
+
+        @store = store
+
+        freeze
+      end
+
       def load(path)
-        contents = File.read(path)
+        contents = store.read(path)
 
         room = deserialize(contents)
 
@@ -21,11 +31,8 @@ module Basketball
 
       def save(path, room)
         contents = serialize(room)
-        dir      = File.dirname(path)
 
-        FileUtils.mkdir_p(dir)
-
-        File.write(path, contents)
+        store.write(path, contents)
 
         room.send('id=', path)
 

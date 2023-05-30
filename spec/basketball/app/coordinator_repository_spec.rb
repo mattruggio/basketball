@@ -4,15 +4,16 @@ require 'spec_helper'
 require 'season_helper'
 
 describe Basketball::App::CoordinatorRepository do
-  subject(:repository) { described_class.new(arena:) }
+  subject(:repository) { described_class.new }
 
   let(:coordinator) do
     Basketball::Season::Coordinator.new(
       calendar:,
       current_date:,
-      league:,
-      arena:
-    )
+      league:
+    ).tap do |coordinator|
+      coordinator.send('arena=', PredictableArena.new)
+    end
   end
 
   let(:calendar) do
@@ -25,7 +26,6 @@ describe Basketball::App::CoordinatorRepository do
     )
   end
 
-  let(:arena)                { PredictableArena.new }
   let(:current_date)         { Date.new(2022, 10, 1) }
   let(:preseason_start_date) { Date.new(2022, 10, 1) }
   let(:preseason_end_date)   { Date.new(2022, 10, 14) }
@@ -105,10 +105,6 @@ describe Basketball::App::CoordinatorRepository do
 
     specify 'current_date' do
       expect(actual_coordinator.current_date).to eq(coordinator.current_date)
-    end
-
-    specify 'arena' do
-      expect(actual_coordinator.arena).to eq(coordinator.arena)
     end
 
     specify 'league' do

@@ -11,33 +11,28 @@ module Basketball
 
       private_constant :GAME_CLASSES
 
-      attr_reader :arena
+      attr_reader :store
 
-      def initialize(arena: Season::Arena.new)
+      def initialize(store: FileStore.new)
         super()
 
-        @arena = arena
+        @store = store
 
         freeze
       end
 
       def load(path)
-        contents = File.read(path)
+        contents = store.read(path)
 
-        coordinator = deserialize(contents)
-
-        coordinator.send('id=', path)
-
-        coordinator
+        deserialize(contents).tap do |coordinator|
+          coordinator.send('id=', path)
+        end
       end
 
       def save(path, coordinator)
         contents = serialize(coordinator)
-        dir      = File.dirname(path)
 
-        FileUtils.mkdir_p(dir)
-
-        File.write(path, contents)
+        store.write(path, contents)
 
         coordinator.send('id=', path)
 
@@ -58,7 +53,6 @@ module Basketball
 
       def from_h(hash)
         Season::Coordinator.new(
-          arena:,
           calendar: deserialize_calendar(hash[:calendar]),
           current_date: Date.parse(hash[:current_date]),
           results: deserialize_results(hash[:results]),
