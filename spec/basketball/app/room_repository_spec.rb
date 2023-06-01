@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Basketball::App::RoomRepository do
-  subject(:repository) { described_class.new }
+  subject(:repository) { described_class.new(Basketball::App::FileStore.new) }
 
   let(:room)          { Basketball::Draft::Room.new(rounds:, players:, front_offices:, events:) }
   let(:front_offices) { [ducks, eagles] }

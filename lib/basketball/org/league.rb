@@ -6,18 +6,18 @@ module Basketball
     # adding teams and players to ensure the all the teams are cohesive, such as:
     #   - preventing duplicate teams
     #   - preventing double-signing players across teams
-    class League
+    class League < Entity
       class TeamAlreadyRegisteredError < StandardError; end
       class UnregisteredTeamError < StandardError; end
 
       attr_reader :teams
 
       def initialize(teams: [])
+        super()
+
         @teams = []
 
         teams.each { |team| register!(team) }
-
-        freeze
       end
 
       def to_s
@@ -63,11 +63,6 @@ module Basketball
 
         self
       end
-
-      def ==(other)
-        teams == other.teams
-      end
-      alias eql? ==
     end
   end
 end

@@ -3,6 +3,8 @@
 require 'spec_helper'
 
 describe Basketball::App::RoomCLI do
+  subject(:room) { described_class.new(Basketball::App::FileStore.new) }
+
   describe 'feature tests' do
     let(:input_path) { fixture_path(dir, 'input.json') }
     let(:io)         { StringIO.new }

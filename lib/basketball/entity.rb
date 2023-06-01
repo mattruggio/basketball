@@ -32,5 +32,9 @@ module Basketball
     def comparable_id
       id.to_s.upcase
     end
+
+    private
+
+    attr_writer :id
   end
 end

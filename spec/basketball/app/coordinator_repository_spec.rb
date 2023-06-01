@@ -4,7 +4,7 @@ require 'spec_helper'
 require 'season_helper'
 
 describe Basketball::App::CoordinatorRepository do
-  subject(:repository) { described_class.new }
+  subject(:repository) { described_class.new(Basketball::App::FileStore.new) }
 
   let(:coordinator) do
     Basketball::Season::Coordinator.new(
@@ -131,7 +131,7 @@ describe Basketball::App::CoordinatorRepository do
 
     before { repository.save(rando_path, coordinator) }
 
-    specify do
+    specify 'deserialized data matches' do
       expect(actual_hash).to eq(fixture_hash)
     end
 

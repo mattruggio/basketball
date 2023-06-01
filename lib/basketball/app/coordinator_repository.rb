@@ -3,7 +3,9 @@
 module Basketball
   module App
     # Knows how to flatten a Coordinator instance and rehydrate one from JSON and/or a Ruby hash.
-    class CoordinatorRepository
+    class CoordinatorRepository < DocumentRepository
+      include LeagueSerializable
+
       GAME_CLASSES = {
         'Exhibition' => Season::Exhibition,
         'Regular' => Season::Regular
@@ -11,45 +13,7 @@ module Basketball
 
       private_constant :GAME_CLASSES
 
-      attr_reader :store
-
-      def initialize(store: FileStore.new)
-        super()
-
-        @store = store
-
-        freeze
-      end
-
-      def load(path)
-        contents = store.read(path)
-
-        deserialize(contents).tap do |coordinator|
-          coordinator.send('id=', path)
-        end
-      end
-
-      def save(path, coordinator)
-        contents = serialize(coordinator)
-
-        store.write(path, contents)
-
-        coordinator.send('id=', path)
-
-        coordinator
-      end
-
       private
-
-      def deserialize(string)
-        hash = JSON.parse(string, symbolize_names: true)
-
-        from_h(hash)
-      end
-
-      def serialize(object)
-        to_h(object).to_json
-      end
 
       def from_h(hash)
         Season::Coordinator.new(
@@ -70,14 +34,6 @@ module Basketball
       end
 
       # Serialization
-
-      def serialize_player(player)
-        {
-          id: player.id,
-          overall: player.overall,
-          position: player.position&.code
-        }
-      end
 
       def serialize_games(games)
         games.map { |game| serialize_game(game) }
@@ -110,19 +66,6 @@ module Basketball
         }
       end
 
-      def serialize_league(league)
-        {
-          teams: league.teams.map { |team| serialize_team(team) }
-        }
-      end
-
-      def serialize_team(team)
-        {
-          id: team.id,
-          players: team.players.map { |player| serialize_player(player) }
-        }
-      end
-
       def serialize_results(results)
         results.map do |result|
           serialize_result(result)
@@ -130,26 +73,6 @@ module Basketball
       end
 
       # Deserialization
-
-      def deserialize_player(player_hash)
-        Org::Player.new(
-          id: player_hash[:id],
-          overall: player_hash[:overall],
-          position: Org::Position.new(player_hash[:position])
-        )
-      end
-
-      def deserialize_league(league_hash)
-        team_hashes = league_hash[:teams] || []
-
-        teams = team_hashes.map do |team_hash|
-          players = (team_hash[:players] || []).map { |player_hash| deserialize_player(player_hash) }
-
-          Org::Team.new(id: team_hash[:id], players:)
-        end
-
-        Org::League.new(teams:)
-      end
 
       def deserialize_calendar(calendar_hash)
         Season::Calendar.new(

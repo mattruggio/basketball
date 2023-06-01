@@ -11,12 +11,19 @@ module Basketball
     #
     #   exe/basketball-coordinator -o tmp/coordinator.json -ae
     class CoordinatorCLI
-      attr_reader :opts, :io, :repository
+      attr_reader :opts, :io, :coordinator_repository
 
-      def initialize(args:, io: $stdout)
-        @io         = io
-        @opts       = slop_parse(args)
-        @repository = CoordinatorRepository.new
+      def initialize(
+        args:,
+        io: $stdout,
+        coordinator_repository: CoordinatorRepository.new(FileStore.new)
+      )
+        raise ArgumentError, 'coordinator_repository is required' unless coordinator_repository
+        raise ArgumentError, 'io is required'                     unless io
+
+        @io                     = io
+        @opts                   = slop_parse(args)
+        @coordinator_repository = coordinator_repository
 
         if no_input? && no_output?
           io.puts('Input and/or output paths are required.')
@@ -92,7 +99,7 @@ module Basketball
       def write(coordinator)
         path = output? ? output : input
 
-        repository.save(path, coordinator)
+        coordinator_repository.save(path, coordinator)
 
         path
       end
@@ -173,7 +180,7 @@ module Basketball
           if input?
             io.puts("Coordinator loaded from: #{input}")
 
-            repository.load(input)
+            coordinator_repository.load(input)
           else
             io.puts('Input path was not provided, generating fresh coordinator')
 

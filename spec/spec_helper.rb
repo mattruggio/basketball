@@ -13,6 +13,10 @@ unless ENV['DISABLE_SIMPLECOV'] == 'true'
   end
 end
 
+def json_parse(json)
+  JSON.parse(json, symbolize_names: true)
+end
+
 def fixture_path(*path)
   File.join('spec', 'fixtures', *path)
 end
@@ -35,6 +39,14 @@ end
 
 def temp_path(*path)
   File.join(TEMP_DIR, *path)
+end
+
+def write_file(path, contents)
+  dir = File.dirname(path)
+
+  FileUtils.mkdir_p(dir)
+
+  File.write(path, contents)
 end
 
 TEMP_DIR = File.join('tmp', 'spec')

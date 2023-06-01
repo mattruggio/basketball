@@ -10,16 +10,25 @@ module Basketball
     #   exe/basketball-room -i tmp/draft-wip.json -s 30 -t 10
     #   exe/basketball-room -i tmp/draft-wip.json -ale
     #
-    #   exe/basketball-room -o tmp/draft-wip.json -ale
+    #   exe/basketball-room -o tmp/draft-wip.json -ale -r tmp/draft-league.json
     class RoomCLI
       class PlayerNotFound < StandardError; end
 
-      attr_reader :opts, :io, :repository
+      attr_reader :opts,
+                  :io,
+                  :room_repository,
+                  :league_repository
 
-      def initialize(args:, io: $stdout)
-        @io         = io
-        @opts       = slop_parse(args)
-        @repository = RoomRepository.new
+      def initialize(
+        args:,
+        io: $stdout,
+        room_repository: RoomRepository.new(FileStore.new),
+        league_repository: LeagueRepository.new(FileStore.new)
+      )
+        @io                = io
+        @opts              = slop_parse(args)
+        @room_repository   = room_repository
+        @league_repository = league_repository
 
         if opts[:input].to_s.empty? && opts[:output].to_s.empty?
           io.puts('Input and/or output paths are required.')
@@ -39,11 +48,18 @@ module Basketball
         events(room)
         league(room)
         query(room)
+        rosters(room)
 
         self
       end
 
       private
+
+      def rosters(room)
+        return if opts[:rosters].to_s.empty?
+
+        league_repository.save(opts[:rosters], room.league)
+      end
 
       def status(room)
         io.puts
@@ -74,6 +90,7 @@ module Basketball
           o.bool    '-l', '--league',       'Output all teams and their picks', default: false
           o.integer '-x', '--skip',         'Number of picks to skip (default is 0).', default: 0
           o.bool    '-e', '--events',       'Output event log.', default: false
+          o.string  '-r', '--rosters',      'Path to write the resulting rosters (league) to.'
 
           o.on '-h', '--help', 'Print out help, like this is doing right now.' do
             io.puts(o)
@@ -141,7 +158,7 @@ module Basketball
       end
 
       def read
-        repository.load(opts[:input])
+        room_repository.load(opts[:input])
       end
 
       # rubocop:disable Metrics/AbcSize
@@ -200,7 +217,7 @@ module Basketball
       def write(room)
         output = output_default_to_input
 
-        repository.save(output, room)
+        room_repository.save(output, room)
 
         io.puts
         io.puts("Draft written to: #{output}")

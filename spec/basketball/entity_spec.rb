@@ -57,7 +57,7 @@ describe Basketball::Entity do
         described_class.new('abc'),
         described_class.new('mno'),
         described_class.new('zyx')
-      ].sort
+      ]
 
       expect(actual).to eq(expected)
     end

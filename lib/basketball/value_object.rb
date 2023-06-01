@@ -33,7 +33,7 @@ module Basketball
     alias eql? ==
 
     def hash
-      all_sorted_values.map(&:hash).hash
+      all_sorted_values.hash
     end
 
     def all_sorted_values

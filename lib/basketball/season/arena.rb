@@ -4,14 +4,14 @@ module Basketball
   module Season
     # A very, very, very basic starting point for a "semi-randomized" game simulator.
     class Arena
-      RANDOM             = :random
-      TOP_ONE            = :top_one
-      TOP_TWO            = :top_two
-      TOP_THREE          = :top_three
-      TOP_SIX            = :top_six
-      MAX_HOME_ADVANTAGE = 5
+      RANDOM    = :random
+      TOP_ONE   = :top_one
+      TOP_TWO   = :top_two
+      TOP_THREE = :top_three
+      TOP_SIX   = :top_six
+      DEFAULT_MAX_HOME_ADVANTAGE = 5
 
-      STRATEGY_FREQUENCIES = {
+      DEFAULT_STRATEGY_FREQUENCIES = {
         RANDOM => 10,
         TOP_ONE => 5,
         TOP_TWO => 10,
@@ -19,17 +19,14 @@ module Basketball
         TOP_SIX => 30
       }.freeze
 
-      private_constant :STRATEGY_FREQUENCIES,
-                       :RANDOM,
-                       :TOP_ONE,
-                       :TOP_TWO,
-                       :TOP_SIX,
-                       :MAX_HOME_ADVANTAGE
+      attr_reader :lotto, :max_home_advantage
 
-      def initialize
-        @lotto = STRATEGY_FREQUENCIES.inject([]) do |memo, (name, frequency)|
-          memo + ([name] * frequency)
-        end.shuffle
+      def initialize(
+        strategy_frquencies: DEFAULT_STRATEGY_FREQUENCIES,
+        max_home_advantage: DEFAULT_MAX_HOME_ADVANTAGE
+      )
+        @max_home_advantage = max_home_advantage
+        @lotto              = make_lotto(strategy_frquencies)
 
         freeze
       end
@@ -57,7 +54,11 @@ module Basketball
 
       private
 
-      attr_reader :lotto
+      def make_lotto(strategy_frquencies)
+        strategy_frquencies.inject([]) do |memo, (name, frequency)|
+          memo + ([name] * frequency)
+        end.shuffle
+      end
 
       def pick_strategy
         lotto.sample
@@ -89,7 +90,7 @@ module Basketball
       end
 
       def random_home_advantage
-        rand(0..MAX_HOME_ADVANTAGE)
+        rand(0..max_home_advantage)
       end
 
       def top_one_strategy(matchup)

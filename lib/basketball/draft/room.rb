@@ -159,8 +159,6 @@ module Basketball
 
       private
 
-      attr_writer :id
-
       def player_events
         events.select { |e| e.respond_to?(:player) }
       end

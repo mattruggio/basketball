@@ -3,53 +3,13 @@
 module Basketball
   module App
     # Can load and save Room objects to JSON files.
-    class RoomRepository
+    class RoomRepository < DocumentRepository
       PICK_EVENT = 'Pick'
       SKIP_EVENT = 'Skip'
 
       private_constant :PICK_EVENT, :SKIP_EVENT
 
-      attr_reader :store
-
-      def initialize(store: FileStore.new)
-        super()
-
-        @store = store
-
-        freeze
-      end
-
-      def load(path)
-        contents = store.read(path)
-
-        room = deserialize(contents)
-
-        room.send('id=', path)
-
-        room
-      end
-
-      def save(path, room)
-        contents = serialize(room)
-
-        store.write(path, contents)
-
-        room.send('id=', path)
-
-        room
-      end
-
       private
-
-      def deserialize(string)
-        hash = JSON.parse(string, symbolize_names: true)
-
-        from_h(hash)
-      end
-
-      def serialize(object)
-        to_h(object).to_json
-      end
 
       def from_h(hash)
         front_offices = deserialize_front_offices(hash[:front_offices])

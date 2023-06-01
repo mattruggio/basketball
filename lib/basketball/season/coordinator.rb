@@ -155,7 +155,7 @@ module Basketball
 
       private
 
-      attr_writer :id, :arena
+      attr_writer :arena
 
       def opponent_team(opponent)
         league.teams.find { |t| t == opponent }
