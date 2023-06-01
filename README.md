@@ -20,9 +20,11 @@ Element      | Description
 **Draft** | Bounded context (sub-module) dealing with running a round-robin player draft for teams.
 **Exhibition** | Pre-season game which has no impact to team record.
 **External Dependency** | Some outside system which this library or portions of this library are dependent on.
+**File Store** | Implements a store that can interact with the underlying File System.
 **File System** | Local operating system that the CLI will use for persistence.
 **Front Office** | Identifiable as a team, contains logic for how to auto-pick draft selections.  Meant to be subclassed and extended to include more intricate player selection logic as the base will simply randomly select a player.
 **Game** | Matches up a date with two teams (home and away) to represent a coordinatord match-up.
+**League Repository** | Understands how to save and load League objects from JSON files on disk.
 **League** | Describes a league in terms of structure composed of teams and players.
 **Match** | When the Coordinator needs an Arena instance to select a game winner, it will send the Arena a Match. A match is Game but also includes the active roster (players) for both teams that will participate in the game.
 **Org** | Bounded context (sub-module) dealing with overall organizational structure of a sports assocation.
@@ -36,6 +38,7 @@ Element      | Description
 **Scout** | Knows how to stack rank lists of players.
 **Season** | Bounded context (sub-module) dealing with calendar and matchup generation.
 **Skip** | Result event emitted when a front office decides to skip a round.
+**Store** | Interface for the underlying Repository persistence layer.  While a Document Repository is mainly responsible for serialization/de-serialization, the store actually knows how to read/write the data.
 **Team Group** | Set of rosters that together form a cohesive league.
 **Team** | Member of a league and signs players.  Has games assigned and played.
 
