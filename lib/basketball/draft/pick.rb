@@ -20,13 +20,6 @@ module Basketball
       def to_s
         "#{super} #{auto ? 'auto-' : ''}picked #{player}"
       end
-
-      def ==(other)
-        super &&
-          player == other.player &&
-          auto == other.auto
-      end
-      alias eql? ==
     end
   end
 end
