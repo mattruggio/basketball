@@ -123,6 +123,12 @@ basketball-room -i tmp/draft.json -p P-100,P-200,P-300
 basketball-room -i tmp/draft.json -a
 ```
 
+###### Write Drafted League to Disk
+
+```zsh
+basketball-room -i tmp/draft.json -r tmp/draft-league.json
+```
+
 ###### Help Menu
 
 ```zsh
