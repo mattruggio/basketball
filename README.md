@@ -12,9 +12,10 @@ Element      | Description
 :------------ | :-----------
 **Arena** | Determines exhibition and regular season game outcomes.
 **Assessment** | When the Room needs to know who a Front Office wants to select, the Room will send the Front Office an Assessment. The Assessment is a report of where the team currently stands: players picked, players available, and round information.
-**basketball-room** | Command-line executable script illustrating an example of how to subclass and consume the drafting module.
+**basketball-draft-room** | Command-line executable script showing an example of how to consume the draft room aggregate root.
+**basketball-season-coordinator** | Command-line executable script showing an example of how to consume the season coordinator aggregate root.
 **Calendar** | Stores important boundary dates (preseason start, preseason end, season start, and season end).
-**Coordinator CLI** | Underlying Ruby class that powers the `basketball-coordinator` script. Basically a terminal wrapper over the Coordinator object.
+**Coordinator CLI** | Underlying Ruby class that powers the `basketball-season-coordinator` script. Basically a terminal wrapper over the Coordinator object.
 **Coordinator Repository** | Understands how to save and load Coordinator objects from JSON files on disk.
 **Coordinator** | Object which can take a League, Calendar, Games, and an Arena and provide an iterable interface to enumerate through days and simulate games as results.
 **Draft** | Bounded context (sub-module) dealing with running a round-robin player draft for teams.
@@ -32,7 +33,7 @@ Element      | Description
 **Player** | Identitiable as a person able to be drafted.  Meant to be subclassed and extended to include more intricate descriptions of a specific sport player, such as abilities, ratings, and statistics.  Right now it has none of these types of traits and it meant to only serve as the base with only an overall attribute.
 **Regular** | Game that counts towards regular season record.
 **Result** | The outcome of a game (typically with a home and away score).
-**Room CLI** | Underlying Ruby class that powers the `basketball-room` script. Basically a terminal wrapper for the Room object.
+**Room CLI** | Underlying Ruby class that powers the `basketball-draft-room` script. Basically a terminal wrapper for the Room object.
 **Room Repository** | Understands how to save and load Room objects from JSON files on disk.
 **Room** | Main object responsible for providing an iterable interface capable of executing a draft, pick by pick.
 **Scout** | Knows how to stack rank lists of players.
@@ -72,67 +73,61 @@ This library ships with an example of how the Draft module could be used impleme
 ###### Generate a Fresh Draft
 
 ```zsh
-basketball-room -o tmp/draft.json
+basketball-draft-room -o tmp/draft.json
 ```
 
 ###### N Top Available Players
 
 ```zsh
-basketball-room -i tmp/draft.json -t 10
+basketball-draft-room -i tmp/draft.json -t 10
 ```
 
 ###### N Top Available Players for a Position
 
 ```zsh
-basketball-room -i tmp/draft.json -t 10 -q PG
+basketball-draft-room -i tmp/draft.json -t 10 -q PG
 ```
 
 ###### Output League
 
 ```zsh
-basketball-room -i tmp/draft.json -l
+basketball-draft-room -i tmp/draft.json -l
 ```
 
 ###### Output Event Log
 
 ```zsh
-basketball-room -i tmp/draft.json -e
+basketball-draft-room -i tmp/draft.json -e
 ```
 
 ###### Simulate N Picks
 
 ```zsh
-basketball-room -i tmp/draft.json -s 10
+basketball-draft-room -i tmp/draft.json -s 10
 ```
 
 ###### Skip N Picks
 
 ```zsh
-basketball-room -i tmp/draft.json -x 10
+basketball-draft-room -i tmp/draft.json -x 10
 ```
 
 ###### Pick Players
 
 ```zsh
-basketball-room -i tmp/draft.json -p P-100,P-200,P-300
+basketball-draft-room -i tmp/draft.json -p P-100,P-200,P-300
 ```
 
 ###### Simulate the Rest of the Draft
 
 ```zsh
-basketball-room -i tmp/draft.json -a
-```
-
-###### Write Drafted League to Disk
-
-```zsh
-basketball-room -i tmp/draft.json -r tmp/draft-league.json
+basketball-draft-room -i tmp/draft.json -a
 ```
 
 ###### Help Menu
 
 ```zsh
-basketball-room -h
+basketball-draft-room -h
 ```
 
 ### Season Module
@@ -149,37 +144,37 @@ This library ships with an example of how the Season module could be used implem
 ###### Generate Random coordinator
 
 ```zsh
-exe/basketball-coordinator -o tmp/coordinator.json
+exe/basketball-season-coordinator -o tmp/coordinator.json
 ```
 
 ###### Sim One Day and Save to New File
 
 ```zsh
-exe/basketball-coordinator -i tmp/coordinator.json -o tmp/coordinator2.json -d 1
+exe/basketball-season-coordinator -i tmp/coordinator.json -o tmp/coordinator2.json -d 1
 ```
 
 ###### Output Event Log
 
 ```zsh
-exe/basketball-coordinator -i tmp/coordinator.json -e
+exe/basketball-season-coordinator -i tmp/coordinator.json -e
 ```
 
 ###### Sim Two Days and Save To Input File
 
 ```zsh
-exe/basketball-coordinator -i tmp/coordinator.json -d 2
+exe/basketball-season-coordinator -i tmp/coordinator.json -d 2
 ```
 
 ###### Sim Rest of Calendar
 
 ```zsh
-exe/basketball-coordinator -i tmp/coordinator.json -a
+exe/basketball-season-coordinator -i tmp/coordinator.json -a
 ```
 
 ###### Help Menu
 
 ```zsh
-basketball-coordinator -h
+basketball-season-coordinator -h
 ```
 
 ## Contributing

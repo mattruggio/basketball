@@ -6,7 +6,6 @@ require_relative 'org/has_teams'
 require_relative 'org/has_divisions'
 
 # Domain Models
-require_relative 'org/association'
 require_relative 'org/conference'
 require_relative 'org/division'
 require_relative 'org/league'

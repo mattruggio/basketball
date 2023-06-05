@@ -3,32 +3,27 @@
 module Basketball
   module App
     # Examples:
-    #   exe/basketball-room -o tmp/draft.json
-    #   exe/basketball-room -i tmp/draft.json -o tmp/draft-wip.json -s 26 -p P-5,P-10 -t 10
-    #   exe/basketball-room -i tmp/draft-wip.json -x 2
-    #   exe/basketball-room -i tmp/draft-wip.json -g -t 10
-    #   exe/basketball-room -i tmp/draft-wip.json -s 30 -t 10
-    #   exe/basketball-room -i tmp/draft-wip.json -ale
-    #
-    #   exe/basketball-room -o tmp/draft-wip.json -ale -r tmp/draft-league.json
+    #   exe/basketball-draft-room -o tmp/draft.json
+    #   exe/basketball-draft-room -i tmp/draft.json -o tmp/draft-wip.json -s 26 -p P-5,P-10 -l 10
+    #   exe/basketball-draft-room -i tmp/draft-wip.json -x 2
+    #   exe/basketball-draft-room -i tmp/draft-wip.json -g -l 10
+    #   exe/basketball-draft-room -i tmp/draft-wip.json -s 30 -l 10
+    #   exe/basketball-draft-room -i tmp/draft-wip.json -ate
     class RoomCLI
       class PlayerNotFound < StandardError; end
 
       attr_reader :opts,
                   :io,
-                  :room_repository,
-                  :league_repository
+                  :room_repository
 
       def initialize(
         args:,
         io: $stdout,
-        room_repository: RoomRepository.new(FileStore.new),
-        league_repository: LeagueRepository.new(FileStore.new)
+        room_repository: RoomRepository.new(FileStore.new)
       )
         @io                = io
         @opts              = slop_parse(args)
         @room_repository   = room_repository
-        @league_repository = league_repository
 
         if opts[:input].to_s.empty? && opts[:output].to_s.empty?
           io.puts('Input and/or output paths are required.')
@@ -46,20 +41,13 @@ module Basketball
         status(room)
         write(room)
         events(room)
-        league(room)
+        teams(room)
         query(room)
-        rosters(room)
 
         self
       end
 
       private
-
-      def rosters(room)
-        return if opts[:rosters].to_s.empty?
-
-        league_repository.save(opts[:rosters], room.league)
-      end
 
       def status(room)
         io.puts
@@ -86,11 +74,10 @@ module Basketball
           o.integer '-s', '--simulate',     'Number of picks to simulate (default is 0).', default: 0
           o.bool    '-a', '--simulate-all', 'Simulate the rest of the draft', default: false
           o.array   '-p', '--picks',        'Comma-separated list of ordered player IDs to pick.', delimiter: ','
-          o.integer '-t', '--top',          'Output the top rated available players (default is 0).', default: 0
-          o.bool    '-l', '--league',       'Output all teams and their picks', default: false
+          o.integer '-l', '--list',         'List the top rated available players (default is 0).', default: 0
+          o.bool    '-t', '--teams',        'Output all teams and their picks', default: false
           o.integer '-x', '--skip',         'Number of picks to skip (default is 0).', default: 0
           o.bool    '-e', '--events',       'Output event log.', default: false
-          o.string  '-r', '--rosters',      'Path to write the resulting rosters (league) to.'
 
           o.on '-h', '--help', 'Print out help, like this is doing right now.' do
             io.puts(o)
@@ -129,11 +116,11 @@ module Basketball
         Draft::Room.new(rounds: 12, players:, front_offices:)
       end
 
-      def league(room)
-        return unless opts[:league]
+      def teams(room)
+        return unless opts[:teams]
 
         io.puts
-        io.puts(room.league)
+        io.puts(room.teams)
       end
 
       def events(room)
@@ -146,14 +133,14 @@ module Basketball
       end
 
       def query(room)
-        top = opts[:top]
+        list = opts[:list]
 
-        return if top <= 0
+        return if list <= 0
 
-        players = room.undrafted_players.sort_by(&:overall).reverse.take(opts[:top])
+        players = room.undrafted_players.sort_by(&:overall).reverse.take(opts[:list])
 
         io.puts
-        io.puts("Top #{top} available players")
+        io.puts("Top #{list} available players")
         io.puts(players)
       end
 

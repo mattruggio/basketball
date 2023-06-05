@@ -143,23 +143,23 @@ describe Basketball::Draft::Room do
     end
   end
 
-  describe '#league' do
+  describe '#teams' do
     it 'registers teams' do
       room.sim_rest!
 
-      league   = room.league
+      teams    = room.teams
       expected = front_offices.map { |front_office| Basketball::Org::Team.new(id: front_office.id) }
 
-      expect(league.teams).to eq(expected)
+      expect(teams).to eq(expected)
     end
 
     it 'signs players' do
       room.sim_rest!
 
-      league   = room.league
+      teams    = room.teams
       expected = room.drafted_players
 
-      expect(league.players).to eq(expected)
+      expect(teams.flat_map(&:players)).to eq(expected)
     end
   end
 

@@ -26,7 +26,9 @@ describe Basketball::Season::Coordinator do
   let(:season_start_date)    { Date.new(2022, 10, 16) }
   let(:season_end_date)      { Date.new(2023, 4, 29) }
   let(:teams)                { [bunnies, rabbits, santas, rizzos] }
-  let(:league)               { Basketball::Org::League.new(teams:) }
+  let(:league)               { Basketball::Org::League.new(conferences: [eastern]) }
+  let(:eastern)              { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)              { Basketball::Org::Division.new(id: 'Midwest', teams:) }
 
   let(:unknown) do
     Basketball::Org::Team.new(

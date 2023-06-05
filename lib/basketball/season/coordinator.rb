@@ -184,9 +184,9 @@ module Basketball
       end
 
       def assert_known_teams(game)
-        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" if league.not_registered?(game.home_opponent)
+        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" unless league.team?(game.home_opponent)
 
-        return unless league.not_registered?(game.away_opponent)
+        return if league.team?(game.away_opponent)
 
         raise UnknownTeamError, "unknown opponent: #{game.away_opponent}"
       end

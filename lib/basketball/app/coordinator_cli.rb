@@ -3,13 +3,13 @@
 module Basketball
   module App
     # Examples:
-    #   exe/basketball-coordinator -o tmp/coordinator.json
-    #   exe/basketball-coordinator -i tmp/coordinator.json -o tmp/coordinator2.json -d 1
-    #   exe/basketball-coordinator -i tmp/coordinator2.json -e
-    #   exe/basketball-coordinator -i tmp/coordinator2.json -o tmp/coordinator2.json -d 2
-    #   exe/basketball-coordinator -i tmp/coordinator2.json -a
+    #   exe/basketball-season-coordinator -o tmp/coordinator.json
+    #   exe/basketball-season-coordinator -i tmp/coordinator.json -o tmp/coordinator2.json -d 1
+    #   exe/basketball-season-coordinator -i tmp/coordinator2.json -e
+    #   exe/basketball-season-coordinator -i tmp/coordinator2.json -o tmp/coordinator2.json -d 2
+    #   exe/basketball-season-coordinator -i tmp/coordinator2.json -a
     #
-    #   exe/basketball-coordinator -o tmp/coordinator.json -ae
+    #   exe/basketball-season-coordinator -o tmp/coordinator.json -ae
     class CoordinatorCLI
       attr_reader :opts, :io, :coordinator_repository
 

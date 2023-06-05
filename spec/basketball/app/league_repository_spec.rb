@@ -5,23 +5,38 @@ require 'spec_helper'
 describe Basketball::App::LeagueRepository do
   subject(:repository) { described_class.new(store) }
 
-  let(:key)     { '123-abc' }
-  let(:store)   { Basketball::App::InMemoryStore.new }
-  let(:league)  { Basketball::Org::League.new(teams: [bunnies]) }
-  let(:bunnies) { Basketball::Org::Team.new(id: 'Bunnies', players: [rabbit]) }
-  let(:rabbit)  { Basketball::Org::Player.new(id: 'Rabbit', position: center, overall: 88) }
-  let(:center)  { Basketball::Org::Position.new('C') }
+  let(:key)      { '123-abc' }
+  let(:store)    { Basketball::App::InMemoryStore.new }
+  let(:league)   { Basketball::Org::League.new(conferences: [eastern]) }
+  let(:eastern)  { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)  { Basketball::Org::Division.new(id: 'Midwest', teams: [clowns]) }
+  let(:clowns)   { Basketball::Org::Team.new(id: 'Clowns', players: [mousey]) }
+  let(:bunnies)  { Basketball::Org::Team.new(id: 'Bunnies') }
+  let(:mousey)   { Basketball::Org::Player.new(id: 'Mousey', overall: 98, position:) }
+  let(:moose)    { Basketball::Org::Player.new(id: 'Moose', overall: 97, position:) }
+  let(:position) { Basketball::Org::Position.new('C') }
 
   let(:json_hash) do
     {
-      teams: [
+      id: key,
+      conferences: [
         {
-          id: 'Bunnies',
-          players: [
+          id: 'Eastern',
+          divisions: [
             {
-              id: 'Rabbit',
-              overall: 88,
-              position: 'C'
+              id: 'Midwest',
+              teams: [
+                {
+                  id: 'Clowns',
+                  players: [
+                    {
+                      id: 'Mousey',
+                      overall: 98,
+                      position: 'C'
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -42,6 +57,7 @@ describe Basketball::App::LeagueRepository do
   describe '#load' do
     before do
       store.data[key] = json_hash.to_json
+
       league.send('id=', key)
     end
 
@@ -51,22 +67,28 @@ describe Basketball::App::LeagueRepository do
       expect(actual).to eq(league)
     end
 
-    it 'loads team' do
+    it 'loads conference' do
       actual = repository.load(key)
 
-      expect(actual.teams.first).to eq(bunnies)
+      expect(actual.conferences).to eq([eastern])
     end
 
-    it 'loads player' do
+    it 'loads divisions' do
       actual = repository.load(key)
 
-      expect(actual.teams.first.players.first).to eq(rabbit)
+      expect(actual.divisions).to eq([midwest])
     end
 
-    it 'loads player position' do
+    it 'loads teams' do
       actual = repository.load(key)
 
-      expect(actual.teams.first.players.first.position).to eq(center)
+      expect(actual.teams).to eq([clowns])
+    end
+
+    it 'loads players' do
+      actual = repository.load(key)
+
+      expect(actual.players).to eq([mousey])
     end
   end
 end

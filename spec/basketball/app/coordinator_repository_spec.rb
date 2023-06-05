@@ -32,9 +32,11 @@ describe Basketball::App::CoordinatorRepository do
   let(:season_start_date)    { Date.new(2022, 10, 16) }
   let(:season_end_date)      { Date.new(2023, 4, 29) }
   let(:teams)                { [bunnies, rabbits, santas, rizzos] }
-  let(:league)               { Basketball::Org::League.new(teams:) }
+  let(:league)               { Basketball::Org::League.new(conferences: [eastern]) }
   let(:path)                 { fixture_path('season', 'coordinator.json') }
   let(:fixture_hash)         { read_json_fixture('season', 'coordinator.json') }
+  let(:eastern)              { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)              { Basketball::Org::Division.new(id: 'Midwest', teams:) }
 
   let(:bunnies) do
     Basketball::Org::Team.new(
