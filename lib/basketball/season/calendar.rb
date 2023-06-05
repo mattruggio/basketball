@@ -60,7 +60,37 @@ module Basketball
         end
       end
 
+      def available_preseason_dates_for(opponent)
+        all_preseason_dates - exhibitions_for(opponent:).map(&:date)
+      end
+
+      def available_season_dates_for(opponent)
+        all_season_dates - regulars_for(opponent:).map(&:date)
+      end
+
+      def available_preseason_matchup_dates(opponent1, opponent2)
+        available_opponent_dates       = available_preseason_dates_for(opponent1)
+        available_other_opponent_dates = available_preseason_dates_for(opponent2)
+
+        available_opponent_dates & available_other_opponent_dates
+      end
+
+      def available_season_matchup_dates(opponent1, opponent2)
+        available_opponent_dates       = available_season_dates_for(opponent1)
+        available_other_opponent_dates = available_season_dates_for(opponent2)
+
+        available_opponent_dates & available_other_opponent_dates
+      end
+
       private
+
+      def all_preseason_dates
+        (preseason_start_date..preseason_end_date).to_a
+      end
+
+      def all_season_dates
+        (season_start_date..season_end_date).to_a
+      end
 
       def assert_free_date(game)
         if games_for(date: game.date, opponent: game.home_opponent).any?

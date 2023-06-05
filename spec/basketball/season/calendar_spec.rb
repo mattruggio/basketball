@@ -70,6 +70,24 @@ describe Basketball::Season::Calendar do
     end
   end
 
+  describe '#available_preseason_dates_for' do
+    it 'returns dates team is not scheduled' do
+      actual_dates   = calendar.available_preseason_dates_for(bunnies_opp)
+      expected_dates = (Date.new(2022, 10, 1)..Date.new(2022, 10, 14)).to_a - exhibitions.map(&:date)
+
+      expect(actual_dates).to eq(expected_dates)
+    end
+  end
+
+  describe '#available_season_dates_for' do
+    it 'returns dates team is not scheduled' do
+      actual_dates   = calendar.available_season_dates_for(bunnies_opp)
+      expected_dates = (Date.new(2022, 10, 16)..Date.new(2023, 4, 29)).to_a - regulars.map(&:date)
+
+      expect(actual_dates).to eq(expected_dates)
+    end
+  end
+
   describe '#add!' do
     context 'when adding a season game' do
       it 'adds new game' do

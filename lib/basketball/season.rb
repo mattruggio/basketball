@@ -14,3 +14,4 @@ require_relative 'season/regular'
 
 # Specific
 require_relative 'season/coordinator'
+require_relative 'season/scheduler'
