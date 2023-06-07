@@ -12,5 +12,11 @@ require_relative 'season/opponent'
 require_relative 'season/exhibition'
 require_relative 'season/regular'
 
+# Standings
+require_relative 'season/detail'
+require_relative 'season/record'
+require_relative 'season/standings'
+
 # Specific
 require_relative 'season/coordinator'
+require_relative 'season/scheduler'

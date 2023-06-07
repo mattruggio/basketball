@@ -30,17 +30,15 @@ module Basketball
       end
 
       # This method will return a materialized list of teams and their selections.
-      def league
-        Org::League.new.tap do |league|
-          front_offices.each do |front_office|
-            team = Org::Team.new(id: front_office.id)
+      def teams
+        front_offices.each_with_object([]) do |front_office, memo|
+          team = Org::Team.new(id: front_office.id)
 
-            league.register!(team)
-
-            drafted_players(front_office).each do |player|
-              league.sign!(player:, team:)
-            end
+          drafted_players(front_office).each do |player|
+            team.sign!(player)
           end
+
+          memo << team
         end
       end
 

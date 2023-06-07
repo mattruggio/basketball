@@ -12,11 +12,11 @@ module Basketball
       DEFAULT_MAX_HOME_ADVANTAGE = 5
 
       DEFAULT_STRATEGY_FREQUENCIES = {
-        RANDOM => 10,
-        TOP_ONE => 5,
-        TOP_TWO => 10,
-        TOP_THREE => 20,
-        TOP_SIX => 30
+        RANDOM => 3,
+        TOP_ONE => 1,
+        TOP_TWO => 1,
+        TOP_THREE => 1,
+        TOP_SIX => 1
       }.freeze
 
       attr_reader :lotto, :max_home_advantage

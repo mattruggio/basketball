@@ -6,18 +6,18 @@ require 'season_helper'
 describe Basketball::Season::Calendar do
   subject(:calendar) do
     described_class.new(
-      preseason_start_date:,
-      preseason_end_date:,
-      season_start_date:,
-      season_end_date:,
+      exhibition_start_date:,
+      exhibition_end_date:,
+      regular_start_date:,
+      regular_end_date:,
       games:
     )
   end
 
-  let(:preseason_start_date) { Date.new(2022, 10, 1) }
-  let(:preseason_end_date)   { Date.new(2022, 10, 14) }
-  let(:season_start_date)    { Date.new(2022, 10, 16) }
-  let(:season_end_date)      { Date.new(2023, 4, 29) }
+  let(:exhibition_start_date) { Date.new(2022, 10, 1) }
+  let(:exhibition_end_date)   { Date.new(2022, 10, 14) }
+  let(:regular_start_date)    { Date.new(2022, 10, 16) }
+  let(:regular_end_date)      { Date.new(2023, 4, 29) }
 
   let(:bunnies_opp) { Basketball::Season::Opponent.new(id: 'bunnies_opp') }
   let(:rabbits_opp) { Basketball::Season::Opponent.new(id: 'rabbits_opp') }
@@ -70,8 +70,26 @@ describe Basketball::Season::Calendar do
     end
   end
 
+  describe '#available_exhibition_dates_for' do
+    it 'returns dates team is not scheduled' do
+      actual_dates   = calendar.available_exhibition_dates_for(bunnies_opp)
+      expected_dates = (Date.new(2022, 10, 1)..Date.new(2022, 10, 14)).to_a - exhibitions.map(&:date)
+
+      expect(actual_dates).to eq(expected_dates)
+    end
+  end
+
+  describe '#available_regular_dates_for' do
+    it 'returns dates team is not scheduled' do
+      actual_dates   = calendar.available_regular_dates_for(bunnies_opp)
+      expected_dates = (Date.new(2022, 10, 16)..Date.new(2023, 4, 29)).to_a - regulars.map(&:date)
+
+      expect(actual_dates).to eq(expected_dates)
+    end
+  end
+
   describe '#add!' do
-    context 'when adding a season game' do
+    context 'when adding a regular game' do
       it 'adds new game' do
         new_game = make_regular(date: Date.new(2023, 3, 4), home_opponent: bunnies_opp, away_opponent: rabbits_opp)
 
@@ -94,7 +112,7 @@ describe Basketball::Season::Calendar do
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
-      it 'prevents season during preseason' do
+      it 'prevents regular during exhibition' do
         new_game = make_regular(date: Date.new(2022, 10, 3), home_opponent: santas_opp, away_opponent: rizzos_opp)
         error    = described_class::OutOfBoundsError
 
@@ -108,7 +126,7 @@ describe Basketball::Season::Calendar do
       end
     end
 
-    context 'when adding a preseason game' do
+    context 'when adding an exhibition game' do
       it 'adds new game' do
         new_game = make_exhibition(date: Date.new(2022, 10, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp)
 
@@ -131,8 +149,8 @@ describe Basketball::Season::Calendar do
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
-      it 'prevents season preseason during regular season' do
-        new_game = make_exhibition(date: calendar.season_start_date + 10, home_opponent: santas_opp,
+      it 'prevents exhibition during regular season' do
+        new_game = make_exhibition(date: calendar.regular_start_date + 10, home_opponent: santas_opp,
                                    away_opponent: rizzos_opp)
         error    = described_class::OutOfBoundsError
 

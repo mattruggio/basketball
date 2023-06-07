@@ -21,10 +21,10 @@ module Basketball
                   :league
 
       def_delegators :calendar,
-                     :preseason_start_date,
-                     :preseason_end_date,
-                     :season_start_date,
-                     :season_end_date,
+                     :exhibition_start_date,
+                     :exhibition_end_date,
+                     :regular_start_date,
+                     :regular_end_date,
                      :games,
                      :exhibitions_for,
                      :regulars_for,
@@ -69,13 +69,13 @@ module Basketball
       end
 
       def assert_current_date
-        if current_date < preseason_start_date
-          raise OutOfBoundsError, "current date #{current_date} should be on or after #{preseason_start_date}"
+        if current_date < exhibition_start_date
+          raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
         end
 
-        return unless current_date > season_end_date
+        return unless current_date > regular_end_date
 
-        raise OutOfBoundsError, "current date #{current_date} should be on or after #{preseason_start_date}"
+        raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
       end
 
       def sim!
@@ -103,11 +103,11 @@ module Basketball
       end
 
       def total_days
-        (season_end_date - preseason_start_date).to_i
+        (regular_end_date - exhibition_start_date).to_i
       end
 
       def days_left
-        (season_end_date - current_date).to_i
+        (regular_end_date - current_date).to_i
       end
 
       def total_exhibitions
@@ -131,7 +131,7 @@ module Basketball
       end
 
       def done?
-        current_date == season_end_date && games.length == results.length
+        current_date == regular_end_date && games.length == results.length
       end
 
       def not_done?
@@ -153,6 +153,14 @@ module Basketball
         end
       end
 
+      def regular_results
+        results.select { |result| result.game.is_a?(Regular) }
+      end
+
+      def exhibition_results
+        results.select { |result| result.game.is_a?(Exhibition) }
+      end
+
       private
 
       attr_writer :arena
@@ -170,7 +178,7 @@ module Basketball
       end
 
       def increment_current_date!
-        return self if current_date >= season_end_date
+        return self if current_date >= regular_end_date
 
         @current_date = current_date + 1
 
@@ -184,9 +192,9 @@ module Basketball
       end
 
       def assert_known_teams(game)
-        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" if league.not_registered?(game.home_opponent)
+        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" unless league.team?(game.home_opponent)
 
-        return unless league.not_registered?(game.away_opponent)
+        return if league.team?(game.away_opponent)
 
         raise UnknownTeamError, "unknown opponent: #{game.away_opponent}"
       end

@@ -18,23 +18,25 @@ describe Basketball::App::CoordinatorRepository do
 
   let(:calendar) do
     Basketball::Season::Calendar.new(
-      preseason_start_date:,
-      preseason_end_date:,
-      season_start_date:,
-      season_end_date:,
+      exhibition_start_date:,
+      exhibition_end_date:,
+      regular_start_date:,
+      regular_end_date:,
       games:
     )
   end
 
-  let(:current_date)         { Date.new(2022, 10, 1) }
-  let(:preseason_start_date) { Date.new(2022, 10, 1) }
-  let(:preseason_end_date)   { Date.new(2022, 10, 14) }
-  let(:season_start_date)    { Date.new(2022, 10, 16) }
-  let(:season_end_date)      { Date.new(2023, 4, 29) }
-  let(:teams)                { [bunnies, rabbits, santas, rizzos] }
-  let(:league)               { Basketball::Org::League.new(teams:) }
-  let(:path)                 { fixture_path('season', 'coordinator.json') }
-  let(:fixture_hash)         { read_json_fixture('season', 'coordinator.json') }
+  let(:current_date)          { Date.new(2022, 10, 1) }
+  let(:exhibition_start_date) { Date.new(2022, 10, 1) }
+  let(:exhibition_end_date)   { Date.new(2022, 10, 14) }
+  let(:regular_start_date)    { Date.new(2022, 10, 16) }
+  let(:regular_end_date)      { Date.new(2023, 4, 29) }
+  let(:teams)                 { [bunnies, rabbits, santas, rizzos] }
+  let(:league)                { Basketball::Org::League.new(conferences: [eastern]) }
+  let(:path)                  { fixture_path('season', 'coordinator.json') }
+  let(:fixture_hash)          { read_json_fixture('season', 'coordinator.json') }
+  let(:eastern)               { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)               { Basketball::Org::Division.new(id: 'Midwest', teams:) }
 
   let(:bunnies) do
     Basketball::Org::Team.new(
@@ -125,13 +127,15 @@ describe Basketball::App::CoordinatorRepository do
   end
 
   describe '#save' do
-    let(:filename) { "#{SecureRandom.uuid}.json" }
+    let(:filename)    { "#{SecureRandom.uuid}.json" }
     let(:actual_hash) { read_json_temp_file(filename) }
-    let(:rando_path) { temp_path(filename) }
+    let(:rando_path)  { temp_path(filename) }
 
     before { repository.save(rando_path, coordinator) }
 
     specify 'deserialized data matches' do
+      fixture_hash[:id] = rando_path
+
       expect(actual_hash).to eq(fixture_hash)
     end
 
