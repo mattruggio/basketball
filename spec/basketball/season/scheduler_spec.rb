@@ -60,13 +60,13 @@ describe Basketball::Season::Scheduler do
       end
     end
 
-    specify 'all teams play between 3 and 6 preseason games' do
+    specify 'all teams play between 3 and 6 exhibition games' do
       calendar = scheduler.schedule(year:, league:)
 
       league.teams.each do |team|
         count = calendar.exhibitions_for(opponent: team).length
 
-        expect(count).to be_between(3, 6), "#{team} only plays #{count} preseason games"
+        expect(count).to be_between(3, 6), "#{team} only plays #{count} exhibition games"
       end
     end
 

@@ -1,0 +1,118 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'basketball'
+
+require 'pry'
+
+store                  = Basketball::App::FileStore.new
+room_repository        = Basketball::App::RoomRepository.new(store)
+league_repository      = Basketball::App::LeagueRepository.new(store)
+coordinator_repository = Basketball::App::CoordinatorRepository.new(store)
+scheduler              = Basketball::Season::Scheduler.new
+
+seed_path  = ARGV[0].to_s.empty? ? File.join('spec', 'fixtures', 'seed.json') : ARGV[0]
+output_dir = ARGV[1].to_s.empty? ? 'tmp' : ARGV[1]
+seed       = JSON.parse(File.read(seed_path), symbolize_names: true)
+
+league_path = File.join(output_dir, '00-league.json')
+
+IO.write(league_path, seed[:league].to_json)
+
+front_offices = seed.dig(:league, :conferences).flat_map do |c|
+  c[:divisions].flat_map do |d|
+    d[:teams].flat_map do |t|
+      { id: t[:id] }
+    end
+  end
+end
+
+room = {
+  rounds: 12,
+  front_offices: front_offices,
+  players: seed[:players]
+}
+
+room_input_path = File.join(output_dir, '01-room-input.json')
+
+IO.write(room_input_path, room.to_json)
+
+room = room_repository.load(room_input_path)
+
+room.sim_rest!
+
+room_output_path = File.join(output_dir, '02-room-output.json')
+
+room_repository.save(room_output_path, room)
+
+league = league_repository.load(league_path)
+
+room.teams.each do |team|
+  team.players.each do |player|
+    league.sign!(team:, player:)
+  end
+end
+
+scheduler_input_path = File.join(output_dir, '03-scheduler-input.json')
+
+league_repository.save(scheduler_input_path, league)
+
+calendar     = scheduler.schedule(league:)
+current_date = calendar.exhibition_start_date
+coordinator  = Basketball::Season::Coordinator.new(league:, calendar:, current_date:)
+
+coordinator_input_path = File.join(output_dir, '04-coordinator-input.json')
+
+coordinator_repository.save(coordinator_input_path, coordinator)
+
+coordinator.sim_rest!
+
+coordinator_output_path = File.join(output_dir, '05-coordinator-output.json')
+
+coordinator_repository.save(coordinator_output_path, coordinator)
+
+def base_standing
+  {
+    exhibition: { wins: 0, losses: 0 },
+    regular: { wins: 0, losses: 0 }
+  }
+end
+
+standings = coordinator.results.each_with_object({}) do |result, standings|
+  standings[result.home_opponent] ||= base_standing
+  standings[result.away_opponent] ||= base_standing
+
+  type = result.game.class.name.split('::').last.downcase.to_sym
+
+  if result.home_score > result.away_score
+    standings[result.home_opponent][type][:wins] += 1
+    standings[result.away_opponent][type][:losses] += 1
+  else
+    standings[result.home_opponent][type][:losses] += 1
+    standings[result.away_opponent][type][:wins] += 1
+  end
+end
+
+def print_standings(league:, standings:, type:)
+  league.conferences.each do |conference|
+    puts conference.id
+
+    conference.divisions.each do |division|
+      puts division.id
+
+      division.teams.each do |team|
+        wins   = standings.dig(team, type, :wins)
+        losses = standings.dig(team, type, :losses)
+
+        puts "#{team.id} #{wins}-#{losses}"
+      end
+    end
+  end
+end
+
+puts "Preseason"
+print_standings(league:, standings:, type: :exhibition)
+
+puts "Regular Season"
+print_standings(league:, standings:, type: :regular)

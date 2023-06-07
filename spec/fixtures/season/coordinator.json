@@ -1,9 +1,9 @@
 {
   "calendar": {
-    "preseason_start_date": "2022-10-01",
-    "preseason_end_date": "2022-10-14",
-    "season_start_date": "2022-10-16",
-    "season_end_date": "2023-04-29",
+    "exhibition_start_date": "2022-10-01",
+    "exhibition_end_date": "2022-10-14",
+    "regular_start_date": "2022-10-16",
+    "regular_end_date": "2023-04-29",
     "games": [
       {
         "type": "Exhibition",

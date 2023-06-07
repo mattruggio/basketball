@@ -67,7 +67,7 @@ module Basketball
 
       def slop_parse(args)
         Slop.parse(args) do |o|
-          o.banner = 'Usage: basketball-room [options] ...'
+          o.banner = 'Usage: basketball-draft-room [options] ...'
 
           o.string  '-i', '--input',        'Path to load the Room from. If omitted then a new draft will be generated.'
           o.string  '-o', '--output',       'Path to write the room to (if omitted then input path will be used)'

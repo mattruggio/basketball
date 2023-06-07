@@ -56,7 +56,7 @@ module Basketball
         else
           io.puts("#{coordinator.days_left} Remaining day(s) (#{coordinator.total_days} total)")
           io.puts("Currently on: #{coordinator.current_date}")
-          io.puts("#{coordinator.exhibitions_left} Remaining preseason (#{coordinator.total_exhibitions} total)")
+          io.puts("#{coordinator.exhibitions_left} Remaining exhibition (#{coordinator.total_exhibitions} total)")
           io.puts("#{coordinator.regulars_left} Remaining season (#{coordinator.total_regulars} total)")
         end
       end
@@ -104,69 +104,46 @@ module Basketball
         path
       end
 
-      def make_league(team_count: 2, players_per_team_count: 4)
-        Org::League.new.tap do |league|
-          team_count.times do |i|
-            team = Org::Team.new(id: "T-#{i}")
+      def make_league
+        Org::League.new(
+          conferences: 2.times.map do |i|
+            conference_id = "C#{i}"
 
-            players_per_team_count.times do |j|
-              player = Org::Player.new(
-                id: "T-#{i}-P-#{j}",
-                overall: rand(20..100),
-                position: Org::Position.random
-              )
+            Org::Conference.new(
+              id: conference_id,
+              divisions: 3.times.map do |j|
+                division_id = "#{conference_id}-D#{j}"
 
-              team.sign!(player)
-            end
+                Org::Division.new(
+                  id: division_id,
+                  teams: 5.times.map do |k|
+                    team_id = "#{division_id}-T#{k}"
 
-            league.register!(team)
+                    Org::Team.new(
+                      id: team_id,
+                      players: 12.times.map do |l|
+                        player_id = "#{team_id}-P#{l}"
+
+                        Org::Player.new(
+                          id: player_id,
+                          overall: rand(20..100),
+                          position: Org::Position.random
+                        )
+                      end
+                    )
+                  end
+                )
+              end
+            )
           end
-        end
-      end
-
-      def make_calendar(league:)
-        preseason_start_date = Date.new(2000, 1, 1)
-        season_start_date = Date.new(2000, 1, 11)
-
-        exhibitions = make_games(
-          start_date: preseason_start_date,
-          count: 10,
-          league:,
-          game_class: Season::Exhibition
         )
-
-        regulars = make_games(
-          start_date: season_start_date,
-          count: 10,
-          league:,
-          game_class: Season::Regular
-        )
-
-        Season::Calendar.new(
-          preseason_start_date:,
-          preseason_end_date: Date.new(2000, 1, 10),
-          season_start_date:,
-          season_end_date: Date.new(2000, 1, 20),
-          games: exhibitions + regulars
-        )
-      end
-
-      def make_games(start_date:, count:, league:, game_class:)
-        count.times.map do |i|
-          home_team, away_team = league.teams.sample(2)
-
-          game_class.new(
-            date: start_date + i,
-            home_opponent: Season::Opponent.new(id: home_team.id),
-            away_opponent: Season::Opponent.new(id: away_team.id)
-          )
-        end
       end
 
       def make_coordinator
         league       = make_league
-        current_date = Date.new(2000, 1, 1)
-        calendar     = make_calendar(league:)
+        year         = Time.now.year
+        calendar     = Season::Scheduler.new.schedule(league:, year:)
+        current_date = calendar.games.min_by(&:date).date
 
         Season::Coordinator.new(
           calendar:,
@@ -227,7 +204,7 @@ module Basketball
 
       def slop_parse(args)
         Slop.parse(args) do |o|
-          o.banner = 'Usage: basketball-coordinator [options] ...'
+          o.banner = 'Usage: basketball-season-coordinator [options] ...'
 
           input_description = <<~DESC
             Path to load the Coordinator from. If omitted then a new coordinator will be created.

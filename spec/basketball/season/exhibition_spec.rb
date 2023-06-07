@@ -10,8 +10,8 @@ describe Basketball::Season::Exhibition do
   let(:away_opponent) { Basketball::Org::Team.new(id: 'at') }
 
   describe '#to_s' do
-    it 'includes preseason' do
-      expect(game.to_s).to include('preseason')
+    it 'includes exhibition' do
+      expect(game.to_s).to include('exhibition')
     end
   end
 end

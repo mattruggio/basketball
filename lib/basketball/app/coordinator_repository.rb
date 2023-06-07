@@ -26,6 +26,7 @@ module Basketball
 
       def to_h(coordinator)
         {
+          id: coordinator.id,
           calendar: serialize_calendar(coordinator.calendar),
           current_date: coordinator.current_date.to_s,
           results: serialize_results(coordinator.results),
@@ -41,10 +42,10 @@ module Basketball
 
       def serialize_calendar(calendar)
         {
-          preseason_start_date: calendar.preseason_start_date.to_s,
-          preseason_end_date: calendar.preseason_end_date.to_s,
-          season_start_date: calendar.season_start_date.to_s,
-          season_end_date: calendar.season_end_date.to_s,
+          exhibition_start_date: calendar.exhibition_start_date.to_s,
+          exhibition_end_date: calendar.exhibition_end_date.to_s,
+          regular_start_date: calendar.regular_start_date.to_s,
+          regular_end_date: calendar.regular_end_date.to_s,
           games: serialize_games(calendar.games)
         }
       end
@@ -76,10 +77,10 @@ module Basketball
 
       def deserialize_calendar(calendar_hash)
         Season::Calendar.new(
-          preseason_start_date: Date.parse(calendar_hash[:preseason_start_date]),
-          preseason_end_date: Date.parse(calendar_hash[:preseason_end_date]),
-          season_start_date: Date.parse(calendar_hash[:season_start_date]),
-          season_end_date: Date.parse(calendar_hash[:season_end_date]),
+          exhibition_start_date: Date.parse(calendar_hash[:exhibition_start_date]),
+          exhibition_end_date: Date.parse(calendar_hash[:exhibition_end_date]),
+          regular_start_date: Date.parse(calendar_hash[:regular_start_date]),
+          regular_end_date: Date.parse(calendar_hash[:regular_end_date]),
           games: deserialize_games(calendar_hash[:games])
         )
       end

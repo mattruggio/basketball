@@ -5,7 +5,7 @@ module Basketball
     # An exhibition game.
     class Exhibition < Game
       def to_s
-        "#{super} (preseason)"
+        "#{super} (exhibition)"
       end
     end
   end

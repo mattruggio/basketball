@@ -26,7 +26,7 @@ module Basketball
         assert_properly_sized_league(league)
 
         Calendar.new(**make_dates(year)).tap do |calendar|
-          schedule_preseason!(calendar:, league:)
+          schedule_exhibition!(calendar:, league:)
           schedule_season!(calendar:, league:)
         end
       end
@@ -35,10 +35,10 @@ module Basketball
 
       def make_dates(year)
         {
-          preseason_start_date: Date.new(year, 9, 30),
-          preseason_end_date: Date.new(year, 10, 14),
-          season_start_date: Date.new(year, 10, 18),
-          season_end_date: Date.new(year + 1, 4, 29)
+          exhibition_start_date: Date.new(year, 9, 30),
+          exhibition_end_date: Date.new(year, 10, 14),
+          regular_start_date: Date.new(year, 10, 18),
+          regular_end_date: Date.new(year + 1, 4, 29)
         }
       end
 
@@ -160,7 +160,7 @@ module Basketball
         matchups = matchup_plan(league)
 
         matchups.each do |(team1, team2), count|
-          candidates = calendar.available_season_matchup_dates(team1, team2)
+          candidates = calendar.available_regular_matchup_dates(team1, team2)
           dates      = candidates.sample(count)
           games      = balanced_games(dates, team1, team2)
 
@@ -181,7 +181,7 @@ module Basketball
         end
       end
 
-      def schedule_preseason!(calendar:, league:)
+      def schedule_exhibition!(calendar:, league:)
         league.teams.each do |team|
           current_games = calendar.exhibitions_for(opponent: team)
           count         = current_games.length
@@ -194,12 +194,12 @@ module Basketball
             break if count > MIN_PRESEASON_GAMES_PER_TEAM
             next  if calendar.exhibitions_for(opponent: other_team).length >= MAX_PRESEASON_GAMES_PER_TEAM
 
-            candidates = calendar.available_preseason_matchup_dates(team, other_team)
+            candidates = calendar.available_exhibition_matchup_dates(team, other_team)
 
             next if candidates.empty?
 
             date = candidates.sample
-            game = random_preseason_game(date, team, other_team)
+            game = random_exhibition_game(date, team, other_team)
 
             calendar.add!(game)
 
@@ -208,7 +208,7 @@ module Basketball
         end
       end
 
-      def random_preseason_game(date, team1, team2)
+      def random_exhibition_game(date, team1, team2)
         home_opponent, away_opponent =
           if rand(1..2) == 1
             [Opponent.from(team1), Opponent.from(team2)]

@@ -12,23 +12,23 @@ describe Basketball::Season::Coordinator do
 
   let(:calendar) do
     Basketball::Season::Calendar.new(
-      preseason_start_date:,
-      preseason_end_date:,
-      season_start_date:,
-      season_end_date:,
+      exhibition_start_date:,
+      exhibition_end_date:,
+      regular_start_date:,
+      regular_end_date:,
       games:
     )
   end
 
-  let(:current_date)         { Date.new(2022, 10, 1) }
-  let(:preseason_start_date) { Date.new(2022, 10, 1) }
-  let(:preseason_end_date)   { Date.new(2022, 10, 14) }
-  let(:season_start_date)    { Date.new(2022, 10, 16) }
-  let(:season_end_date)      { Date.new(2023, 4, 29) }
-  let(:teams)                { [bunnies, rabbits, santas, rizzos] }
-  let(:league)               { Basketball::Org::League.new(conferences: [eastern]) }
-  let(:eastern)              { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
-  let(:midwest)              { Basketball::Org::Division.new(id: 'Midwest', teams:) }
+  let(:current_date)          { Date.new(2022, 10, 1) }
+  let(:exhibition_start_date) { Date.new(2022, 10, 1) }
+  let(:exhibition_end_date)   { Date.new(2022, 10, 14) }
+  let(:regular_start_date)    { Date.new(2022, 10, 16) }
+  let(:regular_end_date)      { Date.new(2023, 4, 29) }
+  let(:teams)                 { [bunnies, rabbits, santas, rizzos] }
+  let(:league)                { Basketball::Org::League.new(conferences: [eastern]) }
+  let(:eastern)               { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)               { Basketball::Org::Division.new(id: 'Midwest', teams:) }
 
   let(:unknown) do
     Basketball::Org::Team.new(
@@ -174,7 +174,7 @@ describe Basketball::Season::Coordinator do
       end.to raise_error(error)
     end
 
-    it 'prevents current date from being before preseason start date' do
+    it 'prevents current date from being before exhibition start date' do
       error = described_class::OutOfBoundsError
 
       expect do
@@ -385,13 +385,13 @@ describe Basketball::Season::Coordinator do
   end
 
   specify '#total_days' do
-    expect(coordinator.total_days).to eq((season_end_date - preseason_start_date).to_i)
+    expect(coordinator.total_days).to eq((regular_end_date - exhibition_start_date).to_i)
   end
 
   specify '#days_left' do
     coordinator.sim!
 
-    expect(coordinator.days_left).to eq((season_end_date - preseason_start_date).to_i - 1)
+    expect(coordinator.days_left).to eq((regular_end_date - exhibition_start_date).to_i - 1)
   end
 
   specify '#total_exhibitions' do

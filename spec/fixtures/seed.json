@@ -1,0 +1,2343 @@
+{
+  "league": {
+    "conferences": [
+      {
+        "id": "Eastern Conference",
+        "divisions": [
+          {
+            "id": "Atlantic",
+            "teams": [
+              {
+                "id": "Boston"
+              },
+              {
+                "id": "Philadelphia"
+              },
+              {
+                "id": "New York"
+              },
+              {
+                "id": "Toronto"
+              },
+              {
+                "id": "Brooklyn"
+              }
+            ]
+          },
+          {
+            "id": "Central Division",
+            "teams": [
+              {
+                "id": "Cleveland"
+              },
+              {
+                "id": "Milwaukee"
+              },
+              {
+                "id": "Chicago"
+              },
+              {
+                "id": "Indiana"
+              },
+              {
+                "id": "Detroit"
+              }
+            ]
+          },
+          {
+            "id": "Southeast Division",
+            "teams": [
+              {
+                "id": "Atlanta"
+              },
+              {
+                "id": "Washington"
+              },
+              {
+                "id": "Miami"
+              },
+              {
+                "id": "Orlando"
+              },
+              {
+                "id": "Charlotte"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Western Conference",
+        "divisions": [
+          {
+            "id": "Northwest Division",
+            "teams": [
+              {
+                "id": "Denver"
+              },
+              {
+                "id": "Oklahoma City"
+              },
+              {
+                "id": "Minnesota"
+              },
+              {
+                "id": "Utah"
+              },
+              {
+                "id": "Portland"
+              }
+            ]
+          },
+          {
+            "id": "Southwest Division",
+            "teams": [
+              {
+                "id": "Memphis"
+              },
+              {
+                "id": "New Orleans"
+              },
+              {
+                "id": "Dallas"
+              },
+              {
+                "id": "Houston"
+              },
+              {
+                "id": "San Antonio"
+              }
+            ]
+          },
+          {
+            "id": "Pacific Division",
+            "teams": [
+              {
+                "id": "Sacramento"
+              },
+              {
+                "id": "Phoenix"
+              },
+              {
+                "id": "Golden State"
+              },
+              {
+                "id": "Los Angeles C"
+              },
+              {
+                "id": "Los Angeles L"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "players": [
+    {
+      "id": "Young Anderson",
+      "position": "PG",
+      "overall": 46
+    },
+    {
+      "id": "Raul Walter",
+      "position": "PF",
+      "overall": 92
+    },
+    {
+      "id": "Tony Homenick",
+      "position": "SF",
+      "overall": 12
+    },
+    {
+      "id": "Edison Johns",
+      "position": "PG",
+      "overall": 43
+    },
+    {
+      "id": "Andreas Ernser",
+      "position": "SG",
+      "overall": 22
+    },
+    {
+      "id": "Joey Batz",
+      "position": "SG",
+      "overall": 64
+    },
+    {
+      "id": "Blair Langworth",
+      "position": "C",
+      "overall": 2
+    },
+    {
+      "id": "Shayne Lueilwitz",
+      "position": "PF",
+      "overall": 8
+    },
+    {
+      "id": "Greg Harber",
+      "position": "C",
+      "overall": 42
+    },
+    {
+      "id": "Antonio Schultz",
+      "position": "PG",
+      "overall": 85
+    },
+    {
+      "id": "Edmond Feest",
+      "position": "SG",
+      "overall": 67
+    },
+    {
+      "id": "Edgar Conroy",
+      "position": "SG",
+      "overall": 31
+    },
+    {
+      "id": "Toney Sauer",
+      "position": "SG",
+      "overall": 19
+    },
+    {
+      "id": "Pat Balistreri",
+      "position": "PG",
+      "overall": 66
+    },
+    {
+      "id": "Pablo Wisozk",
+      "position": "PG",
+      "overall": 36
+    },
+    {
+      "id": "Jacques Schiller",
+      "position": "PG",
+      "overall": 37
+    },
+    {
+      "id": "Rex Turcotte",
+      "position": "SG",
+      "overall": 34
+    },
+    {
+      "id": "Allen Brakus",
+      "position": "SF",
+      "overall": 31
+    },
+    {
+      "id": "Leonardo Kuhic",
+      "position": "SG",
+      "overall": 35
+    },
+    {
+      "id": "Harvey Schuster",
+      "position": "C",
+      "overall": 66
+    },
+    {
+      "id": "Rubin McGlynn",
+      "position": "PF",
+      "overall": 97
+    },
+    {
+      "id": "Zane Hartmann",
+      "position": "PF",
+      "overall": 95
+    },
+    {
+      "id": "Kerry Murray",
+      "position": "PG",
+      "overall": 55
+    },
+    {
+      "id": "Norberto Hoeger",
+      "position": "SG",
+      "overall": 48
+    },
+    {
+      "id": "Raymundo Schumm",
+      "position": "SG",
+      "overall": 31
+    },
+    {
+      "id": "Charlie Zemlak",
+      "position": "C",
+      "overall": 15
+    },
+    {
+      "id": "Jacinto Schowalter",
+      "position": "PG",
+      "overall": 13
+    },
+    {
+      "id": "Milo Ebert",
+      "position": "PG",
+      "overall": 58
+    },
+    {
+      "id": "Brenton Morar",
+      "position": "PG",
+      "overall": 82
+    },
+    {
+      "id": "Warner Glover",
+      "position": "PF",
+      "overall": 42
+    },
+    {
+      "id": "Freeman Rippin",
+      "position": "PG",
+      "overall": 55
+    },
+    {
+      "id": "Seth Dickens",
+      "position": "SG",
+      "overall": 9
+    },
+    {
+      "id": "Vito Friesen",
+      "position": "PG",
+      "overall": 26
+    },
+    {
+      "id": "Von Cruickshank",
+      "position": "SF",
+      "overall": 5
+    },
+    {
+      "id": "Frances Bartoletti",
+      "position": "SG",
+      "overall": 14
+    },
+    {
+      "id": "Elijah Rice",
+      "position": "C",
+      "overall": 84
+    },
+    {
+      "id": "Jarred Smitham",
+      "position": "C",
+      "overall": 7
+    },
+    {
+      "id": "Tyler Hessel",
+      "position": "PG",
+      "overall": 85
+    },
+    {
+      "id": "Lacy Quigley",
+      "position": "PF",
+      "overall": 21
+    },
+    {
+      "id": "Mason Lowe",
+      "position": "PG",
+      "overall": 9
+    },
+    {
+      "id": "Otis Tromp",
+      "position": "SF",
+      "overall": 18
+    },
+    {
+      "id": "Sammy Friesen",
+      "position": "PG",
+      "overall": 51
+    },
+    {
+      "id": "Mauricio Schmidt",
+      "position": "PG",
+      "overall": 16
+    },
+    {
+      "id": "Leroy Brakus",
+      "position": "C",
+      "overall": 24
+    },
+    {
+      "id": "Donald Nolan",
+      "position": "PF",
+      "overall": 81
+    },
+    {
+      "id": "Delmar Hettinger",
+      "position": "PG",
+      "overall": 35
+    },
+    {
+      "id": "Burl Jaskolski",
+      "position": "SF",
+      "overall": 43
+    },
+    {
+      "id": "Darrell Luettgen",
+      "position": "PF",
+      "overall": 49
+    },
+    {
+      "id": "Jere Reichel",
+      "position": "SF",
+      "overall": 15
+    },
+    {
+      "id": "Brock Boehm",
+      "position": "PF",
+      "overall": 20
+    },
+    {
+      "id": "Jeremy Kovacek",
+      "position": "SF",
+      "overall": 32
+    },
+    {
+      "id": "Ed Kassulke",
+      "position": "SF",
+      "overall": 31
+    },
+    {
+      "id": "Luciano Hammes",
+      "position": "SG",
+      "overall": 13
+    },
+    {
+      "id": "Floyd Johns",
+      "position": "PF",
+      "overall": 54
+    },
+    {
+      "id": "Kip Stamm",
+      "position": "C",
+      "overall": 28
+    },
+    {
+      "id": "Wilbert Tillman",
+      "position": "PF",
+      "overall": 23
+    },
+    {
+      "id": "Abram Torp",
+      "position": "C",
+      "overall": 91
+    },
+    {
+      "id": "Walker Marvin",
+      "position": "PF",
+      "overall": 88
+    },
+    {
+      "id": "Earnest Upton",
+      "position": "PF",
+      "overall": 41
+    },
+    {
+      "id": "Lewis Bartoletti",
+      "position": "SG",
+      "overall": 32
+    },
+    {
+      "id": "Terrell Friesen",
+      "position": "PF",
+      "overall": 5
+    },
+    {
+      "id": "Spencer Hickle",
+      "position": "PG",
+      "overall": 72
+    },
+    {
+      "id": "Carey Hodkiewicz",
+      "position": "C",
+      "overall": 30
+    },
+    {
+      "id": "Chung Douglas",
+      "position": "SF",
+      "overall": 71
+    },
+    {
+      "id": "Robt O'Connell",
+      "position": "PF",
+      "overall": 3
+    },
+    {
+      "id": "Santiago Ernser",
+      "position": "SG",
+      "overall": 56
+    },
+    {
+      "id": "Aron Senger",
+      "position": "SG",
+      "overall": 57
+    },
+    {
+      "id": "Dave Gislason",
+      "position": "PF",
+      "overall": 23
+    },
+    {
+      "id": "Geoffrey Raynor",
+      "position": "PG",
+      "overall": 6
+    },
+    {
+      "id": "Mikel Pfannerstill",
+      "position": "PG",
+      "overall": 61
+    },
+    {
+      "id": "Stephen Macejkovic",
+      "position": "SG",
+      "overall": 90
+    },
+    {
+      "id": "Rodney Weimann",
+      "position": "PF",
+      "overall": 96
+    },
+    {
+      "id": "Trevor Medhurst",
+      "position": "PG",
+      "overall": 37
+    },
+    {
+      "id": "Chris Considine",
+      "position": "C",
+      "overall": 44
+    },
+    {
+      "id": "Geoffrey Botsford",
+      "position": "SF",
+      "overall": 52
+    },
+    {
+      "id": "Jim Kling",
+      "position": "PF",
+      "overall": 5
+    },
+    {
+      "id": "Raymond Collier",
+      "position": "PG",
+      "overall": 24
+    },
+    {
+      "id": "Andre Armstrong",
+      "position": "PF",
+      "overall": 40
+    },
+    {
+      "id": "Booker Predovic",
+      "position": "PF",
+      "overall": 1
+    },
+    {
+      "id": "Gus Hilll",
+      "position": "SG",
+      "overall": 55
+    },
+    {
+      "id": "Pierre Spinka",
+      "position": "SG",
+      "overall": 25
+    },
+    {
+      "id": "Yong Abbott",
+      "position": "C",
+      "overall": 49
+    },
+    {
+      "id": "Elbert Hauck",
+      "position": "SG",
+      "overall": 21
+    },
+    {
+      "id": "Rubin Wolff",
+      "position": "SG",
+      "overall": 52
+    },
+    {
+      "id": "Javier Koch",
+      "position": "C",
+      "overall": 17
+    },
+    {
+      "id": "Jarrod Dicki",
+      "position": "PF",
+      "overall": 78
+    },
+    {
+      "id": "Devin Kohler",
+      "position": "PF",
+      "overall": 6
+    },
+    {
+      "id": "Clinton Tromp",
+      "position": "PF",
+      "overall": 77
+    },
+    {
+      "id": "Luther Volkman",
+      "position": "PG",
+      "overall": 28
+    },
+    {
+      "id": "Antione Simonis",
+      "position": "SG",
+      "overall": 17
+    },
+    {
+      "id": "Dustin Pacocha",
+      "position": "SF",
+      "overall": 65
+    },
+    {
+      "id": "Norberto Runolfsdottir",
+      "position": "SG",
+      "overall": 67
+    },
+    {
+      "id": "Wyatt Ferry",
+      "position": "C",
+      "overall": 45
+    },
+    {
+      "id": "Blair Rutherford",
+      "position": "PG",
+      "overall": 33
+    },
+    {
+      "id": "Marcelino Waelchi",
+      "position": "SG",
+      "overall": 53
+    },
+    {
+      "id": "Blake Bins",
+      "position": "C",
+      "overall": 38
+    },
+    {
+      "id": "Shayne Pacocha",
+      "position": "PG",
+      "overall": 28
+    },
+    {
+      "id": "Sean Gutkowski",
+      "position": "SG",
+      "overall": 6
+    },
+    {
+      "id": "Rufus Huels",
+      "position": "C",
+      "overall": 92
+    },
+    {
+      "id": "Barney Huel",
+      "position": "PG",
+      "overall": 56
+    },
+    {
+      "id": "Dee Hahn",
+      "position": "C",
+      "overall": 11
+    },
+    {
+      "id": "Rey Beer",
+      "position": "SG",
+      "overall": 89
+    },
+    {
+      "id": "Nathanael Rogahn",
+      "position": "SG",
+      "overall": 13
+    },
+    {
+      "id": "Jamey Johnson",
+      "position": "C",
+      "overall": 22
+    },
+    {
+      "id": "Broderick Padberg",
+      "position": "C",
+      "overall": 55
+    },
+    {
+      "id": "Moshe Langworth",
+      "position": "SG",
+      "overall": 59
+    },
+    {
+      "id": "Salvatore Schulist",
+      "position": "SG",
+      "overall": 17
+    },
+    {
+      "id": "Jonathon Kiehn",
+      "position": "C",
+      "overall": 27
+    },
+    {
+      "id": "Jospeh Satterfield",
+      "position": "PG",
+      "overall": 47
+    },
+    {
+      "id": "Vern Beatty",
+      "position": "SF",
+      "overall": 43
+    },
+    {
+      "id": "Virgilio Labadie",
+      "position": "PG",
+      "overall": 29
+    },
+    {
+      "id": "Lindsey DuBuque",
+      "position": "SG",
+      "overall": 19
+    },
+    {
+      "id": "Rico Sporer",
+      "position": "PG",
+      "overall": 26
+    },
+    {
+      "id": "Mikel Graham",
+      "position": "SF",
+      "overall": 69
+    },
+    {
+      "id": "Kristopher Beatty",
+      "position": "SF",
+      "overall": 74
+    },
+    {
+      "id": "Hai Pagac",
+      "position": "SF",
+      "overall": 58
+    },
+    {
+      "id": "Moshe Fay",
+      "position": "PF",
+      "overall": 87
+    },
+    {
+      "id": "Leslie Kshlerin",
+      "position": "PF",
+      "overall": 41
+    },
+    {
+      "id": "Russ Oberbrunner",
+      "position": "SF",
+      "overall": 2
+    },
+    {
+      "id": "Margarito Hermiston",
+      "position": "C",
+      "overall": 98
+    },
+    {
+      "id": "Alberto Gibson",
+      "position": "PF",
+      "overall": 36
+    },
+    {
+      "id": "Darwin Doyle",
+      "position": "SF",
+      "overall": 31
+    },
+    {
+      "id": "Bennett Greenfelder",
+      "position": "PF",
+      "overall": 48
+    },
+    {
+      "id": "Wes Walter",
+      "position": "SF",
+      "overall": 75
+    },
+    {
+      "id": "Benny Hettinger",
+      "position": "C",
+      "overall": 0
+    },
+    {
+      "id": "Van Hilpert",
+      "position": "PG",
+      "overall": 24
+    },
+    {
+      "id": "Bennie Steuber",
+      "position": "C",
+      "overall": 20
+    },
+    {
+      "id": "Ethan Wehner",
+      "position": "SF",
+      "overall": 84
+    },
+    {
+      "id": "Don Ruecker",
+      "position": "C",
+      "overall": 26
+    },
+    {
+      "id": "Tyler Haley",
+      "position": "SF",
+      "overall": 20
+    },
+    {
+      "id": "Genaro Torphy",
+      "position": "SF",
+      "overall": 96
+    },
+    {
+      "id": "Tod Olson",
+      "position": "C",
+      "overall": 73
+    },
+    {
+      "id": "Huey Fahey",
+      "position": "PF",
+      "overall": 82
+    },
+    {
+      "id": "Gene Mante",
+      "position": "PG",
+      "overall": 6
+    },
+    {
+      "id": "Kirby Waelchi",
+      "position": "C",
+      "overall": 60
+    },
+    {
+      "id": "Edmund Skiles",
+      "position": "SF",
+      "overall": 94
+    },
+    {
+      "id": "Reuben Pouros",
+      "position": "PF",
+      "overall": 61
+    },
+    {
+      "id": "Hung Abernathy",
+      "position": "PG",
+      "overall": 36
+    },
+    {
+      "id": "Tracy Halvorson",
+      "position": "SG",
+      "overall": 12
+    },
+    {
+      "id": "Tommy Hayes",
+      "position": "PF",
+      "overall": 66
+    },
+    {
+      "id": "Scot Kuphal",
+      "position": "PG",
+      "overall": 22
+    },
+    {
+      "id": "Luis Lindgren",
+      "position": "PF",
+      "overall": 37
+    },
+    {
+      "id": "Miles Zboncak",
+      "position": "PF",
+      "overall": 80
+    },
+    {
+      "id": "Harley Ratke",
+      "position": "PF",
+      "overall": 17
+    },
+    {
+      "id": "Hugo Kovacek",
+      "position": "SF",
+      "overall": 8
+    },
+    {
+      "id": "Santo Schmidt",
+      "position": "SG",
+      "overall": 18
+    },
+    {
+      "id": "Quincy Cremin",
+      "position": "PF",
+      "overall": 57
+    },
+    {
+      "id": "Lucien Wolff",
+      "position": "PG",
+      "overall": 11
+    },
+    {
+      "id": "Abel Jakubowski",
+      "position": "PF",
+      "overall": 97
+    },
+    {
+      "id": "Nolan Labadie",
+      "position": "C",
+      "overall": 9
+    },
+    {
+      "id": "Ali West",
+      "position": "SF",
+      "overall": 19
+    },
+    {
+      "id": "Joaquin Graham",
+      "position": "C",
+      "overall": 10
+    },
+    {
+      "id": "Tim Sanford",
+      "position": "PF",
+      "overall": 48
+    },
+    {
+      "id": "Julius Osinski",
+      "position": "SF",
+      "overall": 9
+    },
+    {
+      "id": "Myles Sporer",
+      "position": "PG",
+      "overall": 93
+    },
+    {
+      "id": "Stuart Nicolas",
+      "position": "PG",
+      "overall": 83
+    },
+    {
+      "id": "Von Considine",
+      "position": "PG",
+      "overall": 55
+    },
+    {
+      "id": "Ahmed Kassulke",
+      "position": "PG",
+      "overall": 44
+    },
+    {
+      "id": "Evan Stark",
+      "position": "PF",
+      "overall": 26
+    },
+    {
+      "id": "Sid Lind",
+      "position": "SG",
+      "overall": 25
+    },
+    {
+      "id": "Garfield Nicolas",
+      "position": "PF",
+      "overall": 17
+    },
+    {
+      "id": "Johnie Rowe",
+      "position": "SG",
+      "overall": 68
+    },
+    {
+      "id": "Carol Gutmann",
+      "position": "PG",
+      "overall": 20
+    },
+    {
+      "id": "Jerome Wiegand",
+      "position": "PG",
+      "overall": 4
+    },
+    {
+      "id": "Roberto Kozey",
+      "position": "PF",
+      "overall": 43
+    },
+    {
+      "id": "Henry Miller",
+      "position": "PF",
+      "overall": 17
+    },
+    {
+      "id": "Abraham Kris",
+      "position": "PF",
+      "overall": 55
+    },
+    {
+      "id": "Glen Weimann",
+      "position": "SF",
+      "overall": 99
+    },
+    {
+      "id": "Tad Herzog",
+      "position": "C",
+      "overall": 82
+    },
+    {
+      "id": "Andrew Bauch",
+      "position": "SG",
+      "overall": 27
+    },
+    {
+      "id": "Fredric Reilly",
+      "position": "SG",
+      "overall": 70
+    },
+    {
+      "id": "Reggie Hammes",
+      "position": "SF",
+      "overall": 64
+    },
+    {
+      "id": "Leif Spinka",
+      "position": "SG",
+      "overall": 57
+    },
+    {
+      "id": "Wm Champlin",
+      "position": "SF",
+      "overall": 90
+    },
+    {
+      "id": "Gustavo Jerde",
+      "position": "SF",
+      "overall": 19
+    },
+    {
+      "id": "Rodney Muller",
+      "position": "PG",
+      "overall": 63
+    },
+    {
+      "id": "Randell Hessel",
+      "position": "PG",
+      "overall": 26
+    },
+    {
+      "id": "Emilio Luettgen",
+      "position": "PG",
+      "overall": 94
+    },
+    {
+      "id": "Shawn Von",
+      "position": "SG",
+      "overall": 24
+    },
+    {
+      "id": "Gene Stamm",
+      "position": "SG",
+      "overall": 81
+    },
+    {
+      "id": "Danial Wintheiser",
+      "position": "PG",
+      "overall": 69
+    },
+    {
+      "id": "Larry Pagac",
+      "position": "PF",
+      "overall": 17
+    },
+    {
+      "id": "Frederick Stoltenberg",
+      "position": "SF",
+      "overall": 1
+    },
+    {
+      "id": "Benjamin Rau",
+      "position": "PG",
+      "overall": 63
+    },
+    {
+      "id": "Alex Blick",
+      "position": "SF",
+      "overall": 29
+    },
+    {
+      "id": "Hugh Farrell",
+      "position": "C",
+      "overall": 79
+    },
+    {
+      "id": "Neil Stanton",
+      "position": "PG",
+      "overall": 87
+    },
+    {
+      "id": "Lindsey Mosciski",
+      "position": "SF",
+      "overall": 65
+    },
+    {
+      "id": "Mauro Rowe",
+      "position": "PF",
+      "overall": 5
+    },
+    {
+      "id": "Luis Torphy",
+      "position": "SG",
+      "overall": 91
+    },
+    {
+      "id": "Lionel Steuber",
+      "position": "PF",
+      "overall": 55
+    },
+    {
+      "id": "Rigoberto Prohaska",
+      "position": "SG",
+      "overall": 95
+    },
+    {
+      "id": "Rhett Mertz",
+      "position": "SG",
+      "overall": 14
+    },
+    {
+      "id": "Jefferey O'Connell",
+      "position": "C",
+      "overall": 33
+    },
+    {
+      "id": "Kent Funk",
+      "position": "PF",
+      "overall": 97
+    },
+    {
+      "id": "Doyle Denesik",
+      "position": "PF",
+      "overall": 2
+    },
+    {
+      "id": "Phillip Erdman",
+      "position": "PG",
+      "overall": 34
+    },
+    {
+      "id": "Esteban Gottlieb",
+      "position": "SF",
+      "overall": 59
+    },
+    {
+      "id": "Rafael Shanahan",
+      "position": "PG",
+      "overall": 82
+    },
+    {
+      "id": "Kieth O'Reilly",
+      "position": "SG",
+      "overall": 18
+    },
+    {
+      "id": "Domenic Vandervort",
+      "position": "SG",
+      "overall": 28
+    },
+    {
+      "id": "Ali Balistreri",
+      "position": "C",
+      "overall": 9
+    },
+    {
+      "id": "Cedrick Donnelly",
+      "position": "SG",
+      "overall": 80
+    },
+    {
+      "id": "Ron Keeling",
+      "position": "C",
+      "overall": 22
+    },
+    {
+      "id": "Raymundo Ebert",
+      "position": "C",
+      "overall": 48
+    },
+    {
+      "id": "Geoffrey Vandervort",
+      "position": "PF",
+      "overall": 14
+    },
+    {
+      "id": "Collin Goyette",
+      "position": "SF",
+      "overall": 74
+    },
+    {
+      "id": "Rich Abshire",
+      "position": "PF",
+      "overall": 88
+    },
+    {
+      "id": "Anton Robel",
+      "position": "C",
+      "overall": 48
+    },
+    {
+      "id": "Samual Littel",
+      "position": "PF",
+      "overall": 25
+    },
+    {
+      "id": "Brant Stiedemann",
+      "position": "C",
+      "overall": 15
+    },
+    {
+      "id": "Tyrone Vandervort",
+      "position": "C",
+      "overall": 9
+    },
+    {
+      "id": "Billy Dach",
+      "position": "SG",
+      "overall": 13
+    },
+    {
+      "id": "Ramiro Hegmann",
+      "position": "SG",
+      "overall": 48
+    },
+    {
+      "id": "Solomon Williamson",
+      "position": "SF",
+      "overall": 4
+    },
+    {
+      "id": "Norris Padberg",
+      "position": "C",
+      "overall": 15
+    },
+    {
+      "id": "Rodger Macejkovic",
+      "position": "PG",
+      "overall": 28
+    },
+    {
+      "id": "Bernardo Rowe",
+      "position": "C",
+      "overall": 10
+    },
+    {
+      "id": "Wesley Steuber",
+      "position": "PF",
+      "overall": 3
+    },
+    {
+      "id": "Alberto Reinger",
+      "position": "PF",
+      "overall": 36
+    },
+    {
+      "id": "Damon Torp",
+      "position": "SG",
+      "overall": 16
+    },
+    {
+      "id": "Gene Volkman",
+      "position": "C",
+      "overall": 64
+    },
+    {
+      "id": "Chad Crooks",
+      "position": "SF",
+      "overall": 65
+    },
+    {
+      "id": "Von Jast",
+      "position": "SF",
+      "overall": 27
+    },
+    {
+      "id": "Alphonse Strosin",
+      "position": "SF",
+      "overall": 45
+    },
+    {
+      "id": "Moshe Zboncak",
+      "position": "C",
+      "overall": 14
+    },
+    {
+      "id": "Rodrigo Wisoky",
+      "position": "SF",
+      "overall": 64
+    },
+    {
+      "id": "Bernie Pacocha",
+      "position": "PF",
+      "overall": 98
+    },
+    {
+      "id": "Sheldon Murphy",
+      "position": "PG",
+      "overall": 45
+    },
+    {
+      "id": "Alvin Maggio",
+      "position": "PF",
+      "overall": 72
+    },
+    {
+      "id": "Delbert White",
+      "position": "PF",
+      "overall": 8
+    },
+    {
+      "id": "Johnnie Gislason",
+      "position": "PG",
+      "overall": 74
+    },
+    {
+      "id": "Jody Dickens",
+      "position": "SG",
+      "overall": 35
+    },
+    {
+      "id": "Dave Greenfelder",
+      "position": "SF",
+      "overall": 15
+    },
+    {
+      "id": "Wendell Bauch",
+      "position": "SF",
+      "overall": 54
+    },
+    {
+      "id": "Jess Bergnaum",
+      "position": "SG",
+      "overall": 0
+    },
+    {
+      "id": "Kareem Swift",
+      "position": "PG",
+      "overall": 53
+    },
+    {
+      "id": "Nicholas Zemlak",
+      "position": "SF",
+      "overall": 63
+    },
+    {
+      "id": "Russ VonRueden",
+      "position": "PF",
+      "overall": 89
+    },
+    {
+      "id": "Reuben Spinka",
+      "position": "PF",
+      "overall": 60
+    },
+    {
+      "id": "Jacob McDermott",
+      "position": "SG",
+      "overall": 55
+    },
+    {
+      "id": "Errol Osinski",
+      "position": "PG",
+      "overall": 37
+    },
+    {
+      "id": "Stacy Kilback",
+      "position": "PF",
+      "overall": 8
+    },
+    {
+      "id": "Adan Schowalter",
+      "position": "C",
+      "overall": 10
+    },
+    {
+      "id": "Yong Becker",
+      "position": "SF",
+      "overall": 46
+    },
+    {
+      "id": "Frankie Conn",
+      "position": "PF",
+      "overall": 39
+    },
+    {
+      "id": "Oliver Bogan",
+      "position": "PF",
+      "overall": 92
+    },
+    {
+      "id": "Jeffrey Shields",
+      "position": "C",
+      "overall": 56
+    },
+    {
+      "id": "Lionel Leffler",
+      "position": "PG",
+      "overall": 15
+    },
+    {
+      "id": "Rosario Friesen",
+      "position": "SF",
+      "overall": 60
+    },
+    {
+      "id": "Ike Johns",
+      "position": "SG",
+      "overall": 38
+    },
+    {
+      "id": "Merle Farrell",
+      "position": "PG",
+      "overall": 48
+    },
+    {
+      "id": "Scotty Schuppe",
+      "position": "PF",
+      "overall": 27
+    },
+    {
+      "id": "Lavern DuBuque",
+      "position": "PF",
+      "overall": 16
+    },
+    {
+      "id": "Carol Ernser",
+      "position": "C",
+      "overall": 50
+    },
+    {
+      "id": "Harry Rogahn",
+      "position": "SG",
+      "overall": 74
+    },
+    {
+      "id": "Clinton Spencer",
+      "position": "SF",
+      "overall": 70
+    },
+    {
+      "id": "Freddie Jacobi",
+      "position": "PF",
+      "overall": 42
+    },
+    {
+      "id": "Emery Witting",
+      "position": "SF",
+      "overall": 40
+    },
+    {
+      "id": "Norman Kulas",
+      "position": "SF",
+      "overall": 52
+    },
+    {
+      "id": "Reyes Spinka",
+      "position": "C",
+      "overall": 22
+    },
+    {
+      "id": "Armand Harber",
+      "position": "C",
+      "overall": 48
+    },
+    {
+      "id": "Fredric Leffler",
+      "position": "SG",
+      "overall": 12
+    },
+    {
+      "id": "Asa Klein",
+      "position": "SF",
+      "overall": 26
+    },
+    {
+      "id": "Sterling Donnelly",
+      "position": "SG",
+      "overall": 39
+    },
+    {
+      "id": "Larry Cronin",
+      "position": "C",
+      "overall": 98
+    },
+    {
+      "id": "Gregory Mills",
+      "position": "SF",
+      "overall": 69
+    },
+    {
+      "id": "Stacey Bradtke",
+      "position": "PG",
+      "overall": 28
+    },
+    {
+      "id": "Bradford Ziemann",
+      "position": "C",
+      "overall": 68
+    },
+    {
+      "id": "Kim Marvin",
+      "position": "SF",
+      "overall": 55
+    },
+    {
+      "id": "Rich Koepp",
+      "position": "SF",
+      "overall": 52
+    },
+    {
+      "id": "Brenton Thiel",
+      "position": "C",
+      "overall": 96
+    },
+    {
+      "id": "Wilbur Jakubowski",
+      "position": "PF",
+      "overall": 22
+    },
+    {
+      "id": "Oren Rempel",
+      "position": "PG",
+      "overall": 18
+    },
+    {
+      "id": "Yong Ziemann",
+      "position": "SG",
+      "overall": 24
+    },
+    {
+      "id": "Ozzie Champlin",
+      "position": "PF",
+      "overall": 15
+    },
+    {
+      "id": "Hubert Grady",
+      "position": "SF",
+      "overall": 54
+    },
+    {
+      "id": "Billie Beer",
+      "position": "SG",
+      "overall": 22
+    },
+    {
+      "id": "Marcel Gleichner",
+      "position": "SF",
+      "overall": 19
+    },
+    {
+      "id": "Irwin Kuphal",
+      "position": "PG",
+      "overall": 20
+    },
+    {
+      "id": "Joshua Keebler",
+      "position": "SF",
+      "overall": 23
+    },
+    {
+      "id": "Jerome Gulgowski",
+      "position": "PF",
+      "overall": 31
+    },
+    {
+      "id": "Arthur Windler",
+      "position": "C",
+      "overall": 100
+    },
+    {
+      "id": "Eduardo Ebert",
+      "position": "PF",
+      "overall": 71
+    },
+    {
+      "id": "Warren Abbott",
+      "position": "C",
+      "overall": 97
+    },
+    {
+      "id": "Logan Champlin",
+      "position": "SG",
+      "overall": 12
+    },
+    {
+      "id": "Doug Von",
+      "position": "C",
+      "overall": 72
+    },
+    {
+      "id": "Ross Lindgren",
+      "position": "PF",
+      "overall": 77
+    },
+    {
+      "id": "Dudley Quigley",
+      "position": "PG",
+      "overall": 19
+    },
+    {
+      "id": "Ozzie Graham",
+      "position": "SF",
+      "overall": 64
+    },
+    {
+      "id": "Stephen Bailey",
+      "position": "PF",
+      "overall": 24
+    },
+    {
+      "id": "Barry Bergnaum",
+      "position": "PG",
+      "overall": 78
+    },
+    {
+      "id": "Stefan Aufderhar",
+      "position": "C",
+      "overall": 19
+    },
+    {
+      "id": "Rufus Quitzon",
+      "position": "PF",
+      "overall": 34
+    },
+    {
+      "id": "Danny Mraz",
+      "position": "PG",
+      "overall": 87
+    },
+    {
+      "id": "Booker Runte",
+      "position": "SG",
+      "overall": 66
+    },
+    {
+      "id": "Ted Durgan",
+      "position": "C",
+      "overall": 77
+    },
+    {
+      "id": "Delbert Kshlerin",
+      "position": "C",
+      "overall": 56
+    },
+    {
+      "id": "Dusty Bernier",
+      "position": "PG",
+      "overall": 40
+    },
+    {
+      "id": "Kareem Mills",
+      "position": "SG",
+      "overall": 54
+    },
+    {
+      "id": "Art Howe",
+      "position": "SG",
+      "overall": 68
+    },
+    {
+      "id": "Raymond McCullough",
+      "position": "SG",
+      "overall": 29
+    },
+    {
+      "id": "Rocky Wiegand",
+      "position": "SG",
+      "overall": 41
+    },
+    {
+      "id": "Odell Brakus",
+      "position": "PF",
+      "overall": 20
+    },
+    {
+      "id": "Del Cummerata",
+      "position": "SF",
+      "overall": 93
+    },
+    {
+      "id": "Jewel Zieme",
+      "position": "C",
+      "overall": 74
+    },
+    {
+      "id": "Dominick Witting",
+      "position": "PG",
+      "overall": 42
+    },
+    {
+      "id": "Cedric Hettinger",
+      "position": "C",
+      "overall": 31
+    },
+    {
+      "id": "Abdul Romaguera",
+      "position": "PG",
+      "overall": 29
+    },
+    {
+      "id": "Julian Stiedemann",
+      "position": "PG",
+      "overall": 59
+    },
+    {
+      "id": "Fred Dickens",
+      "position": "C",
+      "overall": 76
+    },
+    {
+      "id": "Rigoberto Bergstrom",
+      "position": "C",
+      "overall": 58
+    },
+    {
+      "id": "Eliseo Cruickshank",
+      "position": "SG",
+      "overall": 26
+    },
+    {
+      "id": "Dominick Torp",
+      "position": "C",
+      "overall": 82
+    },
+    {
+      "id": "Donn Blick",
+      "position": "PG",
+      "overall": 38
+    },
+    {
+      "id": "Solomon Borer",
+      "position": "PF",
+      "overall": 22
+    },
+    {
+      "id": "James Schultz",
+      "position": "SG",
+      "overall": 18
+    },
+    {
+      "id": "Salvador Crona",
+      "position": "SF",
+      "overall": 88
+    },
+    {
+      "id": "Allen Will",
+      "position": "PG",
+      "overall": 34
+    },
+    {
+      "id": "Otis Quigley",
+      "position": "SG",
+      "overall": 86
+    },
+    {
+      "id": "Mel Aufderhar",
+      "position": "SG",
+      "overall": 67
+    },
+    {
+      "id": "Vincent Bahringer",
+      "position": "PF",
+      "overall": 5
+    },
+    {
+      "id": "Damon White",
+      "position": "C",
+      "overall": 62
+    },
+    {
+      "id": "Domingo Douglas",
+      "position": "SG",
+      "overall": 26
+    },
+    {
+      "id": "Rolland Streich",
+      "position": "SF",
+      "overall": 75
+    },
+    {
+      "id": "Jordan Nicolas",
+      "position": "C",
+      "overall": 83
+    },
+    {
+      "id": "Jarrett Klocko",
+      "position": "SF",
+      "overall": 89
+    },
+    {
+      "id": "Lazaro Kozey",
+      "position": "PG",
+      "overall": 35
+    },
+    {
+      "id": "Geraldo Murazik",
+      "position": "PG",
+      "overall": 16
+    },
+    {
+      "id": "Edgardo Mitchell",
+      "position": "PF",
+      "overall": 62
+    },
+    {
+      "id": "Judson Crooks",
+      "position": "SF",
+      "overall": 8
+    },
+    {
+      "id": "Jefferson Fay",
+      "position": "PF",
+      "overall": 71
+    },
+    {
+      "id": "Orville Collins",
+      "position": "SF",
+      "overall": 79
+    },
+    {
+      "id": "Randall Wuckert",
+      "position": "PF",
+      "overall": 61
+    },
+    {
+      "id": "Troy Wiza",
+      "position": "C",
+      "overall": 32
+    },
+    {
+      "id": "Hobert Rodriguez",
+      "position": "SF",
+      "overall": 50
+    },
+    {
+      "id": "Russell Pfannerstill",
+      "position": "PF",
+      "overall": 28
+    },
+    {
+      "id": "Ismael Will",
+      "position": "SF",
+      "overall": 26
+    },
+    {
+      "id": "Tyree Koepp",
+      "position": "C",
+      "overall": 46
+    },
+    {
+      "id": "Warner McGlynn",
+      "position": "SF",
+      "overall": 66
+    },
+    {
+      "id": "Sergio Feest",
+      "position": "C",
+      "overall": 78
+    },
+    {
+      "id": "Fausto Muller",
+      "position": "C",
+      "overall": 14
+    },
+    {
+      "id": "Jaime Predovic",
+      "position": "SF",
+      "overall": 6
+    },
+    {
+      "id": "Fredrick Kshlerin",
+      "position": "PF",
+      "overall": 22
+    },
+    {
+      "id": "Cristopher Kreiger",
+      "position": "C",
+      "overall": 1
+    },
+    {
+      "id": "Julius Robel",
+      "position": "C",
+      "overall": 14
+    },
+    {
+      "id": "Raphael Hintz",
+      "position": "SF",
+      "overall": 83
+    },
+    {
+      "id": "Joshua Cremin",
+      "position": "PF",
+      "overall": 2
+    },
+    {
+      "id": "George Stark",
+      "position": "SG",
+      "overall": 36
+    },
+    {
+      "id": "Donovan Luettgen",
+      "position": "SF",
+      "overall": 53
+    },
+    {
+      "id": "Florencio Littel",
+      "position": "SF",
+      "overall": 3
+    },
+    {
+      "id": "Kermit Wiegand",
+      "position": "C",
+      "overall": 3
+    },
+    {
+      "id": "Elvis Schroeder",
+      "position": "SG",
+      "overall": 70
+    },
+    {
+      "id": "Bo Bogan",
+      "position": "C",
+      "overall": 92
+    },
+    {
+      "id": "Milton Cronin",
+      "position": "PG",
+      "overall": 49
+    },
+    {
+      "id": "Ozzie Bruen",
+      "position": "SF",
+      "overall": 24
+    },
+    {
+      "id": "Amos Green",
+      "position": "PF",
+      "overall": 15
+    },
+    {
+      "id": "Clint Dickinson",
+      "position": "PF",
+      "overall": 42
+    },
+    {
+      "id": "Garth Dach",
+      "position": "PF",
+      "overall": 42
+    },
+    {
+      "id": "Antonio Kshlerin",
+      "position": "PF",
+      "overall": 90
+    },
+    {
+      "id": "Bart Dach",
+      "position": "PG",
+      "overall": 26
+    },
+    {
+      "id": "Davis Casper",
+      "position": "PF",
+      "overall": 73
+    },
+    {
+      "id": "Bret Langosh",
+      "position": "SG",
+      "overall": 76
+    },
+    {
+      "id": "Caleb Langosh",
+      "position": "SG",
+      "overall": 4
+    },
+    {
+      "id": "Dusty Huels",
+      "position": "PG",
+      "overall": 32
+    },
+    {
+      "id": "Efren Kiehn",
+      "position": "C",
+      "overall": 77
+    },
+    {
+      "id": "Saul Schuppe",
+      "position": "PG",
+      "overall": 23
+    },
+    {
+      "id": "Luther Mills",
+      "position": "C",
+      "overall": 5
+    },
+    {
+      "id": "Malik Will",
+      "position": "C",
+      "overall": 43
+    },
+    {
+      "id": "Robin Hills",
+      "position": "SG",
+      "overall": 95
+    },
+    {
+      "id": "Dillon Dach",
+      "position": "SG",
+      "overall": 94
+    },
+    {
+      "id": "Pasquale Lehner",
+      "position": "SG",
+      "overall": 62
+    },
+    {
+      "id": "Jimmie Hane",
+      "position": "SF",
+      "overall": 20
+    },
+    {
+      "id": "Thanh Rowe",
+      "position": "PF",
+      "overall": 18
+    },
+    {
+      "id": "Davis Kuhlman",
+      "position": "SF",
+      "overall": 32
+    },
+    {
+      "id": "Danny Hand",
+      "position": "SG",
+      "overall": 69
+    },
+    {
+      "id": "Marcelino Reilly",
+      "position": "PG",
+      "overall": 79
+    },
+    {
+      "id": "Phillip Sauer",
+      "position": "PG",
+      "overall": 85
+    },
+    {
+      "id": "Wendell Schaefer",
+      "position": "SG",
+      "overall": 55
+    },
+    {
+      "id": "Brendon Rowe",
+      "position": "PF",
+      "overall": 10
+    },
+    {
+      "id": "Ivory Gerhold",
+      "position": "PG",
+      "overall": 86
+    },
+    {
+      "id": "Carlton Block",
+      "position": "PF",
+      "overall": 56
+    },
+    {
+      "id": "Ambrose Langosh",
+      "position": "SG",
+      "overall": 66
+    },
+    {
+      "id": "Billie Ward",
+      "position": "C",
+      "overall": 23
+    },
+    {
+      "id": "Hosea Kohler",
+      "position": "C",
+      "overall": 45
+    },
+    {
+      "id": "Giuseppe Davis",
+      "position": "SG",
+      "overall": 3
+    },
+    {
+      "id": "Man Gleichner",
+      "position": "PF",
+      "overall": 48
+    },
+    {
+      "id": "Lowell Lakin",
+      "position": "PG",
+      "overall": 32
+    },
+    {
+      "id": "Preston Kassulke",
+      "position": "C",
+      "overall": 3
+    },
+    {
+      "id": "Bradford Ernser",
+      "position": "C",
+      "overall": 78
+    },
+    {
+      "id": "Ashley Collier",
+      "position": "SG",
+      "overall": 21
+    },
+    {
+      "id": "Cole Turcotte",
+      "position": "PF",
+      "overall": 27
+    },
+    {
+      "id": "Erwin Bergstrom",
+      "position": "C",
+      "overall": 10
+    },
+    {
+      "id": "Tory Upton",
+      "position": "PF",
+      "overall": 63
+    },
+    {
+      "id": "Warner Heaney",
+      "position": "PG",
+      "overall": 67
+    },
+    {
+      "id": "Blake Weissnat",
+      "position": "PF",
+      "overall": 19
+    },
+    {
+      "id": "Tory Lind",
+      "position": "PF",
+      "overall": 72
+    },
+    {
+      "id": "Jackson Kautzer",
+      "position": "C",
+      "overall": 37
+    },
+    {
+      "id": "Haywood Hagenes",
+      "position": "PF",
+      "overall": 91
+    },
+    {
+      "id": "Amado Bauch",
+      "position": "PF",
+      "overall": 34
+    },
+    {
+      "id": "Stephen Christiansen",
+      "position": "PF",
+      "overall": 9
+    },
+    {
+      "id": "Harvey Homenick",
+      "position": "SF",
+      "overall": 34
+    },
+    {
+      "id": "Myles McKenzie",
+      "position": "PF",
+      "overall": 86
+    },
+    {
+      "id": "Refugio Stark",
+      "position": "SG",
+      "overall": 31
+    },
+    {
+      "id": "Willard Larson",
+      "position": "PG",
+      "overall": 47
+    },
+    {
+      "id": "Caleb Beahan",
+      "position": "SF",
+      "overall": 29
+    },
+    {
+      "id": "Lawerence White",
+      "position": "SF",
+      "overall": 83
+    },
+    {
+      "id": "David Schimmel",
+      "position": "PF",
+      "overall": 99
+    },
+    {
+      "id": "Man Hilpert",
+      "position": "C",
+      "overall": 23
+    },
+    {
+      "id": "Ramiro O'Conner",
+      "position": "C",
+      "overall": 7
+    },
+    {
+      "id": "Monty Roob",
+      "position": "PG",
+      "overall": 80
+    },
+    {
+      "id": "Tod Frami",
+      "position": "SG",
+      "overall": 42
+    },
+    {
+      "id": "Raphael Mraz",
+      "position": "C",
+      "overall": 32
+    },
+    {
+      "id": "Ernest Pouros",
+      "position": "PG",
+      "overall": 3
+    },
+    {
+      "id": "Hong Heller",
+      "position": "PG",
+      "overall": 11
+    },
+    {
+      "id": "Mitchel Boyle",
+      "position": "PG",
+      "overall": 28
+    },
+    {
+      "id": "Maria Bruen",
+      "position": "SF",
+      "overall": 80
+    },
+    {
+      "id": "Cleveland Lebsack",
+      "position": "SG",
+      "overall": 55
+    },
+    {
+      "id": "Francis McClure",
+      "position": "PF",
+      "overall": 49
+    },
+    {
+      "id": "Edmundo Reilly",
+      "position": "PF",
+      "overall": 51
+    },
+    {
+      "id": "Mac Kulas",
+      "position": "SG",
+      "overall": 71
+    },
+    {
+      "id": "Adrian Nienow",
+      "position": "PF",
+      "overall": 7
+    },
+    {
+      "id": "Stacey Feil",
+      "position": "C",
+      "overall": 75
+    },
+    {
+      "id": "Winfred Casper",
+      "position": "PF",
+      "overall": 80
+    },
+    {
+      "id": "Albert Rempel",
+      "position": "PF",
+      "overall": 8
+    },
+    {
+      "id": "Trent Dietrich",
+      "position": "C",
+      "overall": 22
+    },
+    {
+      "id": "Pasquale Romaguera",
+      "position": "SF",
+      "overall": 59
+    },
+    {
+      "id": "Federico Sporer",
+      "position": "SF",
+      "overall": 28
+    },
+    {
+      "id": "Rhett Deckow",
+      "position": "C",
+      "overall": 51
+    },
+    {
+      "id": "Donn Orn",
+      "position": "SF",
+      "overall": 78
+    },
+    {
+      "id": "Cliff Emmerich",
+      "position": "SF",
+      "overall": 65
+    },
+    {
+      "id": "Rosendo Fisher",
+      "position": "PF",
+      "overall": 67
+    },
+    {
+      "id": "Winford Boyle",
+      "position": "SG",
+      "overall": 21
+    },
+    {
+      "id": "Enoch Sanford",
+      "position": "SF",
+      "overall": 23
+    },
+    {
+      "id": "Carrol Zulauf",
+      "position": "C",
+      "overall": 11
+    },
+    {
+      "id": "Jamie Herzog",
+      "position": "PF",
+      "overall": 5
+    },
+    {
+      "id": "Frances Herzog",
+      "position": "PG",
+      "overall": 30
+    },
+    {
+      "id": "Joesph Mante",
+      "position": "C",
+      "overall": 58
+    },
+    {
+      "id": "Edgardo Goyette",
+      "position": "C",
+      "overall": 45
+    },
+    {
+      "id": "Orval Sawayn",
+      "position": "C",
+      "overall": 13
+    },
+    {
+      "id": "Valentine Trantow",
+      "position": "SG",
+      "overall": 5
+    }
+  ]
+}

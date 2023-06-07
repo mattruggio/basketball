@@ -2,35 +2,35 @@
 
 module Basketball
   module Season
-    # Sets boundaries for preseason and regular season play.  Add games as long as they are
+    # Sets boundaries for exhibition and regular season play.  Add games as long as they are
     # within the correct dated boundaries
     class Calendar
       class OutOfBoundsError < StandardError; end
       class TeamAlreadyBookedError < StandardError; end
 
-      attr_reader :preseason_start_date,
-                  :preseason_end_date,
-                  :season_start_date,
-                  :season_end_date,
+      attr_reader :exhibition_start_date,
+                  :exhibition_end_date,
+                  :regular_start_date,
+                  :regular_end_date,
                   :games
 
       def initialize(
-        preseason_start_date:,
-        preseason_end_date:,
-        season_start_date:,
-        season_end_date:,
+        exhibition_start_date:,
+        exhibition_end_date:,
+        regular_start_date:,
+        regular_end_date:,
         games: []
       )
-        raise ArgumentError, 'preseason_start_date is required' if preseason_start_date.to_s.empty?
-        raise ArgumentError, 'preseason_end_date is required'   if preseason_end_date.to_s.empty?
-        raise ArgumentError, 'season_start_date is required'    if season_start_date.to_s.empty?
-        raise ArgumentError, 'season_end_date is required'      if season_end_date.to_s.empty?
+        raise ArgumentError, 'exhibition_start_date is required' if exhibition_start_date.to_s.empty?
+        raise ArgumentError, 'exhibition_end_date is required'   if exhibition_end_date.to_s.empty?
+        raise ArgumentError, 'regular_start_date is required'    if regular_start_date.to_s.empty?
+        raise ArgumentError, 'regular_end_date is required'      if regular_end_date.to_s.empty?
 
-        @preseason_start_date = preseason_start_date
-        @preseason_end_date   = preseason_end_date
-        @season_start_date    = season_start_date
-        @season_end_date      = season_end_date
-        @games                = []
+        @exhibition_start_date = exhibition_start_date
+        @exhibition_end_date   = exhibition_end_date
+        @regular_start_date    = regular_start_date
+        @regular_end_date      = regular_end_date
+        @games                 = []
 
         games.each { |game| add!(game) }
 
@@ -60,36 +60,36 @@ module Basketball
         end
       end
 
-      def available_preseason_dates_for(opponent)
-        all_preseason_dates - exhibitions_for(opponent:).map(&:date)
+      def available_exhibition_dates_for(opponent)
+        all_exhibition_dates - exhibitions_for(opponent:).map(&:date)
       end
 
-      def available_season_dates_for(opponent)
+      def available_regular_dates_for(opponent)
         all_season_dates - regulars_for(opponent:).map(&:date)
       end
 
-      def available_preseason_matchup_dates(opponent1, opponent2)
-        available_opponent_dates       = available_preseason_dates_for(opponent1)
-        available_other_opponent_dates = available_preseason_dates_for(opponent2)
+      def available_exhibition_matchup_dates(opponent1, opponent2)
+        available_opponent_dates       = available_exhibition_dates_for(opponent1)
+        available_other_opponent_dates = available_exhibition_dates_for(opponent2)
 
         available_opponent_dates & available_other_opponent_dates
       end
 
-      def available_season_matchup_dates(opponent1, opponent2)
-        available_opponent_dates       = available_season_dates_for(opponent1)
-        available_other_opponent_dates = available_season_dates_for(opponent2)
+      def available_regular_matchup_dates(opponent1, opponent2)
+        available_opponent_dates       = available_regular_dates_for(opponent1)
+        available_other_opponent_dates = available_regular_dates_for(opponent2)
 
         available_opponent_dates & available_other_opponent_dates
       end
 
       private
 
-      def all_preseason_dates
-        (preseason_start_date..preseason_end_date).to_a
+      def all_exhibition_dates
+        (exhibition_start_date..exhibition_end_date).to_a
       end
 
       def all_season_dates
-        (season_start_date..season_end_date).to_a
+        (regular_start_date..regular_end_date).to_a
       end
 
       def assert_free_date(game)
@@ -106,11 +106,11 @@ module Basketball
         date = game.date
 
         if game.is_a?(Exhibition)
-          raise OutOfBoundsError, "#{date} is before preseason begins" if date < preseason_start_date
-          raise OutOfBoundsError, "#{date} is after preseason ends"    if date > preseason_end_date
+          raise OutOfBoundsError, "#{date} is before exhibition begins" if date < exhibition_start_date
+          raise OutOfBoundsError, "#{date} is after exhibition ends"    if date > exhibition_end_date
         elsif game.is_a?(Regular)
-          raise OutOfBoundsError, "#{date} is before season begins" if date < season_start_date
-          raise OutOfBoundsError, "#{date} is after season ends"    if date > season_end_date
+          raise OutOfBoundsError, "#{date} is before season begins" if date < regular_start_date
+          raise OutOfBoundsError, "#{date} is after season ends"    if date > regular_end_date
         else
           raise ArgumentError, "Dont know what this game type is: #{game.class.name}"
         end

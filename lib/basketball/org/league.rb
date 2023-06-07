@@ -36,7 +36,9 @@ module Basketball
         raise UnregisteredTeamError, "#{team} not registered" unless team?(team)
         raise PlayerAlreadySignedError, "#{player} already registered" if player?(player)
 
-        team.sign!(player)
+        # It is OK to pass in a detached team as long as its equivalent resides in this
+        # League's object graph.
+        team_for(team.id).sign!(player)
 
         self
       end
@@ -114,6 +116,12 @@ module Basketball
 
       def intraconference?(team1, team2)
         conference_for(team1) == conference_for(team2)
+      end
+
+      private
+
+      def team_for(id)
+        teams.find { |team| team.id == id }
       end
     end
   end
