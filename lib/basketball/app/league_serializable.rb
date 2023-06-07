@@ -13,13 +13,6 @@ module Basketball
         }
       end
 
-      def serialize_team(team)
-        {
-          id: team.id,
-          players: team.players.map { |player| serialize_player(player) }
-        }
-      end
-
       def serialize_conferences(conferences)
         conferences.map do |conference|
           {

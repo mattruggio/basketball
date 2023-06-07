@@ -153,6 +153,14 @@ module Basketball
         end
       end
 
+      def regular_results
+        results.select { |result| result.game.is_a?(Regular) }
+      end
+
+      def exhibition_results
+        results.select { |result| result.game.is_a?(Exhibition) }
+      end
+
       private
 
       attr_writer :arena

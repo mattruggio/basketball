@@ -78,15 +78,6 @@ module Basketball
         conference_for(team)&.divisions&.find { |d| d.teams.include?(team) }
       end
 
-      # Same conference, same division
-      def division_opponents_for(team)
-        division = division_for(team)
-
-        return nil unless division
-
-        division.teams - [team]
-      end
-
       # Same conference, different division
       def cross_division_opponents_for(team)
         conference = conference_for(team)
@@ -97,25 +88,6 @@ module Basketball
         other_divisions = conference.divisions - [division]
 
         other_divisions.flat_map(&:teams)
-      end
-
-      # Different conference
-      def cross_conference_opponents_for(team)
-        conference = conference_for(team)
-
-        return nil unless conference
-
-        other_conferences = conferences - [conference]
-
-        other_conferences.flat_map { |c| c.divisions.flat_map(&:teams) }
-      end
-
-      def intradivisional?(team1, team2)
-        conference_for(team1) == conference_for(team2) && division_for(team1) == division_for(team2)
-      end
-
-      def intraconference?(team1, team2)
-        conference_for(team1) == conference_for(team2)
       end
 
       private

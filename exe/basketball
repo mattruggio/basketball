@@ -4,7 +4,8 @@
 require 'bundler/setup'
 require 'basketball'
 
-require 'pry'
+# This is an example integration script tying all the contexts together.
+# This is definitely subject to change as this library gets extended further.
 
 store                  = Basketball::App::FileStore.new
 room_repository        = Basketball::App::RoomRepository.new(store)
@@ -18,7 +19,7 @@ seed       = JSON.parse(File.read(seed_path), symbolize_names: true)
 
 league_path = File.join(output_dir, '00-league.json')
 
-IO.write(league_path, seed[:league].to_json)
+File.write(league_path, seed[:league].to_json)
 
 front_offices = seed.dig(:league, :conferences).flat_map do |c|
   c[:divisions].flat_map do |d|
@@ -30,13 +31,13 @@ end
 
 room = {
   rounds: 12,
-  front_offices: front_offices,
+  front_offices:,
   players: seed[:players]
 }
 
 room_input_path = File.join(output_dir, '01-room-input.json')
 
-IO.write(room_input_path, room.to_json)
+File.write(room_input_path, room.to_json)
 
 room = room_repository.load(room_input_path)
 
@@ -72,47 +73,19 @@ coordinator_output_path = File.join(output_dir, '05-coordinator-output.json')
 
 coordinator_repository.save(coordinator_output_path, coordinator)
 
-def base_standing
-  {
-    exhibition: { wins: 0, losses: 0 },
-    regular: { wins: 0, losses: 0 }
-  }
+preseason_standings = Basketball::Season::Standings.new
+season_standings = Basketball::Season::Standings.new
+
+league.teams.each do |team|
+  preseason_standings.register!(team)
+  season_standings.register!(team)
 end
 
-standings = coordinator.results.each_with_object({}) do |result, standings|
-  standings[result.home_opponent] ||= base_standing
-  standings[result.away_opponent] ||= base_standing
+coordinator.exhibition_results.each { |result| preseason_standings.accept!(result) }
+coordinator.regular_results.each    { |result| season_standings.accept!(result) }
 
-  type = result.game.class.name.split('::').last.downcase.to_sym
-
-  if result.home_score > result.away_score
-    standings[result.home_opponent][type][:wins] += 1
-    standings[result.away_opponent][type][:losses] += 1
-  else
-    standings[result.home_opponent][type][:losses] += 1
-    standings[result.away_opponent][type][:wins] += 1
-  end
-end
-
-def print_standings(league:, standings:, type:)
-  league.conferences.each do |conference|
-    puts conference.id
-
-    conference.divisions.each do |division|
-      puts division.id
-
-      division.teams.each do |team|
-        wins   = standings.dig(team, type, :wins)
-        losses = standings.dig(team, type, :losses)
-
-        puts "#{team.id} #{wins}-#{losses}"
-      end
-    end
-  end
-end
-
-puts "Preseason"
-print_standings(league:, standings:, type: :exhibition)
-
-puts "Regular Season"
-print_standings(league:, standings:, type: :regular)
+puts 'Preseason Standings'
+puts preseason_standings
+puts '--------------------------------------------'
+puts 'Season Standings'
+puts season_standings
