@@ -3,15 +3,21 @@
   "front_offices": [
     {
       "id": "T-1",
-      "risk_level": 0
+      "risk_level": 0,
+      "star_level": 0,
+      "prioritized_positions":["PG","C","SF","PF","SG","SG","C","PF","SF","PG","PG","PG"]
     },
     {
       "id":  "T-2",
-      "risk_level": 0
+      "risk_level": 0,
+      "star_level": 0,
+      "prioritized_positions":["PG","C","SF","PF","SG","SG","C","PF","SF","PG","PG","PG"]
     },
     {
       "id": "T-3",
-        "risk_level": 0
+      "risk_level": 0,
+      "star_level": 0,
+      "prioritized_positions":["PG","C","SF","PF","SG","SG","C","PF","SF","PG","PG","PG"]
     }
   ],
   "players": [

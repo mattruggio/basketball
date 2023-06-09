@@ -11,16 +11,47 @@ describe Basketball::App::RoomRepository do
   let(:rounds)        { 2 }
   let(:path)          { fixture_path('draft', 'basic_room.json') }
   let(:fixture_hash)  { read_json_fixture('draft', 'basic_room.json') }
-  let(:ducks)         { Basketball::Draft::FrontOffice.new(id: 'ducks', risk_level: 2) }
-  let(:eagles)        { Basketball::Draft::FrontOffice.new(id: 'eagles', risk_level: 5) }
-  let(:mickey)        do
-    Basketball::Org::Player.new(id: 'mickey', overall: 99, position: Basketball::Org::Position.new('C'))
+
+  let(:ducks) do
+    Basketball::Draft::FrontOffice.new(
+      id: 'ducks',
+      risk_level: 2,
+      star_level: 3,
+      prioritized_positions: [Basketball::Org::Position.new('C')] * 12
+    )
   end
+
+  let(:eagles) do
+    Basketball::Draft::FrontOffice.new(
+      id: 'eagles',
+      risk_level: 5,
+      star_level: 4,
+      prioritized_positions: [Basketball::Org::Position.new('PF')] * 12
+    )
+  end
+
+  let(:mickey) do
+    Basketball::Org::Player.new(
+      id: 'mickey',
+      overall: 99,
+      position: Basketball::Org::Position.new('C')
+    )
+  end
+
   let(:donald) do
-    Basketball::Org::Player.new(id: 'donald', overall: 98, position: Basketball::Org::Position.new('C'))
+    Basketball::Org::Player.new(
+      id: 'donald',
+      overall: 98,
+      position: Basketball::Org::Position.new('C')
+    )
   end
+
   let(:daisy) do
-    Basketball::Org::Player.new(id: 'daisy', overall: 97, position: Basketball::Org::Position.new('C'))
+    Basketball::Org::Player.new(
+      id: 'daisy',
+      overall: 97,
+      position: Basketball::Org::Position.new('C')
+    )
   end
 
   let(:events) do

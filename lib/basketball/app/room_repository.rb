@@ -46,7 +46,9 @@ module Basketball
       def serialize_front_office(front_office)
         {
           id: front_office.id,
-          risk_level: front_office.risk_level
+          risk_level: front_office.risk_level,
+          prioritized_positions: front_office.prioritized_positions.map(&:code),
+          star_level: front_office.star_level
         }
       end
 
@@ -96,7 +98,9 @@ module Basketball
       def deserialize_front_office(hash)
         Draft::FrontOffice.new(
           id: hash[:id],
-          risk_level: hash[:risk_level]
+          risk_level: hash[:risk_level].to_i,
+          prioritized_positions: (hash[:prioritized_positions] || []).map { |c| Org::Position.new(c) },
+          star_level: hash[:star_level].to_i
         )
       end
 

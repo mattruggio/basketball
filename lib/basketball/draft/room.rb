@@ -5,6 +5,7 @@ module Basketball
     # Main pick-by-pick iterator object which will round-robin rotate team selections.
     class Room < Entity
       class AlreadyPickedError < StandardError; end
+      class DraftUnderwayError < StandardError; end
       class EndOfDraftError < StandardError; end
       class EventOutOfOrderError < StandardError; end
       class FrontOfficeAlreadyRegisteredError < StandardError; end
@@ -110,6 +111,36 @@ module Basketball
         players - drafted_players
       end
 
+      ### Builder Methods
+
+      def add_player!(player)
+        raise DraftUnderwayError, 'draft already started!' if events.any?
+        raise ArgumentError, 'player required' unless player
+        raise PlayerAlreadyAddedError, "#{player} already added" if player?(player)
+
+        players << player
+
+        self
+      end
+
+      def register!(front_office)
+        raise DraftUnderwayError, 'draft already started!' if events.any?
+        raise ArgumentError, 'front_office required' unless front_office
+        raise FrontOfficeAlreadyRegisteredError, "#{front_office} already registered" if registered?(front_office)
+
+        front_offices << front_office
+
+        self
+      end
+
+      def registered?(front_office)
+        front_offices.include?(front_office)
+      end
+
+      def player?(player)
+        players.include?(player)
+      end
+
       ### Event Methods
 
       def skip!
@@ -187,32 +218,6 @@ module Basketball
 
       def internal_pick
         events.length + 1
-      end
-
-      def registered?(front_office)
-        front_offices.include?(front_office)
-      end
-
-      def register!(front_office)
-        raise ArgumentError, 'front_office required' unless front_office
-        raise FrontOfficeAlreadyRegisteredError, "#{front_office} already registered" if registered?(front_office)
-
-        front_offices << front_office
-
-        self
-      end
-
-      def player?(player)
-        players.include?(player)
-      end
-
-      def add_player!(player)
-        raise ArgumentError, 'player required' unless player
-        raise PlayerAlreadyAddedError, "#{player} already added" if player?(player)
-
-        players << player
-
-        self
       end
     end
   end
