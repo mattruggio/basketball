@@ -13,9 +13,11 @@ module Basketball
       class UnknownFrontOfficeError < StandardError; end
       class UnknownPlayerError < StandardError; end
 
+      DEFAULT_ROUNDS = 12
+
       attr_reader :rounds, :players, :front_offices, :events
 
-      def initialize(front_offices:, rounds:, players: [], events: [])
+      def initialize(events: [], front_offices: [], players: [], rounds: DEFAULT_ROUNDS)
         super()
 
         raise InvalidRoundsError, "#{rounds} should be a positive number" unless rounds.positive?
