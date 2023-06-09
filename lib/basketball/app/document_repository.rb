@@ -41,6 +41,10 @@ module Basketball
         true
       end
 
+      def exist?(id)
+        store.exist?(id)
+      end
+
       protected
 
       def from_h(hash)

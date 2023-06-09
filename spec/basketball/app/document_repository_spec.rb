@@ -31,6 +31,19 @@ describe Basketball::App::DocumentRepository do
     end
   end
 
+  describe '#exist?' do
+    it 'returns true' do
+      store.data[key] = json_hash.to_json
+      entity.send('id=', key)
+
+      expect(repository.exist?(key)).to be true
+    end
+
+    it 'returns false' do
+      expect(repository.exist?(key)).to be false
+    end
+  end
+
   describe '#delete' do
     specify 'value is removed from store' do
       store.data[key] = json_hash.to_json
