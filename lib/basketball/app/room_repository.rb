@@ -26,6 +26,7 @@ module Basketball
 
       def to_h(room)
         {
+          id: room.id,
           rounds: room.rounds,
           front_offices: room.front_offices.map { |fo| serialize_front_office(fo) },
           players: room.players.map { |p| serialize_player(p) },
