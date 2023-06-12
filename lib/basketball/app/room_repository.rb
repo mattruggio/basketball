@@ -66,6 +66,7 @@ module Basketball
 
       def serialize_pick(event)
         {
+          id: event.id || event.pick,
           type: PICK_EVENT,
           front_office: event.front_office.id,
           pick: event.pick,
@@ -78,6 +79,7 @@ module Basketball
 
       def serialize_skip(event)
         {
+          id: event.id || event.pick,
           type: SKIP_EVENT,
           front_office: event.front_office.id,
           pick: event.pick,
@@ -141,11 +143,16 @@ module Basketball
           front_office_id = hash[:front_office]
           front_office    = front_offices.find { |fo| fo.id == front_office_id }
 
-          case hash[:type]
-          when PICK_EVENT
-            deserialize_pick(hash, players:, front_office:)
-          when SKIP_EVENT
-            deserialize_skip(hash, front_office:)
+          event =
+            case hash[:type]
+            when PICK_EVENT
+              deserialize_pick(hash, players:, front_office:)
+            when SKIP_EVENT
+              deserialize_skip(hash, front_office:)
+            end
+
+          event.tap do |e|
+            e.send('id=', hash[:id])
           end
         end
       end

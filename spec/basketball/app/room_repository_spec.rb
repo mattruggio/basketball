@@ -96,6 +96,8 @@ describe Basketball::App::RoomRepository do
     end
 
     specify 'events' do
+      events.each { |e| e.send('id=', e.pick) }
+
       expect(room.events).to eq(events)
     end
 

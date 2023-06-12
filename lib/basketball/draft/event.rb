@@ -3,8 +3,8 @@
 module Basketball
   module Draft
     # Describes what all Room events have to have to be considered an "event".
-    class Event < ValueObject
-      value_reader :pick, :round, :round_pick, :front_office
+    class Event < Entity
+      attr_reader :pick, :round, :round_pick, :front_office
 
       def initialize(front_office:, pick:, round:, round_pick:)
         super()
@@ -18,7 +18,7 @@ module Basketball
       end
 
       def to_s
-        "[##{pick} R:#{round} P:#{round_pick}] #{front_office}"
+        "[#{id}] ##{pick} R:#{round} P:#{round_pick} - #{front_office}"
       end
     end
   end

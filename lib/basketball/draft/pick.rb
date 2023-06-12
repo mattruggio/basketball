@@ -4,7 +4,7 @@ module Basketball
   module Draft
     # Room event where a player is selected.
     class Pick < Event
-      value_reader :player, :auto
+      attr_reader :player, :auto
 
       def initialize(front_office:, player:, pick:, round:, round_pick:, auto: false)
         super(front_office:, pick:, round:, round_pick:)
@@ -13,8 +13,6 @@ module Basketball
 
         @player = player
         @auto   = auto
-
-        freeze
       end
 
       def to_s

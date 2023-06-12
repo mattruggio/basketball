@@ -33,6 +33,7 @@
   ],
   "events": [
     {
+      "id": 1,
       "type": "Pick",
       "front_office": "ducks",
       "pick": 1,
@@ -42,6 +43,7 @@
       "auto": true
     },
     {
+      "id": 2,
       "type": "Skip",
       "front_office": "eagles",
       "pick": 2,
@@ -49,6 +51,7 @@
       "round_pick": 2
     },
     {
+      "id": 3,
       "type": "Pick",
       "front_office": "ducks",
       "pick": 3,
