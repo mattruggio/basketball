@@ -8,7 +8,7 @@ module Basketball
       class DetailAlreadyAddedError < StandardError; end
       class OpponentNotFoundError < StandardError; end
 
-      def initialize(id:)
+      def initialize(id:, details: [])
         super(id)
 
         @details_by_date = {}
@@ -53,7 +53,13 @@ module Basketball
       end
 
       def win_percentage
+        return 0 unless game_count.positive?
+
         (win_count.to_f / game_count).round(3)
+      end
+
+      def win_percentage_display
+        format('%.3f', win_percentage)
       end
 
       def game_count
@@ -69,16 +75,12 @@ module Basketball
       end
 
       def to_s
-        "[#{super}] #{win_count}-#{loss_count} (#{win_percentage})"
+        "[#{super}] #{win_count}-#{loss_count} (#{win_percentage_display})"
       end
 
       def <=>(other)
         [win_count, win_percentage] <=> [other.win_count, other.win_percentage]
       end
-
-      private
-
-      attr_reader :details_by_date
 
       def add!(detail)
         raise DetailAlreadyAddedError, "#{detail} already added for date" if detail_for(detail.date)
@@ -87,6 +89,10 @@ module Basketball
 
         self
       end
+
+      private
+
+      attr_reader :details_by_date
     end
   end
 end

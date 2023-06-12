@@ -18,6 +18,9 @@ RSpec/ExampleLength:
 RSpec/NestedGroups:
   Max: 5
 
+RSpec/MultipleExpectations:
+  Max: 2
+
 Metrics/ParameterLists:
   Max: 6
 

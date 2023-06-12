@@ -2,7 +2,7 @@
 
 module Basketball
   module App
-    # Can load and save Room objects to JSON files.
+    # Can load and save Room objects as JSON Documents.
     class RoomRepository < DocumentRepository
       PICK_EVENT = 'Pick'
       SKIP_EVENT = 'Skip'

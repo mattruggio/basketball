@@ -14,7 +14,7 @@ Element      | Description
 **Assessment** | When the Room needs to know who a Front Office wants to select, the Room will send the Front Office an Assessment. The Assessment is a report of where the team currently stands: players picked, players available, and round information.
 **Calendar** | Stores important boundary dates (exhibition start, exhibition end, season start, and season end).
 **Conference** | A collection of Divisions.
-**Coordinator Repository** | Understands how to save and load Coordinator objects from JSON files on disk.
+**Coordinator Repository** | Understands how to save and load Coordinator objects.
 **Coordinator** | Object which can take a League, Calendar, Games, and an Arena and provide an iterable interface to enumerate through days and simulate games as results.
 **Detail** | Re-representation of a Result object but from a specific team's perspective.
 **Division** | A collection of teams.
@@ -34,13 +34,14 @@ Element      | Description
 **Record** | Represents a team's overall record.
 **Regular** | Game that counts towards regular season record.
 **Result** | The outcome of a game (typically with a home and away score).
-**Room Repository** | Understands how to save and load Room objects from JSON files on disk.
+**Room Repository** | Understands how to save and load Room objects.
 **Room** | Main object responsible for providing an iterable interface capable of executing a draft, pick by pick.
 **Scheduler** | Knows how to take a League and a year and generate a game-populated calendar.
 **Scout** | Knows how to stack rank lists of players.
 **Season** | Bounded context (sub-module) dealing with calendar and matchup generation.
 **Skip** | Result event emitted when a front office decides to skip a round.
 **Standings** | Synthesizes teams and results into team standings with win/loss records and more.
+**Standings Repository** | Understands how to save and load Standings objects.
 **Store** | Interface for the underlying Repository persistence layer.  While a Document Repository is mainly responsible for serialization/de-serialization, the store actually knows how to read/write the data.
 **Team Group** | Set of rosters that together form a cohesive league.
 **Team** | Member of a league and signs players.  Has games assigned and played.

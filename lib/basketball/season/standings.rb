@@ -3,18 +3,29 @@
 module Basketball
   module Season
     # Represents a League with each team's win/loss details.
-    class Standings
+    class Standings < Entity
       class TeamAlreadyRegisteredError < StandardError; end
       class TeamNotRegisteredError < StandardError; end
 
-      def initialize
+      def initialize(records: [])
+        super()
+
         @records_by_id = {}
+
+        records.each { |record| add!(record) }
+      end
+
+      def add!(record)
+        raise ArgumentError, 'record is required' unless record
+        raise TeamAlreadyRegisteredError, "#{team} already registered!" if team?(record)
+
+        records_by_id[record.id] = record
+
+        self
       end
 
       def register!(team)
-        raise TeamAlreadyRegisteredError, "#{team} already registered!" if team?(team)
-
-        records_by_id[team.id] = Record.new(id: team.id)
+        add!(Record.new(id: team.id))
 
         self
       end

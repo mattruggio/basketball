@@ -2,7 +2,7 @@
 
 module Basketball
   module App
-    # Knows how to flatten a League instance and rehydrate one from JSON and/or a Ruby hash.
+    # Knows how to flatten a League instances and rehydrate one from JSON and/or a Ruby hash.
     class LeagueRepository < DocumentRepository
       private
 
