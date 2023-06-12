@@ -9,8 +9,7 @@ describe Basketball::App::CoordinatorRepository do
   let(:coordinator) do
     Basketball::Season::Coordinator.new(
       calendar:,
-      current_date:,
-      league:
+      current_date:
     ).tap do |coordinator|
       coordinator.send('arena=', PredictableArena.new)
     end
@@ -99,7 +98,7 @@ describe Basketball::App::CoordinatorRepository do
 
   before do
     # sim a bunch of days to an exact date
-    95.times { coordinator.sim! }
+    95.times { coordinator.sim!(league) }
   end
 
   describe '#load' do
@@ -107,10 +106,6 @@ describe Basketball::App::CoordinatorRepository do
 
     specify 'current_date' do
       expect(actual_coordinator.current_date).to eq(coordinator.current_date)
-    end
-
-    specify 'league' do
-      expect(actual_coordinator.league).to eq(coordinator.league)
     end
 
     specify 'games' do

@@ -15,13 +15,7 @@ Gem::Specification.new do |s|
   s.email   = ['mattruggio@icloud.com']
   s.files   = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(.github|bin|docs|spec)/}) }
   s.bindir  = 'exe'
-
-  s.executables = %w[
-    basketball
-    basketball-season-coordinator
-    basketball-draft-room
-  ]
-
+  s.executables = %w[]
   s.homepage = 'https://github.com/mattruggio/basketball'
   s.license  = 'MIT'
   s.metadata = {
@@ -34,6 +28,4 @@ Gem::Specification.new do |s|
   }
 
   s.required_ruby_version = '>= 3.2.1'
-
-  s.add_dependency('slop', '~>4.10')
 end

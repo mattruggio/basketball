@@ -90,8 +90,6 @@ module Basketball
         other_divisions.flat_map(&:teams)
       end
 
-      private
-
       def team_for(id)
         teams.find { |team| team.id == id }
       end

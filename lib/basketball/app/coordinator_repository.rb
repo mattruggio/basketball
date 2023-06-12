@@ -4,8 +4,6 @@ module Basketball
   module App
     # Knows how to flatten a Coordinator instance and rehydrate one from JSON and/or a Ruby hash.
     class CoordinatorRepository < DocumentRepository
-      include LeagueSerializable
-
       GAME_CLASSES = {
         'Exhibition' => Season::Exhibition,
         'Regular' => Season::Regular
@@ -19,8 +17,7 @@ module Basketball
         Season::Coordinator.new(
           calendar: deserialize_calendar(hash[:calendar]),
           current_date: Date.parse(hash[:current_date]),
-          results: deserialize_results(hash[:results]),
-          league: deserialize_league(hash[:league])
+          results: deserialize_results(hash[:results])
         )
       end
 
@@ -29,8 +26,7 @@ module Basketball
           id: coordinator.id,
           calendar: serialize_calendar(coordinator.calendar),
           current_date: coordinator.current_date.to_s,
-          results: serialize_results(coordinator.results),
-          league: serialize_league(coordinator.league)
+          results: serialize_results(coordinator.results)
         }
       end
 

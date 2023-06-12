@@ -11,14 +11,12 @@ module Basketball
       class OutOfBoundsError < StandardError; end
       class PlayedGamesError < StandardError; end
       class UnknownGameError < StandardError; end
-      class UnknownTeamError < StandardError; end
       class UnplayedGamesError < StandardError; end
 
       attr_reader :calendar,
                   :current_date,
                   :arena,
-                  :results,
-                  :league
+                  :results
 
       def_delegators :calendar,
                      :exhibition_start_date,
@@ -30,37 +28,29 @@ module Basketball
                      :regulars_for,
                      :games_for
 
-      def initialize(
-        calendar:,
-        current_date:,
-        results: [],
-        league: Org::League.new
-      )
+      def initialize(calendar:, current_date:, results: [])
         super()
 
         raise ArgumentError, 'calendar is required' unless calendar
         raise ArgumentError, 'current_date is required' if current_date.to_s.empty?
-        raise ArgumentError, 'league is required' unless league
 
         @calendar     = calendar
         @current_date = current_date
         @arena        = Arena.new
         @results      = []
-        @league       = league
 
         results.each { |result| replay!(result) }
 
         assert_current_date
         assert_all_past_dates_are_played
         assert_all_future_dates_arent_played
-        assert_all_known_teams
       end
 
-      def sim_rest!(&)
+      def sim_rest!(league, &)
         events = []
 
         while not_done?
-          new_events = sim!(&)
+          new_events = sim!(league, &)
 
           events += new_events
         end
@@ -78,15 +68,17 @@ module Basketball
         raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
       end
 
-      def sim!
+      def sim!(league)
+        raise ArgumentError, 'league is required' unless league
+
         return [] if done?
 
         events = []
         games  = games_for(date: current_date)
 
         games.each do |game|
-          home_players = opponent_team(game.home_opponent).players
-          away_players = opponent_team(game.away_opponent).players
+          home_players = opponent_team(league, game.home_opponent).players
+          away_players = opponent_team(league, game.away_opponent).players
           matchup      = Matchup.new(game:, home_players:, away_players:)
           event        = arena.play(matchup)
 
@@ -140,7 +132,6 @@ module Basketball
 
       def add!(game)
         assert_today_or_in_future(game)
-        assert_known_teams(game)
 
         calendar.add!(game)
 
@@ -165,7 +156,7 @@ module Basketball
 
       attr_writer :arena
 
-      def opponent_team(opponent)
+      def opponent_team(league, opponent)
         league.teams.find { |t| t == opponent }
       end
 
@@ -189,14 +180,6 @@ module Basketball
         return unless game.date <= current_date
 
         raise OutOfBoundsError, "#{game.date} is on or before the current date (#{current_date})"
-      end
-
-      def assert_known_teams(game)
-        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" unless league.team?(game.home_opponent)
-
-        return if league.team?(game.away_opponent)
-
-        raise UnknownTeamError, "unknown opponent: #{game.away_opponent}"
       end
 
       def assert_all_past_dates_are_played
@@ -236,10 +219,6 @@ module Basketball
         results << result
 
         result
-      end
-
-      def assert_all_known_teams
-        calendar.games.each { |game| assert_known_teams(game) }
       end
     end
   end

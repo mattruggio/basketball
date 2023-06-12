@@ -5,7 +5,7 @@ require 'season_helper'
 
 describe Basketball::Season::Coordinator do
   subject(:coordinator) do
-    described_class.new(calendar:, current_date:, league:).tap do |coordinator|
+    described_class.new(calendar:, current_date:).tap do |coordinator|
       coordinator.send('arena=', PredictableArena.new)
     end
   end
@@ -115,7 +115,6 @@ describe Basketball::Season::Coordinator do
 
       coordinator = described_class.new(
         calendar:,
-        league:,
         current_date: Date.new(2022, 10, 2),
         results: events
       )
@@ -142,7 +141,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date: Date.new(2022, 10, 2),
           results: events
         )
@@ -167,7 +165,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date: Date.new(2022, 10, 2),
           results: events
         )
@@ -180,7 +177,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date: Date.new(2022, 9, 30)
         )
       end.to raise_error(error)
@@ -192,7 +188,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date: Date.new(2023, 4, 30)
         )
       end.to raise_error(error)
@@ -209,7 +204,6 @@ describe Basketball::Season::Coordinator do
 
       coordinator = described_class.new(
         calendar:,
-        league:,
         current_date: Date.new(2023, 1, 4),
         results: events
       )
@@ -223,7 +217,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date: Date.new(2022, 10, 2)
         )
       end.to raise_error(error)
@@ -235,7 +228,6 @@ describe Basketball::Season::Coordinator do
       expect do
         described_class.new(
           calendar:,
-          league:,
           current_date:,
           results: [
             Basketball::Season::Result.new(
@@ -261,7 +253,6 @@ describe Basketball::Season::Coordinator do
 
       coordinator = described_class.new(
         calendar:,
-        league:,
         current_date: Date.new(2023, 1, 4),
         results: events
       )
@@ -296,13 +287,13 @@ describe Basketball::Season::Coordinator do
 
   describe '#done?' do
     it 'returns true when all games simulated' do
-      coordinator.sim_rest!
+      coordinator.sim_rest!(league)
 
       expect(coordinator.done?).to be true
     end
 
     it 'returns false when not all days simulated' do
-      coordinator.sim!
+      coordinator.sim!(league)
 
       expect(coordinator.done?).to be false
     end
@@ -316,20 +307,6 @@ describe Basketball::Season::Coordinator do
         coordinator.add!(new_game)
 
         expect(coordinator.games).to include(new_game)
-      end
-
-      it 'prevents unknown home teams' do
-        new_game = make_regular(date: Date.new(2023, 3, 4), home_opponent: unknown, away_opponent: santas)
-        error    = described_class::UnknownTeamError
-
-        expect { coordinator.add!(new_game) }.to raise_error(error)
-      end
-
-      it 'prevents unknown away teams' do
-        new_game = make_regular(date: Date.new(2023, 3, 4), home_opponent: santas, away_opponent: unknown)
-        error    = described_class::UnknownTeamError
-
-        expect { coordinator.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents adding a game on the current date' do
@@ -352,7 +329,6 @@ describe Basketball::Season::Coordinator do
     it 'prevents games not matching current date' do
       coordinator = described_class.new(
         calendar:,
-        league:,
         current_date: Date.new(2022, 10, 1)
       )
 
@@ -360,12 +336,12 @@ describe Basketball::Season::Coordinator do
 
       coordinator.send('arena=', arena)
 
-      expect { coordinator.sim! }.to raise_error(described_class::GameNotCurrentError)
+      expect { coordinator.sim!(league) }.to raise_error(described_class::GameNotCurrentError)
     end
 
     context 'when no days are specified' do
       it 'creates a game result event for each game' do
-        coordinator.sim_rest!
+        coordinator.sim_rest!(league)
 
         actual_games = coordinator.results.map(&:game)
 
@@ -375,7 +351,7 @@ describe Basketball::Season::Coordinator do
 
     context 'when days are specified' do
       it 'creates a game result event for each game on the current day' do
-        coordinator.sim!
+        coordinator.sim!(league)
 
         actual_games = coordinator.results.map(&:game)
 
@@ -389,7 +365,7 @@ describe Basketball::Season::Coordinator do
   end
 
   specify '#days_left' do
-    coordinator.sim!
+    coordinator.sim!(league)
 
     expect(coordinator.days_left).to eq((regular_end_date - exhibition_start_date).to_i - 1)
   end
@@ -403,13 +379,13 @@ describe Basketball::Season::Coordinator do
   end
 
   specify '#exhibitions_left' do
-    coordinator.sim!
+    coordinator.sim!(league)
 
     expect(coordinator.exhibitions_left).to eq(1)
   end
 
   specify '#regulars_left' do
-    34.times { coordinator.sim! }
+    34.times { coordinator.sim!(league) }
 
     expect(coordinator.regulars_left).to eq(1)
   end

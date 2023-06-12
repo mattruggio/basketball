@@ -4,7 +4,6 @@ require 'date'
 require 'fileutils'
 require 'forwardable'
 require 'json'
-require 'slop'
 
 # Generic
 require_relative 'basketball/entity'
