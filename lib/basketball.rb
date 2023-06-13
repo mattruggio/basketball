@@ -15,6 +15,3 @@ require_relative 'basketball/org'
 # Dependent on Org
 require_relative 'basketball/draft'
 require_relative 'basketball/season'
-
-# Dependent on All
-require_relative 'basketball/app'

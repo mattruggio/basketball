@@ -45,10 +45,50 @@ class PredictableArena
 end
 
 def read_league_fixture(*path)
-  store      = Basketball::App::FileStore.new
-  repository = Basketball::App::LeagueRepository.new(store)
+  deserialize_league(read_json_fixture(*path))
+end
 
-  repository.load(fixture_path(*path))
+def deserialize_league(league_hash)
+  Basketball::Org::League.new(
+    conferences: deserialize_conferences(league_hash[:conferences])
+  )
+end
+
+def deserialize_conferences(conference_hashes)
+  (conference_hashes || []).map do |conference_hash|
+    Basketball::Org::Conference.new(
+      id: conference_hash[:id],
+      divisions: deserialize_divisions(conference_hash[:divisions])
+    )
+  end
+end
+
+def deserialize_divisions(division_hashes)
+  (division_hashes || []).map do |division_hash|
+    Basketball::Org::Division.new(
+      id: division_hash[:id],
+      teams: deserialize_teams(division_hash[:teams])
+    )
+  end
+end
+
+def deserialize_teams(team_hashes)
+  (team_hashes || []).map do |team_hash|
+    Basketball::Org::Team.new(
+      id: team_hash[:id],
+      players: deserialize_players(team_hash[:players])
+    )
+  end
+end
+
+def deserialize_players(player_hashes)
+  (player_hashes || []).map do |player_hash|
+    Basketball::Org::Player.new(
+      id: player_hash[:id],
+      overall: player_hash[:overall],
+      position: Org::Position.new(player_hash[:position])
+    )
+  end
 end
 
 def make_id
