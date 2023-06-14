@@ -148,7 +148,7 @@ module Basketball
       def skip!
         return if done?
 
-        event = Skip.new(front_office:, pick:, round:, round_pick:)
+        event = Skip.new(id: pick, front_office:, round:, round_pick:)
 
         add_event!(event)
 
@@ -159,7 +159,7 @@ module Basketball
         return if done?
 
         player = front_office.pick(assessment)
-        event  = Pick.new(front_office:, pick:, round:, round_pick:, player:, auto: true)
+        event  = Pick.new(id: pick, front_office:, round:, round_pick:, player:, auto: true)
 
         add_event!(event)
 
@@ -183,7 +183,7 @@ module Basketball
       def pick!(player)
         return nil if done?
 
-        event = Pick.new(front_office:, pick:, round:, round_pick:, player:)
+        event = Pick.new(id: pick, front_office:, round:, round_pick:, player:)
 
         add_event!(event)
       end
@@ -199,7 +199,7 @@ module Basketball
         raise EndOfDraftError, "#{total_picks} pick limit reached" if done?
         raise UnknownFrontOfficeError, "#{front_office} doesnt exist" unless front_offices.include?(event.front_office)
         raise EventOutOfOrderError, "#{event.front_office} cant pick right now" if event.front_office != front_office
-        raise EventOutOfOrderError, "#{event} has wrong pick" if event.pick != pick
+        raise EventOutOfOrderError, "#{event} has wrong pick" if event.id != pick
         raise EventOutOfOrderError, "#{event} has wrong round" if event.round != round
         raise EventOutOfOrderError, "#{event} has wrong round_pick" if event.round_pick != round_pick
 

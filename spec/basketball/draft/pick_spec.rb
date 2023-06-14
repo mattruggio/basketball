@@ -7,7 +7,7 @@ describe Basketball::Draft::Pick do
     described_class.new(
       front_office: ducks,
       player: mickey,
-      pick: 1,
+      id: 1,
       round: 1,
       round_pick: 1,
       auto:

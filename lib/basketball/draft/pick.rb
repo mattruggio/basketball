@@ -6,8 +6,8 @@ module Basketball
     class Pick < Event
       attr_reader :player, :auto
 
-      def initialize(front_office:, player:, pick:, round:, round_pick:, auto: false)
-        super(front_office:, pick:, round:, round_pick:)
+      def initialize(id:, front_office:, player:, round:, round_pick:, auto: false)
+        super(id:, front_office:, round:, round_pick:)
 
         raise ArgumentError, 'player required' unless player
 

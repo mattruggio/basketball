@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Basketball::Draft::Skip do
   let(:event) do
-    described_class.new(front_office: ducks, pick: 1, round: 1, round_pick: 1)
+    described_class.new(front_office: ducks, id: 1, round: 1, round_pick: 1)
   end
 
   let(:ducks) { Basketball::Draft::FrontOffice.new(id: 'ducks') }

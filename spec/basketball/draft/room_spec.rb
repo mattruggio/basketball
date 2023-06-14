@@ -27,7 +27,7 @@ describe Basketball::Draft::Room do
     describe 'events' do
       it 'sets' do
         events = [
-          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, pick: 1, round: 1, round_pick: 1)
+          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, id: 1, round: 1, round_pick: 1)
         ]
 
         room = described_class.new(rounds:, players:, front_offices:, events:)
@@ -37,9 +37,9 @@ describe Basketball::Draft::Room do
 
       it 'prevents events over limit' do
         events = [
-          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, pick: 1, round: 1, round_pick: 1),
-          Basketball::Draft::Pick.new(front_office: eagles, player: donald, pick: 2, round: 1, round_pick: 2),
-          Basketball::Draft::Pick.new(front_office: ducks, player: daisy, pick: 3, round: 2, round_pick: 1)
+          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, id: 1, round: 1, round_pick: 1),
+          Basketball::Draft::Pick.new(front_office: eagles, player: donald, id: 2, round: 1, round_pick: 2),
+          Basketball::Draft::Pick.new(front_office: ducks, player: daisy, id: 3, round: 2, round_pick: 1)
         ]
 
         expect do
@@ -49,7 +49,7 @@ describe Basketball::Draft::Room do
 
       it 'prevents pick values out of order' do
         events = [
-          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, pick: 2, round: 1, round_pick: 1)
+          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, id: 2, round: 1, round_pick: 1)
         ]
 
         error = described_class::EventOutOfOrderError
@@ -59,7 +59,7 @@ describe Basketball::Draft::Room do
 
       it 'prevents round values out of order' do
         events = [
-          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, pick: 1, round: 2, round_pick: 1)
+          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, id: 1, round: 2, round_pick: 1)
         ]
 
         error = described_class::EventOutOfOrderError
@@ -69,7 +69,7 @@ describe Basketball::Draft::Room do
 
       it 'prevents round pick values out of order' do
         events = [
-          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, pick: 1, round: 1, round_pick: 2)
+          Basketball::Draft::Pick.new(front_office: ducks, player: mickey, id: 1, round: 1, round_pick: 2)
         ]
 
         error = described_class::EventOutOfOrderError
@@ -171,8 +171,8 @@ describe Basketball::Draft::Room do
         expect(event).to be_a(Basketball::Draft::Skip)
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(1)
+      specify 'id' do
+        expect(event.id).to eq(1)
       end
 
       specify 'round' do
@@ -194,8 +194,8 @@ describe Basketball::Draft::Room do
         expect(event).to be_a(Basketball::Draft::Skip)
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(2)
+      specify 'id' do
+        expect(event.id).to eq(2)
       end
 
       specify 'round' do
@@ -232,8 +232,8 @@ describe Basketball::Draft::Room do
         expect(event.auto).to be true
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(1)
+      specify 'id' do
+        expect(event.id).to eq(1)
       end
 
       specify 'round' do
@@ -259,8 +259,8 @@ describe Basketball::Draft::Room do
         expect(event.auto).to be true
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(2)
+      specify 'id' do
+        expect(event.id).to eq(2)
       end
 
       specify 'round' do
@@ -309,8 +309,8 @@ describe Basketball::Draft::Room do
         expect(event.player).to eq(mickey)
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(1)
+      specify 'id' do
+        expect(event.id).to eq(1)
       end
 
       specify 'round' do
@@ -340,8 +340,8 @@ describe Basketball::Draft::Room do
         expect(event.player).to eq(donald)
       end
 
-      specify 'pick' do
-        expect(event.pick).to eq(2)
+      specify 'id' do
+        expect(event.id).to eq(2)
       end
 
       specify 'round' do
