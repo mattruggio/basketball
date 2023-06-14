@@ -3,11 +3,21 @@
 require 'spec_helper'
 
 describe Basketball::Org::Player do
-  let(:player) { described_class.new(id:, overall:, position:) }
+  let(:player) do
+    described_class.new(
+      id:,
+      overall:,
+      position:,
+      first_name:,
+      last_name:
+    )
+  end
 
-  let(:id)       { 'p1234' }
-  let(:overall)  { 95 }
-  let(:position) { Basketball::Org::Position.new('C') }
+  let(:id)         { 'p1234' }
+  let(:overall)    { 95 }
+  let(:position)   { Basketball::Org::Position.new('C') }
+  let(:first_name) { 'Bugs' }
+  let(:last_name)  { 'Bunny' }
 
   describe '#initialize' do
     it 'sets id' do
@@ -21,6 +31,14 @@ describe Basketball::Org::Player do
     it 'sets position' do
       expect(player.position).to eq(position)
     end
+
+    it 'sets first_name' do
+      expect(player.first_name).to eq(first_name)
+    end
+
+    it 'sets last_name' do
+      expect(player.last_name).to eq(last_name)
+    end
   end
 
   describe '#to_s' do
@@ -30,6 +48,10 @@ describe Basketball::Org::Player do
 
     it 'contains position' do
       expect(player.to_s).to include(position.to_s)
+    end
+
+    it 'contains full name' do
+      expect(player.to_s).to include("#{first_name} #{last_name}")
     end
   end
 end

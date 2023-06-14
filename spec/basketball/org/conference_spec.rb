@@ -4,9 +4,10 @@ require 'spec_helper'
 require 'season_helper'
 
 describe Basketball::Org::Conference do
-  subject(:conference) { described_class.new(id:, divisions:) }
+  subject(:conference) { described_class.new(id:, divisions:, name:) }
 
   let(:id)        { 'C-1' }
+  let(:name)      { 'Eastern Conference' }
   let(:divisions) { [midwest] }
   let(:eastern)   { described_class.new(id: 'Eastern', divisions: [midwest]) }
   let(:midwest)   { Basketball::Org::Division.new(id: 'Midwest', teams: [clowns]) }
@@ -15,6 +16,10 @@ describe Basketball::Org::Conference do
   describe 'initialization' do
     it 'sets id' do
       expect(conference.id).to eq(id)
+    end
+
+    it 'sets name' do
+      expect(conference.name).to eq(name)
     end
 
     it 'sets divisions' do
@@ -51,6 +56,10 @@ describe Basketball::Org::Conference do
       divisions.each do |division|
         expect(conference.to_s).to include(division.to_s)
       end
+    end
+
+    it 'includes name' do
+      expect(conference.to_s).to include(name)
     end
   end
 

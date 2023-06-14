@@ -3,9 +3,10 @@
 require 'spec_helper'
 
 describe Basketball::Org::Team do
-  subject(:team)   { described_class.new(id:, players: [mousey]) }
+  subject(:team)   { described_class.new(id:, players: [mousey], name:) }
 
   let(:id)         { 'p1234' }
+  let(:name)       { 'Bunnies' }
   let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey', position: Basketball::Org::Position.new('C')) }
   let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man', position: Basketball::Org::Position.new('C')) }
   let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head', position: Basketball::Org::Position.new('C')) }
@@ -13,6 +14,10 @@ describe Basketball::Org::Team do
   describe 'initialization' do
     it 'sets id' do
       expect(team.id).to eq(id)
+    end
+
+    it 'sets name' do
+      expect(team.name).to eq(name)
     end
 
     it 'sets players' do
@@ -31,6 +36,10 @@ describe Basketball::Org::Team do
 
     it 'includes players' do
       expect(team.to_s).to include(mousey.to_s)
+    end
+
+    it 'includes name' do
+      expect(team.to_s).to include(name)
     end
   end
 

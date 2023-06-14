@@ -16,7 +16,8 @@ module Basketball
       attr_reader :calendar,
                   :current_date,
                   :arena,
-                  :results
+                  :results,
+                  :league
 
       def_delegators :calendar,
                      :exhibition_start_date,
@@ -28,29 +29,32 @@ module Basketball
                      :regulars_for,
                      :games_for
 
-      def initialize(calendar:, current_date:, results: [])
+      def initialize(calendar:, league:, current_date:, results: [])
         super()
 
-        raise ArgumentError, 'calendar is required' unless calendar
+        raise ArgumentError, 'calendar is required'     unless calendar
         raise ArgumentError, 'current_date is required' if current_date.to_s.empty?
+        raise ArgumentError, 'league is required'       unless league
 
         @calendar     = calendar
         @current_date = current_date
         @arena        = Arena.new
         @results      = []
+        @league       = league
 
         results.each { |result| replay!(result) }
 
         assert_current_date
         assert_all_past_dates_are_played
         assert_all_future_dates_arent_played
+        assert_all_known_teams
       end
 
-      def sim_rest!(league, &)
+      def sim_rest!(&)
         events = []
 
         while not_done?
-          new_events = sim!(league, &)
+          new_events = sim!(&)
 
           events += new_events
         end
@@ -68,7 +72,7 @@ module Basketball
         raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
       end
 
-      def sim!(league)
+      def sim!
         raise ArgumentError, 'league is required' unless league
 
         return [] if done?
@@ -77,8 +81,8 @@ module Basketball
         games  = games_for(date: current_date)
 
         games.each do |game|
-          home_players = opponent_team(league, game.home_opponent).players
-          away_players = opponent_team(league, game.away_opponent).players
+          home_players = opponent_team(game.home_opponent).players
+          away_players = opponent_team(game.away_opponent).players
           matchup      = Matchup.new(game:, home_players:, away_players:)
           event        = arena.play(matchup)
 
@@ -156,7 +160,7 @@ module Basketball
 
       attr_writer :arena
 
-      def opponent_team(league, opponent)
+      def opponent_team(opponent)
         league.teams.find { |t| t == opponent }
       end
 
@@ -219,6 +223,18 @@ module Basketball
         results << result
 
         result
+      end
+
+      def assert_known_teams(game)
+        raise UnknownTeamError, "unknown opponent: #{game.home_opponent}" unless league.team?(game.home_opponent)
+
+        return if league.team?(game.away_opponent)
+
+        raise UnknownTeamError, "unknown opponent: #{game.away_opponent}"
+      end
+
+      def assert_all_known_teams
+        calendar.games.each { |game| assert_known_teams(game) }
       end
     end
   end

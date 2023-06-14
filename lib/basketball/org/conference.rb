@@ -6,12 +6,13 @@ module Basketball
     class Conference < Entity
       include HasDivisions
 
-      attr_reader :divisions
+      attr_reader :divisions, :name
 
-      def initialize(id:, divisions: [])
+      def initialize(id:, name: '', divisions: [])
         super(id)
 
         @divisions = []
+        @name      = name.to_s
 
         divisions.each { |d| register_division!(d) }
 
@@ -19,7 +20,7 @@ module Basketball
       end
 
       def to_s
-        ([super] + divisions.map(&:to_s)).join("\n")
+        (["[#{super}] #{name}"] + divisions.map(&:to_s)).join("\n")
       end
 
       def teams
