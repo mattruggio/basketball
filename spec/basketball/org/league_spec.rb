@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Basketball::Org::League do
-  subject(:league) { described_class.new(conferences: [eastern]) }
+  subject(:league) { described_class.new(conferences: [eastern], free_agents: [campy]) }
 
   let(:eastern)  { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
   let(:midwest)  { Basketball::Org::Division.new(id: 'Midwest', teams: [clowns]) }
@@ -11,6 +11,7 @@ describe Basketball::Org::League do
   let(:bunnies)  { Basketball::Org::Team.new(id: 'Bunnies') }
   let(:mousey)   { Basketball::Org::Player.new(id: 'Mousey', position:) }
   let(:moose)    { Basketball::Org::Player.new(id: 'Moose', position:) }
+  let(:campy)    { Basketball::Org::Player.new(id: 'Campy', position:) }
   let(:position) { Basketball::Org::Position.new('C') }
 
   describe '#initialize' do
@@ -106,15 +107,47 @@ describe Basketball::Org::League do
   end
 
   specify '#players' do
-    expect(league.players).to eq([mousey])
+    expect(league.players).to eq([mousey, campy])
+  end
+
+  describe '#player?' do
+    it 'returns true for signed players' do
+      expect(league.player?(mousey)).to be true
+    end
+
+    it 'returns true for free agents' do
+      expect(league.player?(campy)).to be true
+    end
+
+    it 'returns false for unknown players' do
+      expect(league.player?(moose)).to be false
+    end
+  end
+
+  describe '#free_agent?' do
+    it 'returns false for signed players' do
+      expect(league.free_agent?(mousey)).to be false
+    end
+
+    it 'returns true for free agents' do
+      expect(league.free_agent?(campy)).to be true
+    end
+
+    it 'returns false for unknown players' do
+      expect(league.free_agent?(moose)).to be false
+    end
   end
 
   describe '#signed?' do
-    it 'returns true' do
+    it 'returns true for signed players' do
       expect(league.signed?(mousey)).to be true
     end
 
-    it 'returns false' do
+    it 'returns false for free agents' do
+      expect(league.signed?(campy)).to be false
+    end
+
+    it 'returns false for unknown players' do
       expect(league.signed?(moose)).to be false
     end
   end
@@ -144,6 +177,20 @@ describe Basketball::Org::League do
       error = Basketball::Org::PlayerAlreadySignedError
 
       expect { league.sign!(player: mousey, team: clowns) }.to raise_error(error)
+    end
+
+    context 'when player is a free agent' do
+      it 'adds player to team' do
+        league.sign!(player: campy, team: clowns)
+
+        expect(clowns.players).to include(campy)
+      end
+
+      it 'removes player from free agent pool' do
+        league.sign!(player: campy, team: clowns)
+
+        expect(league.free_agents).not_to include(campy)
+      end
     end
   end
 end

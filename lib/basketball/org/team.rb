@@ -26,6 +26,15 @@ module Basketball
         players.include?(player)
       end
 
+      def release!(player)
+        raise ArgumentError, 'player is required' unless player
+        raise PlayerAlreadySignedError, "#{player} id not signed by #{self}" unless signed?(player)
+
+        players.delete(player)
+
+        self
+      end
+
       def sign!(player)
         raise ArgumentError, 'player is required' unless player
         raise PlayerAlreadySignedError, "#{player} already signed by #{self}" if signed?(player)

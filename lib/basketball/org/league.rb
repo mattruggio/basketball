@@ -13,28 +13,63 @@ module Basketball
       include HasDivisions
 
       class ConferenceAlreadyRegisteredError < StandardError; end
+      class NotSignedError < StandardError; end
 
-      alias signed? player?
+      attr_reader :conferences, :free_agents
 
-      attr_reader :conferences
-
-      def initialize(conferences: [])
+      def initialize(conferences: [], free_agents: [])
         super()
 
         @conferences = []
+        @free_agents = []
 
         conferences.each { |c| register!(c) }
+        free_agents.each { |p| free_agent!(p) }
       end
 
       def to_s
         conferences.map(&:to_s).join("\n")
       end
 
+      def free_agent?(player)
+        free_agents.include?(player)
+      end
+
+      def free_agent!(player)
+        raise ArgumentError, 'player is required' unless player
+        raise PlayerAlreadySignedError, "#{player} already registered" if player?(player)
+
+        @free_agents << player
+
+        self
+      end
+
+      def release!(player)
+        raise ArgumentError, 'player is required' unless player
+        raise NotSignedError, 'player is not currently signed' if free_agent?(player)
+
+        @team.release!(player)
+
+        self
+      end
+
+      def signed?(player)
+        signed_players.include?(player)
+      end
+
+      def signed_players
+        conferences.flat_map(&:players)
+      end
+
       def sign!(player:, team:)
         raise ArgumentError, 'player is required' unless player
         raise ArgumentError, 'team is required' unless team
         raise UnregisteredTeamError, "#{team} not registered" unless team?(team)
-        raise PlayerAlreadySignedError, "#{player} already registered" if player?(player)
+        raise PlayerAlreadySignedError, "#{player} already registered" if signed?(player)
+
+        # If this player was a free agent then make sure we remove them from the free agent pool.
+        # It is OK if they weren't, they can still be directly signed.
+        free_agents.delete(player) if free_agent?(player)
 
         # It is OK to pass in a detached team as long as its equivalent resides in this
         # League's object graph.
@@ -67,7 +102,7 @@ module Basketball
       end
 
       def players
-        conferences.flat_map(&:players)
+        conferences.flat_map(&:players) + free_agents
       end
 
       def conference_for(team)
