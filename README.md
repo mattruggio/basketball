@@ -63,6 +63,13 @@ The input for the main object `Basketball::Draft::Room` is an array of teams (`B
 * **Basketball::Draft::Room#pick!(player)**: Pick an exact player for the current front office.
 * **Basketball::Draft::Room#sim_rest!**: Simulate the rest of the picks.
 
+### Org Module
+
+The Org module contains all the structural and transactional for the basketball league as a whole. A League can be made up of free agents and conferences, conferences can have divisions, divisions can have teams, and teams can have players.  The main object: `Basketball::Org::League` allows for the control through its API:
+
+* **Basketball::Org::League#sign!**: Sign a player to a team.
+* **Basketball::Org::League#release!**: Release a player from a team and place them in the free agent pool.
+
 ### Season Module
 
 The Season module knows how to execute a calendar of games for a League and generate results. The main object is the `Basketball::Season::Coordinator` class. Once instantiated there are four main methods:
