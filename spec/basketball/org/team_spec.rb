@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Basketball::Org::Team do
-  subject(:team)   { described_class.new(id:, players: [mousey], name:) }
+  subject(:team) { described_class.new(id:, players: [mousey], name:) }
 
   let(:id)         { 'p1234' }
   let(:name)       { 'Bunnies' }
@@ -72,6 +72,18 @@ describe Basketball::Org::Team do
 
     it 'returns false if player was signed' do
       expect(team.signed?(moose_head)).to be false
+    end
+  end
+
+  describe '#release!' do
+    it 'removes player' do
+      team.release!(mousey)
+
+      expect(team.players).to be_empty
+    end
+
+    it 'raises error if player is not signed' do
+      expect { team.release!(funky_man) }.to raise_error(described_class::PlayerNotSignedError)
     end
   end
 end

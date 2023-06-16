@@ -19,6 +19,7 @@ Element      | Description
 **Division** | A collection of teams.
 **Draft** | Bounded context (sub-module) dealing with running a round-robin player draft for teams.
 **Exhibition** | Pre-season game which has no impact to team record.
+**Free Agent** | A player who is not signed to any team but is able to be signed.
 **Front Office** | Identifiable as a team, contains logic for how to auto-pick draft selections.  Meant to be subclassed and extended to include more intricate player selection logic as the base will simply randomly select a player.
 **Game** | Matches up a date with two teams (home and away) to represent a coordinatord match-up.
 **League** | Describes a league in terms of structure composed of conferences, divisions, teams, and players.

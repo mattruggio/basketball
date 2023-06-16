@@ -193,4 +193,26 @@ describe Basketball::Org::League do
       end
     end
   end
+
+  describe '#release!' do
+    it 'removes player from team' do
+      league.release!(mousey)
+
+      expect(clowns.players).not_to include(mousey)
+    end
+
+    it 'adds player to free agent pool' do
+      league.release!(mousey)
+
+      expect(league.free_agents).to include(mousey)
+    end
+
+    it 'raises error if the player is not signed to any team' do
+      expect { league.release!(moose) }.to raise_error(described_class::NotSignedError)
+    end
+
+    it 'raises error if the player is a free agent' do
+      expect { league.release!(campy) }.to raise_error(described_class::NotSignedError)
+    end
+  end
 end

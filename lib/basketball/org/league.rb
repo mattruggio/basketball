@@ -46,9 +46,15 @@ module Basketball
 
       def release!(player)
         raise ArgumentError, 'player is required' unless player
-        raise NotSignedError, 'player is not currently signed' if free_agent?(player)
+        raise NotSignedError, 'player is currently a free agent' if free_agent?(player)
 
-        @team.release!(player)
+        team = team_for_player(player)
+
+        raise NotSignedError, 'player was not found to be signed by any team' unless team
+
+        team.release!(player)
+
+        free_agents << player
 
         self
       end
@@ -127,6 +133,10 @@ module Basketball
 
       def team_for(id)
         teams.find { |team| team.id == id }
+      end
+
+      def team_for_player(player)
+        teams.find { |t| t.signed?(player) }
       end
     end
   end

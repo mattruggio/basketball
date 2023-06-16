@@ -5,6 +5,8 @@ module Basketball
     # Base class describing a team.  A team here is bare metal and is just described by an ID
     # and a collection of Player objects.
     class Team < Entity
+      class PlayerNotSignedError < StandardError; end
+
       attr_reader :players, :name
 
       def initialize(id:, name: '', players: [])
@@ -28,7 +30,7 @@ module Basketball
 
       def release!(player)
         raise ArgumentError, 'player is required' unless player
-        raise PlayerAlreadySignedError, "#{player} id not signed by #{self}" unless signed?(player)
+        raise PlayerNotSignedError, "#{player} id not signed by #{self}" unless signed?(player)
 
         players.delete(player)
 
