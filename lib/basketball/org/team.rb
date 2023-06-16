@@ -6,6 +6,9 @@ module Basketball
     # and a collection of Player objects.
     class Team < Entity
       class PlayerNotSignedError < StandardError; end
+      class MaxPlayerCountError < StandardError; end
+
+      MAX_PLAYER_COUNT = 18
 
       attr_reader :players, :name
 
@@ -40,6 +43,10 @@ module Basketball
       def sign!(player)
         raise ArgumentError, 'player is required' unless player
         raise PlayerAlreadySignedError, "#{player} already signed by #{self}" if signed?(player)
+
+        if (players.length + 1) >= MAX_PLAYER_COUNT
+          raise MaxPlayerCountError, "max player count reached: #{MAX_PLAYER_COUNT}"
+        end
 
         players << player
 

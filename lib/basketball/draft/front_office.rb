@@ -16,16 +16,18 @@ module Basketball
 
       private_constant :DEFAULT_MAX_STAR_LEVEL, :DEFAULT_MAX_RISK_LEVEL, :MAX_POSITIONS
 
-      attr_reader :prioritized_positions, :risk_level, :star_level, :scout
+      attr_reader :name, :prioritized_positions, :risk_level, :star_level, :scout
 
       def initialize(
         id:,
+        name: '',
         prioritized_positions: [],
         risk_level: rand(0..DEFAULT_MAX_RISK_LEVEL),
         star_level: rand(0..DEFAULT_MAX_STAR_LEVEL)
       )
         super(id)
 
+        @name                  = name.to_s
         @risk_level            = risk_level.to_i
         @star_level            = star_level.to_i
         @prioritized_positions = prioritized_positions

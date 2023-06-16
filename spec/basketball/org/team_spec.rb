@@ -7,9 +7,10 @@ describe Basketball::Org::Team do
 
   let(:id)         { 'p1234' }
   let(:name)       { 'Bunnies' }
-  let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey', position: Basketball::Org::Position.new('C')) }
-  let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man', position: Basketball::Org::Position.new('C')) }
-  let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head', position: Basketball::Org::Position.new('C')) }
+  let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey', position:) }
+  let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man', position:) }
+  let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head', position:) }
+  let(:position)   { Basketball::Org::Position.new('C') }
 
   describe 'initialization' do
     it 'sets id' do
@@ -44,6 +45,14 @@ describe Basketball::Org::Team do
   end
 
   describe '#sign!' do
+    it 'cannot sign more than 18 players' do
+      16.times { |i| team.sign!(Basketball::Org::Player.new(id: "p-#{i}", position:)) }
+
+      error = described_class::MaxPlayerCountError
+
+      expect { team.sign!(Basketball::Org::Player.new(id: 'p-nope', position:)) }.to raise_error(error)
+    end
+
     it 'prevents null players' do
       expect { team.sign!(nil) }.to raise_error(ArgumentError)
     end
