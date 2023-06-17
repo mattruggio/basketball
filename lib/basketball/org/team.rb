@@ -43,10 +43,7 @@ module Basketball
       def sign!(player)
         raise ArgumentError, 'player is required' unless player
         raise PlayerAlreadySignedError, "#{player} already signed by #{self}" if signed?(player)
-
-        if (players.length + 1) >= MAX_PLAYER_COUNT
-          raise MaxPlayerCountError, "max player count reached: #{MAX_PLAYER_COUNT}"
-        end
+        raise MaxPlayerCountError, "max reached: #{MAX_PLAYER_COUNT}" if players.length >= MAX_PLAYER_COUNT
 
         players << player
 

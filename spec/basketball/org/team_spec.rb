@@ -46,9 +46,11 @@ describe Basketball::Org::Team do
 
   describe '#sign!' do
     it 'cannot sign more than 18 players' do
-      16.times { |i| team.sign!(Basketball::Org::Player.new(id: "p-#{i}", position:)) }
+      17.times { |i| team.sign!(Basketball::Org::Player.new(id: "p-#{i}", position:)) }
 
       error = described_class::MaxPlayerCountError
+
+      expect(team.players.length).to eq(18)
 
       expect { team.sign!(Basketball::Org::Player.new(id: 'p-nope', position:)) }.to raise_error(error)
     end
