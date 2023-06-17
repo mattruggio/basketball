@@ -12,6 +12,7 @@ Element      | Description
 :------------ | :-----------
 **Arena** | Determines exhibition and regular season game outcomes.
 **Assessment** | When the Room needs to know who a Front Office wants to select, the Room will send the Front Office an Assessment. The Assessment is a report of where the team currently stands: players picked, players available, and round information.
+**Available Player** | Represents a player in the context of a draft.
 **Calendar** | Stores important boundary dates (exhibition start, exhibition end, season start, and season end).
 **Conference** | A collection of Divisions.
 **Coordinator** | Object which can take a League, Calendar, Games, and an Arena and provide an iterable interface to enumerate through days and simulate games as results.
