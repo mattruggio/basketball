@@ -50,6 +50,14 @@ module Basketball
         assert_all_known_teams
       end
 
+      def release!(player)
+        tap { league.release!(player) }
+      end
+
+      def sign!(player:, team:)
+        tap { league.sign!(player:, team:) }
+      end
+
       def sim_rest!(&)
         events = []
 
@@ -60,16 +68,6 @@ module Basketball
         end
 
         events
-      end
-
-      def assert_current_date
-        if current_date < exhibition_start_date
-          raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
-        end
-
-        return unless current_date > regular_end_date
-
-        raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
       end
 
       def sim!
@@ -159,6 +157,16 @@ module Basketball
       private
 
       attr_writer :arena
+
+      def assert_current_date
+        if current_date < exhibition_start_date
+          raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
+        end
+
+        return unless current_date > regular_end_date
+
+        raise OutOfBoundsError, "current date #{current_date} should be on or after #{exhibition_start_date}"
+      end
 
       def opponent_team(opponent)
         league.teams.find { |t| t == opponent }

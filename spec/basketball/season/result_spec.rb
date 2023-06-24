@@ -26,6 +26,20 @@ describe Basketball::Season::Result do
     end
   end
 
+  describe 'equality' do
+    specify '#==' do
+      other_result = described_class.new(game:, home_score:, away_score:)
+
+      expect(result).to eq(other_result)
+    end
+
+    specify '#eql?' do
+      other_result = described_class.new(game:, home_score:, away_score:)
+
+      expect(result).to eql(other_result)
+    end
+  end
+
   describe '#to_s' do
     it 'includes date' do
       expect(result.to_s).to include(date.to_s)

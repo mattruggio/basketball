@@ -35,9 +35,8 @@ module Basketball
         raise ArgumentError, 'player is required' unless player
         raise PlayerNotSignedError, "#{player} id not signed by #{self}" unless signed?(player)
 
+        # Returns deleted player
         players.delete(player)
-
-        self
       end
 
       def sign!(player)

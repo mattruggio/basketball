@@ -26,16 +26,18 @@ describe Basketball::Season::Coordinator do
   let(:regular_start_date)    { Date.new(2022, 10, 16) }
   let(:regular_end_date)      { Date.new(2023, 4, 29) }
   let(:teams)                 { [bunnies, rabbits, santas, rizzos] }
-  let(:league)                { Basketball::Season::League.new(conferences: [eastern]) }
+  let(:league)                { Basketball::Season::League.new(conferences: [eastern], free_agents: [campy]) }
   let(:eastern)               { Basketball::Season::Conference.new(id: 'Eastern', divisions: [midwest]) }
   let(:midwest)               { Basketball::Season::Division.new(id: 'Midwest', teams:) }
+  let(:campy)                 { Basketball::Season::Player.new(id: 'Campy', position:) }
+  let(:position)              { Basketball::Season::Position.new('C') }
 
   let(:unknown) do
     Basketball::Season::Team.new(
       id: 'unknown',
       players: [
-        Basketball::Season::Player.new(id: 'P99', position: Basketball::Season::Position.new('C')),
-        Basketball::Season::Player.new(id: 'P98', position: Basketball::Season::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P99', position:),
+        Basketball::Season::Player.new(id: 'P98', position:)
       ]
     )
   end
@@ -44,8 +46,8 @@ describe Basketball::Season::Coordinator do
     Basketball::Season::Team.new(
       id: 'bunnies',
       players: [
-        Basketball::Season::Player.new(id: 'P1', position: Basketball::Season::Position.new('C')),
-        Basketball::Season::Player.new(id: 'P2', position: Basketball::Season::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P1', position:),
+        Basketball::Season::Player.new(id: 'P2', position:)
       ]
     )
   end
@@ -54,8 +56,8 @@ describe Basketball::Season::Coordinator do
     Basketball::Season::Team.new(
       id: 'rabbits',
       players: [
-        Basketball::Season::Player.new(id: 'P3', position: Basketball::Season::Position.new('C')),
-        Basketball::Season::Player.new(id: 'P4', position: Basketball::Season::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P3', position:),
+        Basketball::Season::Player.new(id: 'P4', position:)
       ]
     )
   end
@@ -64,7 +66,7 @@ describe Basketball::Season::Coordinator do
     Basketball::Season::Team.new(
       id: 'santas',
       players: [
-        Basketball::Season::Player.new(id: 'P5', position: Basketball::Season::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P5', position:)
       ]
     )
   end
@@ -73,7 +75,7 @@ describe Basketball::Season::Coordinator do
     Basketball::Season::Team.new(
       id: 'rizzos',
       players: [
-        Basketball::Season::Player.new(id: 'P6', position: Basketball::Season::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P6', position:)
       ]
     )
   end
@@ -246,6 +248,28 @@ describe Basketball::Season::Coordinator do
           ]
         )
       end.to raise_error(error)
+    end
+  end
+
+  describe '#sign!' do
+    it 'calls league#sign!' do
+      allow(league).to receive(:sign!)
+
+      coordinator.sign!(team: bunnies, player: campy)
+
+      expect(league).to have_received(:sign!).with(team: bunnies, player: campy)
+    end
+  end
+
+  describe '#release!' do
+    it 'calls league#release!' do
+      allow(league).to receive(:release!)
+
+      player = Basketball::Season::Player.new(id: 'P1', position:)
+
+      coordinator.release!(player)
+
+      expect(league).to have_received(:release!).with(player)
     end
   end
 

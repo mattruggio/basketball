@@ -52,9 +52,12 @@ module Basketball
 
         raise NotSignedError, 'player was not found to be signed by any team' unless team
 
-        team.release!(player)
+        # We will use player as a comparable object but we will keep the same
+        # player instance already in the league's object graph instead of replacing it
+        # with the passed in instance.
+        actual_player = team.release!(player)
 
-        free_agents << player
+        free_agents << actual_player
 
         self
       end
@@ -75,11 +78,11 @@ module Basketball
 
         # If this player was a free agent then make sure we remove them from the free agent pool.
         # It is OK if they weren't, they can still be directly signed.
-        free_agents.delete(player) if free_agent?(player)
+        actual_player = free_agent?(player) ? free_agents.delete(player) : player
 
         # It is OK to pass in a detached team as long as its equivalent resides in this
         # League's object graph.
-        team_for(team.id).sign!(player)
+        team_for(team.id).sign!(actual_player)
 
         self
       end
