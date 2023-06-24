@@ -52,6 +52,10 @@ module Basketball
 
       private
 
+      def top_players(assessment)
+        scout.top_for(players: assessment.undrafted_players)
+      end
+
       def adaptive_search(assessment)
         drafted_positions = assessment.drafted_players.map(&:position)
 
@@ -69,7 +73,7 @@ module Basketball
           break if players.any?
         end
 
-        players = players.any? ? players : scout.top_for
+        players
       end
 
       def all_random_positions
