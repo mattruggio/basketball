@@ -26,54 +26,54 @@ describe Basketball::Season::Coordinator do
   let(:regular_start_date)    { Date.new(2022, 10, 16) }
   let(:regular_end_date)      { Date.new(2023, 4, 29) }
   let(:teams)                 { [bunnies, rabbits, santas, rizzos] }
-  let(:league)                { Basketball::Org::League.new(conferences: [eastern]) }
-  let(:eastern)               { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
-  let(:midwest)               { Basketball::Org::Division.new(id: 'Midwest', teams:) }
+  let(:league)                { Basketball::Season::League.new(conferences: [eastern]) }
+  let(:eastern)               { Basketball::Season::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)               { Basketball::Season::Division.new(id: 'Midwest', teams:) }
 
   let(:unknown) do
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: 'unknown',
       players: [
-        Basketball::Org::Player.new(id: 'P99', position: Basketball::Org::Position.new('C')),
-        Basketball::Org::Player.new(id: 'P98', position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P99', position: Basketball::Season::Position.new('C')),
+        Basketball::Season::Player.new(id: 'P98', position: Basketball::Season::Position.new('C'))
       ]
     )
   end
 
   let(:bunnies) do
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: 'bunnies',
       players: [
-        Basketball::Org::Player.new(id: 'P1', position: Basketball::Org::Position.new('C')),
-        Basketball::Org::Player.new(id: 'P2', position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P1', position: Basketball::Season::Position.new('C')),
+        Basketball::Season::Player.new(id: 'P2', position: Basketball::Season::Position.new('C'))
       ]
     )
   end
 
   let(:rabbits) do
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: 'rabbits',
       players: [
-        Basketball::Org::Player.new(id: 'P3', position: Basketball::Org::Position.new('C')),
-        Basketball::Org::Player.new(id: 'P4', position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P3', position: Basketball::Season::Position.new('C')),
+        Basketball::Season::Player.new(id: 'P4', position: Basketball::Season::Position.new('C'))
       ]
     )
   end
 
   let(:santas) do
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: 'santas',
       players: [
-        Basketball::Org::Player.new(id: 'P5', position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P5', position: Basketball::Season::Position.new('C'))
       ]
     )
   end
 
   let(:rizzos) do
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: 'rizzos',
       players: [
-        Basketball::Org::Player.new(id: 'P6', position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'P6', position: Basketball::Season::Position.new('C'))
       ]
     )
   end

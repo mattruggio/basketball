@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
+  module Season
     # A collection of divisions, teams, and players.
     class Conference < Entity
       include HasDivisions

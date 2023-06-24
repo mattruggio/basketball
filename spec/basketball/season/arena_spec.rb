@@ -23,24 +23,24 @@ describe Basketball::Season::Arena do
 
   let(:bunnies_players) do
     [
-      Basketball::Org::Player.new(id: 'P1', overall: 90, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P2', overall: 80, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P3', overall: 70, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P4', overall: 60, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P5', overall: 50, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P6', overall: 40, position: Basketball::Org::Position.new('C'))
+      Basketball::Season::Player.new(id: 'P1', overall: 90, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P2', overall: 80, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P3', overall: 70, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P4', overall: 60, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P5', overall: 50, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P6', overall: 40, position: Basketball::Season::Position.new('C'))
 
     ]
   end
 
   let(:rabbits_players) do
     [
-      Basketball::Org::Player.new(id: 'P7', overall: 89, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P8', overall: 88, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P9', overall: 87, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P10', overall: 86, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P11', overall: 85, position: Basketball::Org::Position.new('C')),
-      Basketball::Org::Player.new(id: 'P12', overall: 84, position: Basketball::Org::Position.new('C'))
+      Basketball::Season::Player.new(id: 'P7', overall: 89, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P8', overall: 88, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P9', overall: 87, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P10', overall: 86, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P11', overall: 85, position: Basketball::Season::Position.new('C')),
+      Basketball::Season::Player.new(id: 'P12', overall: 84, position: Basketball::Season::Position.new('C'))
     ]
   end
 

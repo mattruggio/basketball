@@ -5,14 +5,13 @@ require 'fileutils'
 require 'forwardable'
 require 'json'
 
-# Generic
+# Foundational Domain Building Blocks
 require_relative 'basketball/entity'
 require_relative 'basketball/value_object'
 
-# Dependent on Generic
+# Common (be careful!)
 require_relative 'basketball/common'
 
-# Dependent on Org
+# Bounded Contexts
 require_relative 'basketball/draft'
-require_relative 'basketball/org'
 require_relative 'basketball/season'

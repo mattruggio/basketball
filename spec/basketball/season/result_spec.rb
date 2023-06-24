@@ -7,8 +7,8 @@ describe Basketball::Season::Result do
 
   let(:game)          { Basketball::Season::Game.new(date:, home_opponent:, away_opponent:) }
   let(:date)          { Date.new(2023, 1, 2) }
-  let(:home_opponent) { Basketball::Org::Team.new(id: 'ht') }
-  let(:away_opponent) { Basketball::Org::Team.new(id: 'at') }
+  let(:home_opponent) { Basketball::Season::Team.new(id: 'ht') }
+  let(:away_opponent) { Basketball::Season::Team.new(id: 'at') }
   let(:home_score)    { 2 }
   let(:away_score)    { 1 }
 

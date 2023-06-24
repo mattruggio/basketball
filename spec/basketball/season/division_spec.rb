@@ -3,13 +3,13 @@
 require 'spec_helper'
 require 'season_helper'
 
-describe Basketball::Org::Division do
+describe Basketball::Season::Division do
   subject(:division) { described_class.new(id:, teams:, name:) }
 
   let(:id)     { 'D-1' }
   let(:name)   { 'Midwest Division' }
   let(:teams)  { [clowns] }
-  let(:clowns) { Basketball::Org::Team.new(id: 'Clowns') }
+  let(:clowns) { Basketball::Season::Team.new(id: 'Clowns') }
 
   describe 'initialization' do
     it 'sets id' do
@@ -26,7 +26,7 @@ describe Basketball::Org::Division do
 
     it 'prevents dupe teams' do
       dupe_teams     = [clowns] * 5
-      expected_error = Basketball::Org::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(id:, teams: dupe_teams) }.to raise_error(expected_error)
     end

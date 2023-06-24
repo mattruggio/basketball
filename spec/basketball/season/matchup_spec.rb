@@ -7,8 +7,8 @@ describe Basketball::Season::Matchup do
 
   let(:game) { Basketball::Season::Game.new(date:, home_opponent:, away_opponent:) }
   let(:date) { Date.parse('2023-01-02') }
-  let(:home_opponent) { Basketball::Org::Team.new(id: 'ht') }
-  let(:away_opponent) { Basketball::Org::Team.new(id: 'at') }
+  let(:home_opponent) { Basketball::Season::Team.new(id: 'ht') }
+  let(:away_opponent) { Basketball::Season::Team.new(id: 'at') }
   let(:home_players) { [] }
   let(:away_players) { [] }
 
@@ -19,7 +19,7 @@ describe Basketball::Season::Matchup do
 
     it 'prevents players being on both teams' do
       players = [
-        Basketball::Org::Player.new(id: 'p1', overall: 99, position: Basketball::Org::Position.new('C'))
+        Basketball::Season::Player.new(id: 'p1', overall: 99, position: Basketball::Season::Position.new('C'))
       ]
 
       expect do

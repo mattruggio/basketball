@@ -25,7 +25,6 @@ Element      | Description
 **Game** | Matches up a date with two teams (home and away) to represent a coordinatord match-up.
 **League** | Describes a league in terms of structure composed of conferences, divisions, teams, and players.
 **Match** | When the Coordinator needs an Arena instance to select a game winner, it will send the Arena a Match. A match is Game but also includes the active roster (players) for both teams that will participate in the game.
-**Org** | Bounded context (sub-module) dealing with overall organizational structure of a sports assocation.
 **Pick** | Result event emitted when a player is automatically or manually selected.
 **Player** | Identitiable as a person able to be drafted.  Meant to be subclassed and extended to include more intricate descriptions of a specific sport player, such as abilities, ratings, and statistics.  Right now it has none of these types of traits and it meant to only serve as the base with only an overall attribute.
 **Record** | Represents a team's overall record.
@@ -57,26 +56,21 @@ bundle add basketball
 
 ### Draft Module
 
-The input for the main object `Basketball::Draft::Room` is an array of teams (`Basketball::Draft::FrontOffice`) and players (`Basketball::Org::Players`). Once instantiated there are four main methods:
+The input for the main object `Basketball::Draft::Room` is an array of teams (`Basketball::Draft::FrontOffice`) and players (`Basketball::Draft::Players`). Once instantiated there are four main methods:
 
 * **Basketball::Draft::Room#sim!**: Simulate the next pick.
 * **Basketball::Draft::Room#skip!**: Skip the next pick.
 * **Basketball::Draft::Room#pick!(player)**: Pick an exact player for the current front office.
 * **Basketball::Draft::Room#sim_rest!**: Simulate the rest of the picks.
 
-### Org Module
-
-The Org module contains all the structural and transactional for the basketball league as a whole. A League can be made up of free agents and conferences, conferences can have divisions, divisions can have teams, and teams can have players.  The main object: `Basketball::Org::League` allows for the control through its API:
-
-* **Basketball::Org::League#sign!**: Sign a player to a team.
-* **Basketball::Org::League#release!**: Release a player from a team and place them in the free agent pool.
-
 ### Season Module
 
-The Season module knows how to execute a calendar of games for a League and generate results. The main object is the `Basketball::Season::Coordinator` class. Once instantiated there are four main methods:
+The Season module knows how to execute a calendar of games for a League and generate results. The main object is the `Basketball::Season::Coordinator` class. Once instantiated the main methods are:
 
-* **Basketball::Season::Coordinator#sim!**: Simulate the next day of games.
+* **Basketball::Season::Coordinator#release!**: Release a player from a team and place them in the free agent pool.
+* **Basketball::Season::Coordinator#sign!**: Sign a player to a team.
 * **Basketball::Season::Coordinator#sim_rest!**: Simulate the rest of the games.
+* **Basketball::Season::Coordinator#sim!**: Simulate the next day of games.
 
 ## Contributing
 

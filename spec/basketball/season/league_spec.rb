@@ -2,17 +2,17 @@
 
 require 'spec_helper'
 
-describe Basketball::Org::League do
+describe Basketball::Season::League do
   subject(:league) { described_class.new(conferences: [eastern], free_agents: [campy]) }
 
-  let(:eastern)  { Basketball::Org::Conference.new(id: 'Eastern', divisions: [midwest]) }
-  let(:midwest)  { Basketball::Org::Division.new(id: 'Midwest', teams: [clowns]) }
-  let(:clowns)   { Basketball::Org::Team.new(id: 'Clowns', players: [mousey]) }
-  let(:bunnies)  { Basketball::Org::Team.new(id: 'Bunnies') }
-  let(:mousey)   { Basketball::Org::Player.new(id: 'Mousey', position:) }
-  let(:moose)    { Basketball::Org::Player.new(id: 'Moose', position:) }
-  let(:campy)    { Basketball::Org::Player.new(id: 'Campy', position:) }
-  let(:position) { Basketball::Org::Position.new('C') }
+  let(:eastern)  { Basketball::Season::Conference.new(id: 'Eastern', divisions: [midwest]) }
+  let(:midwest)  { Basketball::Season::Division.new(id: 'Midwest', teams: [clowns]) }
+  let(:clowns)   { Basketball::Season::Team.new(id: 'Clowns', players: [mousey]) }
+  let(:bunnies)  { Basketball::Season::Team.new(id: 'Bunnies') }
+  let(:mousey)   { Basketball::Season::Player.new(id: 'Mousey', position:) }
+  let(:moose)    { Basketball::Season::Player.new(id: 'Moose', position:) }
+  let(:campy)    { Basketball::Season::Player.new(id: 'Campy', position:) }
+  let(:position) { Basketball::Season::Position.new('C') }
 
   describe '#initialize' do
     it 'sets conferences' do
@@ -30,63 +30,63 @@ describe Basketball::Org::League do
       divisions = [midwest]
 
       conferences = [
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Western',
           divisions:
         ),
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Eastern',
           divisions:
         )
       ]
 
-      expected_error = Basketball::Org::DivisionAlreadyRegisteredError
+      expected_error = Basketball::Season::DivisionAlreadyRegisteredError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
 
     it 'prevents dupe teams across divisions' do
-      team = Basketball::Org::Team.new(id: 'dupe-team')
+      team = Basketball::Season::Team.new(id: 'dupe-team')
 
       conferences = [
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Western',
           divisions: [
-            Basketball::Org::Division.new(id: 'with-dupe-1', teams: [team])
+            Basketball::Season::Division.new(id: 'with-dupe-1', teams: [team])
           ]
         ),
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Eastern',
           divisions: [
-            Basketball::Org::Division.new(id: 'with-dupe-2', teams: [team])
+            Basketball::Season::Division.new(id: 'with-dupe-2', teams: [team])
           ]
         )
       ]
 
-      expected_error = Basketball::Org::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
 
     it 'prevents dupe players across teams' do
-      team = Basketball::Org::Team.new(id: 'dupe-team', players: [mousey])
+      team = Basketball::Season::Team.new(id: 'dupe-team', players: [mousey])
 
       conferences = [
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Western',
           divisions: [
-            Basketball::Org::Division.new(id: 'with-dupe-1', teams: [clowns])
+            Basketball::Season::Division.new(id: 'with-dupe-1', teams: [clowns])
           ]
         ),
-        Basketball::Org::Conference.new(
+        Basketball::Season::Conference.new(
           id: 'Eastern',
           divisions: [
-            Basketball::Org::Division.new(id: 'with-dupe-2', teams: [team])
+            Basketball::Season::Division.new(id: 'with-dupe-2', teams: [team])
           ]
         )
       ]
 
-      expected_error = Basketball::Org::PlayerAlreadySignedError
+      expected_error = Basketball::Season::PlayerAlreadySignedError
 
       expect { described_class.new(conferences:) }.to raise_error(expected_error)
     end
@@ -168,13 +168,13 @@ describe Basketball::Org::League do
     end
 
     it 'prevents signing players to an unregistered team' do
-      error = Basketball::Org::UnregisteredTeamError
+      error = Basketball::Season::UnregisteredTeamError
 
       expect { league.sign!(player: mousey, team: bunnies) }.to raise_error(error)
     end
 
     it 'prevents double-signing players' do
-      error = Basketball::Org::PlayerAlreadySignedError
+      error = Basketball::Season::PlayerAlreadySignedError
 
       expect { league.sign!(player: mousey, team: clowns) }.to raise_error(error)
     end

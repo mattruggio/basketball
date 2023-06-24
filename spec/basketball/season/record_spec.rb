@@ -5,14 +5,14 @@ require 'spec_helper'
 describe Basketball::Season::Record do
   subject(:record) { described_class.new(id: bunnies.id, details: [home_detail, away_detail]) }
 
-  let(:bunnies) { Basketball::Org::Team.new(id: 'bunnies') }
-  let(:rabbits) { Basketball::Org::Team.new(id: 'rabbits') }
+  let(:bunnies) { Basketball::Season::Team.new(id: 'bunnies') }
+  let(:rabbits) { Basketball::Season::Team.new(id: 'rabbits') }
 
   let(:home_detail) do
     Basketball::Season::Detail.new(
       date: Date.new(2023, 1, 2),
       home: true,
-      opponent: Basketball::Org::Team.new(id: rabbits.id),
+      opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 1,
       score: 2
     )
@@ -22,7 +22,7 @@ describe Basketball::Season::Record do
     Basketball::Season::Detail.new(
       date: Date.new(2023, 1, 3),
       home: false,
-      opponent: Basketball::Org::Team.new(id: rabbits.id),
+      opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 9,
       score: 8
     )

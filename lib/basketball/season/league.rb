@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
+  module Season
     # Describes a collection of conferences, divisions, teams, and players.
     # Holds the rules which support adding teams and players to ensure the all the
     # teams are cohesive, such as:

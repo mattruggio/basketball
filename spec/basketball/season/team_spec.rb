@@ -2,15 +2,15 @@
 
 require 'spec_helper'
 
-describe Basketball::Org::Team do
+describe Basketball::Season::Team do
   subject(:team) { described_class.new(id:, players: [mousey], name:) }
 
   let(:id)         { 'p1234' }
   let(:name)       { 'Bunnies' }
-  let(:mousey)     { Basketball::Org::Player.new(id: 'Mousey', position:) }
-  let(:funky_man)  { Basketball::Org::Player.new(id: 'Funky Man', position:) }
-  let(:moose_head) { Basketball::Org::Player.new(id: 'Moose Head', position:) }
-  let(:position)   { Basketball::Org::Position.new('C') }
+  let(:mousey)     { Basketball::Season::Player.new(id: 'Mousey', position:) }
+  let(:funky_man)  { Basketball::Season::Player.new(id: 'Funky Man', position:) }
+  let(:moose_head) { Basketball::Season::Player.new(id: 'Moose Head', position:) }
+  let(:position)   { Basketball::Season::Position.new('C') }
 
   describe 'initialization' do
     it 'sets id' do
@@ -46,13 +46,13 @@ describe Basketball::Org::Team do
 
   describe '#sign!' do
     it 'cannot sign more than 18 players' do
-      17.times { |i| team.sign!(Basketball::Org::Player.new(id: "p-#{i}", position:)) }
+      17.times { |i| team.sign!(Basketball::Season::Player.new(id: "p-#{i}", position:)) }
 
       error = described_class::MaxPlayerCountError
 
       expect(team.players.length).to eq(18)
 
-      expect { team.sign!(Basketball::Org::Player.new(id: 'p-nope', position:)) }.to raise_error(error)
+      expect { team.sign!(Basketball::Season::Player.new(id: 'p-nope', position:)) }.to raise_error(error)
     end
 
     it 'prevents null players' do
@@ -68,7 +68,7 @@ describe Basketball::Org::Team do
     it 'prevents duplicate players' do
       team.sign!(funky_man)
 
-      expect { team.sign!(funky_man) }.to raise_error(Basketball::Org::PlayerAlreadySignedError)
+      expect { team.sign!(funky_man) }.to raise_error(Basketball::Season::PlayerAlreadySignedError)
     end
   end
 

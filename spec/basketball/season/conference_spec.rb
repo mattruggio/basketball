@@ -3,15 +3,15 @@
 require 'spec_helper'
 require 'season_helper'
 
-describe Basketball::Org::Conference do
+describe Basketball::Season::Conference do
   subject(:conference) { described_class.new(id:, divisions:, name:) }
 
   let(:id)        { 'C-1' }
   let(:name)      { 'Eastern Conference' }
   let(:divisions) { [midwest] }
   let(:eastern)   { described_class.new(id: 'Eastern', divisions: [midwest]) }
-  let(:midwest)   { Basketball::Org::Division.new(id: 'Midwest', teams: [clowns]) }
-  let(:clowns)    { Basketball::Org::Team.new(id: 'Clowns') }
+  let(:midwest)   { Basketball::Season::Division.new(id: 'Midwest', teams: [clowns]) }
+  let(:clowns)    { Basketball::Season::Team.new(id: 'Clowns') }
 
   describe 'initialization' do
     it 'sets id' do
@@ -28,20 +28,20 @@ describe Basketball::Org::Conference do
 
     it 'prevents dupe divisions' do
       dupe_divisions = [midwest] * 3
-      expected_error = Basketball::Org::DivisionAlreadyRegisteredError
+      expected_error = Basketball::Season::DivisionAlreadyRegisteredError
 
       expect { described_class.new(id:, divisions: dupe_divisions) }.to raise_error(expected_error)
     end
 
     it 'prevents divisions with dupe teams' do
-      team = Basketball::Org::Team.new(id: 'dupe-team')
+      team = Basketball::Season::Team.new(id: 'dupe-team')
 
       dupe_divisions = [
-        Basketball::Org::Division.new(id: 'with-dupe-1', teams: [team]),
-        Basketball::Org::Division.new(id: 'with-dupe-2', teams: [team])
+        Basketball::Season::Division.new(id: 'with-dupe-1', teams: [team]),
+        Basketball::Season::Division.new(id: 'with-dupe-2', teams: [team])
       ]
 
-      expected_error = Basketball::Org::TeamAlreadyRegisteredError
+      expected_error = Basketball::Season::TeamAlreadyRegisteredError
 
       expect { described_class.new(id:, divisions: dupe_divisions) }.to raise_error(expected_error)
     end

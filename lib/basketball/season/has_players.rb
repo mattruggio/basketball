@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
+  module Season
     # Helper methods for objects that can be composed of players.
     module HasPlayers
       def player?(player)

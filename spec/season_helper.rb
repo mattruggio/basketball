@@ -49,14 +49,14 @@ def read_league_fixture(*path)
 end
 
 def deserialize_league(league_hash)
-  Basketball::Org::League.new(
+  Basketball::Season::League.new(
     conferences: deserialize_conferences(league_hash[:conferences])
   )
 end
 
 def deserialize_conferences(conference_hashes)
   (conference_hashes || []).map do |conference_hash|
-    Basketball::Org::Conference.new(
+    Basketball::Season::Conference.new(
       id: conference_hash[:id],
       divisions: deserialize_divisions(conference_hash[:divisions])
     )
@@ -65,7 +65,7 @@ end
 
 def deserialize_divisions(division_hashes)
   (division_hashes || []).map do |division_hash|
-    Basketball::Org::Division.new(
+    Basketball::Season::Division.new(
       id: division_hash[:id],
       teams: deserialize_teams(division_hash[:teams])
     )
@@ -74,7 +74,7 @@ end
 
 def deserialize_teams(team_hashes)
   (team_hashes || []).map do |team_hash|
-    Basketball::Org::Team.new(
+    Basketball::Season::Team.new(
       id: team_hash[:id],
       players: deserialize_players(team_hash[:players])
     )
@@ -83,10 +83,10 @@ end
 
 def deserialize_players(player_hashes)
   (player_hashes || []).map do |player_hash|
-    Basketball::Org::Player.new(
+    Basketball::Season::Player.new(
       id: player_hash[:id],
       overall: player_hash[:overall],
-      position: Org::Position.new(player_hash[:position])
+      position: Season::Position.new(player_hash[:position])
     )
   end
 end
@@ -96,23 +96,23 @@ def make_id
 end
 
 def make_team(args)
-  Basketball::Org::Team.new(**args)
+  Basketball::Season::Team.new(**args)
 end
 
 def make_player(args)
-  Basketball::Org::Player.new(**args)
+  Basketball::Season::Player.new(**args)
 end
 
 def make_division(args)
-  Basketball::Org::Division.new(**args)
+  Basketball::Season::Division.new(**args)
 end
 
 def make_conference(args)
-  Basketball::Org::Conference.new(**args)
+  Basketball::Season::Conference.new(**args)
 end
 
 def make_league(args)
-  Basketball::Org::League.new(**args)
+  Basketball::Season::League.new(**args)
 end
 
 def make_teams(count = 5)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
+  module Season
     # Helper methods for objects that can be composed of teams which are also made up of players.
     module HasTeams
       include HasPlayers

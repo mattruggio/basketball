@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
+  module Season
     # Base class describing a team.  A team here is bare metal and is just described by an ID
     # and a collection of Player objects.
     class Team < Entity
