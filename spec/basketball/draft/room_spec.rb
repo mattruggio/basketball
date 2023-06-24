@@ -14,9 +14,9 @@ describe Basketball::Draft::Room do
   let(:front_offices) { [ducks, eagles] }
 
   # Players
-  let(:mickey)  { Basketball::Org::Player.new(id: 'mickey', position: Basketball::Org::Position.new('C')) }
-  let(:donald)  { Basketball::Org::Player.new(id: 'donald', position: Basketball::Org::Position.new('C')) }
-  let(:daisy)   { Basketball::Org::Player.new(id: 'daisy', position: Basketball::Org::Position.new('C')) }
+  let(:mickey)  { Basketball::Draft::Player.new(id: 'mickey', position: Basketball::Org::Position.new('C')) }
+  let(:donald)  { Basketball::Draft::Player.new(id: 'donald', position: Basketball::Org::Position.new('C')) }
+  let(:daisy)   { Basketball::Draft::Player.new(id: 'daisy', position: Basketball::Org::Position.new('C')) }
   let(:players) { [mickey, donald, daisy] }
 
   describe '#initialize' do
