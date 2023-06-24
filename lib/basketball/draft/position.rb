@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Basketball
-  module Org
-    # Describes a player position in context of a Season.
+  module Draft
+    # Defines a position a player can hold.
     class Position < Common::Position; end
   end
 end

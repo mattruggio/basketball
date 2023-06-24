@@ -14,9 +14,9 @@ describe Basketball::Draft::Room do
   let(:front_offices) { [ducks, eagles] }
 
   # Players
-  let(:mickey)  { Basketball::Draft::Player.new(id: 'mickey', position: Basketball::Org::Position.new('C')) }
-  let(:donald)  { Basketball::Draft::Player.new(id: 'donald', position: Basketball::Org::Position.new('C')) }
-  let(:daisy)   { Basketball::Draft::Player.new(id: 'daisy', position: Basketball::Org::Position.new('C')) }
+  let(:mickey)  { Basketball::Draft::Player.new(id: 'mickey', position: Basketball::Draft::Position.new('C')) }
+  let(:donald)  { Basketball::Draft::Player.new(id: 'donald', position: Basketball::Draft::Position.new('C')) }
+  let(:daisy)   { Basketball::Draft::Player.new(id: 'daisy', position: Basketball::Draft::Position.new('C')) }
   let(:players) { [mickey, donald, daisy] }
 
   describe '#initialize' do
@@ -143,23 +143,23 @@ describe Basketball::Draft::Room do
     end
   end
 
-  describe '#teams' do
-    it 'registers teams' do
+  describe '#drafted_players' do
+    it 'returns all players that have been selected' do
       room.sim_rest!
 
-      teams    = room.teams
-      expected = front_offices.map { |front_office| Basketball::Org::Team.new(id: front_office.id) }
+      actual = room.drafted_players
+      expected = room.player_events.map(&:player)
 
-      expect(teams).to eq(expected)
+      expect(actual).to eq(expected)
     end
 
-    it 'signs players' do
+    it 'returns all players selected by a specific front office' do
       room.sim_rest!
 
-      teams    = room.teams
-      expected = room.drafted_players
+      actual   = room.drafted_players(ducks)
+      expected = room.player_events.select { |e| e.front_office == ducks }.map(&:player)
 
-      expect(teams.flat_map(&:players)).to eq(expected)
+      expect(actual).to eq(expected)
     end
   end
 

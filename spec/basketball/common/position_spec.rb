@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Org::Position do
+describe Basketball::Common::Position do
   subject(:position) { described_class.new(code) }
 
   let(:code) { 'c' }

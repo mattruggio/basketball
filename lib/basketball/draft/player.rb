@@ -3,6 +3,6 @@
 module Basketball
   module Draft
     # Defines a player currently in the draft.
-    class Player < Org::Player; end
+    class Player < Common::Player; end
   end
 end

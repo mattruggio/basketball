@@ -16,7 +16,7 @@ describe Basketball::Draft::Pick do
 
   let(:auto)   { false }
   let(:ducks)  { Basketball::Draft::FrontOffice.new(id: 'ducks') }
-  let(:mickey) { Basketball::Org::Player.new(id: 'mickey', position: Basketball::Org::Position.new('C')) }
+  let(:mickey) { Basketball::Draft::Player.new(id: 'mickey', position: Basketball::Draft::Position.new('C')) }
 
   describe '#to_s' do
     context 'when auto event' do

@@ -8,6 +8,7 @@ require_relative 'draft/assessment'
 require_relative 'draft/event'
 require_relative 'draft/front_office'
 require_relative 'draft/player'
+require_relative 'draft/position'
 
 # Event Subclasses
 require_relative 'draft/pick'

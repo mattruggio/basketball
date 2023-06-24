@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Basketball::Org::Player do
+describe Basketball::Common::Player do
   let(:player) do
     described_class.new(
       id:,
@@ -15,7 +15,7 @@ describe Basketball::Org::Player do
 
   let(:id)         { 'p1234' }
   let(:overall)    { 95 }
-  let(:position)   { Basketball::Org::Position.new('C') }
+  let(:position)   { Basketball::Common::Position.new('C') }
   let(:first_name) { 'Bugs' }
   let(:last_name)  { 'Bunny' }
 

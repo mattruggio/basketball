@@ -32,19 +32,6 @@ module Basketball
         events.each        { |event| add_event!(event) }
       end
 
-      # This method will return a materialized list of teams and their selections.
-      def teams
-        front_offices.each_with_object([]) do |front_office, memo|
-          team = Org::Team.new(id: front_office.id)
-
-          drafted_players(front_office).each do |player|
-            team.sign!(player)
-          end
-
-          memo << team
-        end
-      end
-
       ### Peek Methods
 
       def assessment
@@ -188,11 +175,11 @@ module Basketball
         add_event!(event)
       end
 
-      private
-
       def player_events
         events.select { |e| e.respond_to?(:player) }
       end
+
+      private
 
       # rubocop:disable Metrics/AbcSize
       def add_event!(event)

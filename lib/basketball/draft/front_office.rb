@@ -73,11 +73,11 @@ module Basketball
       end
 
       def all_random_positions
-        Org::Position::ALL_VALUES.to_a.shuffle.map { |v| Org::Position.new(v) }
+        Position::ALL_VALUES.to_a.shuffle.map { |v| Position.new(v) }
       end
 
       def random_positions_queue
-        all_random_positions + all_random_positions + [Org::Position.random] + [Org::Position.random]
+        all_random_positions + all_random_positions + [Position.random] + [Position.random]
       end
 
       def available_prioritized_positions(drafted_players)
