@@ -35,8 +35,6 @@ module Basketball
         @games                 = []
 
         games.each { |game| add!(game) }
-
-        freeze
       end
 
       def add!(game)
