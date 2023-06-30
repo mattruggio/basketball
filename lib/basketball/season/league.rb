@@ -111,7 +111,7 @@ module Basketball
       end
 
       def players
-        conferences.flat_map(&:players) + free_agents
+        signed_players + free_agents
       end
 
       def conference_for(team)

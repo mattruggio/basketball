@@ -4,7 +4,7 @@ module Basketball
   module Season
     # Sets boundaries for exhibition and regular season play.  Add games as long as they are
     # within the correct dated boundaries
-    class Calendar
+    class Calendar < Entity
       class OutOfBoundsError < StandardError; end
       class TeamAlreadyBookedError < StandardError; end
 
@@ -21,6 +21,8 @@ module Basketball
         regular_end_date:,
         games: []
       )
+        super()
+
         raise ArgumentError, 'exhibition_start_date is required' if exhibition_start_date.to_s.empty?
         raise ArgumentError, 'exhibition_end_date is required'   if exhibition_end_date.to_s.empty?
         raise ArgumentError, 'regular_start_date is required'    if regular_start_date.to_s.empty?
