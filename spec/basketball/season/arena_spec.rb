@@ -14,12 +14,14 @@ describe Basketball::Season::Arena do
     make_regular(
       date: Date.new(2022, 11, 3),
       home_opponent: bunnies_opp,
-      away_opponent: rabbits_opp
+      away_opponent: rabbits_opp,
+      opponent_type:
     )
   end
 
-  let(:bunnies_opp) { Basketball::Season::Opponent.new(id: 'bunnies_opp') }
-  let(:rabbits_opp) { Basketball::Season::Opponent.new(id: 'rabbits_opp') }
+  let(:bunnies_opp)   { Basketball::Season::Opponent.new(id: 'bunnies_opp') }
+  let(:rabbits_opp)   { Basketball::Season::Opponent.new(id: 'rabbits_opp') }
+  let(:opponent_type) { Basketball::Season::OpponentType::INTRA_DIVISIONAL }
 
   let(:bunnies_players) do
     [

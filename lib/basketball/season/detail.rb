@@ -12,7 +12,8 @@ module Basketball
 
       alias home? home
 
-      def initialize(date:, home:, opponent:, opponent_score:, score:)
+      # rubocop:disable Metrics/CyclomaticComplexity
+      def initialize(date:, home:, opponent:, opponent_score:, score:, opponent_type:)
         super()
 
         raise ArgumentError,  'date is required'           unless date
@@ -21,14 +22,29 @@ module Basketball
         raise ArgumentError,  'opponent_score is required' unless opponent_score
         raise ArgumentError,  'home is required'           if home.nil?
         raise CannotTieError, 'scores cannot be equal'     if score == opponent_score
+        raise ArgumentError,  'opponent_type is required'  unless opponent_type
 
         @date           = date
         @opponent       = opponent
         @score          = score
         @opponent_score = opponent_score
         @home           = home
+        @opponent_type  = OpponentType.parse(opponent_type)
 
         freeze
+      end
+      # rubocop:enable Metrics/CyclomaticComplexity
+
+      def divisional?
+        opponent_type == INTRA_DIVISIONAL
+      end
+
+      def intra_conference?
+        opponent_type == INTRA_CONFERENCE
+      end
+
+      def inter_conterence?
+        opponent_type == INTER_CONFERENCE
       end
 
       def win?
@@ -40,7 +56,10 @@ module Basketball
       end
 
       def to_s
-        "[#{date}] #{win? ? 'Win' : 'Loss'} #{home? ? 'vs' : 'at'} #{opponent} (#{score}-#{opponent_score})"
+        win_display = win? ? 'win' : 'loss'
+        vs_display  = home? ? 'vs' : 'at'
+
+        "[#{date}] #{opponent_type} #{win_display} #{vs_display} #{opponent} (#{score}-#{opponent_score})"
       end
     end
   end

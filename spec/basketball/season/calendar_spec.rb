@@ -19,22 +19,25 @@ describe Basketball::Season::Calendar do
   let(:regular_start_date)    { Date.new(2022, 10, 16) }
   let(:regular_end_date)      { Date.new(2023, 4, 29) }
 
-  let(:bunnies_opp) { Basketball::Season::Opponent.new(id: 'bunnies_opp') }
-  let(:rabbits_opp) { Basketball::Season::Opponent.new(id: 'rabbits_opp') }
-  let(:santas_opp)  { Basketball::Season::Opponent.new(id: 'santas_opp') }
-  let(:rizzos_opp)  { Basketball::Season::Opponent.new(id: 'rizzos_opp') }
+  let(:bunnies_opp)   { Basketball::Season::Opponent.new(id: 'bunnies_opp') }
+  let(:rabbits_opp)   { Basketball::Season::Opponent.new(id: 'rabbits_opp') }
+  let(:santas_opp)    { Basketball::Season::Opponent.new(id: 'santas_opp') }
+  let(:rizzos_opp)    { Basketball::Season::Opponent.new(id: 'rizzos_opp') }
+  let(:opponent_type) { Basketball::Season::OpponentType::INTRA_DIVISIONAL }
 
   let(:exhibitions) do
     [
-      make_exhibition(date: Date.new(2022, 10, 1), home_opponent: bunnies_opp, away_opponent: rabbits_opp),
-      make_exhibition(date: Date.new(2022, 10, 2), home_opponent: rabbits_opp, away_opponent: bunnies_opp)
+      make_exhibition(date: Date.new(2022, 10, 1), home_opponent: bunnies_opp, away_opponent: rabbits_opp,
+                      opponent_type:),
+      make_exhibition(date: Date.new(2022, 10, 2), home_opponent: rabbits_opp, away_opponent: bunnies_opp,
+                      opponent_type:)
     ]
   end
 
   let(:regulars) do
     [
-      make_regular(date: Date.new(2022, 11, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp),
-      make_regular(date: Date.new(2023, 1, 4), home_opponent: rabbits_opp, away_opponent: bunnies_opp)
+      make_regular(date: Date.new(2022, 11, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp, opponent_type:),
+      make_regular(date: Date.new(2023, 1, 4), home_opponent: rabbits_opp, away_opponent: bunnies_opp, opponent_type:)
     ]
   end
 
@@ -91,7 +94,12 @@ describe Basketball::Season::Calendar do
   describe '#add!' do
     context 'when adding a regular game' do
       it 'adds new game' do
-        new_game = make_regular(date: Date.new(2023, 3, 4), home_opponent: bunnies_opp, away_opponent: rabbits_opp)
+        new_game = make_regular(
+          date: Date.new(2023, 3, 4),
+          home_opponent: bunnies_opp,
+          away_opponent: rabbits_opp,
+          opponent_type:
+        )
 
         calendar.add!(new_game)
 
@@ -99,28 +107,51 @@ describe Basketball::Season::Calendar do
       end
 
       it 'prevents home team from playing on same day' do
-        new_game = make_regular(date: Date.new(2022, 11, 3), home_opponent: bunnies_opp, away_opponent: santas_opp)
-        error    = described_class::TeamAlreadyBookedError
+        new_game = make_regular(
+          date: Date.new(2022, 11, 3),
+          home_opponent: bunnies_opp,
+          away_opponent: santas_opp,
+          opponent_type:
+        )
+
+        error = described_class::TeamAlreadyBookedError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents away team from playing on same day' do
-        new_game = make_regular(date: Date.new(2022, 11, 3), home_opponent: santas_opp, away_opponent: bunnies_opp)
-        error    = described_class::TeamAlreadyBookedError
+        new_game = make_regular(
+          date: Date.new(2022, 11, 3),
+          home_opponent: santas_opp,
+          away_opponent: bunnies_opp,
+          opponent_type:
+        )
+
+        error = described_class::TeamAlreadyBookedError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents regular during exhibition' do
-        new_game = make_regular(date: Date.new(2022, 10, 3), home_opponent: santas_opp, away_opponent: rizzos_opp)
-        error    = described_class::OutOfBoundsError
+        new_game = make_regular(
+          date: Date.new(2022, 10, 3),
+          home_opponent: santas_opp,
+          away_opponent: rizzos_opp,
+          opponent_type:
+        )
+
+        error = described_class::OutOfBoundsError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents unknown game class constants' do
-        new_game = PlayoffGame.new(date: Date.new(2022, 10, 3), home_opponent: santas_opp, away_opponent: rizzos_opp)
+        new_game = PlayoffGame.new(
+          date: Date.new(2022, 10, 3),
+          home_opponent: santas_opp,
+          away_opponent: rizzos_opp,
+          opponent_type:
+        )
 
         expect { calendar.add!(new_game) }.to raise_error(ArgumentError)
       end
@@ -128,7 +159,12 @@ describe Basketball::Season::Calendar do
 
     context 'when adding an exhibition game' do
       it 'adds new game' do
-        new_game = make_exhibition(date: Date.new(2022, 10, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp)
+        new_game = make_exhibition(
+          date: Date.new(2022, 10, 3),
+          home_opponent: bunnies_opp,
+          away_opponent: rabbits_opp,
+          opponent_type:
+        )
 
         calendar.add!(new_game)
 
@@ -136,23 +172,40 @@ describe Basketball::Season::Calendar do
       end
 
       it 'prevents home team from playing on same day' do
-        new_game = make_exhibition(date: Date.new(2022, 10, 2), home_opponent: bunnies_opp, away_opponent: santas_opp)
-        error    = described_class::TeamAlreadyBookedError
+        new_game = make_exhibition(
+          date: Date.new(2022, 10, 2),
+          home_opponent: bunnies_opp,
+          away_opponent: santas_opp,
+          opponent_type:
+        )
+
+        error = described_class::TeamAlreadyBookedError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents away team from playing on same day' do
-        new_game = make_exhibition(date: Date.new(2022, 10, 2), home_opponent: santas_opp, away_opponent: bunnies_opp)
-        error    = described_class::TeamAlreadyBookedError
+        new_game = make_exhibition(
+          date: Date.new(2022, 10, 2),
+          home_opponent: santas_opp,
+          away_opponent: bunnies_opp,
+          opponent_type:
+        )
+
+        error = described_class::TeamAlreadyBookedError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents exhibition during regular season' do
-        new_game = make_exhibition(date: calendar.regular_start_date + 10, home_opponent: santas_opp,
-                                   away_opponent: rizzos_opp)
-        error    = described_class::OutOfBoundsError
+        new_game = make_exhibition(
+          date: calendar.regular_start_date + 10,
+          home_opponent: santas_opp,
+          away_opponent: rizzos_opp,
+          opponent_type:
+        )
+
+        error = described_class::OutOfBoundsError
 
         expect { calendar.add!(new_game) }.to raise_error(error)
       end

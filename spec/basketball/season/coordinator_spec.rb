@@ -80,22 +80,25 @@ describe Basketball::Season::Coordinator do
     )
   end
 
-  let(:bunnies_opp) { Basketball::Season::Opponent.new(id: 'bunnies') }
-  let(:rabbits_opp) { Basketball::Season::Opponent.new(id: 'rabbits') }
-  let(:santas_opp)  { Basketball::Season::Opponent.new(id: 'santas') }
-  let(:rizzos_opp)  { Basketball::Season::Opponent.new(id: 'rizzos') }
+  let(:bunnies_opp)   { Basketball::Season::Opponent.new(id: 'bunnies') }
+  let(:rabbits_opp)   { Basketball::Season::Opponent.new(id: 'rabbits') }
+  let(:santas_opp)    { Basketball::Season::Opponent.new(id: 'santas') }
+  let(:rizzos_opp)    { Basketball::Season::Opponent.new(id: 'rizzos') }
+  let(:opponent_type) { Basketball::Season::OpponentType::INTRA_DIVISIONAL }
 
   let(:exhibitions) do
     [
-      make_exhibition(date: Date.new(2022, 10, 1), home_opponent: bunnies_opp, away_opponent: rabbits_opp),
-      make_exhibition(date: Date.new(2022, 10, 2), home_opponent: rabbits_opp, away_opponent: bunnies_opp)
+      make_exhibition(date: Date.new(2022, 10, 1), home_opponent: bunnies_opp, away_opponent: rabbits_opp,
+                      opponent_type:),
+      make_exhibition(date: Date.new(2022, 10, 2), home_opponent: rabbits_opp, away_opponent: bunnies_opp,
+                      opponent_type:)
     ]
   end
 
   let(:regulars) do
     [
-      make_regular(date: Date.new(2022, 11, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp),
-      make_regular(date: Date.new(2023, 1, 4), home_opponent: rabbits_opp, away_opponent: bunnies_opp)
+      make_regular(date: Date.new(2022, 11, 3), home_opponent: bunnies_opp, away_opponent: rabbits_opp, opponent_type:),
+      make_regular(date: Date.new(2023, 1, 4), home_opponent: rabbits_opp, away_opponent: bunnies_opp, opponent_type:)
     ]
   end
 
@@ -157,7 +160,8 @@ describe Basketball::Season::Coordinator do
           game: make_regular(
             date: Date.new(2023, 3, 3),
             home_opponent: bunnies_opp,
-            away_opponent: rabbits_opp
+            away_opponent: rabbits_opp,
+            opponent_type:
           ),
           home_score: 153,
           away_score: 151
@@ -335,7 +339,12 @@ describe Basketball::Season::Coordinator do
   describe '#add!' do
     context 'when adding a season game' do
       it 'adds new game' do
-        new_game = make_regular(date: Date.new(2023, 3, 4), home_opponent: bunnies, away_opponent: rabbits)
+        new_game = make_regular(
+          date: Date.new(2023, 3, 4),
+          home_opponent: bunnies,
+          away_opponent: rabbits,
+          opponent_type:
+        )
 
         coordinator.add!(new_game)
 
@@ -343,15 +352,27 @@ describe Basketball::Season::Coordinator do
       end
 
       it 'prevents adding a game on the current date' do
-        new_game = make_exhibition(date: Date.new(2022, 9, 29), home_opponent: bunnies, away_opponent: santas)
-        error    = described_class::OutOfBoundsError
+        new_game = make_exhibition(
+          date: Date.new(2022, 9, 29),
+          home_opponent: bunnies,
+          away_opponent: santas,
+          opponent_type:
+        )
+
+        error = described_class::OutOfBoundsError
 
         expect { coordinator.add!(new_game) }.to raise_error(error)
       end
 
       it 'prevents adding a game before the current date' do
-        new_game = make_exhibition(date: Date.new(2022, 9, 28), home_opponent: bunnies, away_opponent: santas)
-        error    = described_class::OutOfBoundsError
+        new_game = make_exhibition(
+          date: Date.new(2022, 9, 28),
+          home_opponent: bunnies,
+          away_opponent: santas,
+          opponent_type:
+        )
+
+        error = described_class::OutOfBoundsError
 
         expect { coordinator.add!(new_game) }.to raise_error(error)
       end

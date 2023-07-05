@@ -14,7 +14,8 @@ describe Basketball::Season::Record do
       home: true,
       opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 1,
-      score: 2
+      score: 2,
+      opponent_type: 'intra_divisional'
     )
   end
 
@@ -24,7 +25,8 @@ describe Basketball::Season::Record do
       home: false,
       opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 9,
-      score: 8
+      score: 8,
+      opponent_type: 'inter_conference'
     )
   end
 

@@ -79,5 +79,63 @@ describe Basketball::Season::Scheduler do
         expect(count).to eq(82), "#{team} plays #{count} season games"
       end
     end
+
+    describe 'opponent_type assignment' do
+      specify 'inter-conference games' do
+        calendar = scheduler.schedule(year:, league:)
+
+        games = calendar
+                .games
+                .select { |g| g.opponent_type == Basketball::Season::OpponentType::INTER_CONFERENCE }
+
+        expect(!games.empty?).to be true
+
+        games.each do |game|
+          home_team_conference = game.home_opponent.id.split('-').first
+          away_team_conference = game.away_opponent.id.split('-').first
+
+          expect(home_team_conference).not_to eq(away_team_conference)
+        end
+      end
+
+      specify 'intra-conference games' do
+        calendar = scheduler.schedule(year:, league:)
+
+        games = calendar
+                .games
+                .select { |g| g.opponent_type == Basketball::Season::OpponentType::INTRA_CONFERENCE }
+
+        expect(!games.empty?).to be true
+
+        games.each do |game|
+          game.home_opponent.id.split('-').first
+          game.away_opponent.id.split('-').first
+
+          home_team_division = game.home_opponent.id.split('-')[1]
+          away_team_division = game.away_opponent.id.split('-')[1]
+
+          expect(home_team_division).not_to eq(away_team_division)
+        end
+      end
+
+      specify 'intra-divisional games' do
+        calendar = scheduler.schedule(year:, league:)
+
+        games = calendar.games
+                        .select { |g| g.opponent_type == Basketball::Season::OpponentType::INTRA_DIVISIONAL }
+
+        expect(!games.empty?).to be true
+
+        games.each do |game|
+          game.home_opponent.id.split('-').first
+          game.away_opponent.id.split('-').first
+
+          home_team_division = game.home_opponent.id.split('-')[1]
+          away_team_division = game.away_opponent.id.split('-')[1]
+
+          expect(home_team_division).to eq(away_team_division)
+        end
+      end
+    end
   end
 end

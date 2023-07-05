@@ -6,6 +6,7 @@ require_relative 'season/calendar'
 require_relative 'season/game'
 require_relative 'season/matchup'
 require_relative 'season/opponent'
+require_relative 'season/opponent_type'
 require_relative 'season/result'
 
 # League Common

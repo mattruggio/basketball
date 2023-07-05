@@ -26,7 +26,8 @@ class BadArena
       game: Basketball::Season::Game.new(
         date:,
         home_opponent: game.home_opponent,
-        away_opponent: game.away_opponent
+        away_opponent: game.away_opponent,
+        opponent_type: game.opponent_type
       ),
       home_score: 1,
       away_score: 2

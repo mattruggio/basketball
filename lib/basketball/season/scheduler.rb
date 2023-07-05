@@ -160,16 +160,19 @@ module Basketball
         matchups = matchup_plan(league)
 
         matchups.each do |(team1, team2), count|
-          candidates = calendar.available_regular_matchup_dates(team1, team2)
-          dates      = candidates.sample(count)
-          games      = balanced_games(dates, team1, team2)
+          determine_opponent_type(league, team1, team2)
+          candidates    = calendar.available_regular_matchup_dates(team1, team2)
+          dates         = candidates.sample(count)
+          games         = balanced_games(dates, team1, team2, league)
 
           games.each { |game| calendar.add!(game) }
         end
       end
 
-      def balanced_games(dates, team1, team2)
+      def balanced_games(dates, team1, team2, league)
         dates.map.with_index(1) do |date, index|
+          opponent_type = determine_opponent_type(league, team1, team2)
+
           home_opponent, away_opponent =
             if index.even?
               [Opponent.from(team1), Opponent.from(team2)]
@@ -177,7 +180,7 @@ module Basketball
               [Opponent.from(team2), Opponent.from(team1)]
             end
 
-          Regular.new(date:, home_opponent:, away_opponent:)
+          Regular.new(date:, home_opponent:, away_opponent:, opponent_type:)
         end
       end
 
@@ -198,8 +201,9 @@ module Basketball
 
             next if candidates.empty?
 
-            date = candidates.sample
-            game = random_exhibition_game(date, team, other_team)
+            opponent_type = determine_opponent_type(league, team, other_team)
+            date          = candidates.sample
+            game          = random_exhibition_game(date, team, other_team, opponent_type)
 
             calendar.add!(game)
 
@@ -208,7 +212,17 @@ module Basketball
         end
       end
 
-      def random_exhibition_game(date, team1, team2)
+      def determine_opponent_type(league, team1, team2)
+        if league.division_for(team1) == league.division_for(team2)
+          OpponentType::INTRA_DIVISIONAL
+        elsif league.conference_for(team1) == league.conference_for(team2)
+          OpponentType::INTRA_CONFERENCE
+        else
+          OpponentType::INTER_CONFERENCE
+        end
+      end
+
+      def random_exhibition_game(date, team1, team2, opponent_type)
         home_opponent, away_opponent =
           if rand(1..2) == 1
             [Opponent.from(team1), Opponent.from(team2)]
@@ -216,7 +230,7 @@ module Basketball
             [Opponent.from(team2), Opponent.from(team1)]
           end
 
-        Exhibition.new(date:, home_opponent:, away_opponent:)
+        Exhibition.new(date:, home_opponent:, away_opponent:, opponent_type:)
       end
     end
   end

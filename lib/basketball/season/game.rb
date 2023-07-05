@@ -4,19 +4,21 @@ module Basketball
   module Season
     # Base class describing what all games have in common.
     class Game < ValueObject
-      value_reader :date, :home_opponent, :away_opponent
+      value_reader :date, :home_opponent, :away_opponent, :opponent_type
 
-      def initialize(date:, home_opponent:, away_opponent:)
+      def initialize(date:, home_opponent:, away_opponent:, opponent_type:)
         super()
 
         raise ArgumentError, 'date is required'             unless date
         raise ArgumentError, 'home_opponent is required'    unless home_opponent
         raise ArgumentError, 'away_opponent is required'    unless away_opponent
         raise ArgumentError, 'teams cannot play themselves' if home_opponent == away_opponent
+        raise ArgumentError, 'opponent_type is required'    unless opponent_type
 
         @date          = date
         @home_opponent = home_opponent
         @away_opponent = away_opponent
+        @opponent_type = OpponentType.parse(opponent_type)
 
         freeze
       end

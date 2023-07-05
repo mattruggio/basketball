@@ -5,12 +5,13 @@ require 'spec_helper'
 describe Basketball::Season::Result do
   subject(:result) { described_class.new(game:, home_score:, away_score:) }
 
-  let(:game)          { Basketball::Season::Game.new(date:, home_opponent:, away_opponent:) }
+  let(:game)          { Basketball::Season::Game.new(date:, home_opponent:, away_opponent:, opponent_type:) }
   let(:date)          { Date.new(2023, 1, 2) }
   let(:home_opponent) { Basketball::Season::Team.new(id: 'ht') }
   let(:away_opponent) { Basketball::Season::Team.new(id: 'at') }
   let(:home_score)    { 2 }
   let(:away_score)    { 1 }
+  let(:opponent_type) { Basketball::Season::OpponentType::INTRA_DIVISIONAL }
 
   describe '#initialize' do
     it 'sets game' do
