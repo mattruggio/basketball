@@ -7,6 +7,7 @@ module Basketball
       value_reader :date,
                    :home,
                    :opponent_score,
+                   :opponent_type,
                    :opponent,
                    :score
 

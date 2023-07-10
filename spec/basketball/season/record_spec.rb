@@ -15,7 +15,7 @@ describe Basketball::Season::Record do
       opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 1,
       score: 2,
-      opponent_type: 'intra_divisional'
+      opponent_type: Basketball::Season::OpponentType::INTRA_DIVISIONAL
     )
   end
 
@@ -26,8 +26,44 @@ describe Basketball::Season::Record do
       opponent: Basketball::Season::Team.new(id: rabbits.id),
       opponent_score: 9,
       score: 8,
-      opponent_type: 'inter_conference'
+      opponent_type: Basketball::Season::OpponentType::INTER_CONFERENCE
     )
+  end
+
+  describe '#win_count' do
+    it 'all' do
+      expect(record.win_count).to eq(1)
+    end
+
+    it 'intra-divisional' do
+      expect(record.win_count(Basketball::Season::OpponentType::INTRA_DIVISIONAL)).to eq(1)
+    end
+
+    it 'intra-conference' do
+      expect(record.win_count(Basketball::Season::OpponentType::INTRA_CONFERENCE)).to eq(0)
+    end
+
+    it 'inter-conference' do
+      expect(record.win_count(Basketball::Season::OpponentType::INTER_CONFERENCE)).to eq(0)
+    end
+  end
+
+  describe '#loss_count' do
+    it 'all' do
+      expect(record.loss_count).to eq(1)
+    end
+
+    it 'intra-divisional' do
+      expect(record.loss_count(Basketball::Season::OpponentType::INTRA_DIVISIONAL)).to eq(0)
+    end
+
+    it 'intra-conference' do
+      expect(record.loss_count(Basketball::Season::OpponentType::INTRA_CONFERENCE)).to eq(0)
+    end
+
+    it 'inter-conference' do
+      expect(record.loss_count(Basketball::Season::OpponentType::INTER_CONFERENCE)).to eq(1)
+    end
   end
 
   describe '#win_percentage_display' do

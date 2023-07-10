@@ -52,26 +52,28 @@ module Basketball
         details_by_date.values
       end
 
-      def win_percentage
+      def win_percentage(opponent_type = nil)
+        game_count = game_count(opponent_type)
+
         return 0 unless game_count.positive?
 
-        (win_count.to_f / game_count).round(3)
+        (win_count(opponent_type).to_f / game_count).round(3)
       end
 
-      def win_percentage_display
-        format('%.3f', win_percentage)
+      def win_percentage_display(opponent_type = nil)
+        format('%.3f', win_percentage(opponent_type))
       end
 
-      def game_count
-        details.length
+      def game_count(opponent_type)
+        details_for(opponent_type).length
       end
 
-      def win_count
-        details.count(&:win?)
+      def win_count(opponent_type = nil)
+        details_for(opponent_type).count(&:win?)
       end
 
-      def loss_count
-        details.count(&:loss?)
+      def loss_count(opponent_type = nil)
+        details_for(opponent_type).count(&:loss?)
       end
 
       def to_s
@@ -93,6 +95,10 @@ module Basketball
       private
 
       attr_reader :details_by_date
+
+      def details_for(opponent_type = nil)
+        details.select { |d| opponent_type.nil? || d.opponent_type == opponent_type }
+      end
     end
   end
 end
