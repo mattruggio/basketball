@@ -11,7 +11,7 @@ module Basketball
 
       attr_reader :game, :home_score, :away_score
 
-      def_delegators :game, :date, :home_opponent, :away_opponent, :teams
+      def_delegators :game, :date, :home_opponent, :away_opponent, :teams, :opponent_type
 
       def initialize(game:, home_score:, away_score:)
         raise ArgumentError, 'game is required' unless game

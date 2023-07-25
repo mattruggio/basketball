@@ -19,7 +19,7 @@ RSpec/NestedGroups:
   Max: 5
 
 RSpec/MultipleExpectations:
-  Max: 2
+  Max: 10
 
 Metrics/ParameterLists:
   Max: 6

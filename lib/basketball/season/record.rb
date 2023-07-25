@@ -19,29 +19,9 @@ module Basketball
       end
 
       def accept!(result)
-        if result.home_opponent == self
-          detail = Detail.new(
-            date: result.date,
-            opponent: result.away_opponent,
-            score: result.home_score,
-            opponent_score: result.away_score,
-            home: true
-          )
+        detail = result_to_detail(result)
 
-          add!(detail)
-        elsif result.away_opponent == self
-          detail = Detail.new(
-            date: result.date,
-            opponent: result.home_opponent,
-            score: result.away_score,
-            opponent_score: result.home_score,
-            home: false
-          )
-
-          add!(detail)
-        else
-          raise OpponentNotFoundError, "#{result} has no opponent for #{self}"
-        end
+        add!(detail)
       end
 
       def detail_for(date)
@@ -98,6 +78,34 @@ module Basketball
 
       def details_for(opponent_type = nil)
         details.select { |d| opponent_type.nil? || d.opponent_type == opponent_type }
+      end
+
+      def result_to_detail(result)
+        base_args = {
+          date: result.date,
+          opponent_type: result.opponent_type
+        }
+
+        all_args =
+          if result.home_opponent == self
+            base_args.merge(
+              opponent: result.away_opponent,
+              score: result.home_score,
+              opponent_score: result.away_score,
+              home: true
+            )
+          elsif result.away_opponent == self
+            base_args.merge(
+              opponent: result.home_opponent,
+              score: result.away_score,
+              opponent_score: result.home_score,
+              home: false
+            )
+          else
+            raise OpponentNotFoundError, "#{result} has no opponent for #{self}"
+          end
+
+        Detail.new(**all_args)
       end
     end
   end
