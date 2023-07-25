@@ -17,28 +17,28 @@ def json_parse(json)
   JSON.parse(json, symbolize_names: true)
 end
 
-def fixture_path(*path)
-  File.join('spec', 'fixtures', *path)
+def fixture_path(*)
+  File.join('spec', 'fixtures', *)
 end
 
-def read_fixture(*path)
-  File.read(fixture_path(*path))
+def read_fixture(*)
+  File.read(fixture_path(*))
 end
 
-def read_json_fixture(*path)
-  JSON.parse(read_fixture(*path), symbolize_names: true)
+def read_json_fixture(*)
+  JSON.parse(read_fixture(*), symbolize_names: true)
 end
 
-def read_json_temp_file(*path)
-  JSON.parse(read_temp_file(*path), symbolize_names: true)
+def read_json_temp_file(*)
+  JSON.parse(read_temp_file(*), symbolize_names: true)
 end
 
-def read_temp_file(*path)
-  File.read(temp_path(*path))
+def read_temp_file(*)
+  File.read(temp_path(*))
 end
 
-def temp_path(*path)
-  File.join(TEMP_DIR, *path)
+def temp_path(*)
+  File.join(TEMP_DIR, *)
 end
 
 def write_file(path, contents)

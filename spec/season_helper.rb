@@ -45,8 +45,8 @@ class PredictableArena
   end
 end
 
-def read_league_fixture(*path)
-  deserialize_league(read_json_fixture(*path))
+def read_league_fixture(*)
+  deserialize_league(read_json_fixture(*))
 end
 
 def deserialize_league(league_hash)
